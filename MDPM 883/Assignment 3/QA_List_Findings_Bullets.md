@@ -13,28 +13,25 @@ Team Dart | PRISM Request | MDPM 883 Assignment 3 | Working session, Monday 5 Oc
 ## Scenario 1: creating and submitting a furniture request
 
 - **1.1 Home: My work orders [P2]**
-  - **Issue:** Inconsistent. The Figma file opens on a work order list; the HTML reference opens on a dashboard. The default was left “to be tested” on 1 Oct and never revisited.
+  - **Issue:** Inconsistent. The earlier demonstration opened on a work order list in the Figma file and on a dashboard in the HTML reference; the default was left “to be tested”. The pasted earlier screens open on “My Work Orders”, a list with a Draft row. The 3 October brief specifies a Dashboard plus a separate My Requests list.
   - **Evidence status:** **H.** Team preference is split. No user has seen either layout.
   - **Validation needed:** Usability test, Q1 and Q2.
-  - **Recommended change:** Keep one list page. Add a visible Draft status and a “Needs your action” marker to each row. Treat list versus dashboard as a test question.
+  - **Recommended change:** Treat as resolved by the brief once the new build is seen to open on the Dashboard. If it does not, keep one list with a visible Draft status and a “Needs your attention” marker on each row.
 - **1.2 Before you start: request type [P1]**
-  - **Issue:** Inconsistent. Request type is not yet the first choice (decision of 3 Oct, A2). If other types are listed they lead nowhere in this prototype.
+  - **Issue:** Inconsistent. In the earlier build request type is step 3 of 6, after “Before you start” and “Client checklist”. The 3 October decision puts it first; whether the new build does so is not verified. The earlier build’s second option, “Another request type — options to be confirmed”, is selectable.
   - **Evidence status:** **TD** (3 Oct). **S:** the checklist applies only to furniture requests (PM-side interview, as reported by Felix).
   - **Validation needed:** Type names against the Requirements Document, confirmed with Cohen (O1).
-  - **Recommended change:** Make request type the first choice. Show guidance only after Furniture is selected. Show other types as inactive and marked out of scope.
-  - **Prototype text check:** Pasted earlier build still shows request type as step 3 of 6, with “Another request type” selectable.
+  - **Recommended change:** Make request type the first choice. Show Furniture and the three [PM] categories described in the brief, and mark post-submission rules for the [PM] categories as unverified.
 - **1.3 Checklist step (download and “I reviewed”) [P1]**
   - **Issue:** Duplicated. The step repeats the legacy download-and-confirm pattern and duplicates the review page. Removal was agreed, then contested; the step was still in the file. The Help page meant to hold the full checklist does not exist.
   - **Evidence status:** **S:** Kai’s difficulty was finding what the checklist asks for. Removal is **TD**. **A:** that a signed-off checklist is a mandatory record.
   - **Validation needed:** Anne-Marie today (what did she want kept, C3). Cohen: attested, attached or guidance only?
   - **Recommended change:** Remove the step. Build a Help page with the full checklist and download, reachable from every step. Add one tick on the review page only if Cohen says attestation is mandatory.
-  - **Prototype text check:** Pasted earlier build still has “2. Client checklist” as a step.
 - **1.4 Side-panel checklist [P1]**
-  - **Issue:** Missing. Automatic ticking and pop-ups cannot run in a manually linked Figma build, and the client library has no pop-up component. No fallback was agreed. Ticks were also justified as letting the coordinator see uploads, which is a coordinator-side need outside scope.
+  - **Issue:** Missing. The earlier build shows only a static “Request checklist summary” (request type, location, furniture need, supporting files). The brief asks for an expandable helper. The earlier claim that automatic ticking and pop-ups cannot run in a manually linked Figma build was not checked and may not apply to the Make build.
   - **Evidence status:** **H** for the panel. **A** for the coordinator’s use of the ticks.
   - **Validation needed:** Teaching team’s reply on build method (A1). Usability test.
-  - **Recommended change:** Show the panel in three static states (empty, part complete, complete) and say in the video that the logic is simulated. Use a library side panel. Describe ticks as Kevin’s own progress aid only.
-  - **Prototype text check:** Pasted earlier build shows only a static “Request checklist summary”, not a helper panel.
+  - **Recommended change:** Build the helper as a reference panel. Show completion only for fields actually populated, never as approval. Describe ticks as Kevin’s own progress aid.
 - **1.5 Request details: pre-fill and required fields [P2]**
   - **Issue:** Assumption as rule. Section 1 appears pre-filled with the requester’s details, and “required” fields are shown without a defined set. Facility ID alone was called required, with no source.
   - **Evidence status:** **A** for the pre-fill source and the required set. **S** for facility ID (Felix, source not cited).
@@ -46,11 +43,10 @@ Team Dart | PRISM Request | MDPM 883 Assignment 3 | Working session, Monday 5 Oc
   - **Validation needed:** Cohen or a technical contact on building data. Infrastructure for guidance wording.
   - **Recommended change:** Inline help only, worded from the existing checklist or marked “content to be supplied”. No auto-complete. Label any look-up “Future: building data, not validated”.
 - **1.7 Quantity threshold and lead time [P1]**
-  - **Issue:** Assumption as rule. The HTML demo appeared to change the lead time, in weeks, above a quantity threshold (transcribed as “greater than 9”). The transcript is unclear and no source was given.
-  - **Evidence status:** **None** on the record.
-  - **Validation needed:** Felix today for the source; then the furniture coordinator or Cohen.
-  - **Recommended change:** Remove the numbers unless Felix can cite a source; state that timing is confirmed in the proposal. Do not carry the rule into Figma from the HTML version.
-  - **Prototype text check:** UPDATE: the 3 Oct brief cites the June 2019 checklist (12, 8 and 4 week lead times; “greater than 9” means workstations, not furniture quantity). Re-tag from None to S and change the recommendation to: show as planning guidance only, never as a delivery date.
+  - **Issue:** Assumption as rule. The earlier HTML demo appeared to change lead time above a quantity threshold (“greater than 9”). The 3 October brief attributes lead times to the June 2019 checklist: 12, 8 and 4 weeks by request type. “Greater than 9” counts workstations, not furniture quantity, so fourteen chairs must not trigger it.
+  - **Evidence status:** **S.** The June 2019 checklist, as cited in the brief; not independently seen. Whether Greater than 9 and STIP are standalone values or contextual rules is unresolved.
+  - **Validation needed:** The checklist itself; furniture coordinator or Cohen.
+  - **Recommended change:** Show lead times only as planning guidance from the 2019 checklist, never as a delivery date. Do not apply the Greater than 9 rule to furniture quantity.
 - **1.8 Attachments and Infrastructure Attachments [P1]**
   - **Issue:** Assumption as rule. The client UAT build has two upload steps. The second was dropped from Kevin’s journey on an unconfirmed reading of what it is for. If that reading is wrong, a required input has been removed.
   - **Evidence status:** **C** that both steps exist. **A** for what the second holds (one member’s hypothesis). **S:** PM-side requests have no separate infrastructure step.
@@ -60,53 +56,47 @@ Team Dart | PRISM Request | MDPM 883 Assignment 3 | Working session, Monday 5 Oc
   - **Issue:** Inconsistent. The demo reached “Request submitted” while required items were flagged as missing. Gaps are also flagged on the attachments step, possibly in different wording.
   - **Evidence status:** **N/A.** Internal consistency, not an evidence question.
   - **Validation needed:** None.
-  - **Recommended change:** Two review states: complete (Submit active) and incomplete (Submit inactive, each gap linking back to its field). One wording for gaps everywhere. Record the video on the complete path.
-  - **Prototype text check:** UPDATE: GoA guidance says keep Submit enabled and explain errors on submit. Change “Submit inactive” to “Submit enabled, error summary with links”.
+  - **Recommended change:** Two review states: complete, and incomplete with an error summary linking to each field. Keep Submit enabled and explain errors on submit, as GoA guidance advises against disabled buttons. One wording for gaps everywhere. Record the video on the complete path.
 - **1.10 Save draft [P2]**
   - **Issue:** Inconsistent. Save draft is on every step in the HTML version, with auto-save and drafts on the home page. How the Figma file handles drafts is not on the record. Test question 2 depends on it.
   - **Evidence status:** **S:** Kai saves a draft, then changes status on a separate tab (F-WORTS has no submit button). Auto-save is **H**.
   - **Validation needed:** Usability test, Q2.
   - **Recommended change:** One Save draft control in the same position on every step, and a Draft status on the list. Show “Draft saved” as a static message; do not claim auto-save in the narration.
-  - **Prototype text check:** Pasted earlier build shows Back and Continue only on steps 2 and 3; Save draft appears only on the message box.
 - **1.11 Request submitted page [P1]**
   - **Issue:** Missing. The last screen before the “black box” should give the work order number, current stage, who holds the request, what happens next and whether Kevin must act. It has been described both as the end of Scenario 1 and the start of Scenario 2.
   - **Evidence status:** **C** for the problem: furniture-side and PM-side interviewees both lose sight of the request here. **H** for the content. Guiding Scenario: “received and awaiting initial review”.
   - **Validation needed:** Usability test, Q3 and Q4.
   - **Recommended change:** Add the five facts. End Scenario 1 on this page; begin Scenario 2 from it (see 2.1).
 - **1.12 Progress indicator [P2]**
-  - **Issue:** Inconsistent. The HTML bar has five steps including the checklist; the Figma flow differs; the client UAT build has two attachment steps.
-  - **Evidence status:** **TD** (follows from 3 Oct).
+  - **Issue:** Inconsistent. The earlier build’s indicator shows six steps: Before you start, Client checklist, Request type, Request details, Supporting documents, Review and submit. The 3 October decision is four steps. The HTML reference bar was reported with five.
+  - **Evidence status:** **TD** (3 Oct). Six-step labels seen in the pasted earlier build.
   - **Validation needed:** None.
-  - **Recommended change:** Four steps with identical labels on every screen: Request type, Request details, Attachments, Review and submit.
-  - **Prototype text check:** Pasted earlier build shows six steps with “Supporting documents”, not the four agreed labels.
+  - **Recommended change:** Four steps with identical labels on every screen: Request Type, Request Details, Attachments, Review & Submit.
 
 ## Scenario 2: after submission
 
 - **2.1 Start of Scenario 2 [P1]**
-  - **Issue:** Open decision. Starting at Fulfilling (because Kevin does nothing between Submitted and Reviewing) skips the silent interval where the black-box evidence sits. Not decided on Saturday (C6).
+  - **Issue:** Open decision. Starting at Fulfilling skips the silent interval where the black-box evidence sits. Not decided on Saturday (C6). The pasted earlier build already opens Scenario 2 at “Client approval pending”, so that interval is not shown.
   - **Evidence status:** **C** for the black box, from both sides. Guiding Scenario shows the moment (assigned to Joy, nothing needed from Kevin) but is a team source.
   - **Validation needed:** Usability test, Q3.
   - **Recommended change:** Start at Submitted: stage, holder, last change, “No action needed”. Then the proposal notification. Fulfilling and Closed stay as non-interactive states.
-  - **Prototype text check:** Pasted earlier build opens Scenario 2 at “Client approval pending”, skipping the Submitted interval.
 - **2.2 Stage tracker [P1]**
   - **Issue:** Assumption as rule. Submitted, Reviewing, Fulfilling and Closed are shown as the process. “Gatekeeping” appears but no role by that name exists in the scenarios. The Chair flagged exact statuses as unconfirmed.
   - **Evidence status:** **H.** Nobody in Infrastructure has confirmed the names.
   - **Validation needed:** Cohen’s own workflow (received 1 Oct; comparison never assigned). Then an infrastructure-side user. Cohen Q4.
   - **Recommended change:** Keep the four stages as a stated hypothesis. Adekunle compares them with Cohen’s workflow before Wednesday. Remove “gatekeeping” or name the role.
 - **2.3 Client decision wording [P1]**
-  - **Issue:** Inconsistent. Five wordings are in use: Authorization, Client decision pending, Waiting on client, Client approval pending, Client approved. It was decided as a status, not a stage or gate; the wording is not final (C4).
+  - **Issue:** Inconsistent. Five wordings were reported: Authorization, Client decision pending, Waiting on client, Client approval pending, Client approved. The pasted earlier screens use “Client approval pending” on the list, header and Approval field; the 3 October brief says “Client decision pending”. It was decided as a status within Reviewing, and the wording is not final (C4).
   - **Evidence status:** **H** for the wording. The need for a client decision is supported (the Chair called it evidenced), but the source interview was not named.
   - **Validation needed:** Infrastructure-side user on stage versus status. Record Anne-Marie’s position.
   - **Recommended change:** Keep “Reviewing” as the stage. Add the sub-status pair “Waiting on client decision” (action with Kevin) and “Client decision recorded”, in identical words on list, tracker, notification and header.
-  - **Prototype text check:** Pasted screens use “Client approval pending” (a sixth wording); the brief says “Client decision pending”. Pick one.
 - **2.4 Proposal view [P1]**
-  - **Issue:** Missing. The proposal is not visibly tied to its work order, and members describe its contents differently (scope of work, drawings, pictures, mover quotation).
+  - **Issue:** Missing. The proposal is shown inside the work order, under its number, title and location, in the earlier build. It has one “Estimated cost: Not supplied” and no delivery cost per source, and it names “Snap Tracker” (availability source) and “ROSS furniture” (vendor), which no source supports. Members described its contents differently.
   - **Evidence status:** **TS.** The Guiding Scenario fixes the contents: four recycled and ten new chairs, furniture costs, delivery cost per source, timing. Pictures were doubted.
   - **Validation needed:** Furniture coordinator: what a standard proposal contains.
-  - **Recommended change:** Show the proposal as a panel inside the work order, under its number, title and location. List only those contents. Label files “Documents from Infrastructure”, read-only.
-  - **Prototype text check:** Pasted proposal has one “Estimated cost” and no per-source delivery cost, and names “Snap Tracker” and “ROSS furniture”, which no source supports. Raise as P1.
+  - **Recommended change:** Show the proposal under its work order with only the supported contents: quantity from each source, furniture and delivery cost per source, timing, total, marked “Not supplied” where unknown. Remove “Snap Tracker” and “ROSS furniture” unless a source is produced.
 - **2.5 Sharing and approval mechanism [P1]**
-  - **Issue:** Open decision. “Share externally”, a package button, a signable document that returns automatically and a client Approve button each assert a capability nobody has confirmed. An Approve button also makes the client an actor, against the 3 Oct decision.
+  - **Issue:** Open decision. “Share externally”, a package button, a signable document and a client Approve button each assert a capability nobody has confirmed. An Approve button would also make the client an actor. The earlier build shows neither a package control nor a decision control, only “This prototype does not let Kevin approve on the client’s behalf.”
   - **Evidence status:** The need is supported (everything for the decision in one place, and a way back). **A** for every mechanism. Sending documents out of an internal system has not been put to Cohen.
   - **Validation needed:** Cohen Q5: how the proposal reaches the client today and what counts as approval.
   - **Recommended change:** Build “Download proposal package” and “Record client decision” (outcome, approver’s name, date, optional attached confirmation). Label any Share control “Concept, not validated”.
@@ -121,28 +111,25 @@ Team Dart | PRISM Request | MDPM 883 Assignment 3 | Working session, Monday 5 Oc
   - **Validation needed:** Usability test, Q4.
   - **Recommended change:** The list row reads “Waiting on client decision, action with you” and opens at the proposal panel.
 - **2.8 Current holder [P1]**
-  - **Issue:** Assumption as rule. A named holder is shown from the moment of submission. That presumes someone is assigned at every stage, that PRISM knows who, and that names may be shown to requesters. PM-side intake may be a shared mailbox.
+  - **Issue:** Assumption as rule. A named holder is shown from the moment of submission in some accounts. That presumes someone is assigned at every stage, that PRISM knows who, and that names may be shown to requesters. The earlier build shows “Current owner: Kevin” while the request waits on the client; the new list shows “Joy — Furniture Coordinator” for the same state.
   - **Evidence status:** **C** for the need to know who has the request. **A** that a name is available. **S:** shared mailbox (PM-side only). Guiding Scenario names Joy only after the Furniture Request Coordinator’s review.
   - **Validation needed:** Infrastructure-side user. Cohen Q7.
   - **Recommended change:** Show role first, name second. Add “Awaiting initial review, not yet assigned” for Submitted.
-  - **Prototype text check:** Earlier build shows “Current owner: Kevin”; new list shows “Joy — Furniture Coordinator” for the same state. Decide which.
 - **2.9 Role names [P2]**
   - **Issue:** Inconsistent. Two Infrastructure roles are involved: the Furniture Request Coordinator (reviews and assigns) and the Furniture Coordinator, Joy (prepares the proposal). Screens and speech use FRC, coordinator and Joy interchangeably.
   - **Evidence status:** **C** that both roles exist (1 Oct). Exact titles unconfirmed.
   - **Validation needed:** Cohen for exact role titles (Q4).
   - **Recommended change:** Titles in full, no acronyms. One persona name per role, matching the Requirements Document.
 - **2.10 Activity and messages [P2]**
-  - **Issue:** Missing. A two-sided history was agreed but its placement was not. The activity feed and the messages are not related. The willingness test Felix proposed has no owner.
+  - **Issue:** Missing. A two-sided history was agreed but its placement was not. The earlier build has a “Message Joy” composer and two activity events, but no message from Joy in the history. The willingness test Felix proposed has no owner.
   - **Evidence status:** **H.** No evidence that Infrastructure staff will message inside PRISM.
   - **Validation needed:** Infrastructure-side user. Usability test.
   - **Recommended change:** One Activity timeline per work order, mixing status changes and messages, each with role, name and time. Put it on the right, the same side as the Scenario 1 panel.
-  - **Prototype text check:** Pasted earlier build has a composer only; no message from Joy in the history.
 - **2.11 Notifications [P2]**
-  - **Issue:** Inconsistent. The 1 Oct decision: email only signals a change and returns the user to PRISM. The Scenario 2 notification should follow it and land on the right work order.
+  - **Issue:** Inconsistent. The 1 October decision: a notification signals a change and returns the user to PRISM. The earlier build has a separate Notifications page (“Mark all read”); the 3 October brief removes it.
   - **Evidence status:** **S:** CMACs do not open the legacy system’s emails (Demo 2); one PM-side complaint about repeats; the same interviewee showed little interest in status notifications.
   - **Validation needed:** Usability test.
-  - **Recommended change:** Three linked frames: email with a count and a link, in-app marker, work order. The marker clears when the decision is recorded.
-  - **Prototype text check:** Earlier build has a separate Notifications page; the brief forbids one.
+  - **Recommended change:** Use an unread marker on the list and in the menu that opens the request at the relevant tab and clears only the unread state. No separate Notifications page. Show email only as a concept frame.
 - **2.12 Later stages, dates and closure [P3]**
   - **Issue:** Assumption as rule. Fulfilling and Closed are shown but not designed. Any target date or service standard would be invented, and nothing should imply that Kevin closes the request.
   - **Evidence status:** **A.** Nothing on the record.
@@ -157,23 +144,20 @@ Team Dart | PRISM Request | MDPM 883 Assignment 3 | Working session, Monday 5 Oc
   - **Validation needed:** Cohen Q9, Wednesday.
   - **Recommended change:** Say “out of scope for this prototype”, never “not permitted”. Record other user groups as a design principle in the Requirements Document. Do not build the client-contact section until decided.
 - **3.2 Sample data across scenarios [P1]**
-  - **Issue:** Inconsistent. One request should travel through both scenarios. Two people build in two copies of the file and there is a time gap between scenarios.
+  - **Issue:** Inconsistent. One request should travel through both scenarios. The same record appears as “Not supplied”, “Work Order #001” and “PR-2026-1027” in the pasted screens. “Task chairs” appears in the prototype but not in the Guiding Scenario (“fourteen chairs”) or the brief (“fourteen additional chairs”).
   - **Evidence status:** **TS.** The Guiding Scenario fixes the case: fourteen chairs, McDougall Centre, Calgary, recycled preferred.
   - **Validation needed:** None.
   - **Recommended change:** Pin one sample-data sheet in the file (draft in Appendix B). Both builders copy from it.
-  - **Prototype text check:** Same record appears as “Not supplied”, “#001” and “PR-2026-1027”; “task chairs” is in no source.
 - **3.3 Status vocabulary [P1]**
-  - **Issue:** Inconsistent. Status words differ between list, tracker, notification and discussion, and must match the Requirements Document. Colour is allowed only with the stage label (1 Oct).
+  - **Issue:** Inconsistent. Status words differ between list, tracker, notification and discussion. The pasted screens use Draft, Client approval pending, Action needed, Under coordination, Reviewing and Closed. Colour is allowed only with the stage label (1 Oct).
   - **Evidence status:** **TD** (1 Oct on colour). No vocabulary agreed.
   - **Validation needed:** Stage names with Cohen (see 2.2).
   - **Recommended change:** One status table: label, meaning for Kevin, holder, Kevin’s action (draft in Appendix B). Label always beside colour. Copy into the data dictionary.
-  - **Prototype text check:** Pasted screens use Draft, Client approval pending, Action needed, Under coordination, Reviewing, Closed.
 - **3.4 Product name [P2]**
-  - **Issue:** Inconsistent. PRISM Requests, PRISM Request, WORTS 2 and a file titled “Wort2” are all in use. The reminder to change the name has no owner.
+  - **Issue:** Inconsistent. The prototype header reads “PRISM Request”. Revision 2 and the team’s documents say “PRISM Requests”. WORTS 2 (Cohen’s interim suggestion, as reported) and a file titled “Wort2” were also in use.
   - **Evidence status:** **S.** WORTS 2 is Cohen’s interim suggestion, as reported by Mmenyene.
   - **Validation needed:** Cohen Q10, in writing.
-  - **Recommended change:** Choose one name today; use it on the file, screens, video and documents.
-  - **Prototype text check:** Prototype says “PRISM Request”; Revision 2 and the QA list say “PRISM Requests”.
+  - **Recommended change:** Choose one name and use it on the file, screens, video and documents. The prototype and brief use “PRISM Request”.
 - **3.5 Balance between the scenarios [P1]**
   - **Issue:** Missing. Scenario 1 is nearly complete and Scenario 2 is “very rough”, yet post-submission visibility is the strongest evidence. Without it the prototype reads as a refinement of form submission.
   - **Evidence status:** **C** for post-submission visibility (both sides). Entry pain rests on **S** (Kai); PM-side interviewees were content.
