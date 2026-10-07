@@ -43,7 +43,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>0</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2026-10-07T00:15:14</CurrentDate>
+    <CurrentDate>2026-10-07T01:39:33</CurrentDate>
     <MicrosoftProjectServerURL>0</MicrosoftProjectServerURL>
     <Autolink>0</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -1808,7 +1808,7 @@
         <Task>
             <UID>35</UID>
             <ID>35</ID>
-            <Name>M2 Compliance path and budget confirmed</Name>
+            <Name>M2 Compliance path confirmed</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
@@ -1854,7 +1854,7 @@
         <Task>
             <UID>36</UID>
             <ID>36</ID>
-            <Name>M3 Trailer delivered; equipment and fit-out contracted</Name>
+            <Name>M3 Trailer and equipment acquired</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
@@ -1999,7 +1999,7 @@
         <Task>
             <UID>39</UID>
             <ID>39</ID>
-            <Name>M6 Staff trained; compliance documents filed</Name>
+            <Name>M6 Staff trained; compliance package complete</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
