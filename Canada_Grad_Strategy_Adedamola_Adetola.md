@@ -12,6 +12,7 @@
 **Strengths:** a hands-on UAV and machining profile, which is rare among applicants. You do real diagnostics on multirotors and FPV drones (ESC and structural faults), you design in Inventor and Fusion, and you fabricate on lathe and mill. A first-class degree gives you the grades.
 
 **Weaknesses to fix before applying:**
+
 - No publications, and no research assistantship on the CV. The Aerotech work is technician-level, so frame it as *fault logs and field data*.
 - No GPA or percentage is stated. Add it with the conversion.
 - No final-year project with measured results. Quantify the Grain Grinding Machine and the Drone Design projects (throughput, mass, thrust, test results).
@@ -33,6 +34,7 @@
 | **Not recommended as first target** | **Polytechnique Montréal, Dr. Giovanni Beltrame** (MIST Lab) ✅ | Swarm and autonomy | The home department is Computer & Software Engineering ✅, which favours software-heavy applicants. |
 
 **Course-based fallbacks** (confirm each on the official page):
+
 - Concordia M.Eng. Aerospace is the only one of the schools I checked that is confirmed course-based ✅ (aggregator listing; fees are inconsistent across sources, so use Concordia's own page).
 - McGill M.Eng. Aerospace is course-based ✅.
 - TMU M.Eng. Aerospace and U of T (UTIAS) M.Eng. exist as professional programs, but their course-based status was not confirmed ⚠️.
@@ -48,6 +50,8 @@
 **Gap.** Fault diagnosis for multirotors concentrates on propellers and motors. In the work I found, ESC faults are mentioned as one part of the powertrain rather than studied directly. Examples: Bondyra et al. (2018, vibration-based blade damage); Cacace et al. (2024, J. Intelligent & Robotic Systems, motor-fault detection via an external-wrench estimate and an RNN); and a 2019 Berkeley study on vibration-based propeller diagnosis ✅. Nearly all of it is simulation or lab-bench work. ⚠️ I did not find an ESC-specific review in one search, so run a systematic search before claiming novelty.
 
 **Research questions.**
+
+
 1. Which ESC fault signatures (desync, thermal derating, FET failure, signal loss) are observable from standard flight-controller logs?
 2. Can a lightweight detector run on-board and still separate ESC faults from motor and propeller faults?
 3. Does fault-tolerant reallocation improve landing outcomes under ESC dropout?
@@ -63,6 +67,8 @@
 **Gap.** MDO reviews cover aerial vehicles broadly (e.g. Papageorgiou et al., 2018, *Int. J. Aerospace Engineering*, DOI 10.1155/2018/4258020 ✅), but manufacturing cost and process limits, such as machining or printing constraints, are rarely built into the optimization loop for small UAVs. ⚠️ I did not read the full text; check its "gaps" section.
 
 **Research questions.**
+
+
 1. How much mass or cost does including manufacturing constraints change in the optimum?
 2. Does a surrogate-assisted loop keep the cost of that extra fidelity affordable?
 
@@ -75,6 +81,8 @@
 **Gap.** The lab's published work covers robust cooperative control of quadrotors carrying payloads: Qian and Liu, *J. Guidance, Control, and Dynamics* (2022), DOI 10.2514/1.G006173 ✅, and Chen, Shan and Liu, *Int. J. Aerospace Engineering* (2022), DOI 10.1155/2022/2486561 ✅. ⚠️ I did not confirm whether motor or ESC degradation inside a cooperative payload setting is covered. Verify with a literature search first.
 
 **Research questions.**
+
+
 1. How does partial loss of thrust on one carrier alter payload stability?
 2. Can the team reallocate load safely?
 
@@ -85,6 +93,7 @@
 *(A fourth, for Dr. Bisheban, can follow the same pattern: learning-based fault-tolerant control of a drone with a manipulator. I would not draft it until you confirm interest.)*
 
 **Foundational literature (verified):**
+
 - Zhang, Y. & Jiang, J. (2008). Bibliographical review on reconfigurable fault-tolerant control systems. *Annual Reviews in Control*, 32(2), 229–252. DOI 10.1016/j.arcontrol.2008.03.008 ✅
 - Yu, Z., Zhang, Y., Jiang, B., Su, C.-Y. (2023). *Fault-Tolerant Cooperative Control of Unmanned Aerial Vehicles*. Springer. ISBN 978-981-99-7660-7 ✅ (author order as listed by a retailer; confirm)
 - Qian, L. & Liu, H.H.T. (2022). Robust path-following control for multiple quadrotors with a slung payload. *JGCD*. DOI 10.2514/1.G006173 ✅ (title wording approximate; the page confirmed authors, journal and DOI)
@@ -154,6 +163,7 @@ Adedamola Adetola | adetoladamolaayo@gmail.com
 ---
 
 ## 5. Next steps (in order)
+
 1. Send me the portfolio contents and GPA, and I will tighten the proposals and emails.
 2. Run a proper literature search for each gap (Scopus, Web of Science, Google Scholar) and keep the search strings; this is what will make the "gap" claims defensible.
 3. Check each lab and admissions page for 2027 intake, funding, and English requirements.
