@@ -21,7 +21,7 @@
 function createSurvey() {
   var form = FormApp.create("Generative AI at Work and School: A Short Survey");
   form.setDescription(
-    "A 4-minute anonymous survey for a college business analysis course. " +
+    "A 4-minute anonymous survey run by Adekunle Adeniji and Alain Rivera Sanchez for a business analysis course (MGMT-6124) at Fanshawe College. " +
     "It asks how people use generative AI tools (like ChatGPT, Copilot, Gemini or Claude) at work and in school, " +
     "and what support they need. Taking part is voluntary, no names or emails are collected, " +
     "and results are only reported as group totals. You must be 18 or older. Thank you!");
