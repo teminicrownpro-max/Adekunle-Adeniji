@@ -8,7 +8,10 @@
  *  3. Choose the function "createSurvey" in the toolbar and click Run.
  *  4. Approve the permissions (Forms, Sheets, Drive: it only touches the form and sheet it creates).
  *  5. Open View > Logs (or Execution log). You get 3 links: the form to EDIT, the form to SHARE, and the response sheet.
- *  6. Open the form, click the Settings tab, and check "Responses > Collect email addresses" is OFF (anonymous survey).
+ *  6. TEST THE SHARE LINK while signed out: open it in a private/incognito window. If it asks you to sign in, open the form's
+ *     Settings and set responders to "Anyone with the link" (turn off "Restrict to users in <your organisation>"), then test again.
+ *     Tip: a personal Gmail account avoids school/Workspace restrictions. A college account may block people outside the school.
+ *  7. Also check Settings > Responses > "Collect email addresses" is OFF (anonymous survey).
  *
  * IMPORTANT: the option wording below is what the Excel workbook counts. If you reword an option here,
  * reword the matching label on the workbook's Summary / XTab sheets too (the 'Unmatched answers' check will tell you).
@@ -23,6 +26,9 @@ function createSurvey() {
     "and what support they need. Taking part is voluntary, no names or emails are collected, " +
     "and results are only reported as group totals. You must be 18 or older. Thank you!");
   form.setCollectEmail(false);
+  // Do not force respondents to sign in to a Google account (school/Workspace accounts can default to "restrict to organisation").
+  try { form.setRequireLogin(false); }
+  catch (e) { Logger.log("Could not clear the sign-in requirement (" + e + "). Open the form's Settings and allow Anyone with the link."); }
   form.setProgressBar(true);
   form.setShowLinkToRespondAgain(false);
   form.setAllowResponseEdits(false);
@@ -76,8 +82,17 @@ function createSurvey() {
   catch (e) { Logger.log("Could not publish automatically (" + e + "). Open the form and click Publish."); }
   form.setAcceptingResponses(true);
 
+  // Self-check for the two settings that most often stop outsiders from responding.
+  try {
+    Logger.log("Self-check  | collects email: " + form.collectsEmail() + " | requires sign-in: " + form.requiresLogin());
+    if (form.requiresLogin()) {
+      Logger.log("WARNING: this form requires sign-in, so friends and family may be blocked. Open the form > Settings and allow Anyone with the link, or re-run from a personal Gmail account.");
+    }
+  } catch (e) { Logger.log("Self-check skipped: " + e); }
+
   Logger.log("EDIT the form:      " + form.getEditUrl());
   Logger.log("SHARE this link:    " + form.getPublishedUrl());
   Logger.log("Response sheet:     " + ss.getUrl());
+  Logger.log("NEXT: open the SHARE link in an incognito window and confirm it loads without a sign-in prompt.");
   Logger.log("Reminder: the report needs a link to your survey results. Share the response sheet 'view only' and paste its link into the report.");
 }

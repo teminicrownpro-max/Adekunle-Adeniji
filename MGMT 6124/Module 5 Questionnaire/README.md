@@ -19,9 +19,10 @@ A link has to come from a form that lives in **your** Google account, so it cann
 4. Open **Execution log**. It prints three links:
    - `SHARE this link:` is the one you send to respondents.
    - `EDIT the form:` is where you can change wording (but see the note below).
-   - `Response sheet:` is where answers arrive. Download it as `.xlsx` or `.csv` for the analysis workbook.
-5. Test the share link in a private/incognito window: pick **Never** on Q3 (you should jump to the last page), then try again with **Daily**.
-6. If the form says it is not published or not accepting responses, open it in edit mode and click **Publish**.
+   - `Response sheet:` is where answers arrive. Download it as `.xlsx` (whole file) or `.csv` (make sure the **Form Responses 1** tab is the active one, not the empty Sheet1) for the analysis workbook.
+5. Test the share link in a private/incognito window while signed out of Google. It must open **without** asking you to sign in. If it does ask, open the form's **Settings** and set responders to **Anyone with the link** (turn off "Restrict to users in ..."), then test again. A school/Workspace account often defaults to restricted, which would block friends and family; a personal Gmail account does not.
+6. Still in the private window, pick **Never** on Q3 (you should jump to the last page), then try again with **Daily**.
+7. If the form says it is not published or not accepting responses, open it in edit mode and click **Publish**.
 
 Do not change the wording of answer options after people start responding. The workbook counts the exact text.
 
