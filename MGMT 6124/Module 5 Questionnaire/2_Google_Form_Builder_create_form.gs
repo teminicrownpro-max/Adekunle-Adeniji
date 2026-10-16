@@ -70,6 +70,12 @@ function createSurvey() {
   var ss = SpreadsheetApp.create("Generative AI at Work and School: A Short Survey (Responses)");
   form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
 
+  // Some Google Forms versions create new forms unpublished. Publish and open the form to responses.
+  // Guarded so the script still works on versions without these methods.
+  try { if (typeof form.setPublished === "function") { form.setPublished(true); } }
+  catch (e) { Logger.log("Could not publish automatically (" + e + "). Open the form and click Publish."); }
+  form.setAcceptingResponses(true);
+
   Logger.log("EDIT the form:      " + form.getEditUrl());
   Logger.log("SHARE this link:    " + form.getPublishedUrl());
   Logger.log("Response sheet:     " + ss.getUrl());
