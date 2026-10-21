@@ -15,7 +15,7 @@ PALETTE = {
 }
 
 KEYNOTES = [
-    (1, 'Sintered-stone rainscreen panels, 5\'x10\' warm limestone finish, 1/4" open joints'),
+    (1, 'Sintered-stone rainscreen panels, 10\'x5\' stack bond, warm limestone finish, 1/4" open joints'),
     (2, 'Thermally-modified ash cladding, vertical shiplap, natural oil finish'),
     (3, 'Dark bronze anodized aluminum: lantern frame, fascia and panels'),
     (4, 'Structural glass curtain wall, low-iron low-E insulated units, bronze caps'),
@@ -25,11 +25,12 @@ KEYNOTES = [
     (8, 'Overhead garage door, bronze frame, satin-etched glass'),
     (9, 'Wood fin screen, 2" x 10" thermally-modified ash @ 13" o.c.'),
     (10, 'Cantilevered bronze entry canopy with integral downlights'),
-    (11, 'Wood slat soffit with continuous LED cove (2700K)'),
+    (11, 'Wood slat soffit with continuous LED cove (2700K) — see details 2 & 3 / A2.4'),
     (12, 'Extensive sedum green roof with stone ballast edge'),
     (13, 'Steel column, 8" square, bronze powder coat'),
     (14, 'Casement / awning windows, dark bronze frame'),
     (15, 'Wood privacy fins between terraces'),
+    (16, 'Insulated steel service door, dark bronze finish, closer & lever'),
 ]
 
 
@@ -162,22 +163,15 @@ class Elev:
         svg, p = self.svg, self.pal
         u0, u1, z0, z1 = it['u0'], it['u1'], it['z0'], it['z1']
         if mat == 'stone':
-            z = math.floor(z0 / 2.5) * 2.5 + 2.5
-            row = 0
-            while z < z1:
-                svg.line(self.X(u0), self.Z(z), self.X(u1), self.Z(z), sw=0.5, c=p['stone_j'])
-                z += 2.5
-            zz = math.floor(z0 / 2.5) * 2.5
-            while zz < z1:
-                off = 2.5 if int(round(zz / 2.5)) % 2 else 0
-                u = math.floor((u0 - off) / 5) * 5 + off
-                while u < u1:
-                    if u > u0:
-                        svg.line(self.X(u), self.Z(max(zz, z0)), self.X(u), self.Z(min(zz + 2.5, z1)), sw=0.5,
-                                 c=p['stone_j'])
-                    u += 5
-                zz += 2.5
-                row += 1
+            # 10'-0" x 5'-0" panels in stack bond: horizontal joints at mid-storey, vertical joints on a 10' module
+            for z in (5.0, 16.5, 27.5):
+                if z0 < z < z1:
+                    svg.line(self.X(u0), self.Z(z), self.X(u1), self.Z(z), sw=0.5, c=p['stone_j'])
+            u = math.floor(u0 / 10) * 10
+            while u < u1:
+                if u > u0:
+                    svg.line(self.X(u), self.Z(z0), self.X(u), self.Z(z1), sw=0.5, c=p['stone_j'])
+                u += 10
         elif mat == 'wood':
             u = math.floor(u0 / 0.5) * 0.5
             while u < u1:
@@ -565,11 +559,11 @@ def section_b(svg, left, base, s):
         sect_rect(svg, X, Z, x - 0.21, 22, x + 0.21, 32)
     # cut furniture / millwork
     sect_rect(svg, X, Z, 0.75, 0, 2.0, 2.4, fill='#d8d1c6', stroke=INK, sw=0.6)
-    sect_rect(svg, X, Z, 33, 0, 45, 3.0, fill='#e9e3d8', stroke=INK, sw=0.8)
-    sect_rect(svg, X, Z, 33, 2.85, 45, 3.15, fill='#f4f1ea', stroke=INK, sw=0.6)
+    sect_rect(svg, X, Z, 31.5, 0, 43.5, 3.0, fill='#e9e3d8', stroke=INK, sw=0.8)
+    sect_rect(svg, X, Z, 31.5, 2.85, 43.5, 3.15, fill='#f4f1ea', stroke=INK, sw=0.6)
     sect_rect(svg, X, Z, 47.25, 0, 49.25, 8.5, fill='#e9e3d8', stroke=INK, sw=0.8)
     for k in range(4):
-        cx = 12.5 * k + 6.25
+        cx = 12.5 * k + (4.95 if k in (0, 2) else 7.55)
         sect_rect(svg, X, Z, cx - 2.67, 11, cx + 2.67, 12.9, fill='#efeae2', stroke='#777', sw=0.6)
     sect_rect(svg, X, Z, 38.6, 22, 44.6, 24.0, fill='#fff', stroke=INK, sw=0.8)
     # pendants & ceiling lines

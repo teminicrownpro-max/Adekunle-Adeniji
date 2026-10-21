@@ -2,7 +2,7 @@
 import math
 
 from model import (LV, CUT, EXT_OPS, DOORS, WALLS, ROOMS, FRONT_JAMBS, LANTERN_CW, ST_X0, ST_X1, ST_Y0, ST_Y1,
-                   TREAD, RISERS, CAT_X1, ELEV, LOT_W, LOT_D, HOUSE_AT, ZONE_COLORS)
+                   TREAD, RISERS, CAT_X1, ELEV, LOT_W, LOT_D, HOUSE_AT, ZONE_COLORS, RAILS, GUARD_T)
 from svgkit import INK, FURN, SOFT, Fr, fi, tag
 
 POCHE_EXT = '#1e1e1c'
@@ -169,6 +169,9 @@ def mark_tag(svg, T, w, o):
         if o['typ'] in ('pocket', 'bifold', 'elev', 'double'):
             off = sd * (w['t'] / 2 + 0.75)
         x, y = (mid, w['c'] + off) if w['o'] == 'h' else (w['c'] + off, mid)
+        if o.get('tag_at'):
+            tag(svg, *T.p(*o['tag_at']), o['mark'], shape='circle', size=5.2, r=8.5, fill='#fff')
+            return
         if o['typ'] in ('swing',):
             # sit beside the leaf rather than on top of it
             if w['o'] == 'h':
@@ -508,11 +511,11 @@ def furnish_1(svg, T):
     for y0_, y1_, lab in ((35.0, 38.0, 'REF'), (38.0, 40.5, 'FRZ'), (40.5, 43.2, 'OVENS'), (43.2, 46.0, 'PANTRY')):
         frect(svg, T, 47.25, y0_, 49.25, y1_, fill='#f1eee8', sw=0.8)
         ftext(svg, T, 48.25, (y0_ + y1_) / 2 - 0.2, lab, size=5)
-    frect(svg, T, 33.0, 39.5, 45.0, 44.0, fill='#f4f1ea', sw=1.0)
-    sink(svg, T, 37.8, 40.4, 2.6, 1.2)
-    frect(svg, T, 39.6, 39.6, 41.6, 41.4, fill='none', sw=0.5, dash='2 2')
-    ftext(svg, T, 39.0, 42.3, '12\' WATERFALL ISLAND', size=5.2)
-    for x in (34.8, 37.8, 40.8, 43.8):
+    frect(svg, T, 31.5, 39.5, 43.5, 44.0, fill='#f4f1ea', sw=1.0)
+    sink(svg, T, 36.3, 40.4, 2.6, 1.2)
+    frect(svg, T, 38.1, 39.6, 40.1, 41.4, fill='none', sw=0.5, dash='2 2')
+    ftext(svg, T, 37.5, 42.3, '12\' WATERFALL ISLAND', size=5.2)
+    for x in (33.3, 36.3, 39.3, 42.3):
         chair(svg, T, x, 45.0, 1.3, 'N', round_=True)
     # scullery + mudroom
     counter(svg, T, 47.25, 24.25, 49.25, 31.79)
@@ -528,8 +531,16 @@ def furnish_1(svg, T):
     # garage
     car(svg, T, 32.8, 11.6, 'S')
     car(svg, T, 42.4, 11.6, 'S')
-    counter(svg, T, 47.6, 1.3, 49.25, 17.6, fill='#faf8f4')
-    ftext(svg, T, 48.45, 9.5, 'STORAGE CABINETS', size=4.8, rot=-90)
+    counter(svg, T, 47.6, 1.3, 49.25, 14.8, fill='#faf8f4')
+    ftext(svg, T, 48.45, 8.0, 'STORAGE CABINETS', size=4.8, rot=-90)
+    frect(svg, T, 46.75, 19.75, 49.0, 23.5, fill='#f4f3f1', sw=0.7)
+    ftext(svg, T, 47.9, 21.5, 'AHU-1', size=5)
+    frect(svg, T, 27.25, 11.0, 28.0, 15.5, fill='#f4f3f1', sw=0.6)
+    ftext(svg, T, 28.6, 13.25, 'PV INVERTER + BATTERY', size=4.6, rot=-90)
+    for i in range(10):
+        T.rect(svg, 15.35 + 1.15 * i, -0.7, 15.55 + 1.15 * i, 0, fill=POCHE_INT)
+    frect(svg, T, 15.2, -4.6, 26.0, -2.0, fill='#bfdbe8', sw=0.7)
+    ftext(svg, T, 20.6, -3.5, 'LINEAR REFLECTING POOL', size=5)
     frect(svg, T, 27.25, 8.6, 27.85, 9.6, fill='#fff', sw=0.6)
     ftext(svg, T, 28.6, 8.95, 'EV', size=5.5, weight=700)
     ftext(svg, T, 38.5, 1.6, "18'-0\" x 8'-0\" O.H. DOOR", size=5.2)
@@ -552,13 +563,18 @@ def suite_layout(k):
     return baths[k], vest[k], k in (0, 2)
 
 
+def suite_bed_x(k):
+    """Bed centerline for Level 2 suite k, kept clear of the vestibule mouth."""
+    _, _, bath_left = suite_layout(k)
+    return 12.5 * k + (4.95 if bath_left else 7.55)
+
+
 def furnish_2(svg, T):
     pavers(svg, T, 14, 0, 48.75, 6, dx=4, dy=2)
     pavers(svg, T, 0, 54, 50, 60, dx=4, dy=2)
     sedum(svg, T, 0, 60, 50, 66)
-    T.rect(svg, 0, 59.85, 50, 60.15, fill='#fff', stroke='#444', sw=0.6)
     for x in (12.5, 25, 37.5):
-        T.rect(svg, x - 0.25, 54, x + 0.25, 59.6, fill='#c9b59a', stroke=FURN, sw=0.4)
+        T.rect(svg, x - 0.25, 54, x + 0.25, 57.0, fill='#c9b59a', stroke=FURN, sw=0.4)
     for k in range(4):
         (b0, b1), _, _ = suite_layout(k)
         T.rect(svg, b0, 28.21, b1, 35.79, fill=WET_FILL)
@@ -575,7 +591,7 @@ def furnish_2(svg, T):
     ftext(svg, T, 18.4, 13.6, 'GAME TABLE', size=5)
     rug(svg, T, 27.4, 8.0, 36.8, 19.4)
     sofa(svg, T, 29.3, 13.8, 9.2, 3.3, 'W')
-    sofa(svg, T, 33.2, 9.4, 5.2, 2.9, 'S')
+    sofa(svg, T, 32.7, 9.4, 4.2, 2.9, 'S')
     frect(svg, T, 31.6, 12.2, 34.8, 15.8, fill='#fbfaf7')
     fireplace(svg, T, 36.95, 11.5, 37.79, 18.5)
     counter(svg, T, 26.0, 21.79, 37.79, 23.79)
@@ -593,9 +609,12 @@ def furnish_2(svg, T):
     appliance(svg, T, 48.1, 19.7, 2.2, 'D')
     counter(svg, T, 38.21, 15.21, 46.6, 17.21)
     sink(svg, T, 41.6, 16.2, 1.8, 1.2)
-    counter(svg, T, 38.21, 21.4, 40.2, 23.79, fill='#faf8f4')
+    counter(svg, T, 38.21, 21.4, 39.8, 23.79, fill='#faf8f4')
     ftext(svg, T, 43.2, 18.0, 'FOLD / STEAM', size=4.8)
-    closet_rod(svg, T, 44.4, 24.4, 49.05, 25.6)
+    closet_rod(svg, T, 44.4, 24.4, 46.3, 27.6)
+    ftext(svg, T, 45.35, 26.0, 'LINEN', size=4.6, rot=-90)
+    frect(svg, T, 46.7, 24.4, 49.04, 27.6, fill='#f4f3f1', sw=0.7)
+    ftext(svg, T, 47.87, 25.85, 'AHU-2', size=5)
     # balcony
     for x in (18.2, 21.2):
         chaise(svg, T, x, 3.1, 2.2, 4.6, 'N')
@@ -607,21 +626,21 @@ def furnish_2(svg, T):
         x0 = 12.5 * k
         if bath_left:
             shower(svg, T, b0, 28.21, b0 + 3.6, 32.3)
-            wc(svg, T, b1 - 1.15, 29.3, 'S')
+            wc(svg, T, b1 - 1.5, 29.3, 'S')
         else:
             shower(svg, T, b1 - 3.6, 28.21, b1, 32.3)
-            wc(svg, T, b0 + 1.15, 29.3, 'S')
+            wc(svg, T, b0 + 1.5, 29.3, 'S')
         vanity(svg, T, b0 + 0.3, 34.1, b1 - 0.3, 35.79, [(b0 + 2.4, 35.1), (b1 - 2.4, 35.1)], 'N')
-        closet_rod(svg, T, b0, 38.6, b1, 40.29)
-        cx = x0 + 6.25
-        bed(svg, T, cx, 44.2, 5.33, 6.67, 'S')
-        for dx in (-3.55, 3.55):
-            frect(svg, T, cx + dx - 0.75, 40.9, cx + dx + 0.75, 42.4, fill='#fbfaf7', sw=0.6)
+        closet_rod(svg, T, b0, 38.79, b1, 40.79)
+        cx = suite_bed_x(k)
+        bed(svg, T, cx, 44.55, 5.33, 6.67, 'S')
+        for dx in (-3.35, 3.35):
+            frect(svg, T, cx + dx - 0.62, 41.4, cx + dx + 0.62, 42.65, fill='#fbfaf7', sw=0.6)
         chair(svg, T, x0 + (2.4 if not bath_left else 10.1), 51.6, 2.2, 'S' if k % 2 else 'S')
         chaise(svg, T, x0 + 4.4, 57.0, 2.1, 4.4, 'N')
         chaise(svg, T, x0 + 8.1, 57.0, 2.1, 4.4, 'N')
         svg.text(*T.p((b0 + b1) / 2, 32.9), f'BATH {k + 2}', size=6.5, weight=700, anchor='middle')
-        svg.text(*T.p((b0 + b1) / 2, 39.25), 'WIC', size=5.5, anchor='middle', fill=FURN)
+        svg.text(*T.p((b0 + b1) / 2, 37.3), 'WALK-IN CLOSET', size=5.5, anchor='middle', fill=FURN)
 
 
 def furnish_3(svg, T):
@@ -647,16 +666,15 @@ def furnish_3(svg, T):
     chair(svg, T, 17.2, 10.4, 1.6, 'E')
     chair(svg, T, 29.4, 8.4, 2.4, 'N')
     shower(svg, T, 19.71, 20.3, 23.3, 23.79)
-    wc(svg, T, 25.6, 22.6, 'N')
-    vanity(svg, T, 20.0, 17.71, 26.5, 19.4, [(21.8, 18.6), (24.8, 18.6)], 'S')
-    closet_rod(svg, T, 30.1, 18.6, 31.75, 23.79)
+    wc(svg, T, 25.4, 18.9, 'S')
+    vanity(svg, T, 20.0, 17.71, 24.0, 19.4, [(22.0, 18.6)], 'S')
+    closet_rod(svg, T, 29.96, 18.6, 31.79, 23.79)
     # bedroom 7
     bed(svg, T, 41.6, 13.79, 6.33, 7.0, 'N')
     for dx in (-4.05, 4.05):
         frect(svg, T, 41.6 + dx - 0.8, 15.6, 41.6 + dx + 0.8, 17.2, fill='#fbfaf7', sw=0.6)
     chair(svg, T, 34.6, 8.6, 2.4, 'N')
-    closet_rod(svg, T, 32.25, 18.6, 34.0, 23.79)
-    closet_rod(svg, T, 34.0, 22.1, 38.79, 23.79)
+    closet_rod(svg, T, 32.21, 18.6, 34.21, 23.79)
     shower(svg, T, 45.6, 20.2, 49.25, 23.79)
     wc(svg, T, 43.6, 22.6, 'N')
     vanity(svg, T, 39.6, 17.71, 47.0, 19.4, [(41.6, 18.6), (45.0, 18.6)], 'S')
@@ -664,18 +682,20 @@ def furnish_3(svg, T):
     for x in (19.0, 22.0, 36.0, 39.0):
         chair(svg, T, x, 3.0, 2.2, 'N')
     # mech
-    frect(svg, T, 41.6, 24.5, 44.2, 27.5, fill='#f4f3f1', sw=0.7)
-    ftext(svg, T, 42.9, 25.8, 'AHU', size=5)
-    T.circle(svg, 47.8, 26.0, 0.9, fill='#fff', stroke=FURN, sw=0.7)
-    ftext(svg, T, 47.8, 25.85, 'HPWH', size=4.3)
-    frect(svg, T, 44.6, 24.5, 46.6, 27.5, fill='none', sw=0.6, dash='3 2')
-    ftext(svg, T, 45.6, 23.0 + 5.0, '', size=4)
+    frect(svg, T, 40.0, 24.5, 42.5, 27.0, fill='#f4f3f1', sw=0.7)
+    ftext(svg, T, 41.25, 25.6, 'AHU-3', size=5)
+    T.circle(svg, 44.4, 26.0, 0.9, fill='#fff', stroke=FURN, sw=0.7)
+    ftext(svg, T, 44.4, 25.85, 'HPWH', size=4.3)
+    frect(svg, T, 46.4, 24.5, 48.9, 27.5, fill='none', sw=0.6, dash='3 2')
+    for i in range(1, 6):
+        fline(svg, T, 46.6, 24.5 + i * 0.5, 48.7, 24.5 + i * 0.5, sw=0.4)
+    ftext(svg, T, 47.65, 23.0 + 5.0, 'SHIP LADDER / 30"x36" HATCH ABOVE', size=4.2)
     # primary bedroom
     rug(svg, T, 16.6, 35.4, 24.4, 44.4)
-    bed(svg, T, 32.29, 35.2, 6.33, 7.0, 'E')
-    for y in (30.9, 39.5):
-        frect(svg, T, 34.2, y - 0.8, 35.79, y + 0.8, fill='#fbfaf7', sw=0.6)
-    frect(svg, T, 27.4, 32.6, 28.4, 37.8, fill='#efebe4', sw=0.6)
+    bed(svg, T, 32.29, 33.0, 6.33, 7.0, 'E')
+    for y in (29.05, 36.95):
+        frect(svg, T, 34.2, y - 0.75, 35.79, y + 0.75, fill='#fbfaf7', sw=0.6)
+    frect(svg, T, 27.4, 30.4, 28.4, 35.6, fill='#efebe4', sw=0.6)
     fireplace(svg, T, 14.21, 37.0, 15.0, 43.0)
     sofa(svg, T, 21.7, 40.0, 7.0, 3.0, 'E')
     frect(svg, T, 17.4, 38.6, 19.4, 41.4, fill='#fbfaf7')
@@ -686,8 +706,8 @@ def furnish_3(svg, T):
     closet_rod(svg, T, 0.75, 28.6, 2.75, 44.85)
     closet_rod(svg, T, 3.4, 28.21, 10.6, 30.2)
     closet_rod(svg, T, 3.4, 43.25, 13.6, 45.25)
-    frect(svg, T, 5.2, 33.6, 10.2, 39.4, fill='#f4f1ea', sw=0.9)
-    ftext(svg, T, 7.7, 36.4, 'ISLAND', size=5)
+    frect(svg, T, 5.4, 33.6, 8.9, 39.4, fill='#f4f1ea', sw=0.9)
+    ftext(svg, T, 7.15, 36.4, 'ISLAND', size=5)
     frect(svg, T, 11.8, 33.0, 13.79, 40.0, fill='#faf8f4', sw=0.6)
     ftext(svg, T, 12.8, 36.5, 'MIRROR / VANITY', size=4.6, rot=-90)
     # spa bath
@@ -807,6 +827,12 @@ def elev_mark(svg, T, x, y, look, num_, sheet):
 def floor_plan(svg, T, lvl):
     FURNISH[lvl](svg, T)
     draw_walls(svg, T, lvl)
+    for (o, c, a, b, z0, _z1) in RAILS:
+        if abs(z0 - LV[lvl]) < 0.01:
+            if o == 'h':
+                T.rect(svg, a, c - GUARD_T / 2, b, c + GUARD_T / 2, fill='#fff', stroke='#444', sw=0.6)
+            else:
+                T.rect(svg, c - GUARD_T / 2, a, c + GUARD_T / 2, b, fill='#fff', stroke='#444', sw=0.6)
     room_labels(svg, T, lvl)
     if lvl == 1:
         stair(svg, T, ST_X0, ST_X1, ST_Y0, RISERS - 1, TREAD, solid_to=7, up=(ST_Y0 + 0.4, ST_Y0 + 6.6 * TREAD, 'UP'),
@@ -849,7 +875,7 @@ def roof_plan(svg, T):
     T.rect(svg, 0, 59.85, 50, 60.15, fill='#fff', stroke='#444', sw=0.6)
     T.rect(svg, 0, 53.6, 50, 53.9, fill='#fff', stroke='#444', sw=0.6)
     for x in (12.5, 25, 37.5):
-        T.rect(svg, x - 0.25, 54, x + 0.25, 59.6, fill='#c9b59a', stroke=FURN, sw=0.4)
+        T.rect(svg, x - 0.25, 54, x + 0.25, 57.0, fill='#c9b59a', stroke=FURN, sw=0.4)
     # main roof
     outline = [(14, 0), (50, 0), (50, 50), (0, 50), (0, 24), (14, 24)]
     T.poly(svg, outline, fill='#f4f3f0', stroke=INK, sw=2.2)
@@ -862,31 +888,24 @@ def roof_plan(svg, T):
     for a, b in (((14.6, 0.6), (30, 13)), ((49.4, 0.6), (30, 13)), ((49.4, 24.0), (30, 13)), ((14.6, 24.6), (30, 13)),
                  ((0.6, 24.6), (25, 37)), ((49.4, 24.0), (25, 37)), ((49.4, 49.4), (25, 37)), ((0.6, 49.4), (25, 37))):
         fline(svg, T, *a, *b, sw=0.5, c=SOFT, dash='5 3')
-    ftext(svg, T, 30, 11.6, 'RD-1', size=6, fill=INK, weight=700)
-    ftext(svg, T, 25, 35.6, 'RD-2', size=6, fill=INK, weight=700)
+    ftext(svg, T, 30, 11.6, 'RD-1 / OD-1', size=6, fill=INK, weight=700)
+    ftext(svg, T, 25, 35.6, 'RD-2 / OD-2', size=6, fill=INK, weight=700)
+    for d in ((31.4, 13), (26.4, 37), (4.6, 21.5)):
+        T.circle(svg, *d, 0.45, fill='#fff', stroke=INK, sw=0.8, dash='2 1.5')
     # PV array
-    n_mod = 0
-    for (x0, y0, x1, y1) in ((16.0, 2.0, 48.5, 11.0), (16.0, 15.5, 48.5, 22.5), (2.0, 39.0, 48.5, 48.0)):
-        mw, mh = 5.6, 3.5
-        y = y0
-        while y + mh <= y1 + 1e-6:
-            x = x0
-            while x + mw <= x1 + 1e-6:
-                if not (26.5 < x + mw / 2 < 33.5 and 9 < y + mh / 2 < 17):
-                    frect(svg, T, x, y, x + mw - 0.15, y + mh - 0.15, fill='#dbe3ec', sw=0.5, c='#6f7f91')
-                    fline(svg, T, x + mw / 2, y, x + mw / 2, y + mh - 0.15, sw=0.3, c='#6f7f91')
-                    n_mod += 1
-                x += mw
-            y += mh
+    mods = pv_modules()
+    for x, y, mw, mh in mods:
+        frect(svg, T, x, y, x + mw - 0.15, y + mh - 0.15, fill='#dbe3ec', sw=0.5, c='#6f7f91')
+    n_mod = len(mods)
     # equipment
-    frect(svg, T, 37.5, 26.0, 48.5, 34.5, fill='none', sw=0.7, dash='6 3', c=INK)
+    frect(svg, T, 37.5, 29.0, 48.5, 36.5, fill='none', sw=0.7, dash='6 3', c=INK)
     for x in (38.5, 42.0, 45.5):
-        appliance(svg, T, x + 1.25, 28.6, 2.6, '')
-    ftext(svg, T, 43.0, 32.6, 'HEAT PUMP CONDENSERS (3) ON RAILS', size=5.2, fill=INK)
-    ftext(svg, T, 43.0, 33.6, 'BEHIND 42" BRONZE LOUVER SCREEN', size=5.2, fill=INK)
-    frect(svg, T, 44.6, 24.5, 46.6, 27.5 - 2.0, fill='#fff', sw=0.8, c=INK)
-    ftext(svg, T, 45.6, 24.1 + 0.0, '', size=4)
-    ftext(svg, T, 41.0, 25.0, 'ROOF HATCH', size=5.2, fill=INK)
+        appliance(svg, T, x + 1.25, 31.6, 2.6, '')
+    ftext(svg, T, 43.0, 34.9, 'HEAT PUMP CONDENSERS (3) ON RAILS', size=5.2, fill=INK)
+    ftext(svg, T, 43.0, 35.8, 'BEHIND 42" BRONZE LOUVER SCREEN', size=5.2, fill=INK)
+    frect(svg, T, 46.4, 24.5, 48.9, 27.5, fill='#fff', sw=0.8, c=INK)
+    fline(svg, T, 46.4, 24.5, 48.9, 27.5, sw=0.4)
+    ftext(svg, T, 43.2, 25.6, 'ROOF HATCH 30"x36"', size=5.2, fill=INK)
     # lantern roof
     frect(svg, T, 0, -1.5, 14, 24, fill='#e6e0d6', sw=2.2, c=INK)
     frect(svg, T, 0.6, -0.9, 13.4, 23.4, fill='none', sw=0.7, c=INK)
@@ -897,14 +916,28 @@ def roof_plan(svg, T):
     ftext(svg, T, 4.4, 13.2, "T.O. PARAPET +37'-0\"", size=5.5, fill=INK)
     ftext(svg, T, 10.85, 21.0, 'STRUCTURAL GLASS SKYLIGHT', size=4.8, fill=INK)
     ftext(svg, T, 10.85, 20.1, 'OVER CHANDELIER VOID', size=4.8, fill=INK)
+    T.circle(svg, 3.0, 21.5, 0.55, fill='#fff', stroke=INK, sw=0.9)
+    T.circle(svg, 3.0, 21.5, 0.2, fill=INK)
+    ftext(svg, T, 3.8, 19.9, 'RD-3 / OD-3', size=5, fill=INK, weight=700)
     # canopy
     frect(svg, T, 2.5, -5, 11.5, -1.5, fill='#e6e0d6', sw=0.9, c=INK)
     ftext(svg, T, 7.0, -3.5, 'ENTRY CANOPY +10\'-0"', size=5, fill=INK)
-    # scuppers
-    for x, y, d in ((0, 36, -1), (50, 36, 1), (50, 12, 1)):
-        frect(svg, T, x - 0.4 if d < 0 else x, y - 0.6, x + (0.4 if d > 0 else 0), y + 0.6, fill=INK, sw=0.5, c=INK)
-        T.circle(svg, x + d * 1.0, y, 0.45, fill='#fff', stroke=INK, sw=0.8)
     return n_mod
+
+
+def pv_modules():
+    """PV module rectangles (x, y, w, h), held 3'-0" off every parapet and clear of drains and equipment."""
+    mods = []
+    for (x0, y0, x1, y1) in ((17.6, 3.6, 46.4, 11.0), (17.6, 15.5, 46.4, 22.5), (3.6, 39.0, 46.4, 46.4)):
+        mw, mh = 5.6, 3.5
+        y = y0
+        while y + mh <= y1 + 1e-6:
+            x = x0
+            while x + mw <= x1 + 1e-6:
+                mods.append((x, y, mw, mh))
+                x += mw
+            y += mh
+    return mods
 
 
 # ------------------------------------------------------------ site plan
@@ -933,10 +966,10 @@ def site_plan(svg, T):
     pavers(svg, T, *H(0, 66), *H(50, 88), dx=4, dy=2)
     pool = (*H(5, 69), *H(35, 83))
     T.rect(svg, *pool, fill='#bfdbe8', stroke=INK, sw=1.2)
-    T.rect(svg, *H(5, 69), *H(11, 83), fill='#d5e8f0', stroke='#6a95ab', sw=0.6, dash='3 2')
+    T.rect(svg, *H(29, 69), *H(35, 83), fill='#d5e8f0', stroke='#6a95ab', sw=0.6, dash='3 2')
     ftext(svg, T, *H(20, 76.3), 'POOL 30\' x 14\'', size=7, fill=INK, weight=700)
     ftext(svg, T, *H(20, 75.0), 'HEATED · SALT · AUTO COVER', size=5.5, fill=INK)
-    ftext(svg, T, *H(8, 75.5), 'SUN SHELF', size=5, fill=INK, rot=-90)
+    ftext(svg, T, *H(32, 75.5), 'SUN SHELF', size=5, fill=INK, rot=-90)
     T.rect(svg, *H(38, 69), *H(46, 77), fill='#a9cfe0', stroke=INK, sw=1.2)
     ftext(svg, T, *H(42, 73.0), 'SPA', size=7, fill=INK, weight=700)
     ftext(svg, T, *H(42, 71.8), 'RAISED · SPILLOVER', size=4.6, fill=INK)
@@ -981,8 +1014,8 @@ def site_plan(svg, T):
     T.rect(svg, LOT_W - 5, hy, LOT_W, hy + 66, fill='#ece9e1')
     for y in range(int(hy) + 2, int(hy) + 64, 4):
         T.rect(svg, 1.0, y, 4.0, y + 2.2, fill='#f7f6f2', stroke=SOFT, sw=0.4)
-    T.rect(svg, LOT_W - 4.6, hy + 14, LOT_W - 0.4, hy + 22, fill='#f0eee9', stroke=INK, sw=0.6)
-    ftext(svg, T, LOT_W - 2.5, hy + 18, 'BINS', size=5, fill=INK, rot=-90)
+    T.rect(svg, LOT_W - 4.6, hy + 6, LOT_W - 0.4, hy + 14, fill='#f0eee9', stroke=INK, sw=0.6)
+    ftext(svg, T, LOT_W - 2.5, hy + 10, 'BINS', size=5, fill=INK, rot=-90)
     T.rect(svg, LOT_W - 4.6, hy + 88, LOT_W - 0.4, hy + 96, fill='#f0eee9', stroke=INK, sw=0.6)
     ftext(svg, T, LOT_W - 2.5, hy + 92, 'POOL EQUIP.', size=4.6, fill=INK, rot=-90)
     T.rect(svg, 0.6, hy + 58, 4.4, hy + 61.5, fill='#f6f8f9', stroke=INK, sw=0.6)
@@ -999,7 +1032,9 @@ def site_plan(svg, T):
     ftext(svg, T, *H(7, 12), 'GLASS', size=6, fill='#fff', weight=700)
     ftext(svg, T, *H(7, 10.8), 'LANTERN', size=6, fill='#fff', weight=700)
     svg.text(*T.p(*H(32, 30)), 'PROPOSED RESIDENCE', size=10, weight=700, anchor='middle', ls=1)
-    svg.text(*T.p(*H(32, 27.6)), "3 STORIES · 6,395 SF CONDITIONED", size=7.5, anchor='middle')
+    a = level_areas()
+    svg.text(*T.p(*H(32, 27.6)), f"3 STORIES · {a['L1'] + a['L2'] + a['L3']:,.0f} SF CONDITIONED", size=7.5,
+             anchor='middle')
     svg.text(*T.p(*H(32, 25.6)), "L1 F.F. = 100'-0\" (ASSUMED DATUM)", size=7.5, anchor='middle')
     svg.text(*T.p(*H(32, 23.6)), "T.O. PARAPET 134'-6\" · LANTERN 137'-0\"", size=7.5, anchor='middle')
     # setbacks
@@ -1023,8 +1058,8 @@ def site_plan(svg, T):
     # utilities
     T.rect(svg, *H(23.5, -hy + 4.6), *H(25.5, -hy + 6.0), fill='#fff', stroke=INK, sw=0.7)
     ftext(svg, T, *H(24.5, -hy + 3.4), 'WM', size=5, fill=INK, weight=700)
-    T.circle(svg, *H(50.9, 14), 0.6, fill=INK)
-    ftext(svg, T, *H(52.6, 14.0), 'EM', size=5, fill=INK, weight=700)
+    T.circle(svg, *H(50.9, 3.0), 0.6, fill=INK)
+    ftext(svg, T, *H(52.6, 3.0), 'EM', size=5, fill=INK, weight=700)
     T.circle(svg, *H(-2.0, 50), 0.5, fill='#fff', stroke=INK, sw=0.7)
     ftext(svg, T, *H(-2.0, 48.3), 'CO', size=5, fill=INK, weight=700)
     # dimensions
