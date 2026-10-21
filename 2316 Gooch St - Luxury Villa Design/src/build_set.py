@@ -12,7 +12,7 @@ from svgkit import Svg, PT, INK, SOFT, BRONZE, fi, drawing_title, north_arrow, s
 import plans
 from plans import floor_plan, roof_plan, site_plan, level_areas
 from elev import Elev, KEYNOTES, extents, section_a, section_b, sect_datums
-from interiors import INTERIORS, parapet_detail, terrace_detail
+from interiors import INTERIORS, parapet_detail, terrace_detail, wall_section
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'svg'
 os.makedirs(OUT, exist_ok=True)
@@ -260,12 +260,12 @@ def sheet_cover():
         '3-stop residential elevator serving every level',
         'Chef\'s kitchen: 12-ft waterfall island, 48" range, scullery and walk-in pantry',
         f'{GLASS_FT:.0f} ft of pocketing lift-slide glass in four bays to a covered loggia with outdoor kitchen',
-        'Heated salt pool with sun shelf, raised spillover spa and fire lounge',
+        'Heated salt pool with sun shelf, raised spillover spa and electric fire lounge',
         'Seven bedroom suites, each with its own bath and closet',
-        'Level 3 primary retreat: fireplace, island dressing room, spa bath, 400 SF terrace',
+        'Level 3 primary retreat: electric fireplace, island dressing room, spa bath, 400 SF terrace',
         'Family lounge with 198-bottle backlit wine wall; climate-controlled wine room under the stair',
         'Office behind a wood-fin screen and linear reflecting pool',
-        f'All-electric: ±{PV_KW:.1f} kW solar, battery, heat pumps, ERV, EV charging',
+        f'All-electric: ±{PV_KW:.1f} kW solar, 27 kWh battery, heat pumps, ERV, EV charging',
     ]
     bullets(svg, fx, y + 8, feats[:5], size=11, width=48, gap=9)
     bullets(svg, fx + 545, y + 8, feats[5:], size=11, width=48, gap=9)
@@ -280,8 +280,8 @@ def sheet_cover():
     y = heading(svg, x, y, 'PROJECT DATA', rule=700)
     data = [('Address', '2316 Gooch St, Dallas TX 75241'), ('Subdivision', 'Alameda Heights'),
             ('Lot (assumed)', "60' x 145' = 8,700 SF (0.20 AC)"), ('Zoning', 'R-7.5(A) assumed — verify'),
-            ('Code basis', 'IRC 2021 w/ Dallas amendments'), ('Construction', 'Type V-B, sprinklered (13D)'),
-            ('Stories / height', "3 stories · 34'-6\" parapet · 37'-0\" lantern"),
+            ('Code basis', 'IRC 2021 w/ Dallas amendments'), ('Construction', 'Type V-B · NFPA 13D sprinklers throughout'),
+            ('Stories / height', "3 stories · 35'-2\" parapet · 37'-8\" lantern (avg. grade)"),
             ('Footprint', '2,700 SF + 600 SF loggia'), ('Lot coverage', f'{(2700 + 600) / 8700 * 100:.1f}%'),
             ('School district', 'Dallas ISD')]
     for k, v in data:
@@ -340,7 +340,7 @@ def sheet_concept():
         ('STONE BASE · WOOD CROWN', 'Warm limestone sintered-stone panels wrap Levels 1-2; thermally-modified ash wraps the '
                                     'set-back Level 3; a thin bronze roof plate floats above with LED-lit wood soffits.'),
         ('INDOOR-OUTDOOR LIVING', f'{GLASS_FT:.0f} feet of pocketing lift-slide glass in four bays open the great room to a 50 x 12 ft loggia with '
-                                  'outdoor kitchen, then pool, spa, lawn and fire lounge.'),
+                                  'outdoor kitchen, then pool, spa, lawn and an electric fire lounge.'),
         ('EVERY BEDROOM A SUITE', 'Seven bedrooms, each with a private bath. Four Level 2 suites open to a planted rear '
                                   'terrace; Level 3 holds the primary retreat with dressing room, spa bath and 400 SF terrace.'),
         ('FUNCTION FIRST', 'Garage to mudroom to scullery to kitchen; laundry on the bedroom level; kids\' study; wine room '
@@ -422,12 +422,14 @@ def sheet_concept():
         'thermally broken bronze frames with low-E, argon-filled insulated glass.',
         'HVAC — three variable-speed heat pumps, one per level: AHU-1 in the garage mech closet, AHU-2 in the Level 2 '
         'mech/linen closet, AHU-3 in the Level 3 mech room; ERV for fresh air, dehumidification, MERV-13 filtration.',
-        f'POWER — all-electric house: ±{PV_KW:.1f} kW rooftop PV, 27 kWh battery and inverter in the garage, '
-        'Level 2 EV charger, smart panel.',
+        f'POWER — all-electric house, no gas service: ±{PV_KW:.1f} kW rooftop PV; 2 x 13.5 kWh UL 9540 batteries and '
+        'inverter on the garage wall behind bollards (IRC R328); EV charger; smart panel. Fireplaces and fire table '
+        'are electric (no combustion).',
         'WATER — heat-pump water heater with recirculation; drip irrigation; downspouts to rain gardens; salt pool with '
         'heat-pump heater and automatic safety cover.',
-        'LIFE SAFETY — NFPA 13D residential sprinklers recommended for the 3-story open lantern; hard-wired smoke/CO; '
-        'every bedroom opens to a balcony or terrace (terrace-level rescue openings subject to AHJ acceptance).',
+        'LIFE SAFETY — NFPA 13D sprinklers throughout, including the lantern, garage and covered terraces; hard-wired, '
+        'interconnected smoke/CO alarms (lantern included) and a garage heat detector; casement escape windows in '
+        'Bedrooms 2, 5 and 7; terrace-level rescue openings elsewhere subject to AHJ approval (R104.11).',
         'SMART HOME — lighting control with scene presets, motorized shades in the lantern, integrated AV and security.',
     ], size=9.8, width=168, gap=8)
     yy = heading(svg, sx, yy + 34, 'PROGRAM BY LEVEL', size=16, rule=950)
@@ -439,7 +441,7 @@ def sheet_concept():
                                       'each with bath and walk-in closet, covered front balcony, rear terrace, green roof.'),
         ('LEVEL 3 · PRIMARY RETREAT', 'Primary bedroom with fireplace & morning bar, island dressing room, spa bath, '
                                       'Bedrooms 6-7 with baths, mechanical / storage, front terraces, primary terrace.'),
-        ('GARDEN', 'Heated pool with sun shelf, raised spa, fire lounge, lawn, outdoor shower, reflecting pool at the entry.'),
+        ('GARDEN', 'Heated pool with sun shelf, raised spa, electric fire lounge, lawn, reflecting pool at the entry.'),
     ]
     for h, t in program:
         svg.text(sx, yy + 4, h, size=10, weight=800, ls=0.8, fill=BRONZE)
@@ -456,18 +458,19 @@ LEVEL_NOTES = {
     1: ['Pivot door opens into the triple-height glass lantern: floating stair, chandelier and a straight view through '
         'the great room to the pool.',
         'Office behind a wood-fin screen and reflecting pool; glass wall to the foyer.',
-        'Great room 50 ft wide: living with linear fireplace, dining for 10, chef\'s kitchen with 12-ft waterfall island.',
+        'Great room 50 ft wide: living with electric linear fireplace, dining for 10, chef\'s kitchen with 12-ft waterfall '
+        'island.',
         'Service spine: garage > mudroom lockers > scullery & walk-in pantry > kitchen. Groceries never cross the living room.',
         'Powder room and dry bar sit off a side gallery, not the front door.',
-        '50 x 12 ft covered loggia with outdoor kitchen and fire table; four bays of pocketing lift-slide doors aligned '
+        '50 x 12 ft covered loggia with outdoor kitchen and electric fire table; four bays of pocketing lift-slide doors aligned '
         'under the Level 2 suites.',
-        'Glass-enclosed, climate-controlled wine room under the stair.'],
+        'Climate-controlled wine room under the stair: 1/2" gypsum on the enclosed side of walls and stair soffit (R302.7).'],
     2: ['Glass bridge crosses the lantern beside the chandelier; stacked flights continue to Level 3.',
-        'Family lounge with game table, fireplace and backlit wine bar opens to the covered front balcony.',
+        'Family lounge with game table, electric fireplace and backlit wine bar opens to the covered front balcony.',
         'Four bedroom suites (Bedrooms 2-5), each with private bath, walk-in closet and lift-slide door to the rear terrace.',
         'Rear terrace on the loggia roof, divided by wood privacy fins, bordered by a sedum green roof.',
         'Laundry with folding counter and kids\' study on the bedroom level; mech / linen closet (AHU-2) at the hall end.'],
-    3: ['Primary retreat: 22 x 17 ft bedroom with fireplace and morning bar, dressing room with island, spa bath with '
+    3: ['Primary retreat: 22 x 17 ft bedroom with electric fireplace and morning bar, dressing room with island, spa bath with '
         'freestanding tub, rain shower and private WC.',
         '400 SF primary terrace under a cantilevered roof, with outdoor shower and planters.',
         'Bedrooms 6 and 7 each with en-suite bath, walk-through closet and a private front terrace.',
@@ -523,6 +526,17 @@ def plan_sheet(lvl, idx):
     svg.text(lx2 + 36, ly + 45, 'SECTION / ELEVATION REFERENCE', size=8.8)
     svg.line(lx2, ly + 64, lx2 + 24, ly + 64, sw=0.6, dash='6 4')
     svg.text(lx2 + 36, ly + 68, 'OVERHEAD / ABOVE, OR HIGH WINDOW', size=8.8)
+    lx3 = px + 900
+    for i, (k, lab) in enumerate((('SD', 'SMOKE ALARM, INTERCONNECTED (R314)'), ('CO', 'CARBON MONOXIDE ALARM (R315)'),
+                                  ('HD', 'HEAT DETECTOR, INTERCONNECTED (R328.7)'), ('EF', 'EXHAUST FAN TO EXTERIOR (R303.3)'))):
+        yy = ly - 4 + i * 22
+        if k == 'EF':
+            svg.rect(lx3 + 2, yy - 10, 20, 20, fill='#fff', stroke=INK, sw=0.7)
+            svg.text(lx3 + 12, yy + 3.5, k, size=7, weight=700, anchor='middle')
+        else:
+            svg.circle(lx3 + 12, yy, 11, fill='#fff', stroke='#b24a3a', sw=0.9)
+            svg.text(lx3 + 12, yy + 3.5, k, size=7, weight=700, anchor='middle', fill='#b24a3a')
+        svg.text(lx3 + 34, yy + 4, lab, size=8.8)
     ny = heading(svg, px, ly + 104, 'GENERAL NOTES', size=12, rule=1230)
     ny = bullets(svg, px, ny + 4, [
         'Dimensions to exterior face of sheathing and centerline of partitions. Ceilings 10\'-0" typ.; baths/closets 9\'-0".',
@@ -530,7 +544,9 @@ def plan_sheet(lvl, idx):
         'side; 42" glass guards on open sides.',
         'Elevator: ASME A17.1 §5.3 residential, 3 stops, 3\'-0" entrance. Garage separation: 5/8" Type X, 20-min door.',
         'Egress: casement escape windows in Bedrooms 2, 5 and 7; every bedroom also opens to a balcony or terrace '
-        '(terrace-level rescue openings subject to AHJ acceptance; NFPA 13D sprinklers recommended).',
+        '(terrace-level rescue openings subject to AHJ approval). NFPA 13D sprinklers throughout.',
+        'Smoke alarms ≥ 3\'-0" from bath doors; windowless baths and WCs exhausted to exterior, 50 cfm intermittent '
+        'or 20 cfm continuous. Under-stair wine room lined with 1/2" gypsum (R302.7).',
     ], size=9.2, width=160, gap=4)
     top = max(ny + 60, 1090)
     first, second = INTERIORS[lvl]
@@ -547,7 +563,7 @@ def roof_sheet(idx):
     svg = frame('A2.4', 'ROOF PLAN', 'AS NOTED')
     T = PLAN_T
     n_mod = roof_plan(svg, T)
-    plans.dim_h(svg, T, [0, 14, 27, 36, 50], -5.5, ext_from=-1.6)
+    plans.dim_h(svg, T, [0, 14, 27, 36, 50], -6.75, ext_from=-1.6)
     plans.dim_h(svg, T, [0, 50], -8.5)
     plans.dim_v(svg, T, [0, 24, 46, 50, 54, 66], -5.5, ext_from=-1.5)
     plans.dim_v(svg, T, [0, 66], -8.5)
@@ -567,12 +583,13 @@ def roof_sheet(idx):
         'Heat-pump condensers (one per level) on vibration-isolated rails behind a 42" bronze louver screen; refrigerant '
         'lines drop through the mechanical room.',
         'Roof hatch (30" x 36") with ship ladder and fall-protection rail from the Level 3 mechanical room.',
-        'Lantern roof raised to +37\'-0" with a structural-glass skylight over the chandelier void; motorized shade.',
+        'Lantern roof raised to +37\'-0" with a structural-glass skylight over the chandelier void (laminated, PVB '
+        'interlayer ≥ 0.030", R308.6; U ≤ 0.55); motorized shade. Fritted linear skylight over the Level 3 hall.',
         'Terraces over conditioned space: porcelain pavers on pedestals over hot-applied waterproofing and tapered '
         'insulation; Level 2 terrace on the loggia roof with an extensive sedum green roof beyond.',
         'Parapet 1\'-6" above roof deck (no roof occupancy); 42" guards at all accessible terraces.',
     ], size=10, width=150, gap=6)
-    rows = [('Lantern roof / parapet', "+36'-6\" / +37'-0\"", 'PVC, structural glass skylight'),
+    rows = [('Lantern roof / parapet', "+36'-6\" / +37'-0\"", 'PVC, laminated glass skylight, U ≤ 0.55'),
             ('Main roof / parapet', "+33'-0\" / +34'-6\"", 'PVC, PV array, equipment'),
             ('Level 3 terraces', "+22'-0\"", 'Pavers on pedestals'),
             ('Level 2 terrace', "+11'-0\"", 'Pavers on pedestals'),
@@ -593,8 +610,8 @@ def site_sheet(idx):
     svg = frame('A1.0', 'ARCHITECTURAL SITE PLAN', 'AS NOTED')
     T = PT(400, 2000, 12.5)
     site_plan(svg, T)
-    drawing_title(svg, 1380, 2240, '1', 'ARCHITECTURAL SITE PLAN', 'SCALE: 1/8" = 1\'-0"', width=520)
-    scale_bar(svg, 1960, 2232, 12.5, feet=(0, 4, 8, 16, 32))
+    drawing_title(svg, 150, 2312, '1', 'ARCHITECTURAL SITE PLAN', 'SCALE: 1/8" = 1\'-0"', width=520)
+    scale_bar(svg, 730, 2304, 12.5, feet=(0, 4, 8, 16, 32))
     north_arrow(svg, 1300, 1900, r=40)
     px = 1450
     y = heading(svg, px, 110, 'SITE DATA', size=16, rule=1750)
@@ -607,23 +624,27 @@ def site_sheet(idx):
             ('Provided', f'Front {hy:.0f}\'-0" to facade ({hy - 5:.0f}\'-0" to canopy)  ·  Sides 5\'-0"  ·  Rear {145 - hy - 66:.0f}\'-0" to loggia'),
             ('Building footprint', '2,700 SF enclosed + 600 SF covered loggia = 3,300 SF'),
             ('Lot coverage', f'{3300 / 8700 * 100:.1f}% (45% max typical — verify)'),
-            ('Building height', '3 stories · 34\'-6" T.O. parapet · 37\'-0" T.O. lantern above L1 F.F.'),
+            ('Building height', '3 stories · 35\'-2" T.O. parapet · 37\'-8" T.O. lantern above avg. grade (-0\'-8"); '
+             'rooftop equipment screen 37\'-2" — verify permitted projections'),
             ('Parking', '2 enclosed (garage) + 2 on driveway'),
             ('Utilities', 'City water & sewer, electric — all-electric house, no gas service'),
             ('Soils', 'Expansive black clay (per listing) — geotechnical report required')]
     y = table(svg, px, y + 20, [('ITEM', 330), ('DATA', 1420)], rows, rh=24, size=9.6)
     y = heading(svg, px, y + 60, 'SITE & LANDSCAPE DESIGN', size=16, rule=1750)
     y = bullets(svg, px, y + 6, [
-        'Arrival: offset porcelain stepping pads cross a turf front lawn to the pivot door under the bronze canopy; '
-        'a linear reflecting pool with a scupper runs in front of the office fins.',
+        'Arrival: a 4\'-0" porcelain walk runs from the driveway along the reflecting pool to the pivot door under the '
+        'bronze canopy; offset stepping pads cross the front lawn from the public sidewalk.',
         'The specimen Sabal palm (existing) is relocated as the centerpiece of the front lawn; low agave, muhly grass and '
         'boxwood beds line the facade with integrated uplights.',
         'Driveway: 20\'-0" concrete with stone bands; new curb cut and apron to City standards; EV-ready garage.',
         'Rear garden: covered loggia steps down to a porcelain pool deck, 30\' x 14\' heated salt pool with sun shelf, raised '
         '8\' x 8\' spillover spa, lawn and a circular fire lounge.',
-        'Privacy: 8\'-0" horizontal cedar fence on side and rear property lines (verify height limits), evergreen holly '
-        'screen along the rear, self-closing pool barrier gates at both side yards.',
-        'Service: bins beside the garage side door; pool equipment screened at the rear right; outdoor shower by the loggia. '
+        'Privacy: 8\'-0" cedar fence on side and rear property lines (verify height limits), smooth face and rails on '
+        'the pool side so it cannot be climbed from outside the barrier; evergreen holly screen along the rear.',
+        'Pool barrier gates at both side yards open away from the pool, self-closing and self-latching, latch release '
+        '≥ 54" above grade (ISPSC 305.3); barrier ≥ 48", ≤ 2" clear at grade; power safety cover on pool and spa.',
+        'Service: 2\'-0" bins pad against the fence keeps a 36" clear egress path and a 3\'x3\' landing at the garage '
+        'side door; pool equipment screened at the rear right; outdoor shower by the loggia. '
         'Drainage: 5% slope for 10\'-0" away from the house; downspouts to rain gardens.',
     ], size=10, width=170, gap=5)
     y = heading(svg, px, y + 24, 'LEGEND', size=12, rule=1750)
@@ -645,6 +666,8 @@ def site_sheet(idx):
     s = 9.375
     base = 1700
     site_section(svg, 1500 + 46 * s, base, s)
+    svg.text(1500, base + 168, 'Fire separation: side walls are 5\'-0" to sheathing and about 4\'-8" to the cladding '
+             'face; with NFPA 13D throughout, Table R302.1(2) applies (no rating at FSD ≥ 3\'-0").', size=9.4, fill='#444')
     drawing_title(svg, 1500, base + 120, '2', 'SITE SECTION — GOOCH STREET TO REAR FENCE', 'SCALE: 3/32" = 1\'-0"',
                   width=700)
     save(svg, idx, 'A1.0')
@@ -656,11 +679,11 @@ def elev_sheet(idx, num_, title, views):
     kn = {
         'front': [(40, 0, 9.0, 1), (38, 6, 16, 2), (0.6, -1.5, 30, 3), (7, 0, 28, 4), (26, 6, 13, 5), (30, 0.25, 12.6, 6),
                   (7, 0, 5, 7), (38.5, 0, 4, 8), (20.5, -0.7, 6, 9), (10.6, -5, 11.2, 10), (44, 0, 21.5, 1),
-                  (30, 0, 33.3, 3), (49.4, 0, 27, 1)],
+                  (30, 0, 33.9, 3), (49.4, 0, 27, 1)],
         'rear': [(25, 66, 5, 13), (40, 65.5, 11.35, 12), (8, 54, 5, 5), (20, 60, 13.2, 6), (49.6, 54, 16, 1),
-                 (36.25, 46, 27, 2), (20, 50, 33.3, 3), (7, 46, 30, 14), (12.5, 59.5, 15.6, 15)],
-        'left': [(0, 10, 18, 3), (0, 21.5, 30, 4), (0, 40, 5, 1), (0, 47, 17.5, 14), (0, 35, 26, 2), (0, 65.7, 5, 13),
-                 (0, 50, 24.2, 6), (0, 30, 33.3, 3)],
+                 (36.25, 46, 27, 2), (20, 50, 33.9, 3), (7, 46, 30, 14), (12.5, 59.5, 15.6, 15)],
+        'left': [(0, 12, 6, 3), (0, 21.5, 30, 4), (0, 40, 5, 1), (0, 47, 17.5, 14), (0, 35, 26, 2), (0, 65.7, 5, 13),
+                 (0, 50, 24.2, 6), (0, 30, 33.9, 3), (0, 12, 26, 17)],
         'right': [(50, 40, 5, 1), (50, 11.5, 17, 14), (50, 30, 26, 2), (14, 10, 36, 3), (50, 65.7, 5, 13),
                   (50, 50, 24.2, 6), (50, 17.0, 3.5, 16), (50, 3, 16, 1)],
     }
@@ -690,6 +713,8 @@ def elev_sheet(idx, num_, title, views):
         'All glazing low-E, argon filled; low-iron glass at the lantern curtain wall and guards.',
         'Exterior lighting: 2700K, full cutoff, dark-sky compliant; LED coves at all wood soffits.',
         'Parapet tops capped in bronze. No exposed downspouts: roof and overflow drains are internal leaders to grade.',
+        'Side walls: no projections (copings, conductor heads, meters, line sets) beyond the wall face within 5\'-0" of '
+        'the side lot lines.',
     ], size=9.2, width=int((w - 20) / 5.1), gap=5)
     y = heading(svg, px, y + 30, 'EXTERIOR MATERIALS', size=12, rule=w)
     sw_ = (w - 3 * 20) / 4
@@ -699,7 +724,33 @@ def elev_sheet(idx, num_, title, views):
         swatch(svg, mx, y + 4, sw_, sw_ * 0.6, kind)
         tag(svg, mx + 20, y + 24, code, shape='box', size=8, r=11)
         svg.text(mx, y + 24 + sw_ * 0.6, name, size=9.5, weight=800, ls=0.6)
+    if views[0][0] == 'front':
+        regulating_lines(svg, px + 30, 2120)
+    else:
+        wall_section(svg, px + 190, 2160)
+        drawing_title(svg, px, 2240, '3', 'TYPICAL WALL SECTION — RIGHT SIDE', 'SCALE: 3/8" = 1\'-0"', width=w - 20)
     save(svg, idx, num_)
+
+
+def regulating_lines(svg, left, base):
+    """Front elevation reduced, with the head lines and the shared mullion grid that order the street face."""
+    s = 18.75
+    e = Elev(svg, 'front', left, base, s, interior=False, shadows=False)
+    e.draw()
+    e.grade(extend=2)
+    red = '#b24a3a'
+    for z, lab in ((10, "HEAD / SPANDREL +10'-0\""), (21, "HEAD / SPANDREL +21'-0\""), (31, "HEAD +31'-0\""),
+                   (33.25, "ROOF PLATE +33'-3\"")):
+        svg.line(e.X(-1.5), e.Z(z), e.X(51.5), e.Z(z), sw=0.9, c=red, dash='10 4')
+        svg.text(e.X(51.8), e.Z(z) + 3, lab, size=7.6, weight=700, fill=red)
+    for x in (14, 20.67, 26.33, 32, 38, 43.25, 48.5):
+        svg.line(e.X(x), e.Z(-1.6), e.X(x), e.Z(36), sw=0.7, c=red, dash='3 3')
+    svg.text(e.X(14), e.Z(-1.6) + 14, 'SHARED MULLION GRID, LEVELS 2-3', size=7.6, weight=700, fill=red)
+    for z0, z1 in ((0, 10), (11, 21), (22, 31)):
+        y = (e.Z(z0) + e.Z(z1)) / 2
+        svg.text(e.X(-2.2), y + 3, f'{fi(z1 - z0)} TO HEAD', size=7.6, anchor='end', fill=red)
+    drawing_title(svg, left - 50, base + 82, '3', 'REGULATING LINES — STREET FACE', 'SCALE: 3/16" = 1\'-0"', width=560)
+    return e
 
 
 def section_sheet(idx):
@@ -713,12 +764,12 @@ def section_sheet(idx):
     sect_datums(svg, X2, Z2, 56, items=[(34.5, 'T.O. PARAPET', "+34'-6\""), (33, 'ROOF', "+33'-0\""),
                                         (22, 'LEVEL 3', "+22'-0\""), (11, 'LEVEL 2', "+11'-0\""),
                                         (0, 'LEVEL 1', "+0'-0\"")])
-    drawing_title(svg, 1950, 2240, 'B', 'TRANSVERSE SECTION B — GREAT ROOM, SUITES & PRIMARY', 'SCALE: 1/4" = 1\'-0"',
+    drawing_title(svg, 120, 2290, 'B', 'TRANSVERSE SECTION B — GREAT ROOM, SUITES & PRIMARY', 'SCALE: 1/4" = 1\'-0"',
                   width=820)
     px = 2000
     y = heading(svg, px, 1380, 'TYPICAL ASSEMBLIES', size=14, rule=1180)
     bullets(svg, px, y + 4, [
-        'ROOF: PVC membrane, 1/2" cover board, tapered polyiso R-49 avg., vapor retarder, 3/4" sheathing on wood I-joists; '
+        'ROOF: PVC membrane, 1/2" cover board, tapered polyiso R-49 min., vapor retarder, 3/4" sheathing on wood I-joists; '
         'gypsum ceiling. Parapet capped in bronze.',
         'EXTERIOR WALL: sintered stone or thermo-ash on aluminum rainscreen rails, 1-1/2" mineral wool c.i., WRB, '
         '1/2" sheathing, 2x6 studs @ 16" o.c. with R-23, 5/8" gypsum.',
@@ -726,7 +777,8 @@ def section_sheet(idx):
         'R-19 sound batts, resilient channel, 5/8" gypsum.',
         'TERRACES OVER CONDITIONED SPACE: pavers on pedestals, drainage mat, hot-rubberized waterproofing, tapered XPS.',
         'FOUNDATION: post-tensioned slab on 15-mil vapor barrier, perimeter grade beams on drilled piers; final design '
-        'per geotechnical report (expansive clay, PI > 40 anticipated).',
+        'per geotechnical report (expansive clay, PI > 40 anticipated). R-10 rigid slab-edge insulation, 2\'-0" deep '
+        '(coordinate termite provisions, R318.4).',
         'LANTERN: steel moment frame, bronze-capped curtain wall with laminated low-iron IGUs, steel-plate glass bridge '
         'with 42" laminated glass guard.',
         'TRANSFERS: W-flange beam at grid 2 (Y 6\'-4") over the office and garage carries the Level 2-3 front walls; '
@@ -736,6 +788,20 @@ def section_sheet(idx):
         'and the primary bath to the scullery, Bath 6 to the wine-bar wall, Bath 7 over the laundry.',
     ], size=9.4, width=150, gap=6)
     save(svg, idx, 'A4.1')
+
+
+SAFETY_T = {'slider', 'pivot', 'garage'}
+
+
+def safety_glazing(o):
+    """R308.4 hazardous-location designation for a scheduled exterior opening."""
+    if o['typ'] in SAFETY_T or o['lvl'] == 0 or o.get('room') in ('Lantern', 'Stair'):
+        return 'T' if o['typ'] != 'slot' else 'L'
+    ff = LV[o['lvl']]
+    wet = any(k in (o.get('room') or '') for k in ('Bath', 'Spa', 'Shower', 'WC'))
+    if o['z0'] - ff < 1.5 or wet:
+        return 'T'
+    return '—'
 
 
 def schedules_sheet(idx):
@@ -772,14 +838,18 @@ def schedules_sheet(idx):
         kind = {'slider': 'Lift-slide door', 'fixed': 'Fixed', 'win': 'Casement / awning', 'slot': 'Fixed slot'}[o['typ']]
         face = {'-y': 'FRONT', '+y': 'REAR', '-x': 'LEFT', '+x': 'RIGHT'}[o['n']]
         rows.append((o['mark'], 'ALL' if o['lvl'] == 0 else f'L{o["lvl"]}', face, o.get('room', 'Lantern'), kind,
-                     f'{fi(o["b"] - o["a"])} x {fi(o["z1"] - o["z0"])}', fi(o['z0'] - ff), o['desc']))
+                     f'{fi(o["b"] - o["a"])} x {fi(o["z1"] - o["z0"])}', fi(o['z0'] - ff), safety_glazing(o),
+                     o['desc']))
+    rows.append(('CW1', 'ALL', 'FRONT', 'Lantern', 'Curtain wall', "14'-0\" x 37'-0\"", '0"', 'L',
+                 'Steel-backed bronze curtain wall, laminated low-iron IGUs; barrier at bridge'))
     x2 = 1200
-    y2 = table(svg, x2, 130, [('MARK', 62), ('LVL', 46), ('ELEV.', 66), ('ROOM', 160), ('TYPE', 160), ('W x H', 150),
-                              ('SILL', 72), ('NOTES', 330)], rows, title='WINDOW & GLAZED DOOR SCHEDULE', rh=27, size=9.2)
+    y2 = table(svg, x2, 130, [('MARK', 62), ('LVL', 46), ('ELEV.', 66), ('ROOM', 150), ('TYPE', 150), ('W x H', 140),
+                              ('SILL', 66), ('SAF.', 50), ('NOTES', 316)], rows, title='WINDOW & GLAZED DOOR SCHEDULE',
+               rh=27, size=9.2)
     y2 += 28
     svg.text(x2, y2, 'All units: thermally broken aluminum, dark bronze anodized; low-E argon IGU (U ≤ 0.30, SHGC ≤ 0.25);',
              size=9.4, fill='#444')
-    svg.text(x2, y2 + 15, 'tempered/laminated where required by IRC R308; egress per R310. Verify rough openings with mfr.',
+    svg.text(x2, y2 + 15, 'SAF.: T = tempered, L = laminated (R308.4); glass guards laminated (R308.4.4.1). Egress per R310.',
              size=9.4, fill='#444')
     y2 += 60
     rows = [('Level 1 — conditioned', sf(AREAS['L1'])), ('Level 2 — conditioned', sf(AREAS['L2'])),
@@ -802,25 +872,36 @@ def schedules_sheet(idx):
                          ('CLG HT', 114)], rows, title='ROOM FINISH SCHEDULE', rh=26, size=9.2)
     cy = max(y, y2 + 40) + 50
     code = [
-        ('Emergency escape (R310)', 'Opening ≥ 5.7 SF net, sill ≤ 44", onto a yard, court or public way',
-         'Casements in BR 2, 5, 7; terrace doors elsewhere — AHJ acceptance required'),
+        ('Emergency escape (R310)', '≥ 5.7 SF net, ≥ 24" clear H, ≥ 20" clear W, sill ≤ 44"; to yard/court ≥ 36" '
+         'wide or public way', 'Casements BR 2, 5, 7; BR 3, 4, 6 & 308 via terraces — R104.11 alternate w/ 13D'),
         ('Handrails (R311.7.8)', '34"–38" high on at least one side of each flight', 'Continuous lit handrail at 36" '
          'on the wall side of every flight'),
         ('Stairs (R311.7)', 'Riser ≤ 7-3/4", tread ≥ 10", width ≥ 36", headroom ≥ 6\'-8"',
          '7-5/16" risers, 11" treads, 3\'-8" clear, ≥ 10\'-0" headroom'),
-        ('Guards (R312)', '36" min where drop > 30"; 4" sphere rule', '42" laminated glass guards at stair, bridge and terraces'),
-        ('Garage separation (R302.6)', '1/2" gyp walls; 5/8" Type X ceiling with habitable space above',
-         '5/8" Type X walls and ceiling; 20-min self-closing door'),
-        ('Smoke & CO alarms (R314/R315)', 'Interconnected: each bedroom, outside sleeping areas, each story',
-         'Hard-wired, interconnected, battery backup throughout'),
-        ('Fire sprinklers (R313)', 'Per Dallas amendments', 'NFPA 13D system recommended for the 3-story open lantern'),
-        ('Elevator (ASME A17.1 §5.3)', 'Residential elevator, shaft & pit per mfr.', '3 stops, 3\'-0" entrance, dedicated circuit'),
-        ('Safety glazing (R308)', 'Doors, wet areas, near stairs & landings', 'Tempered / laminated as scheduled'),
-        ('Pool barrier (ISPSC / App. AG)', '48" barrier, self-closing gates, door alarms',
-         'Fences + self-latching gates; alarms on L1 lift-slides; auto pool cover'),
-        ('Energy (IECC 2021, zone 3A)', 'Walls R-20 or 13+5, ceiling R-38, U ≤ 0.30, SHGC ≤ 0.25',
-         'R-23 + R-7.5 c.i. walls, R-49 roof, U ≤ 0.30 / SHGC ≤ 0.25 glazing'),
-        ('Zoning height (assumed R-7.5(A))', '30\'-0" maximum', "34'-6\" / 37'-0\" — VERIFY DISTRICT; variance or SUP may be required"),
+        ('Guards (R312)', '36" min (34" at stair from nosing); 4" sphere (4-3/8" stair sides)',
+         '42" laminated glass guards at stair, bridge and terraces'),
+        ('Garage separation (R302.6)', '1/2" gyp walls & supports; 5/8" Type X clg under habitable; ducts 26 ga',
+         '5/8" Type X walls and ceiling; 20-min self-closing door; no duct openings in garage'),
+        ('Fire separation distance (R302.1)', 'FSD < 5\'-0": 1-hr walls unless sprinklered (Table R302.1(2))',
+         'FSD ≈ 4\'-8" to cladding; NFPA 13D → Table R302.1(2), no rating at FSD ≥ 3\'-0"'),
+        ('Under-stair space (R302.7)', 'Enclosed accessible space: 1/2" gypsum on enclosed side',
+         'Wine room walls and stair soffit 1/2" gypsum, oak / glass finish over'),
+        ('Smoke & CO alarms (R314/R315)', 'Each bedroom, outside sleeping areas, each story; ≥ 3\' from bath doors',
+         'Hard-wired, interconnected; SD in lantern; SD/CO in halls and at garage entry'),
+        ('Bath exhaust (R303.3)', 'Windowless baths: 50 cfm intermittent / 20 cfm continuous',
+         'EF ducted to exterior in Powder 105, Baths 211, 212, 303 and Primary WC'),
+        ('Fire sprinklers (R313)', 'Per Dallas amendments', 'NFPA 13D throughout incl. lantern, garage, covered terraces'),
+        ('Elevator (ASME A17.1 §5.3, R321)', 'Hoistway enclosed, interlocks, ≤ 4" door-to-car-gate space',
+         '3 stops (L1-L3), 3\'-0" entrance, pit / overhead per mfr., dedicated circuit'),
+        ('Safety glazing (R308)', 'Doors, wet areas, near stairs & landings, guards, skylights',
+         'T / L per SAF. column; laminated guards, curtain wall and skylight'),
+        ('Energy storage (R328)', 'Listed UL 9540, ≤ 20 kWh / unit, ≤ 80 kWh in garage; heat detector',
+         '2 x 13.5 kWh units, interconnected HD, bollards (R328.8)'),
+        ('Pool barrier (IRC R326 / ISPSC §305)', '48" barrier, gates open away from pool, self-closing & latching',
+         'Gates swing away from pool; power safety cover on pool & spa; alarms on L1 lift-slides'),
+        ('Energy (IECC 2021, zone 3A)', 'Clg R-49; wall R-20 or 13+5; slab R-10, 2\'; U ≤ 0.30, SHGC ≤ 0.25',
+         'R-23 + R-7.5 c.i. walls, R-49 roof, R-10 slab edge; skylight U ≤ 0.55; ≤ 3.0 ACH50; R408 pkg'),
+        ('Zoning height (assumed R-7.5(A))', '30\'-0" max., from grade', "35'-2\" / 37'-8\" above avg. grade — VERIFY DISTRICT; variance / SUP"),
         ('Lot coverage (assumed)', '45% maximum', f'{3300 / 8700 * 100:.1f}% provided'),
     ]
     table(svg, 70, cy, [('ITEM', 360), ('REQUIREMENT (VERIFY WITH CITY OF DALLAS)', 760), ('DESIGN RESPONSE', 1060)], code,
@@ -904,7 +985,7 @@ def site_section(svg, left, base, s):
         svg.rect(X(u) - 0.2 * s, Z(5.0), 0.4 * s, 5.7 * s, fill='#5b4a3a')
     svg.rect(X(114.8), Z(7.33), 0.3 * s, 8 * s, fill='#7a5b3a')
     svg.text(X(114.0), Z(11.5), '8\' FENCE', size=6.5, anchor='end', fill='#555')
-    section_a(svg, left, base, s)
+    section_a(svg, left, base, s, tag_scale=0.8)
 
 
 def main():

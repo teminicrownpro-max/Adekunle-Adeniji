@@ -93,7 +93,7 @@ class IE:
         self.svg.line(x, self.Z(z0), x, self.Z(z1), sw=0.5)
         for z in (z0, z1):
             self.svg.line(x - 3, self.Z(z) + 3, x + 3, self.Z(z) - 3, sw=0.9)
-        self.svg.text(x - 4, (self.Z(z0) + self.Z(z1)) / 2, fi(z1 - z0), size=7, anchor='middle', rot=-90)
+        self.svg.text(x + 11, (self.Z(z0) + self.Z(z1)) / 2, fi(z1 - z0), size=7.5, anchor='middle', rot=-90)
 
     def title(self, num_, text, scale='SCALE: 3/8" = 1\'-0"', width=None):
         drawing_title(self.svg, self.X(self.u0) - 0.5 * self.s, self.Z(-0.6) + 78, num_, text, scale,
@@ -129,12 +129,12 @@ def kitchen_range_wall(svg, left, top, s=37.5):
     e.line(17.6, 3.3, 17.6, 4.4, sw=1.4, c=BRONZE)
     e.line(17.6, 4.4, 17.15, 4.1, sw=1.4, c=BRONZE)
     e.frame()
-    e.dim_v(20.6, 0, 3.17)
-    e.dim_v(20.6, 3.17, 10)
+    e.dim_v(20.9, 0, 3.17)
+    e.dim_v(20.9, 3.17, 10)
     e.note(13.0, 8.8, 'CUSTOM LIME-PLASTER HOOD', 8.0, 11.3, 'end')
     e.note(18.5, 8.5, 'T1 BOOK-MATCHED SLAB, FULL HEIGHT', 15.0, 11.3)
-    e.note(8.5, 7.15, 'OAK FLOATING SHELVES W/ LED', 3.0, 9.5, 'end')
-    e.note(13.0, 1.5, '48" DUAL-FUEL RANGE (INDUCTION)', 8.0, -1.6, 'end')
+    e.note(8.5, 7.15, 'OAK FLOATING SHELVES W/ LED', 0.0, 9.5, 'end')
+    e.note(13.0, 1.5, '48" INDUCTION RANGE, 6-ZONE', 8.0, -1.6, 'end')
     e.note(17.0, 1.6, 'RIFT WHITE OAK, PUSH-LATCH', 16.0, -1.6)
     e.note(1.75, 4.2, 'REF. COLUMN END PANEL', 0.6, -1.6, 'end')
     e.title('2', 'KITCHEN — RANGE WALL ELEVATION (LOOKING SOUTH)')
@@ -158,8 +158,8 @@ def living_fireplace_wall(svg, left, top, s=37.5):
     e.rect(38.75, 4.4, 43.25, 7.0, fill='#141414', sw=0.6)
     e.glass(47, 0, 52.5, 10, mull=0)
     e.frame()
-    e.dim_v(53.9, 0, 10)
-    e.note(41.0, 2.2, 'LINEAR 72" DIRECT-VENT FIREPLACE', 47.0, -1.6)
+    e.dim_v(54.15, 0, 10)
+    e.note(41.0, 2.2, 'LINEAR 72" ELECTRIC FIREPLACE', 47.0, -1.6)
     e.note(41.0, 5.7, 'RECESSED 85" DISPLAY', 46.6, 8.3)
     e.note(44.6, 9.2, 'T1 BOOK-MATCHED SLAB SURROUND', 46.6, 11.3)
     e.note(33.2, 5.5, 'OAK BUILT-IN SHELVING W/ LED', 29.2, 11.3, 'end')
@@ -186,7 +186,7 @@ def wine_bar_wall(svg, left, top, s=37.5):
     e.rect(30.4, 3.17, 31.6, 3.3, fill='#bbb', sw=0.4)
     e.line(31.0, 3.3, 31.0, 4.1, sw=1.4, c='#c4a26b')
     e.frame()
-    e.dim_v(38.3, 0, 10)
+    e.dim_v(38.7, 0, 10)
     e.note(32.0, 8.8, 'BACKLIT WINE WALL, 198 BOTTLES, BRONZE GLASS DOORS', 24.6, 11.3, 'end')
     e.note(28.0, 1.8, 'SMOKED OAK BAR CABINETRY, BEVERAGE FRIDGE', 25.6, -1.6, 'end')
     e.note(31.0, 3.1, 'QUARTZITE TOP, BAR SINK', 33.0, -1.6)
@@ -227,8 +227,8 @@ def lounge_fireplace_wall(svg, left, top, s=37.5):
     e.cabinets(-23.6, -19.9, 0, 2.2, 2)
     e.cabinets(-10.1, -9.5, 0, 2.2, 1)
     e.frame()
-    e.dim_v(-6.1, 0, 10)
-    e.note(-15.0, 2.0, 'LINEAR FIREPLACE IN HERRINGBONE-PATTERN SLAB', -20.0, -1.6, 'end')
+    e.dim_v(-5.85, 0, 10)
+    e.note(-15.0, 2.0, 'LINEAR ELECTRIC FIREPLACE IN HERRINGBONE-PATTERN SLAB', -20.0, -1.6, 'end')
     e.note(-15.0, 6.0, 'MEDIA DISPLAY', -11.0, 11.3)
     e.title('4', 'FAMILY LOUNGE — FIREPLACE WALL (LOOKING EAST)')
     return e
@@ -253,7 +253,7 @@ def spa_vanity_wall(svg, left, top, s=37.5):
     e.svg.path(f'M {e.X(-44.6):.1f} {e.Z(0):.1f} L {e.X(-44.6):.1f} {e.Z(1.5):.1f} Q {e.X(-43.1):.1f} {e.Z(2.1):.1f} '
                f'{e.X(-41.6):.1f} {e.Z(1.5):.1f} L {e.X(-41.6):.1f} {e.Z(0):.1f} Z', fill='#fafafa', stroke=INK, sw=0.9)
     e.frame()
-    e.dim_v(-27.6, 0, 10)
+    e.dim_v(-27.3, 0, 10)
     e.note(-37.0, 8.2, 'RIBBON CLERESTORY 6\'-6" A.F.F.', -31.5, 11.3)
     e.note(-38.6, 1.6, '8\'-0" FLOATING DOUBLE VANITY', -33.0, -1.6)
     e.note(-43.1, 1.0, 'FREESTANDING STONE-RESIN TUB', -45.0, -1.6, 'end')
@@ -274,9 +274,9 @@ def primary_fireplace_wall(svg, left, top, s=37.5):
     e.rect(37.5, 1.5, 42.5, 2.6, fill='#2a2522', sw=0.6)
     e.svg.path(f'M {e.X(37.8):.1f} {e.Z(1.7):.1f} q 20 -14 40 0 t 40 0 t 40 0 t 40 0', stroke='#f2a64f', sw=2.2)
     e.frame()
-    e.dim_v(45.8, 0, 10)
+    e.dim_v(46.15, 0, 10)
     e.note(31.0, 6.5, '9\'-0" RIFT OAK DOOR TO DRESSING ROOM', 30.0, 11.3, 'end')
-    e.note(40.0, 2.0, 'LINEAR FIREPLACE, SLAB SURROUND', 43.0, -1.6)
+    e.note(40.0, 2.0, 'LINEAR ELECTRIC FIREPLACE, SLAB SURROUND', 43.0, -1.6)
     e.note(36.4, 7.0, 'FLUTED OAK PANELING', 36.0, 11.3)
     e.title('3', 'PRIMARY BEDROOM — FIREPLACE WALL (LOOKING WEST)')
     return e
@@ -348,7 +348,7 @@ def parapet_detail(svg, left, top):
     d.rect(1.2, 0.42, 3.42, 0.6, fill='#fff', stroke='#888', sw=0.5)
     svg.circle(d.X(3.3), d.Z(0.36), 4, fill='#ffd38f')
     d.note(1.0, 2.55, 'PVC MEMBRANE ON 1/2" COVER BOARD', 3.9)
-    d.note(0.6, 2.2, 'TAPERED POLYISO, R-49 AVG.', 3.4)
+    d.note(0.6, 2.2, 'TAPERED POLYISO, R-49 MIN.', 3.4)
     d.note(0.9, 1.2, '14" WOOD I-JOISTS / 3/4" SHEATHING', 2.9)
     d.note(3.48, 3.65, 'BRONZE COPING, 1/4" SLOPE IN', 4.45, tu=4.25)
     d.note(3.46, 1.8, 'BRONZE FASCIA PANEL ON RAILS', 2.4)
@@ -386,3 +386,96 @@ def terrace_detail(svg, left, top):
     d.note(3.44, 1.4, 'SINTERED STONE FASCIA ON RAILS', 1.9, tu=4.25)
     d.note(3.3, 0.32, 'WOOD SLAT SOFFIT / LED COVE', 1.0, tu=4.25)
     return d
+
+
+# ------------------------------------------------------------ wall section
+class WS:
+    """Wall-section frame: x runs from the exterior face (0) inward, z is height above Level 1 floor."""
+
+    def __init__(self, svg, left, base, s, z_base):
+        self.svg, self.left, self.base, self.s, self.zb = svg, left, base, s, z_base
+
+    def X(self, x):
+        return self.left + x * self.s
+
+    def Z(self, z):
+        return self.base - (z - self.zb) * self.s
+
+    def rect(self, x0, z0, x1, z1, fill='none', stroke=INK, sw=0.6, **kw):
+        self.svg.rect(self.X(min(x0, x1)), self.Z(max(z0, z1)), abs(x1 - x0) * self.s, abs(z1 - z0) * self.s, fill=fill,
+                      stroke=stroke, sw=sw, **kw)
+
+    def note(self, x, z, text, tz, tx=6.2):
+        self.svg.circle(self.X(x), self.Z(z), 1.8, fill='#444')
+        self.svg.line(self.X(x), self.Z(z), self.X(tx), self.Z(tz), sw=0.45, c='#555')
+        self.svg.text(self.X(tx) + 5, self.Z(tz) + 3, text, size=8.6, fill='#222')
+
+
+def wall_section(svg, left, base, s=37.5):
+    """Typical wall section at the right wall (Bedroom 5 / Bedroom 7): stone base, wood crown, floating roof plate."""
+    w = WS(svg, left, base, s, 9.0)
+    stud = '#efe3cf'
+    # Level 2 floor: open-web truss, subfloor, stone slab band
+    w.rect(0.9, 10.0, 4.6, 10.95, fill=stud)
+    for k in range(6):
+        svg.line(w.X(0.9 + k * 0.6), w.Z(10.0), w.X(1.2 + k * 0.6), w.Z(10.95), sw=0.5, c='#b49a74')
+    w.rect(0.9, 10.95, 4.6, 11.0, fill='#c9b08a')
+    w.rect(0.0, 10.0, 0.12, 11.0, fill='#e6dece')
+    w.rect(4.6, 9.0, 4.8, 23.0, fill='none', stroke='#999', sw=0.4, dash='4 3')
+    # Level 2 stone wall with egress casement (sill +3'-0", head +10'-0")
+    for z0, z1 in ((11.0, 14.0), (20.6, 21.0)):
+        w.rect(0.0, z0, 0.12, z1, fill='#e6dece')
+        w.rect(0.2, z0, 0.33, z1, fill='#fbf7ee')
+        w.rect(0.33, z0, 0.38, z1, fill='#c9b08a')
+        w.rect(0.38, z0, 0.84, z1, fill=stud)
+        w.rect(0.84, z0, 0.9, z1, fill='#fff')
+    w.rect(0.3, 14.0, 0.62, 14.25, fill=BRONZE, stroke=None)
+    w.rect(0.42, 14.25, 0.5, 20.6, fill=GLASS, sw=0.5)
+    w.rect(0.3, 20.35, 0.62, 20.6, fill=BRONZE, stroke=None)
+    w.rect(0.62, 13.95, 1.25, 14.08, fill=OAK_DARK, sw=0.4)
+    svg.line(w.X(0.0), w.Z(14.0), w.X(0.3), w.Z(13.92), sw=1.2, c=BRONZE)
+    # Level 3 floor and terrace-height band
+    w.rect(0.9, 21.0, 4.6, 21.95, fill=stud)
+    for k in range(6):
+        svg.line(w.X(0.9 + k * 0.6), w.Z(21.0), w.X(1.2 + k * 0.6), w.Z(21.95), sw=0.5, c='#b49a74')
+    w.rect(0.9, 21.95, 4.6, 22.0, fill='#c9b08a')
+    w.rect(0.0, 21.0, 0.12, 22.0, fill='#e6dece')
+    w.rect(0.12, 21.0, 0.9, 22.0, fill='#3c3530', stroke=None)
+    # Level 3 thermo-ash wall with casement (sill +3'-0", head +9'-0")
+    for z0, z1 in ((22.0, 25.0), (31.0, 32.0)):
+        w.rect(0.0, z0, 0.07, z1, fill='#b98a5c')
+        w.rect(0.07, z0, 0.15, z1, fill='#fff', stroke='#999', sw=0.4)
+        w.rect(0.15, z0, 0.28, z1, fill='#fbf7ee')
+        w.rect(0.28, z0, 0.33, z1, fill='#c9b08a')
+        w.rect(0.33, z0, 0.79, z1, fill=stud)
+        w.rect(0.79, z0, 0.85, z1, fill='#fff')
+    w.rect(0.25, 25.0, 0.57, 25.25, fill=BRONZE, stroke=None)
+    w.rect(0.37, 25.25, 0.45, 30.75, fill=GLASS, sw=0.5)
+    w.rect(0.25, 30.75, 0.57, 31.0, fill=BRONZE, stroke=None)
+    # roof: recessed reveal under a thin bronze plate, parapet and coping
+    w.rect(0.85, 32.0, 4.6, 33.0, fill=stud)
+    w.rect(0.85, 33.0, 4.6, 33.55, fill='#fbf7ee')
+    w.rect(0.5, 32.0, 0.85, 33.25, fill='#2c2622', stroke=None)
+    w.rect(0.0, 33.25, 0.85, 34.5, fill='#3c3530', stroke=None)
+    w.rect(0.85, 33.55, 1.35, 34.5, fill=stud)
+    svg.poly([(w.X(-0.05), w.Z(34.62)), (w.X(1.45), w.Z(34.5)), (w.X(1.45), w.Z(34.42)), (w.X(-0.05), w.Z(34.5))],
+             fill=BRONZE)
+    # ceilings
+    for z in (21.0 - 0.0, 32.0):
+        svg.line(w.X(0.9), w.Z(z) + 0.5, w.X(4.6), w.Z(z) + 0.5, sw=0.8, c='#777')
+    for z, lab in ((11.0, 'LEVEL 2 F.F. +11\'-0"'), (22.0, 'LEVEL 3 F.F. +22\'-0"'), (33.0, 'ROOF +33\'-0"')):
+        svg.line(w.X(-1.4), w.Z(z), w.X(-0.15), w.Z(z), sw=0.5, dash='6 3', c='#555')
+        svg.text(w.X(-1.45), w.Z(z) - 4, lab, size=7.2, anchor='end', weight=700)
+    w.note(0.06, 12.5, 'SINTERED STONE PANEL ON ALUMINUM RAILS, 1/4" OPEN JOINT', 12.5)
+    w.note(0.27, 12.0, '1-1/2" MINERAL WOOL C.I. + WRB', 11.7)
+    w.note(0.6, 13.0, '2x6 STUDS @ 16" O.C., R-23 BATTS', 13.4)
+    w.note(0.46, 17.0, 'EGRESS CASEMENT, BRONZE FRAME, LOW-E IGU', 17.0)
+    w.note(0.15, 13.97, 'BRONZE SILL FLASHING, END DAMS', 14.4)
+    w.note(2.5, 10.5, '14" OPEN-WEB FLOOR TRUSS, R-19 SOUND BATTS', 10.2)
+    w.note(0.5, 21.5, 'BRONZE SLAB-EDGE BAND, THERMAL BREAK', 21.4)
+    w.note(0.04, 23.5, 'THERMO-ASH SHIPLAP ON VENTED BATTENS', 23.4)
+    w.note(0.41, 28.0, 'L3 CASEMENT, HEAD +9\'-0" A.F.F.', 28.0)
+    w.note(0.42, 33.9, 'BRONZE ROOF PLATE, 15" FACE', 34.9)
+    w.note(0.68, 32.6, '6" RECESSED SHADOW REVEAL', 33.3)
+    w.note(3.0, 33.3, 'PVC ROOF / TAPERED POLYISO R-49', 32.3)
+    return w

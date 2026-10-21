@@ -31,6 +31,7 @@ KEYNOTES = [
     (14, 'Casement / awning windows, dark bronze frame'),
     (15, 'Wood privacy fins between terraces'),
     (16, 'Insulated steel service door, dark bronze finish, closer & lever'),
+    (17, 'Translucent low-iron channel-glass band, bronze caps'),
 ]
 
 
@@ -79,6 +80,25 @@ def build_items(v):
         if pr:
             u0, u1, d = pr
             items.append(dict(k='rail', u0=u0, u1=u1, z0=z0, z1=z1, d=d, df=d, grp='rail', n='rail', order=2))
+    # merge co-planar faces of one material so massing joints (e.g. at the lantern line) don't print as seams
+    faces = [i for i in items if i['k'] == 'face']
+    others = [i for i in items if i['k'] != 'face']
+    merged = True
+    while merged:
+        merged = False
+        for a in faces:
+            for b in faces:
+                if a is b or a['mat'] != b['mat'] or a['grp'] != b['grp'] or a['cast'] != b['cast']:
+                    continue
+                if (abs(a['d'] - b['d']) < 1e-6 and abs(a['z0'] - b['z0']) < 1e-6 and abs(a['z1'] - b['z1']) < 1e-6
+                        and abs(a['u1'] - b['u0']) < 1e-6):
+                    a['u1'], a['df'] = b['u1'], max(a['df'], b['df'])
+                    faces.remove(b)
+                    merged = True
+                    break
+            if merged:
+                break
+    items = faces + others
     items.sort(key=lambda it: (-it['d'], it['order']))
     return items
 
@@ -219,6 +239,7 @@ class Elev:
         svg, p = self.svg, self.pal
         x, y, w, h = self.R(it['u0'], it['z0'], it['u1'], it['z1'])
         typ = it['typ']
+        channel = 'channel' in ((it.get('op') or {}).get('desc') or '').lower()
         if not self.lit(it):
             svg.rect(x, y, w, h, fill='#e4eaee', stroke='#bfc6cc', sw=0.6)
             return
@@ -233,7 +254,10 @@ class Elev:
             px = self.X(it['u0'] + (it['u1'] - it['u0']) * 0.82)
             svg.rect(px - 0.08 * self.s, self.Z(7.0), 0.16 * self.s, 4 * self.s, fill=frame)
         elif typ == 'garage':
-            svg.rect(x, y, w, h, fill=f'url(#{self.g_frost})')
+            if self.mode == 'dusk':
+                svg.rect(x, y, w, h, fill='#a99a83')   # dimmer than the lantern so the entry leads
+            else:
+                svg.rect(x, y, w, h, fill=f'url(#{self.g_frost})')
             cols, rows = 6, 4
             for i in range(1, cols):
                 svg.line(x + w * i / cols, y, x + w * i / cols, y + h, sw=1.6, c=frame)
@@ -243,10 +267,15 @@ class Elev:
             svg.rect(x, y, w, h, fill=p['bronze'])
             svg.rect(x + w * 0.78, y + h * 0.45, w * 0.06, h * 0.12, fill='#8a7a66')
         else:
-            svg.rect(x, y, w, h, fill=f'url(#{self.g_glass})')
+            svg.rect(x, y, w, h, fill=f'url(#{self.g_frost if channel else self.g_glass})')
+            if channel:   # U-profile channel glass, about 10" modules
+                uu = it['u0'] + 0.85
+                while uu < it['u1'] - 0.1:
+                    svg.line(self.X(uu), y, self.X(uu), y + h, sw=0.7, c='#9aa6ae' if self.mode == 'day' else '#c98a4c')
+                    uu += 0.85
             if self.interior and typ == 'cw':
                 self.lantern_interior(it, cid)
-            if self.mode == 'day':
+            if self.mode == 'day' and not channel:
                 svg.g(f'clip-path="url(#{cid})"')
                 svg.poly([(x + w * 0.15, y), (x + w * 0.42, y), (x + w * 0.05, y + h), (x - w * 0.22, y + h)],
                          fill='#ffffff', op=0.16)
@@ -262,12 +291,18 @@ class Elev:
             svg.line(x, self.Z(32), x + w, self.Z(32), sw=1.6, c=frame)
         elif typ in ('slider', 'fixed', 'win', 'slot'):
             span = it['u1'] - it['u0']
-            n = max(1, int(round(span / 5.0))) if typ == 'slider' else max(1, int(round(span / 6.0)))
-            if typ == 'slider':
-                n = max(2, n)
-            for i in range(1, n):
-                xx = x + w * i / n
-                svg.line(xx, y, xx, y + h, sw=1.8 if typ == 'slider' else 1.3, c=frame)
+            op = it['op']
+            if op.get('mull'):
+                for m in op['mull']:
+                    xx = self.X(self.u_of(m, op['c']))
+                    svg.line(xx, y, xx, y + h, sw=1.8, c=frame)
+            elif not channel:
+                n = max(1, int(round(span / 5.0))) if typ == 'slider' else max(1, int(round(span / 6.0)))
+                if typ == 'slider':
+                    n = max(2, n)
+                for i in range(1, n):
+                    xx = x + w * i / n
+                    svg.line(xx, y, xx, y + h, sw=1.8 if typ == 'slider' else 1.3, c=frame)
             if typ == 'slot':
                 for z in (11, 22):
                     svg.line(x, self.Z(z), x + w, self.Z(z), sw=1.6, c=frame)
@@ -410,10 +445,13 @@ def room_tag(svg, X, Z, u, z, name, size=9):
     svg.text(X(u), Z(z), name, size=size, weight=700, anchor='middle', ls=0.6, fill='#333')
 
 
-def section_a(svg, left, base, s):
+def section_a(svg, left, base, s, tag_scale=1.0):
     """Longitudinal section at X = 6'-3" looking toward the left (west) wall. u = Y."""
     X = lambda u: left + (u + 6) * s  # noqa: E731
     Z = lambda z: base - z * s  # noqa: E731
+
+    def rt(u, z, name, size=9):
+        room_tag(svg, X, Z, u, z, name, size * tag_scale)
     earth(svg, X, Z, -6, 92)
     # pool cut (pool spans X 5..35 in house coords, Y 69..83)
     sect_rect(svg, X, Z, 69, -5.2, 83, GRADE, fill='#fff')
@@ -442,8 +480,12 @@ def section_a(svg, left, base, s):
             prof += [(X(y0), Z(z)), (X(min(y0 + TREAD, ST_Y1)), Z(z))]
         svg.poly(prof, close=False, stroke='#55504a', sw=1.0)
         svg.line(X(ST_Y0), Z(base_z - 0.6 + RISER), X(ST_Y1), Z(base_z + 11 - 0.7), sw=0.8, c='#55504a')
-        svg.line(X(ST_Y0), Z(base_z + 3.0), X(ST_Y1), Z(base_z + 14.0), sw=0.6, c='#7d97a6')
-    sect_rect(svg, X, Z, 12, 0, ST_Y1, 6.2, fill='#f4efe6', stroke='#8b8b8b', sw=0.5)
+        svg.line(X(ST_Y0), Z(base_z + RISER + 3.5), X(ST_Y1), Z(base_z + 11 + 3.5), sw=0.7, c='#7d97a6')
+        svg.line(X(ST_Y0), Z(base_z + RISER + 3.0), X(ST_Y1), Z(base_z + 11 + 3.0), sw=1.4, c='#3c3530')
+    if tag_scale >= 1:
+        svg.text(X(13.0), Z(9.0), 'HANDRAIL 36" / GUARD 42"', size=6.5, anchor='middle', fill='#555', rot=-34)
+    svg.poly([(X(12), Z(0)), (X(ST_Y1), Z(0)), (X(ST_Y1), Z(10.2)), (X(12), Z(5.2))], fill='#f4efe6', stroke='#8b8b8b',
+             sw=0.5)
     svg.text(X(15.8), Z(2.5), 'WINE', size=6.5, anchor='middle', fill='#666')
     # chandelier hint (beyond is behind the viewer; show dashed outline per convention)
     # cut: ground slab + foundations
@@ -497,19 +539,19 @@ def section_a(svg, left, base, s):
                 sect_rect(svg, X, Z, u0, ff, u1, ff + 10)
     glass_cut(svg, X, Z, 53.45, 53.65, 0, 10)
     # labels
-    room_tag(svg, X, Z, 9.5, 30.0, 'STAIR LANTERN', 9)
+    rt(9.5, 30.0, 'STAIR LANTERN', 9)
     svg.text(X(9.5), Z(28.8), 'TRIPLE HEIGHT · 35\'-6"', size=7, anchor='middle', fill='#555')
-    room_tag(svg, X, Z, 9.0, 6.0, 'FOYER')
-    room_tag(svg, X, Z, 31, 5.0, 'LIVING')
-    room_tag(svg, X, Z, 60, 4.0, 'LOGGIA')
-    room_tag(svg, X, Z, 21.8, 15.5, 'HALL', 8)
-    room_tag(svg, X, Z, 32.0, 15.5, 'BATH 2', 8)
-    room_tag(svg, X, Z, 38.3, 15.5, 'WIC', 8)
-    room_tag(svg, X, Z, 47.2, 15.5, 'BEDROOM 2', 8)
-    room_tag(svg, X, Z, 57, 15.5, 'TERRACE', 7.5)
-    room_tag(svg, X, Z, 21.8, 26.5, 'LANDING', 8)
-    room_tag(svg, X, Z, 37, 26.5, 'DRESSING ROOM', 8.5)
-    room_tag(svg, X, Z, 50.0, 26.5, 'PRIMARY TERRACE', 7.5)
+    rt(9.0, 6.0, 'FOYER')
+    rt(31, 5.0, 'LIVING')
+    rt(60, 4.0, 'LOGGIA')
+    rt(21.8, 15.5, 'HALL', 8)
+    rt(32.0, 15.5, 'BATH 2', 8)
+    rt(38.5, 15.5, 'WIC', 8)
+    rt(47.2, 15.5, 'BEDROOM 2', 8)
+    rt(57, 15.5, 'TERRACE', 7.5)
+    rt(17.0, 27.5, 'LANDING', 8)
+    rt(37, 26.5, 'DRESSING ROOM', 8.5)
+    rt(50.8, 26.5, 'PRIMARY TERRACE', 7.5)
     return X, Z
 
 
@@ -517,7 +559,7 @@ def section_b(svg, left, base, s):
     """Transverse section at Y = 43'-0" looking toward the garden. u = X."""
     X = lambda u: left + (u + 6) * s  # noqa: E731
     Z = lambda z: base - z * s  # noqa: E731
-    earth(svg, X, Z, -6, 56)
+    earth(svg, X, Z, -6, 56, depth=-3.5)
     # beyond: rear walls and openings
     sect_rect(svg, X, Z, 0, 0, 50, 10, fill='#faf8f4', stroke='#9a9a9a', sw=0.5)
     sect_rect(svg, X, Z, 0, 11, 50, 21, fill='#faf8f4', stroke='#9a9a9a', sw=0.5)
@@ -530,7 +572,7 @@ def section_b(svg, left, base, s):
     slab(svg, X, Z, -0.2, 50.2, -0.5, 0)
     for u in (-0.5, 49.0):
         sect_rect(svg, X, Z, u, -2.8, u + 1.5, -0.5)
-        sect_rect(svg, X, Z, u + 0.4, -6.0, u + 1.1, -2.8, fill='#fff', stroke=INK, sw=0.6)
+        sect_rect(svg, X, Z, u + 0.4, -3.4, u + 1.1, -2.8, fill='#fff', stroke=INK, sw=0.6)
     slab(svg, X, Z, 0, 50, 10, 11)
     slab(svg, X, Z, 0, 50, 21, 22)
     slab(svg, X, Z, 0, 50, 32, 33)
@@ -565,7 +607,7 @@ def section_b(svg, left, base, s):
     for k in range(4):
         cx = 12.5 * k + (4.95 if k in (0, 2) else 7.55)
         sect_rect(svg, X, Z, cx - 2.67, 11, cx + 2.67, 12.9, fill='#efeae2', stroke='#777', sw=0.6)
-    sect_rect(svg, X, Z, 38.6, 22, 44.6, 24.0, fill='#fff', stroke=INK, sw=0.8)
+    sect_rect(svg, X, Z, 40.0, 22, 46.0, 24.0, fill='#fff', stroke=INK, sw=0.8)
     # pendants & ceiling lines
     for u in (36, 39, 42):
         svg.line(X(u), Z(10), X(u), Z(7.0), sw=0.5, c='#777')

@@ -51,36 +51,47 @@ EXT_OPS = [
     Op('v', 50, 15.5, 18.5, 'door', lvl=1, z0=0, z1=7, hinge='b', swing=-1, room='Garage',
        desc='Insulated steel side door to service yard'),
     Op('v', 50, 26, 31, 'win', lvl=1, z0=4, z1=7, room='Scullery', desc='Casement over prep sink'),
-    Op('v', 50, 47.5, 53, 'fixed', lvl=1, z0=0, z1=10, room='Kitchen', desc='Floor-to-ceiling light'),
+    Op('v', 50, 47, 52.5, 'fixed', lvl=1, z0=0, z1=10, room='Kitchen', desc='Floor-to-ceiling corner light'),
     Op('h', 54, 1.0, 11.75, 'slider', lvl=1, z0=0, z1=10, room='Living', desc='Lift-slide, pocketing, to loggia'),
     Op('h', 54, 13.25, 24.25, 'slider', lvl=1, z0=0, z1=10, room='Living / Dining', desc='Lift-slide, pocketing, to loggia'),
     Op('h', 54, 25.75, 36.75, 'slider', lvl=1, z0=0, z1=10, room='Dining / Kitchen', desc='Lift-slide, pocketing, to loggia'),
     Op('h', 54, 38.25, 49.0, 'slider', lvl=1, z0=0, z1=10, room='Kitchen', desc='Lift-slide, pocketing, to outdoor kitchen'),
     # Level 2
-    Op('h', 6, 15, 37, 'slider', lvl=2, z0=11, z1=21, room='Family Lounge', desc='Lift-slide to covered front balcony'),
-    Op('h', 6, 39, 48.5, 'slider', lvl=2, z0=11, z1=21, room='Study', desc='Lift-slide to covered front balcony'),
+    Op('h', 6, 15, 37.75, 'slider', lvl=2, z0=11, z1=21, room='Family Lounge', desc='Lift-slide to covered front balcony',
+       mull=[20.67, 26.33, 32.0]),
+    Op('h', 6, 38.25, 48.5, 'slider', lvl=2, z0=11, z1=21, room='Study', desc='Lift-slide to covered front balcony',
+       mull=[43.25]),
     Op('v', 0, 24.5, 27.5, 'fixed', lvl=2, z0=11, z1=21, room='Hall', desc='Full-height hall slot'),
-    Op('v', 0, 29, 33, 'win', lvl=2, z0=17, z1=20, room='Bath 2', desc='High awning, obscure glass'),
-    Op('v', 0, 42, 52, 'win', lvl=2, z0=14, z1=21, room='Bedroom 2', desc='Casement pair'),
-    Op('v', 50, 9, 14, 'win', lvl=2, z0=14, z1=20, room='Study', desc='Casement'),
-    Op('v', 50, 17, 22, 'win', lvl=2, z0=16.5, z1=20, room='Laundry', desc='High awning'),
-    Op('v', 50, 29, 33, 'win', lvl=2, z0=17, z1=20, room='Bath 5', desc='High awning, obscure glass'),
-    Op('v', 50, 42, 52, 'win', lvl=2, z0=14, z1=21, room='Bedroom 5', desc='Casement pair'),
+    Op('v', 0, 29, 33, 'win', lvl=2, z0=17.5, z1=21, room='Bath 2', desc='High awning, obscure glass'),
+    Op('v', 0, 47, 52.5, 'win', lvl=2, z0=14, z1=21, room='Bedroom 2',
+       desc='Egress casement over fritted fixed lower lite'),
+    Op('v', 50, 8.5, 14.5, 'win', lvl=2, z0=14, z1=21, room='Study', desc='Casement pair'),
+    Op('v', 50, 19, 23, 'win', lvl=2, z0=17.5, z1=21, room='Laundry', desc='High awning'),
+    Op('v', 50, 29, 33, 'win', lvl=2, z0=17.5, z1=21, room='Bath 5', desc='High awning, obscure glass'),
+    Op('v', 50, 47, 52.5, 'win', lvl=2, z0=14, z1=21, room='Bedroom 5',
+       desc='Egress casement over fritted fixed lower lite'),
     Op('h', 54, 2.25, 10.25, 'slider', lvl=2, z0=11, z1=21, room='Bedroom 2', desc='Lift-slide to rear terrace'),
     Op('h', 54, 14.75, 22.75, 'slider', lvl=2, z0=11, z1=21, room='Bedroom 3', desc='Lift-slide to rear terrace'),
     Op('h', 54, 27.25, 35.25, 'slider', lvl=2, z0=11, z1=21, room='Bedroom 4', desc='Lift-slide to rear terrace'),
     Op('h', 54, 39.75, 47.75, 'slider', lvl=2, z0=11, z1=21, room='Bedroom 5', desc='Lift-slide to rear terrace'),
     # Level 3
-    Op('h', 6, 15.5, 30.5, 'slider', lvl=3, z0=22, z1=31, room='Bedroom 6', desc='Lift-slide to front terrace'),
-    Op('h', 6, 33.5, 48.25, 'slider', lvl=3, z0=22, z1=31, room='Bedroom 7', desc='Lift-slide to front terrace'),
-    Op('v', 0, 24.5, 27.5, 'fixed', lvl=3, z0=22, z1=32, room='Hall', desc='Full-height hall slot'),
-    Op('v', 0, 30, 44, 'win', lvl=3, z0=28.5, z1=31.5, room='Dressing Room', desc='Ribbon clerestory'),
-    Op('v', 50, 8, 15, 'win', lvl=3, z0=25, z1=31, room='Bedroom 7', desc='Casement pair'),
-    Op('v', 50, 19, 23, 'win', lvl=3, z0=28, z1=31, room='Bath 7', desc='High awning, obscure glass'),
-    Op('v', 50, 30, 44, 'win', lvl=3, z0=28.5, z1=31.5, room='Primary Bath', desc='Ribbon clerestory'),
-    Op('h', 46, 2, 12, 'win', lvl=3, z0=28.5, z1=31.5, room='Dressing Room', desc='Ribbon clerestory'),
+    Op('h', 6, 15, 31.75, 'slider', lvl=3, z0=22, z1=31, room='Bedroom 6', desc='Lift-slide to front terrace',
+       mull=[20.67, 26.33]),
+    Op('h', 6, 32.25, 48.5, 'slider', lvl=3, z0=22, z1=31, room='Bedroom 7', desc='Lift-slide to front terrace',
+       mull=[38.0, 43.25]),
+    Op('v', 0, 24.5, 27.5, 'fixed', lvl=3, z0=22, z1=31, room='Hall', desc='Full-height hall slot'),
+    Op('v', 0, 29, 44, 'win', lvl=3, z0=28.5, z1=31, room='Dressing Room', desc='Ribbon clerestory'),
+    Op('v', 50, 8.5, 14.5, 'win', lvl=3, z0=25, z1=31, room='Bedroom 7', desc='Egress casement pair'),
+    Op('v', 50, 19, 23, 'win', lvl=3, z0=28.5, z1=31, room='Bath 7', desc='High awning, obscure glass'),
+    Op('v', 50, 29, 44, 'win', lvl=3, z0=28.5, z1=31, room='Primary Bath', desc='Ribbon clerestory'),
+    Op('h', 46, 2.5, 11.5, 'win', lvl=3, z0=28.5, z1=31, room='Dressing Room', desc='Ribbon clerestory'),
     Op('h', 46, 16, 34, 'slider', lvl=3, z0=22, z1=31, room='Primary Bedroom', desc='Lift-slide, pocketing, to primary terrace'),
-    Op('h', 46, 38.5, 47.5, 'fixed', lvl=3, z0=25, z1=31, room='Primary Bath', desc='Fixed picture window at tub, privacy film'),
+    Op('h', 46, 38.5, 47.5, 'fixed', lvl=3, z0=25, z1=31, room='Primary Bath',
+       desc='Fixed picture window at tub, switchable (PDLC) privacy glass'),
+    # appended so earlier marks keep their numbers
+    Op('v', 0, 4.5, 19.5, 'slot', lvl=0, z0=11, z1=35, room='Lantern',
+       desc='Translucent low-iron channel-glass band along the stair, bronze caps'),
+    Op('h', 0, 29.5, 47.5, 'fixed', lvl=1, z0=8, z1=10, room='Garage', desc='Satin-etched transom in garage door frame'),
 ]
 for _o in EXT_OPS:
     if _o['o'] == 'h':
@@ -90,7 +101,7 @@ for _o in EXT_OPS:
 
 # Lantern curtain wall (front of the stair lantern, full height).
 LANTERN_CW = dict(o='h', c=0, a=1.25, b=12.75, z0=0, z1=35.5, typ='cw', n='-y',
-                  mull_u=[5, 9], spandrels=[(10.4, 11.4), (21.4, 22.4)])
+                  mull_u=[5, 9], spandrels=[(10, 11), (21, 22)])
 
 # ---------------------------------------------------------------- walls
 FRONT_JAMBS = [(0, -1.5, 1.25, 0.75), (12.75, -1.5, 14, 0.75)]   # bronze lantern frame
@@ -238,7 +249,7 @@ def Rm(num, name, rect, at=None, zone='social', fin='living', dims=True, area=No
 ROOMS = {
     1: [
         Rm('101', 'FOYER', (0.75, 0.33, 14, 24), at=(9.4, 16.2), zone='social', fin='foyer', sub='STAIR LANTERN · 35\'-6" CLG.', dims=False),
-        Rm('102', 'OFFICE', (14.2, 0.75, 26.75, 13.29), at=(20.5, 11.4), zone='social', fin='living'),
+        Rm('102', 'OFFICE', (14.2, 0.75, 26.75, 13.29), at=(20.5, 12.0), zone='social', fin='living'),
         Rm('103', 'COAT', (14.41, 13.71, 19.29, 18.29), at=(16.9, 16.2), zone='service', fin='closet', dims=False, size=8),
         Rm('104', 'ELEV.', (14.41, 18.71, 19.29, 23.79), at=(16.85, 21.1), zone='service', fin='elev', dims=False, size=8),
         Rm('105', 'POWDER', (19.71, 13.71, 26.75, 18.79), at=(23.4, 15.4), zone='service', fin='bath', dims=False, size=8.5),
@@ -256,7 +267,7 @@ ROOMS = {
         Rm('201', 'GLASS BRIDGE', (0.75, 0.33, 8.08, 24), at=None, zone='social', fin='foyer', dims=False),
         Rm('202', 'FAMILY LOUNGE', (14.2, 6.75, 37.79, 23.79), at=(22.8, 16.6), zone='family', fin='living', sub='WINE BAR · FIREPLACE'),
         Rm('203', 'STUDY', (38.21, 6.75, 49.25, 14.79), at=(43.6, 12.6), zone='family', fin='living', size=9.5),
-        Rm('204', 'LAUNDRY', (38.21, 15.21, 49.25, 23.79), at=(42.2, 21.0), zone='service', fin='mud', size=9.5),
+        Rm('204', 'LAUNDRY', (38.21, 15.21, 49.25, 23.79), at=(42.6, 19.9), zone='service', fin='mud', size=9.5),
         Rm('205', 'HALL', (0.75, 24, 44, 28), at=(30.2, 26.2), zone='circ', fin='living', dims=False, size=8.5),
         Rm('206', 'BEDROOM 2', (0.75, 41.0, 12.25, 53.25), at=(6.5, 50.9), zone='bed', fin='bed', size=9.5),
         Rm('207', 'BEDROOM 3', (12.75, 41.0, 24.75, 53.25), at=(18.75, 50.9), zone='bed', fin='bed', size=9.5),
@@ -268,7 +279,7 @@ ROOMS = {
         Rm('213', 'BATH 5', (41.21, 28.21, 49.25, 35.79), at=None, zone='service', fin='bath', dims=False),
         Rm('214', 'MECH / LINEN', (44.21, 24.21, 49.25, 27.79), at=None, zone='service', fin='mech', dims=False, size=7.5),
         Rm('215', 'FRONT BALCONY', (14, 0, 48.75, 6), at=(31.5, 3.3), zone='outdoor', fin='deck', area=0, dims=False, size=9),
-        Rm('216', 'REAR TERRACE', (0, 54, 50, 60), at=(6.3, 57.6), zone='outdoor', fin='deck', area=0, dims=False, size=8.5),
+        Rm('216', 'REAR TERRACE', (0, 54, 50, 60), at=(10.8, 56.2), zone='outdoor', fin='deck', area=0, dims=False, size=7.5),
         Rm('217', 'GREEN ROOF', (0, 60, 50, 66), at=(25, 63.3), zone='outdoor', fin='green', area=0, dims=False, size=8.5),
     ],
     3: [
@@ -279,11 +290,11 @@ ROOMS = {
         Rm('305', 'BATH 7', (39.21, 17.71, 49.25, 23.79), at=None, zone='service', fin='bath', dims=False),
         Rm('306', 'HALL', (0.75, 24, 39.5, 28), at=(26.0, 26.2), zone='circ', fin='living', dims=False, size=8.5),
         Rm('307', 'MECH.', (39.71, 24.21, 49.25, 27.79), at=None, zone='service', fin='mech', dims=False, size=7.5),
-        Rm('308', 'PRIMARY BEDROOM', (14.21, 28.21, 35.79, 45.25), at=(25.0, 43.3), zone='primary', fin='bed'),
+        Rm('308', 'PRIMARY BEDROOM', (14.21, 28.21, 35.79, 45.25), at=(29.0, 41.4), zone='primary', fin='bed'),
         Rm('309', 'DRESSING ROOM', (0.75, 28.21, 13.79, 45.25), at=(7.3, 41.6), zone='primary', fin='dressing', size=9.5),
         Rm('310', 'SPA BATH', (36.21, 28.21, 49.25, 45.25), at=(44.0, 38.4), zone='primary', fin='spa', size=9.5),
-        Rm('311', 'FRONT TERRACES', (14, 0, 48.75, 6), at=(31.6, 3.2), zone='outdoor', fin='deck', area=0, dims=False, size=8.5),
-        Rm('312', 'PRIMARY TERRACE', (0, 46, 50, 54), at=(25, 52.2), zone='outdoor', fin='deck', area=0, dims=False),
+        Rm('311', 'FRONT TERRACES', (14, 0, 48.75, 6), at=(27.5, 3.2), zone='outdoor', fin='deck', area=0, dims=False, size=8.5),
+        Rm('312', 'PRIMARY TERRACE', (0, 46, 50, 54), at=(34.0, 51.8), zone='outdoor', fin='deck', area=0, dims=False),
     ],
 }
 
@@ -301,7 +312,7 @@ FINISHES = {
     'garage': ('F4', '-', 'P3', 'C3', "10'-0\""),
     'mech': ('F4', '-', 'P3', 'C1', "9'-0\""),
     'elev': ('F2', '-', 'W1', 'BY MFR.', '-'),
-    'wine': ('F2', '-', 'W1 / GLASS', 'W1', 'VARIES'),
+    'wine': ('F2', '-', 'GYP + W1 / GLASS', 'GYP + W1', 'VARIES'),
     'deck': ('F5', '-', '-', 'C2', 'VARIES'),
     'green': ('F6', '-', '-', '-', '-'),
 }
@@ -359,22 +370,31 @@ BOXES = [
     Bx('L3', 14, 50, 6, 46, 22, 32, 'wood', grp='crown'),
     Bx('L3w', 0, 14, 24, 46, 22, 32, 'wood', grp='crown'),
     Bx('cheek3', 48.75, 50, 0, 6, 22, 32, 'stone', grp='base'),
-    Bx('roof', 14, 50, 0, 50, 32, PARAPET, 'bronze', grp='roof'),
-    Bx('roofw', 0, 14, 24, 50, 32, PARAPET, 'bronze', grp='roof'),
+    Bx('roof', 14, 50, 0, 50, 33.25, PARAPET, 'bronze', grp='roof'),          # thin floating plate
+    Bx('roofGap', 14.5, 49.5, 0.5, 49.5, 32, 33.25, 'bronze', grp='roof'),    # recessed shadow reveal
+    Bx('roofw', 0, 14, 24, 50, 33.25, PARAPET, 'bronze', grp='roof'),
+    Bx('roofwGap', 0.5, 14.5, 24.5, 49.5, 32, 33.25, 'bronze', grp='roof'),
+    Bx('eyebrow2', 0, 50, 54, 57, 21, 22, 'bronze', grp='base'),             # shades the Level 2 suite glass
     Bx('loggiaRoof', 0, 50, 54, 66, 10, 11, 'stone', grp='base'),
     Bx('green', 0.5, 49.5, 60.5, 65.5, 11, 11.7, 'green', cast=False, grp='base'),
     Bx('col1', 0, 0.67, 65.33, 66, 0, 10, 'bronze', grp='base'),
     Bx('col2', 24.67, 25.33, 65.33, 66, 0, 10, 'bronze', grp='base'),
     Bx('col3', 49.33, 50, 65.33, 66, 0, 10, 'bronze', grp='base'),
-    Bx('div1', 12.4, 12.6, 54, 57, 11, 17, 'wood', grp='base'),
-    Bx('div2', 24.9, 25.1, 54, 57, 11, 17, 'wood', grp='base'),
-    Bx('div3', 37.4, 37.6, 54, 57, 11, 17, 'wood', grp='base'),
+    Bx('div1', 12.4, 12.6, 54, 57, 11, 21, 'wood', grp='base'),
+    Bx('div2', 24.9, 25.1, 54, 57, 11, 21, 'wood', grp='base'),
+    Bx('div3', 37.4, 37.6, 54, 57, 11, 21, 'wood', grp='base'),
     Bx('planter3', 31.75, 32.25, 0.5, 5.5, 22, 25.5, 'wood', grp='crown'),
+    Bx('shwrE', 49.45, 49.75, 50.3, 54, 22, 29, 'wood', grp='crown'),       # outdoor-shower screens
+    Bx('shwrN', 46.3, 49.75, 53.45, 53.75, 22, 29, 'wood', grp='crown'),
 ]
 # Vertical wood fins screening the office storefront.
 for _i in range(10):
     _x = 15.35 + _i * 1.15
     BOXES.append(Bx(f'fin{_i}', _x, _x + 0.2, -0.7, 0, 0, 10, 'wood', grp='fins'))
+# Thermo-ash sliding screens on the Level 3 terrace edge, drawn parked half-open over each bedroom.
+L3_SCREENS = [24.0 + 1.15 * _k for _k in range(7)] + [41.5 + 1.15 * _k for _k in range(7)]
+for _i, _x in enumerate(L3_SCREENS):
+    BOXES.append(Bx(f'scr{_i}', _x, _x + 0.2, 0.6, 1.3, 22.5, 32, 'wood', grp='crown'))
 
 # Frameless glass guards (o, plane, a, b, z0, z1)
 RAILS = [

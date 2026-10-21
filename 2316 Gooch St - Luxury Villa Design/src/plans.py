@@ -2,7 +2,7 @@
 import math
 
 from model import (LV, CUT, EXT_OPS, DOORS, WALLS, ROOMS, FRONT_JAMBS, LANTERN_CW, ST_X0, ST_X1, ST_Y0, ST_Y1,
-                   TREAD, RISERS, CAT_X1, ELEV, LOT_W, LOT_D, HOUSE_AT, ZONE_COLORS, RAILS, GUARD_T)
+                   TREAD, RISERS, CAT_X1, ELEV, LOT_W, LOT_D, HOUSE_AT, ZONE_COLORS, RAILS, GUARD_T, L3_SCREENS)
 from svgkit import INK, FURN, SOFT, Fr, fi, tag
 
 POCHE_EXT = '#1e1e1c'
@@ -91,11 +91,15 @@ def draw_opening(svg, T, w, o, ff):
         L(a, lo, a, hi, sw=0.9)
         L(b, lo, b, hi, sw=0.9)
         L(a, lo, b, lo, sw=0.4)
-        npan = max(2, int(round(width / 5.0)))
-        pw = width / npan
+        if o.get('mull'):
+            edges = [a] + [m for m in o['mull'] if a < m < b] + [b]
+        else:
+            npan = max(2, int(round(width / 5.0)))
+            edges = [a + i * width / npan for i in range(npan + 1)]
+        npan = len(edges) - 1
         for i in range(npan):
-            s0 = a + i * pw - (0.25 if i else 0)
-            s1 = a + (i + 1) * pw + (0.25 if i < npan - 1 else 0)
+            s0 = edges[i] - (0.25 if i else 0)
+            s1 = edges[i + 1] + (0.25 if i < npan - 1 else 0)
             off = -t * 0.17 if i % 2 == 0 else t * 0.17
             svg.poly([P(s0, c + off - 0.06), P(s1, c + off - 0.06), P(s1, c + off + 0.06), P(s0, c + off + 0.06)],
                      fill='#fff', stroke=INK, sw=0.7)
@@ -162,7 +166,7 @@ def mark_tag(svg, T, w, o):
             out = -1 if w['c'] < 25 else 1
             x, y = w['c'] + out * (w['t'] / 2 + 1.25), mid
         is_door = o['typ'] in ('pivot', 'garage', 'door')
-        tag(svg, *T.p(x, y), o['mark'], shape='circle' if is_door else 'hex', size=6.2, r=10.5)
+        tag(svg, *T.p(x, y), o['mark'], shape='circle' if is_door else 'hex', size=7.0, r=12)
     else:
         sd = o.get('swing', 1) or 1
         off = sd * (w['t'] / 2 + 0.9)
@@ -170,7 +174,7 @@ def mark_tag(svg, T, w, o):
             off = sd * (w['t'] / 2 + 0.75)
         x, y = (mid, w['c'] + off) if w['o'] == 'h' else (w['c'] + off, mid)
         if o.get('tag_at'):
-            tag(svg, *T.p(*o['tag_at']), o['mark'], shape='circle', size=5.2, r=8.5, fill='#fff')
+            tag(svg, *T.p(*o['tag_at']), o['mark'], shape='circle', size=6.6, r=10.5, fill='#fff')
             return
         if o['typ'] in ('swing',):
             # sit beside the leaf rather than on top of it
@@ -178,7 +182,7 @@ def mark_tag(svg, T, w, o):
                 x = (a + 0.55) if o.get('hinge', 'a') == 'b' else (b - 0.55)
             else:
                 y = (a + 0.55) if o.get('hinge', 'a') == 'b' else (b - 0.55)
-        tag(svg, *T.p(x, y), o['mark'], shape='circle', size=5.2, r=8.5, fill='#fff')
+        tag(svg, *T.p(x, y), o['mark'], shape='circle', size=6.6, r=10.5, fill='#fff')
 
 
 def draw_walls(svg, T, lvl):
@@ -189,8 +193,10 @@ def draw_walls(svg, T, lvl):
     tagged = []
     for w in WALLS[lvl]:
         mine = ops_on(w, ops)
+        high = [o for o in mine if o in EXT_OPS and o['z0'] - ff > CUT]
+        cut = [o for o in mine if o not in high]
         k = w['k']
-        for a, b in solid_segments(w['a'], w['b'], mine):
+        for a, b in solid_segments(w['a'], w['b'], cut):
             x0, y0, x1, y1 = wall_box(w, a, b)
             if k == 'ext':
                 T.rect(svg, x0, y0, x1, y1, fill=POCHE_EXT)
@@ -203,8 +209,16 @@ def draw_walls(svg, T, lvl):
         if k == 'cw':
             for m in [w['a']] + LANTERN_CW['mull_u'] + [w['b']]:
                 T.rect(svg, m - 0.17, w['c'] - 0.2, m + 0.17, w['c'] + 0.2, fill=POCHE_EXT)
-        for o in mine:
+        for o in cut:
             draw_opening(svg, T, w, o, ff)
+            tagged.append((w, o))
+        for o in high:
+            a, b = max(o['a'], w['a']), min(o['b'], w['b'])
+            P = (lambda s, n: T.p(s, n)) if w['o'] == 'h' else (lambda s, n: T.p(n, s))
+            for off in (-0.08, 0.08):
+                svg.line(*P(a, w['c'] + off), *P(b, w['c'] + off), sw=0.8, c='#ffffff', dash='5 3')
+            for s_ in (a, b):
+                svg.line(*P(s_, w['c'] - w['t'] / 2), *P(s_, w['c'] + w['t'] / 2), sw=0.8, c='#ffffff')
             tagged.append((w, o))
     for w, o in tagged:
         mark_tag(svg, T, w, o)
@@ -366,7 +380,7 @@ def plant(svg, T, cx, cy, r, fill='#fff'):
 
 
 def ftext(svg, T, x, y, s, size=6, rot=0, fill=FURN, weight=500):
-    svg.text(*T.p(x, y), s, size=size, anchor='middle', fill=fill, rot=rot, weight=weight)
+    svg.text(*T.p(x, y), s, size=max(size, 6.5), anchor='middle', fill=fill, rot=rot, weight=weight)
 
 
 def fireplace(svg, T, x0, y0, x1, y1):
@@ -536,7 +550,9 @@ def furnish_1(svg, T):
     frect(svg, T, 46.75, 19.75, 49.0, 23.5, fill='#f4f3f1', sw=0.7)
     ftext(svg, T, 47.9, 21.5, 'AHU-1', size=5)
     frect(svg, T, 27.25, 11.0, 28.0, 15.5, fill='#f4f3f1', sw=0.6)
-    ftext(svg, T, 28.6, 13.25, 'PV INVERTER + BATTERY', size=4.6, rot=-90)
+    ftext(svg, T, 29.15, 13.25, 'INVERTER + 2x13.5 kWh ESS', size=4.6, rot=-90)
+    for yb in (10.6, 15.9):
+        T.circle(svg, 28.35, yb, 0.3, fill=INK)
     for i in range(10):
         T.rect(svg, 15.35 + 1.15 * i, -0.7, 15.55 + 1.15 * i, 0, fill=POCHE_INT)
     frect(svg, T, 15.2, -4.6, 26.0, -2.0, fill='#bfdbe8', sw=0.7)
@@ -584,7 +600,9 @@ def furnish_2(svg, T):
     void_x(svg, T, CAT_X1 + 0.1, 0.5, 13.9, ST_Y1 - 0.1)
     stair(svg, T, ST_X0, ST_X1, ST_Y0, RISERS - 1, TREAD, up=(ST_Y0 + 0.4, ST_Y0 + 6.2 * TREAD, 'UP'),
           dn=(ST_Y1 - 0.3, ST_Y0 + 8.2 * TREAD, 'DN'), brk=7.2)
-    ftext(svg, T, 6.25, 12.0, 'GLASS BRIDGE', size=6, rot=-90, fill=INK, weight=700)
+    ftext(svg, T, 7.3, 12.0, 'GLASS BRIDGE', size=6, rot=-90, fill=INK, weight=700)
+    frect(svg, T, 0, 54, 50, 57, fill='none', sw=0.7, dash='7 4', c=INK)
+    ftext(svg, T, 23.25, 57.6, 'EYEBROW ABOVE', size=6.5)
     elevator(svg, T)
     # lounge
     round_table(svg, T, 18.4, 10.6, 1.9, 4)
@@ -648,10 +666,19 @@ def furnish_3(svg, T):
     pavers(svg, T, 0, 46, 50, 54, dx=4, dy=2)
     T.rect(svg, 31.75, 0.5, 32.25, 5.5, fill='#c9b59a', stroke=FURN, sw=0.4)
     frect(svg, T, 0, 46, 50, 50, fill='none', sw=0.7, dash='7 4', c=INK)
-    ftext(svg, T, 38.5, 49.3, 'ROOF OVERHANG ABOVE', size=5.2)
+    ftext(svg, T, 40.5, 49.3, 'ROOF OVERHANG ABOVE', size=5.2)
+    frect(svg, T, 16.0, 24.75, 38.0, 27.25, fill='none', sw=0.7, dash='7 4', c=INK)
+    ftext(svg, T, 33.0, 25.3, 'LINEAR SKYLIGHT ABOVE', size=5)
+    for x in L3_SCREENS:
+        T.rect(svg, x, 0.6, x + 0.2, 1.3, fill='#b98a5c', stroke=FURN, sw=0.3)
     # lower roofs beyond
-    frect(svg, T, 0, 54, 50, 66, fill='none', sw=0.6, c=SOFT)
-    ftext(svg, T, 25, 60.3, 'LEVEL 2 TERRACE + GREEN ROOF BELOW', size=6, fill=SOFT)
+    svg.g('opacity="0.4"')
+    pavers(svg, T, 0, 54, 50, 60, dx=4, dy=2)
+    sedum(svg, T, 0, 60, 50, 66)
+    svg.end()
+    T.rect(svg, 0, 54, 50, 57, fill='#d9d1c6', stroke=INK, sw=0.6)
+    ftext(svg, T, 25, 55.3, "BRONZE EYEBROW BELOW (+22'-0\")", size=6.5, fill=INK)
+    ftext(svg, T, 25, 61.6, 'LEVEL 2 REAR TERRACE + GREEN ROOF BELOW', size=8, fill=INK, weight=600)
     for r in ((19.71, 17.71, 26.79, 23.79), (39.21, 17.71, 49.25, 23.79), (36.21, 28.21, 49.25, 45.25)):
         T.rect(svg, *r, fill=WET_FILL)
     # lantern
@@ -692,16 +719,16 @@ def furnish_3(svg, T):
     ftext(svg, T, 47.65, 23.0 + 5.0, 'SHIP LADDER / 30"x36" HATCH ABOVE', size=4.2)
     # primary bedroom
     rug(svg, T, 16.6, 35.4, 24.4, 44.4)
-    bed(svg, T, 32.29, 33.0, 6.33, 7.0, 'E')
-    for y in (29.05, 36.95):
-        frect(svg, T, 34.2, y - 0.75, 35.79, y + 0.75, fill='#fbfaf7', sw=0.6)
-    frect(svg, T, 27.4, 30.4, 28.4, 35.6, fill='#efebe4', sw=0.6)
+    bed(svg, T, 27.0, 31.71, 6.33, 7.0, 'S')
+    for x0_ in (22.3, 30.2):
+        frect(svg, T, x0_, 28.4, x0_ + 1.5, 29.9, fill='#fbfaf7', sw=0.6)
+    frect(svg, T, 24.5, 35.6, 29.5, 36.6, fill='#efebe4', sw=0.6)
     fireplace(svg, T, 14.21, 37.0, 15.0, 43.0)
     sofa(svg, T, 21.7, 40.0, 7.0, 3.0, 'E')
     frect(svg, T, 17.4, 38.6, 19.4, 41.4, fill='#fbfaf7')
     chair(svg, T, 18.0, 36.0, 2.2, 'S')
-    counter(svg, T, 20.0, 28.21, 26.0, 29.8, fill='#f6f3ee')
-    ftext(svg, T, 23.0, 29.0, 'MORNING BAR', size=4.8)
+    counter(svg, T, 34.2, 29.0, 35.79, 35.0, fill='#f6f3ee')
+    ftext(svg, T, 35.0, 32.0, 'MORNING BAR', size=4.8, rot=-90)
     # dressing room
     closet_rod(svg, T, 0.75, 28.6, 2.75, 44.85)
     closet_rod(svg, T, 3.4, 28.21, 10.6, 30.2)
@@ -715,17 +742,19 @@ def furnish_3(svg, T):
     ftext(svg, T, 38.85, 30.0, 'RAIN SHOWER', size=4.8)
     wc(svg, T, 47.2, 29.4, 'S')
     vanity(svg, T, 47.35, 34.6, 49.25, 42.6, [(48.3, 36.6), (48.3, 40.6)], 'E')
-    tub(svg, T, 38.6, 41.6, 44.6, 44.6)
+    tub(svg, T, 40.0, 41.6, 46.0, 44.6)
     frect(svg, T, 42.6, 35.4, 44.4, 37.8, fill='#fbfaf7', sw=0.6)
     # primary terrace
     for x in (4.0, 7.0):
         chaise(svg, T, x, 50.0, 2.3, 5.8, 'S')
     sofa(svg, T, 24.0, 49.0, 8.0, 2.8, 'S')
     frect(svg, T, 22.0, 50.9, 26.0, 52.4, fill='#fbfaf7')
-    for x in range(10, 48, 4):
+    for x in range(10, 44, 4):
         plant(svg, T, x + 1.3, 53.2, 0.55)
-    shower(svg, T, 46.4, 46.4, 49.4, 49.2)
-    ftext(svg, T, 47.9, 49.8, 'OUTDOOR SHOWER', size=4.6)
+    shower(svg, T, 46.6, 50.6, 49.4, 53.4)
+    T.rect(svg, 49.45, 50.3, 49.75, 54, fill='#b98a5c', stroke=FURN, sw=0.3)
+    T.rect(svg, 46.3, 53.45, 49.75, 53.75, fill='#b98a5c', stroke=FURN, sw=0.3)
+    ftext(svg, T, 48.0, 49.2, 'OUTDOOR SHOWER', size=6.5)
 
 
 FURNISH = {1: furnish_1, 2: furnish_2, 3: furnish_3}
@@ -745,7 +774,9 @@ def room_labels(svg, T, lvl):
         if r['sub']:
             line2.append(r['sub'])
         for i, s in enumerate(line2):
-            svg.text(x, y + size * 1.05 + i * size * 0.95, s, size=size * 0.68, anchor='middle', fill='#5a5650', ls=0.3)
+            svg.text(x, y + size * 1.05 + i * size * 0.95, s, size=size * 0.8, anchor='middle', fill='#5a5650', ls=0.3)
+        ny = y + size * 1.05 + len(line2) * size * 0.95 + 7
+        tag(svg, x, ny, r['num'], shape='box', size=6.5, r=8.5, fill='#f7f4ee', stroke='#8c857a')
 
 
 # ----------------------------------------------------------- dims / grid
@@ -824,6 +855,33 @@ def elev_mark(svg, T, x, y, look, num_, sheet):
     svg.text(sx, sy + 11, sheet, size=6.5, anchor='middle')
 
 
+def alarm(svg, T, kind, x, y):
+    """Ceiling-mounted life-safety device: SD smoke, CO carbon monoxide, HD heat detector."""
+    parts = kind.split('/')
+    for i, p in enumerate(parts):
+        cx = x + (i - (len(parts) - 1) / 2) * 1.0
+        T.circle(svg, cx, y, 0.48, fill='#fff', stroke='#b24a3a', sw=0.9)
+        svg.text(*T.p(cx, y - 0.17), p, size=5.5, weight=700, anchor='middle', fill='#b24a3a')
+
+
+ALARMS = {
+    1: [('SD', 9.0, 26.6), ('SD/CO', 33.6, 27.7), ('HD', 33.0, 21.0)],
+    2: [('SD/CO', 24.0, 26.0), ('SD', 6.5, 22.2)] + [('SD', 12.5 * k + (4.95 if k in (0, 2) else 7.55), 49.3)
+                                                     for k in range(4)],
+    3: [('SD/CO', 22.0, 26.0), ('SD', 6.0, 22.2), ('SD', 28.5, 14.5), ('SD', 46.8, 11.5), ('SD', 32.3, 39.0)],
+}
+EXHAUST = {
+    1: [(24.2, 18.25)],
+    2: [(1.75, 32.9), (17.2, 32.9), (26.25, 32.9), (42.2, 32.9)],
+    3: [(24.8, 20.6), (43.6, 20.4), (46.0, 32.0), (43.0, 33.0)],
+}
+INTERIOR_ELEVS = {
+    1: [(40.0, 36.6, '-y', '2'), (4.3, 41.0, '-x', '3')],
+    2: [(31.9, 19.2, '+y', '2'), (6.2, 32.8, '+y', '3'), (35.3, 17.3, '+x', '4')],
+    3: [(46.0, 40.6, '+x', '2'), (16.3, 40.0, '-x', '3')],
+}
+
+
 def floor_plan(svg, T, lvl):
     FURNISH[lvl](svg, T)
     draw_walls(svg, T, lvl)
@@ -834,23 +892,31 @@ def floor_plan(svg, T, lvl):
             else:
                 T.rect(svg, c - GUARD_T / 2, a, c + GUARD_T / 2, b, fill='#fff', stroke='#444', sw=0.6)
     room_labels(svg, T, lvl)
+    fline(svg, T, ST_X0 + 0.22, ST_Y0, ST_X0 + 0.22, ST_Y1, sw=0.9, c=INK)
+    for kind, x, y in ALARMS[lvl]:
+        alarm(svg, T, kind, x, y)
+    for x, y in EXHAUST[lvl]:
+        frect(svg, T, x - 0.4, y - 0.4, x + 0.4, y + 0.4, fill='#fff', sw=0.7, c=INK)
+        svg.text(*T.p(x, y - 0.17), 'EF', size=5.5, weight=700, anchor='middle')
+    for x, y, look, n_ in INTERIOR_ELEVS[lvl]:
+        elev_mark(svg, T, x, y, look, n_, f'A2.{lvl}')
     if lvl == 1:
         stair(svg, T, ST_X0, ST_X1, ST_Y0, RISERS - 1, TREAD, solid_to=7, up=(ST_Y0 + 0.4, ST_Y0 + 6.6 * TREAD, 'UP'),
               brk=7.3)
         elevator(svg, T)
     # dimensions
     depth = 66 if lvl < 3 else 54
-    dim_h(svg, T, [0, 14, 27, 36, 50], -5.5, ext_from=-1.6)
+    dim_h(svg, T, [0, 14, 27, 36, 50], -6.75, ext_from=-1.6)
     dim_h(svg, T, [0, 50], -8.5)
     ys = [0, 6, 24, 32, 46, 54] + ([66] if lvl < 3 else [])
     dim_v(svg, T, ys, -5.5, ext_from=-1.5)
     dim_v(svg, T, [0, depth], -8.5)
     grid(svg, T, -12.2, -12.2, depth, 50)
-    section_mark(svg, T, 'A', 'A4.1', -10.5, depth + 3.5, 'v', 6.25, '-x')
+    section_mark(svg, T, 'A', 'A4.1', -10.5, depth + 2.4, 'v', 6.25, '-x')
     section_mark(svg, T, 'B', 'A4.1', -10.5, 57.0, 'h', 43, '+y')
     if lvl == 1:
         elev_mark(svg, T, 20.5, -11.4, '+y', '1', 'A3.1')
-        elev_mark(svg, T, 25.0, 70.0, '-y', '2', 'A3.1')
+        elev_mark(svg, T, 25.0, 68.5, '-y', '2', 'A3.1')
         elev_mark(svg, T, -12.2, 39.0, '+x', '1', 'A3.2')
         elev_mark(svg, T, 56.5, 30.0, '-x', '2', 'A3.2')
 
@@ -916,6 +982,10 @@ def roof_plan(svg, T):
     ftext(svg, T, 4.4, 13.2, "T.O. PARAPET +37'-0\"", size=5.5, fill=INK)
     ftext(svg, T, 10.85, 21.0, 'STRUCTURAL GLASS SKYLIGHT', size=4.8, fill=INK)
     ftext(svg, T, 10.85, 20.1, 'OVER CHANDELIER VOID', size=4.8, fill=INK)
+    frect(svg, T, 16.0, 24.75, 38.0, 27.25, fill='#dfeaf0', sw=0.9, c=INK)
+    ftext(svg, T, 27.0, 25.7, 'LINEAR FRITTED SKYLIGHT OVER L3 HALL', size=5, fill=INK)
+    T.rect(svg, 0, 54, 50, 57, fill='#8c8073', stroke=INK, sw=0.7)
+    ftext(svg, T, 25, 55.3, "BRONZE EYEBROW +22'-0\"", size=6.5, fill='#fff', weight=700)
     T.circle(svg, 3.0, 21.5, 0.55, fill='#fff', stroke=INK, sw=0.9)
     T.circle(svg, 3.0, 21.5, 0.2, fill=INK)
     ftext(svg, T, 3.8, 19.9, 'RD-3 / OD-3', size=5, fill=INK, weight=700)
@@ -982,7 +1052,7 @@ def site_plan(svg, T):
     ftext(svg, T, *H(17, 98), 'LAWN · ZOYSIA', size=6.5, fill='#5d7140')
     for x in range(3, 50, 7):
         T.circle(svg, *H(x, 111.5), 2.7, fill='#cfe0bd', stroke='#6c8752', sw=0.6)
-    ftext(svg, T, *H(25, 109.0), 'EVERGREEN PRIVACY SCREEN (NELLIE R. STEVENS HOLLY)', size=5.2, fill='#5d7140')
+    ftext(svg, T, *H(25, 106.4), 'EVERGREEN PRIVACY SCREEN (NELLIE R. STEVENS HOLLY)', size=7, fill='#5d7140')
     # front yard
     T.rect(svg, 0, 0, LOT_W, hy - 0.01, fill='#e2ecd2')
     T.rect(svg, *H(29, -hy - 12), *H(49, 0), fill='#eceae5', stroke=INK, sw=0.8)
@@ -1000,7 +1070,9 @@ def site_plan(svg, T):
         y += 3.6
     T.rect(svg, *H(1.5, -6), *H(13.5, -0.2), fill='#efede8', stroke=INK, sw=0.6)
     T.rect(svg, *H(15.2, -4.6), *H(26.0, -2.0), fill='#bfdbe8', stroke=INK, sw=0.8)
-    ftext(svg, T, *H(20.6, -6.4), 'LINEAR REFLECTING POOL', size=5, fill=INK)
+    ftext(svg, T, *H(20.6, -3.6), 'REFLECTING POOL', size=6.5, fill=INK)
+    pavers(svg, T, *H(13.5, -9.0), *H(29.0, -5.0), dx=4, dy=2, fill='#efede8')
+    ftext(svg, T, *H(21.5, -7.3), 'WALK FROM DRIVE', size=6.5, fill=INK)
     for x, y, r in ((22, -17, 4.5), (-1.0, -20, 3.0)):
         T.circle(svg, *H(x, y), r, fill='#d8e6c3', stroke='#6c8752', sw=0.7)
         for i in range(8):
@@ -1014,12 +1086,12 @@ def site_plan(svg, T):
     T.rect(svg, LOT_W - 5, hy, LOT_W, hy + 66, fill='#ece9e1')
     for y in range(int(hy) + 2, int(hy) + 64, 4):
         T.rect(svg, 1.0, y, 4.0, y + 2.2, fill='#f7f6f2', stroke=SOFT, sw=0.4)
-    T.rect(svg, LOT_W - 4.6, hy + 6, LOT_W - 0.4, hy + 14, fill='#f0eee9', stroke=INK, sw=0.6)
-    ftext(svg, T, LOT_W - 2.5, hy + 10, 'BINS', size=5, fill=INK, rot=-90)
+    T.rect(svg, LOT_W - 2.4, hy + 6, LOT_W - 0.4, hy + 14, fill='#f0eee9', stroke=INK, sw=0.6)
+    ftext(svg, T, LOT_W - 1.4, hy + 10, 'BINS', size=6.5, fill=INK, rot=-90)
     T.rect(svg, LOT_W - 4.6, hy + 88, LOT_W - 0.4, hy + 96, fill='#f0eee9', stroke=INK, sw=0.6)
     ftext(svg, T, LOT_W - 2.5, hy + 92, 'POOL EQUIP.', size=4.6, fill=INK, rot=-90)
     T.rect(svg, 0.6, hy + 58, 4.4, hy + 61.5, fill='#f6f8f9', stroke=INK, sw=0.6)
-    ftext(svg, T, 2.5, hy + 59.6, 'OUTDOOR SHWR', size=4.2, fill=INK)
+    ftext(svg, T, 2.5, hy + 63.6, 'OUTDOOR SHOWER', size=6.5, fill=INK, rot=-90)
     # house footprint (roof plan simplified)
     T.rect(svg, *H(0, 54), *H(50, 66), fill='#ebe7df', stroke=INK, sw=0.9)
     ftext(svg, T, *H(25, 62.6), 'COVERED LOGGIA / L2 TERRACE & GREEN ROOF ABOVE', size=5.3, fill=INK)
@@ -1043,16 +1115,18 @@ def site_plan(svg, T):
     for x in (5, LOT_W - 5):
         fline(svg, T, x, 25, x, LOT_D - 5, sw=0.8, c='#b24a3a', dash='10 4')
     fline(svg, T, 5, LOT_D - 5, LOT_W - 5, LOT_D - 5, sw=0.8, c='#b24a3a', dash='10 4')
-    ftext(svg, T, 30, LOT_D - 4.4, "5'-0\" REAR SETBACK", size=5.5, fill='#b24a3a')
+    ftext(svg, T, LOT_W + 8.5, LOT_D - 5.0, "5'-0\" REAR SETBACK", size=7, fill='#b24a3a')
     # fences & gates
     for x in (0.15, LOT_W - 0.15):
         fline(svg, T, x, hy + 26, x, LOT_D, sw=2.2, c='#7a5b3a')
     fline(svg, T, 0, LOT_D - 0.15, LOT_W, LOT_D - 0.15, sw=2.2, c='#7a5b3a')
     for x0, x1 in ((0, 5), (LOT_W - 5, LOT_W)):
+        # pool-barrier gates swing out, away from the pool (ISPSC 305.3)
         fline(svg, T, x0, hy + 26, x1, hy + 26, sw=2.2, c='#7a5b3a')
-        fline(svg, T, x0 + 0.6, hy + 26, x0 + 0.6, hy + 30.2, sw=0.6, c='#7a5b3a')
-        svg.path('M {} {} A {} {} 0 0 1 {} {}'.format(*T.p(x0 + 0.6, hy + 30.2), T.L(4.2), T.L(4.2),
-                                                      *T.p(x1 - 0.2, hy + 26)), stroke='#7a5b3a', sw=0.5)
+        fline(svg, T, x0 + 0.6, hy + 26, x0 + 0.6, hy + 21.8, sw=0.6, c='#7a5b3a')
+        arc = [T.p(x0 + 0.6 + 4.2 * math.cos(math.radians(a)), hy + 26 + 4.2 * math.sin(math.radians(a)))
+               for a in range(-90, 1, 5)]
+        svg.poly(arc, close=False, stroke='#7a5b3a', sw=0.5)
     # property line
     T.rect(svg, 0, 0, LOT_W, LOT_D, fill='none', stroke=INK, sw=1.8, dash='26 6 4 6')
     # utilities
