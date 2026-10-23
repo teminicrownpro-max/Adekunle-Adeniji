@@ -3,6 +3,7 @@
     <SaveVersion>14</SaveVersion>
     <Name>Charity 5K - Model Answer</Name>
     <Title>Campus Charity 5K Run - Model Answer</Title>
+    <Subject>MGMT 6128 midterm practice case</Subject>
     <ScheduleFromStart>1</ScheduleFromStart>
     <StartDate>2027-02-01T08:00:00</StartDate>
     <FinishDate>2027-04-28T17:00:00</FinishDate>
@@ -39,7 +40,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2026-10-23T12:15:46</CurrentDate>
+    <CurrentDate>2026-10-23T12:34:28</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -136,14 +137,54 @@
                     <DayType>7</DayType>
                     <DayWorking>0</DayWorking>
                 </WeekDay>
+                <WeekDay>
+                    <DayType>0</DayType>
+                    <DayWorking>0</DayWorking>
+                    <TimePeriod>
+                        <FromDate>2027-02-15T00:00:00</FromDate>
+                        <ToDate>2027-02-15T23:59:59</ToDate>
+                    </TimePeriod>
+                </WeekDay>
+                <WeekDay>
+                    <DayType>0</DayType>
+                    <DayWorking>0</DayWorking>
+                    <TimePeriod>
+                        <FromDate>2027-03-26T00:00:00</FromDate>
+                        <ToDate>2027-03-26T23:59:59</ToDate>
+                    </TimePeriod>
+                </WeekDay>
             </WeekDays>
+            <Exceptions>
+                <Exception>
+                    <EnteredByOccurrences>0</EnteredByOccurrences>
+                    <TimePeriod>
+                        <FromDate>2027-02-15T00:00:00</FromDate>
+                        <ToDate>2027-02-15T23:59:59</ToDate>
+                    </TimePeriod>
+                    <Occurrences>1</Occurrences>
+                    <Name>Family Day</Name>
+                    <Type>1</Type>
+                    <DayWorking>0</DayWorking>
+                </Exception>
+                <Exception>
+                    <EnteredByOccurrences>0</EnteredByOccurrences>
+                    <TimePeriod>
+                        <FromDate>2027-03-26T00:00:00</FromDate>
+                        <ToDate>2027-03-26T23:59:59</ToDate>
+                    </TimePeriod>
+                    <Occurrences>1</Occurrences>
+                    <Name>Good Friday</Name>
+                    <Type>1</Type>
+                    <DayWorking>0</DayWorking>
+                </Exception>
+            </Exceptions>
         </Calendar>
     </Calendars>
     <Tasks>
         <Task>
             <UID>1</UID>
             <ID>1</ID>
-            <Name>Project Initiation &amp; Planning</Name>
+            <Name>Overall Project Management</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
@@ -153,8 +194,8 @@
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-02-01T08:00:00</Start>
-            <Finish>2027-02-09T17:00:00</Finish>
-            <Duration>PT56H0M0S</Duration>
+            <Finish>2027-04-28T17:00:00</Finish>
+            <Duration>PT488H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -163,12 +204,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>1</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-01T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-28T17:00:00</EarlyFinish>
+            <LateStart>2027-02-01T08:00:00</LateStart>
+            <LateFinish>2027-04-28T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT56H0M0S</RemainingDuration>
+            <RemainingDuration>PT488H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -180,7 +225,7 @@
         <Task>
             <UID>2</UID>
             <ID>2</ID>
-            <Name>Hold kickoff meeting with Student Union and food bank</Name>
+            <Name>Hold kickoff meeting with the Student Union and food bank</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -200,11 +245,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-01T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-01T17:00:00</EarlyFinish>
+            <LateStart>2027-02-01T08:00:00</LateStart>
+            <LateFinish>2027-02-01T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -237,11 +287,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-02T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-04T17:00:00</EarlyFinish>
+            <LateStart>2027-02-02T08:00:00</LateStart>
+            <LateFinish>2027-02-04T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -281,11 +336,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-05T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-09T17:00:00</EarlyFinish>
+            <LateStart>2027-02-05T08:00:00</LateStart>
+            <LateFinish>2027-02-09T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -325,16 +385,21 @@
             <Estimated>0</Estimated>
             <Milestone>1</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-09T17:00:00</EarlyStart>
+            <EarlyFinish>2027-02-09T17:00:00</EarlyFinish>
+            <LateStart>2027-02-09T17:00:00</LateStart>
+            <LateFinish>2027-02-09T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Milestone: sponsor signs off the plan.</Notes>
+            <Notes>Milestone. The Student Union executive signs off the plan.</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
@@ -349,6 +414,227 @@
         <Task>
             <UID>6</UID>
             <ID>6</ID>
+            <Name>Reconcile funds and present donation to the food bank</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>1.5</WBS>
+            <OutlineNumber>1.5</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-04-19T08:00:00</Start>
+            <Finish>2027-04-22T17:00:00</Finish>
+            <Duration>PT32H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-19T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-22T17:00:00</EarlyFinish>
+            <LateStart>2027-04-20T08:00:00</LateStart>
+            <LateFinish>2027-04-23T17:00:00</LateFinish>
+            <FreeSlack>4800</FreeSlack>
+            <TotalSlack>4800</TotalSlack>
+            <StartSlack>4800</StartSlack>
+            <FinishSlack>4800</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT32H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>51</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>7</UID>
+            <ID>7</ID>
+            <Name>Survey participants, volunteers and sponsors</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>1.6</WBS>
+            <OutlineNumber>1.6</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-04-19T08:00:00</Start>
+            <Finish>2027-04-23T17:00:00</Finish>
+            <Duration>PT40H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-19T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-23T17:00:00</EarlyFinish>
+            <LateStart>2027-04-19T08:00:00</LateStart>
+            <LateFinish>2027-04-23T17:00:00</LateFinish>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT40H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>51</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>8</UID>
+            <ID>8</ID>
+            <Name>Write final report and lessons learned</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>1.7</WBS>
+            <OutlineNumber>1.7</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-04-26T08:00:00</Start>
+            <Finish>2027-04-28T17:00:00</Finish>
+            <Duration>PT24H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-26T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-28T17:00:00</EarlyFinish>
+            <LateStart>2027-04-26T08:00:00</LateStart>
+            <LateFinish>2027-04-28T17:00:00</LateFinish>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>6</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>7</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>9</UID>
+            <ID>9</ID>
+            <Name>Project closed</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>1.8</WBS>
+            <OutlineNumber>1.8</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-04-28T17:00:00</Start>
+            <Finish>2027-04-28T17:00:00</Finish>
+            <Duration>PT0H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>1</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-28T17:00:00</EarlyStart>
+            <EarlyFinish>2027-04-28T17:00:00</EarlyFinish>
+            <LateStart>2027-04-28T17:00:00</LateStart>
+            <LateFinish>2027-04-28T17:00:00</LateFinish>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>Milestone.</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>8</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>52</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>53</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>10</UID>
+            <ID>10</ID>
             <Name>Route &amp; Permits</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -359,7 +645,7 @@
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-02-10T08:00:00</Start>
-            <Finish>2027-03-03T17:00:00</Finish>
+            <Finish>2027-03-04T17:00:00</Finish>
             <Duration>PT128H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -369,10 +655,14 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>1</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-04T17:00:00</EarlyFinish>
+            <LateStart>2027-02-10T08:00:00</LateStart>
+            <LateFinish>2027-03-04T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
             <RemainingDuration>PT128H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
@@ -384,8 +674,8 @@
             <EarnedValueMethod>0</EarnedValueMethod>
         </Task>
         <Task>
-            <UID>7</UID>
-            <ID>7</ID>
+            <UID>11</UID>
+            <ID>11</ID>
             <Name>Design candidate routes and measure the 5 km course</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -406,11 +696,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-12T17:00:00</EarlyFinish>
+            <LateStart>2027-02-10T08:00:00</LateStart>
+            <LateFinish>2027-02-12T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -428,9 +723,9 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>8</UID>
-            <ID>8</ID>
-            <Name>Walk route with Campus Security and Facilities</Name>
+            <UID>12</UID>
+            <ID>12</ID>
+            <Name>Walk the route with Campus Facilities and Security</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -439,8 +734,8 @@
             <OutlineNumber>2.2</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-15T08:00:00</Start>
-            <Finish>2027-02-16T17:00:00</Finish>
+            <Start>2027-02-16T08:00:00</Start>
+            <Finish>2027-02-17T17:00:00</Finish>
             <Duration>PT16H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -450,11 +745,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-16T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-17T17:00:00</EarlyFinish>
+            <LateStart>2027-02-16T08:00:00</LateStart>
+            <LateFinish>2027-02-17T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -464,7 +764,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>7</PredecessorUID>
+                <PredecessorUID>11</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -472,9 +772,9 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>9</UID>
-            <ID>9</ID>
-            <Name>Submit special-event and road-use permit application</Name>
+            <UID>13</UID>
+            <ID>13</ID>
+            <Name>Submit special-event and road-use permit applications</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -483,8 +783,8 @@
             <OutlineNumber>2.3</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-17T08:00:00</Start>
-            <Finish>2027-02-17T17:00:00</Finish>
+            <Start>2027-02-18T08:00:00</Start>
+            <Finish>2027-02-18T17:00:00</Finish>
             <Duration>PT8H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -494,11 +794,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-18T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-18T17:00:00</EarlyFinish>
+            <LateStart>2027-02-18T08:00:00</LateStart>
+            <LateFinish>2027-02-18T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -508,7 +813,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>8</PredecessorUID>
+                <PredecessorUID>12</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -516,8 +821,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>10</UID>
-            <ID>10</ID>
+            <UID>14</UID>
+            <ID>14</ID>
             <Name>City permit review (external)</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -527,8 +832,8 @@
             <OutlineNumber>2.4</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-18T08:00:00</Start>
-            <Finish>2027-03-03T17:00:00</Finish>
+            <Start>2027-02-19T08:00:00</Start>
+            <Finish>2027-03-04T17:00:00</Finish>
             <Duration>PT80H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -538,22 +843,27 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-19T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-04T17:00:00</EarlyFinish>
+            <LateStart>2027-02-19T08:00:00</LateStart>
+            <LateFinish>2027-03-04T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT80H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>External wait: no team resource. The ELC follows up weekly.</Notes>
+            <Notes>External wait with no team resource. Assumes a 10-working-day review. The ELC follows up twice a week.</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>9</PredecessorUID>
+                <PredecessorUID>13</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -561,8 +871,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>11</UID>
-            <ID>11</ID>
+            <UID>15</UID>
+            <ID>15</ID>
             <Name>Develop safety and emergency plan</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -572,8 +882,8 @@
             <OutlineNumber>2.5</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-17T08:00:00</Start>
-            <Finish>2027-02-23T17:00:00</Finish>
+            <Start>2027-02-18T08:00:00</Start>
+            <Finish>2027-02-24T17:00:00</Finish>
             <Duration>PT40H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -587,7 +897,15 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-18T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-24T17:00:00</EarlyFinish>
+            <LateStart>2027-02-26T08:00:00</LateStart>
+            <LateFinish>2027-03-04T17:00:00</LateFinish>
+            <TotalSlack>28800</TotalSlack>
+            <StartSlack>28800</StartSlack>
+            <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT40H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -597,7 +915,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>8</PredecessorUID>
+                <PredecessorUID>12</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -605,8 +923,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>12</UID>
-            <ID>12</ID>
+            <UID>16</UID>
+            <ID>16</ID>
             <Name>Permits approved and route confirmed</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -616,8 +934,8 @@
             <OutlineNumber>2.6</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-03T17:00:00</Start>
-            <Finish>2027-03-03T17:00:00</Finish>
+            <Start>2027-03-04T17:00:00</Start>
+            <Finish>2027-03-04T17:00:00</Finish>
             <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -627,11 +945,16 @@
             <Estimated>0</Estimated>
             <Milestone>1</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-04T17:00:00</EarlyStart>
+            <EarlyFinish>2027-03-04T17:00:00</EarlyFinish>
+            <LateStart>2027-03-04T17:00:00</LateStart>
+            <LateFinish>2027-03-04T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -641,14 +964,14 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>10</PredecessorUID>
+                <PredecessorUID>14</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>11</PredecessorUID>
+                <PredecessorUID>15</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -656,8 +979,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>13</UID>
-            <ID>13</ID>
+            <UID>17</UID>
+            <ID>17</ID>
             <Name>Registration &amp; Fundraising Platform</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -669,7 +992,7 @@
             <Priority>500</Priority>
             <Start>2027-02-10T08:00:00</Start>
             <Finish>2027-04-08T17:00:00</Finish>
-            <Duration>PT336H0M0S</Duration>
+            <Duration>PT320H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -678,12 +1001,17 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>1</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-08T17:00:00</EarlyFinish>
+            <LateStart>2027-02-17T08:00:00</LateStart>
+            <LateFinish>2027-04-08T17:00:00</LateFinish>
+            <StartSlack>19200</StartSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT336H0M0S</RemainingDuration>
+            <RemainingDuration>PT320H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -693,8 +1021,8 @@
             <EarnedValueMethod>0</EarnedValueMethod>
         </Task>
         <Task>
-            <UID>14</UID>
-            <ID>14</ID>
+            <UID>18</UID>
+            <ID>18</ID>
             <Name>Select registration and fundraising platform</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -719,7 +1047,15 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-12T17:00:00</EarlyFinish>
+            <LateStart>2027-02-17T08:00:00</LateStart>
+            <LateFinish>2027-02-19T17:00:00</LateFinish>
+            <TotalSlack>19200</TotalSlack>
+            <StartSlack>19200</StartSlack>
+            <FinishSlack>19200</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -737,8 +1073,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>15</UID>
-            <ID>15</ID>
+            <UID>19</UID>
+            <ID>19</ID>
             <Name>Configure registration form, fees and waiver</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -748,8 +1084,8 @@
             <OutlineNumber>3.2</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-15T08:00:00</Start>
-            <Finish>2027-02-18T17:00:00</Finish>
+            <Start>2027-02-16T08:00:00</Start>
+            <Finish>2027-02-19T17:00:00</Finish>
             <Duration>PT32H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -763,7 +1099,15 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-16T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-19T17:00:00</EarlyFinish>
+            <LateStart>2027-02-22T08:00:00</LateStart>
+            <LateFinish>2027-02-25T17:00:00</LateFinish>
+            <TotalSlack>19200</TotalSlack>
+            <StartSlack>19200</StartSlack>
+            <FinishSlack>19200</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT32H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -773,7 +1117,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>14</PredecessorUID>
+                <PredecessorUID>18</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -781,8 +1125,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>16</UID>
-            <ID>16</ID>
+            <UID>20</UID>
+            <ID>20</ID>
             <Name>Set up individual and team fundraising pages</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -792,8 +1136,8 @@
             <OutlineNumber>3.3</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-19T08:00:00</Start>
-            <Finish>2027-02-23T17:00:00</Finish>
+            <Start>2027-02-22T08:00:00</Start>
+            <Finish>2027-02-24T17:00:00</Finish>
             <Duration>PT24H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -807,7 +1151,15 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-22T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-24T17:00:00</EarlyFinish>
+            <LateStart>2027-02-26T08:00:00</LateStart>
+            <LateFinish>2027-03-02T17:00:00</LateFinish>
+            <TotalSlack>19200</TotalSlack>
+            <StartSlack>19200</StartSlack>
+            <FinishSlack>19200</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -817,7 +1169,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>15</PredecessorUID>
+                <PredecessorUID>19</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -825,8 +1177,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>17</UID>
-            <ID>17</ID>
+            <UID>21</UID>
+            <ID>21</ID>
             <Name>Test registration and payment flow</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -836,8 +1188,8 @@
             <OutlineNumber>3.4</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-24T08:00:00</Start>
-            <Finish>2027-02-25T17:00:00</Finish>
+            <Start>2027-02-25T08:00:00</Start>
+            <Finish>2027-02-26T17:00:00</Finish>
             <Duration>PT16H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -851,7 +1203,16 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-25T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-26T17:00:00</EarlyFinish>
+            <LateStart>2027-03-03T08:00:00</LateStart>
+            <LateFinish>2027-03-04T17:00:00</LateFinish>
+            <FreeSlack>19200</FreeSlack>
+            <TotalSlack>19200</TotalSlack>
+            <StartSlack>19200</StartSlack>
+            <FinishSlack>19200</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -861,7 +1222,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>16</PredecessorUID>
+                <PredecessorUID>20</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -869,8 +1230,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>18</UID>
-            <ID>18</ID>
+            <UID>22</UID>
+            <ID>22</ID>
             <Name>Registration opens</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -880,8 +1241,8 @@
             <OutlineNumber>3.5</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-03T17:00:00</Start>
-            <Finish>2027-03-03T17:00:00</Finish>
+            <Start>2027-03-04T17:00:00</Start>
+            <Finish>2027-03-04T17:00:00</Finish>
             <Duration>PT0H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -891,35 +1252,40 @@
             <Estimated>0</Estimated>
             <Milestone>1</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-04T17:00:00</EarlyStart>
+            <EarlyFinish>2027-03-04T17:00:00</EarlyFinish>
+            <LateStart>2027-03-04T17:00:00</LateStart>
+            <LateFinish>2027-03-04T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Milestone. Registration does not open until the route is approved.</Notes>
+            <Notes>Milestone. Registration does not open until the permits are approved.</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>17</PredecessorUID>
+                <PredecessorUID>21</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>27</PredecessorUID>
+                <PredecessorUID>31</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>12</PredecessorUID>
+                <PredecessorUID>16</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -927,8 +1293,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>19</UID>
-            <ID>19</ID>
+            <UID>23</UID>
+            <ID>23</ID>
             <Name>Close registration and confirm participant list</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -949,11 +1315,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-08T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-08T17:00:00</EarlyFinish>
+            <LateStart>2027-04-08T08:00:00</LateStart>
+            <LateFinish>2027-04-08T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -963,7 +1334,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>30</PredecessorUID>
+                <PredecessorUID>34</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -971,8 +1342,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>20</UID>
-            <ID>20</ID>
+            <UID>24</UID>
+            <ID>24</ID>
             <Name>Sponsorship</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -983,7 +1354,7 @@
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-02-10T08:00:00</Start>
-            <Finish>2027-03-12T17:00:00</Finish>
+            <Finish>2027-03-15T17:00:00</Finish>
             <Duration>PT184H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -997,6 +1368,14 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-15T17:00:00</EarlyFinish>
+            <LateStart>2027-02-12T08:00:00</LateStart>
+            <LateFinish>2027-03-17T17:00:00</LateFinish>
+            <FreeSlack>9600</FreeSlack>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>9600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
             <RemainingDuration>PT184H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
@@ -1008,8 +1387,8 @@
             <EarnedValueMethod>0</EarnedValueMethod>
         </Task>
         <Task>
-            <UID>21</UID>
-            <ID>21</ID>
+            <UID>25</UID>
+            <ID>25</ID>
             <Name>Create sponsorship package and tiers</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1034,7 +1413,15 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-12T17:00:00</EarlyFinish>
+            <LateStart>2027-02-12T08:00:00</LateStart>
+            <LateFinish>2027-02-17T17:00:00</LateFinish>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>9600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -1052,8 +1439,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>22</UID>
-            <ID>22</ID>
+            <UID>26</UID>
+            <ID>26</ID>
             <Name>Pitch local businesses for sponsorship</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1063,8 +1450,8 @@
             <OutlineNumber>4.2</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-15T08:00:00</Start>
-            <Finish>2027-02-26T17:00:00</Finish>
+            <Start>2027-02-16T08:00:00</Start>
+            <Finish>2027-03-01T17:00:00</Finish>
             <Duration>PT80H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -1078,7 +1465,15 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-16T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-01T17:00:00</EarlyFinish>
+            <LateStart>2027-02-18T08:00:00</LateStart>
+            <LateFinish>2027-03-03T17:00:00</LateFinish>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>9600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT80H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -1088,7 +1483,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>21</PredecessorUID>
+                <PredecessorUID>25</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -1096,8 +1491,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>23</UID>
-            <ID>23</ID>
+            <UID>27</UID>
+            <ID>27</ID>
             <Name>Negotiate and sign sponsor agreements</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1107,8 +1502,8 @@
             <OutlineNumber>4.3</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-01T08:00:00</Start>
-            <Finish>2027-03-09T17:00:00</Finish>
+            <Start>2027-03-02T08:00:00</Start>
+            <Finish>2027-03-10T17:00:00</Finish>
             <Duration>PT56H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -1122,177 +1517,16 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-02T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-10T17:00:00</EarlyFinish>
+            <LateStart>2027-03-04T08:00:00</LateStart>
+            <LateFinish>2027-03-12T17:00:00</LateFinish>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>9600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT56H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>22</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>24</UID>
-            <ID>24</ID>
-            <Name>Collect sponsor logos and recognition details</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>4.4</WBS>
-            <OutlineNumber>4.4</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-03-10T08:00:00</Start>
-            <Finish>2027-03-12T17:00:00</Finish>
-            <Duration>PT24H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT24H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>23</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>25</UID>
-            <ID>25</ID>
-            <Name>Marketing Campaign</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>0</Type>
-            <IsNull>0</IsNull>
-            <WBS>5</WBS>
-            <OutlineNumber>5</OutlineNumber>
-            <OutlineLevel>1</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-02-10T08:00:00</Start>
-            <Finish>2027-04-07T17:00:00</Finish>
-            <Duration>PT328H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>1</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT328H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-        </Task>
-        <Task>
-            <UID>26</UID>
-            <ID>26</ID>
-            <Name>Develop marketing plan and key messages</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>5.1</WBS>
-            <OutlineNumber>5.1</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-02-10T08:00:00</Start>
-            <Finish>2027-02-15T17:00:00</Finish>
-            <Duration>PT32H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT32H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>5</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>27</UID>
-            <ID>27</ID>
-            <Name>Design posters, digital ads and social templates</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>5.2</WBS>
-            <OutlineNumber>5.2</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-02-16T08:00:00</Start>
-            <Finish>2027-02-22T17:00:00</Finish>
-            <Duration>PT40H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT40H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1311,18 +1545,18 @@
         <Task>
             <UID>28</UID>
             <ID>28</ID>
-            <Name>Run social media and campus outreach campaign</Name>
+            <Name>Collect sponsor logos and recognition details</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>5.3</WBS>
-            <OutlineNumber>5.3</OutlineNumber>
+            <WBS>4.4</WBS>
+            <OutlineNumber>4.4</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-04T08:00:00</Start>
-            <Finish>2027-03-31T17:00:00</Finish>
-            <Duration>PT160H0M0S</Duration>
+            <Start>2027-03-11T08:00:00</Start>
+            <Finish>2027-03-15T17:00:00</Finish>
+            <Duration>PT24H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -1335,17 +1569,26 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-11T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-15T17:00:00</EarlyFinish>
+            <LateStart>2027-03-15T08:00:00</LateStart>
+            <LateFinish>2027-03-17T17:00:00</LateFinish>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>9600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT160H0M0S</RemainingDuration>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>Logos are needed before the T-shirt order (7.3).</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>18</PredecessorUID>
+                <PredecessorUID>27</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -1355,6 +1598,202 @@
         <Task>
             <UID>29</UID>
             <ID>29</ID>
+            <Name>Marketing Campaign</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>0</Type>
+            <IsNull>0</IsNull>
+            <WBS>5</WBS>
+            <OutlineNumber>5</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-02-10T08:00:00</Start>
+            <Finish>2027-04-07T17:00:00</Finish>
+            <Duration>PT312H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>1</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-07T17:00:00</EarlyFinish>
+            <LateStart>2027-02-22T08:00:00</LateStart>
+            <LateFinish>2027-04-07T17:00:00</LateFinish>
+            <StartSlack>33600</StartSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <RemainingDuration>PT312H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+        </Task>
+        <Task>
+            <UID>30</UID>
+            <ID>30</ID>
+            <Name>Develop marketing plan and key messages</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>5.1</WBS>
+            <OutlineNumber>5.1</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-02-10T08:00:00</Start>
+            <Finish>2027-02-16T17:00:00</Finish>
+            <Duration>PT32H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-10T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-16T17:00:00</EarlyFinish>
+            <LateStart>2027-02-22T08:00:00</LateStart>
+            <LateFinish>2027-02-25T17:00:00</LateFinish>
+            <TotalSlack>33600</TotalSlack>
+            <StartSlack>33600</StartSlack>
+            <FinishSlack>33600</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT32H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>5</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>31</UID>
+            <ID>31</ID>
+            <Name>Design posters, digital ads and social media templates</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>5.2</WBS>
+            <OutlineNumber>5.2</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-02-17T08:00:00</Start>
+            <Finish>2027-02-23T17:00:00</Finish>
+            <Duration>PT40H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-17T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-23T17:00:00</EarlyFinish>
+            <LateStart>2027-02-26T08:00:00</LateStart>
+            <LateFinish>2027-03-04T17:00:00</LateFinish>
+            <FreeSlack>33600</FreeSlack>
+            <TotalSlack>33600</TotalSlack>
+            <StartSlack>33600</StartSlack>
+            <FinishSlack>33600</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT40H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>30</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>32</UID>
+            <ID>32</ID>
+            <Name>Run social media and campus outreach campaign</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>5.3</WBS>
+            <OutlineNumber>5.3</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-03-05T08:00:00</Start>
+            <Finish>2027-03-31T17:00:00</Finish>
+            <Duration>PT144H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>1</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-05T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-31T17:00:00</EarlyFinish>
+            <LateStart>2027-03-05T08:00:00</LateStart>
+            <LateFinish>2027-03-31T17:00:00</LateFinish>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT144H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>22</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>33</UID>
+            <ID>33</ID>
             <Name>Run residence and club team challenge</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1364,8 +1803,8 @@
             <OutlineNumber>5.4</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-11T08:00:00</Start>
-            <Finish>2027-03-26T17:00:00</Finish>
+            <Start>2027-03-12T08:00:00</Start>
+            <Finish>2027-03-30T17:00:00</Finish>
             <Duration>PT96H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -1379,18 +1818,27 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-12T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-30T17:00:00</EarlyFinish>
+            <LateStart>2027-03-15T08:00:00</LateStart>
+            <LateFinish>2027-03-31T17:00:00</LateFinish>
+            <FreeSlack>4800</FreeSlack>
+            <TotalSlack>4800</TotalSlack>
+            <StartSlack>4800</StartSlack>
+            <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT96H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Starts 5 days after the campaign launches (SS + 5d).</Notes>
+            <Notes>Starts 5 working days after the campaign launches (start-to-start link with a 5-day lag).</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>28</PredecessorUID>
+                <PredecessorUID>32</PredecessorUID>
                 <Type>3</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>24000</LinkLag>
@@ -1398,9 +1846,9 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>30</UID>
-            <ID>30</ID>
-            <Name>Final promotional push and race-week reminders</Name>
+            <UID>34</UID>
+            <ID>34</ID>
+            <Name>Run final promotion and race-week reminders</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -1420,144 +1868,17 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-01T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-07T17:00:00</EarlyFinish>
+            <LateStart>2027-04-01T08:00:00</LateStart>
+            <LateFinish>2027-04-07T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT40H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>28</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>29</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>31</UID>
-            <ID>31</ID>
-            <Name>Volunteers</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>0</Type>
-            <IsNull>0</IsNull>
-            <WBS>6</WBS>
-            <OutlineNumber>6</OutlineNumber>
-            <OutlineLevel>1</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-02-24T08:00:00</Start>
-            <Finish>2027-03-24T17:00:00</Finish>
-            <Duration>PT168H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>1</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT168H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-        </Task>
-        <Task>
-            <UID>32</UID>
-            <ID>32</ID>
-            <Name>Define volunteer roles and numbers</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>6.1</WBS>
-            <OutlineNumber>6.1</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-02-24T08:00:00</Start>
-            <Finish>2027-02-25T17:00:00</Finish>
-            <Duration>PT16H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT16H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>11</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>33</UID>
-            <ID>33</ID>
-            <Name>Recruit 40 volunteers</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>6.2</WBS>
-            <OutlineNumber>6.2</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-02-26T08:00:00</Start>
-            <Finish>2027-03-18T17:00:00</Finish>
-            <Duration>PT120H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT120H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1572,43 +1893,6 @@
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>34</UID>
-            <ID>34</ID>
-            <Name>Build volunteer schedule and station assignments</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>6.3</WBS>
-            <OutlineNumber>6.3</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-03-19T08:00:00</Start>
-            <Finish>2027-03-23T17:00:00</Finish>
-            <Duration>PT24H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT24H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
                 <PredecessorUID>33</PredecessorUID>
                 <Type>1</Type>
@@ -1620,62 +1904,18 @@
         <Task>
             <UID>35</UID>
             <ID>35</ID>
-            <Name>Train and brief volunteers</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>6.4</WBS>
-            <OutlineNumber>6.4</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-03-24T08:00:00</Start>
-            <Finish>2027-03-24T17:00:00</Finish>
-            <Duration>PT8H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT8H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>34</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>36</UID>
-            <ID>36</ID>
-            <Name>Race Kit &amp; Logistics</Name>
+            <Name>Volunteers</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>7</WBS>
-            <OutlineNumber>7</OutlineNumber>
+            <WBS>6</WBS>
+            <OutlineNumber>6</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-02-18T08:00:00</Start>
-            <Finish>2027-04-13T17:00:00</Finish>
-            <Duration>PT312H0M0S</Duration>
+            <Start>2027-02-25T08:00:00</Start>
+            <Finish>2027-04-09T17:00:00</Finish>
+            <Duration>PT248H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -1688,8 +1928,16 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-25T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-09T17:00:00</EarlyFinish>
+            <LateStart>2027-03-15T08:00:00</LateStart>
+            <LateFinish>2027-04-13T17:00:00</LateFinish>
+            <FreeSlack>9600</FreeSlack>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>57600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT312H0M0S</RemainingDuration>
+            <RemainingDuration>PT248H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1699,59 +1947,15 @@
             <EarnedValueMethod>0</EarnedValueMethod>
         </Task>
         <Task>
-            <UID>37</UID>
-            <ID>37</ID>
-            <Name>Get quotes and select vendors</Name>
+            <UID>36</UID>
+            <ID>36</ID>
+            <Name>Define volunteer roles and numbers</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>7.1</WBS>
-            <OutlineNumber>7.1</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-02-18T08:00:00</Start>
-            <Finish>2027-02-24T17:00:00</Finish>
-            <Duration>PT40H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT40H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>9</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>38</UID>
-            <ID>38</ID>
-            <Name>Sign vendor contracts</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>7.2</WBS>
-            <OutlineNumber>7.2</OutlineNumber>
+            <WBS>6.1</WBS>
+            <OutlineNumber>6.1</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-02-25T08:00:00</Start>
@@ -1769,8 +1973,122 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-25T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-26T17:00:00</EarlyFinish>
+            <LateStart>2027-03-15T08:00:00</LateStart>
+            <LateFinish>2027-03-16T17:00:00</LateFinish>
+            <TotalSlack>57600</TotalSlack>
+            <StartSlack>57600</StartSlack>
+            <FinishSlack>57600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>Marshal points come from the safety plan.</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>15</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>37</UID>
+            <ID>37</ID>
+            <Name>Recruit 40 volunteers</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>6.2</WBS>
+            <OutlineNumber>6.2</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-03-01T08:00:00</Start>
+            <Finish>2027-03-19T17:00:00</Finish>
+            <Duration>PT120H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-01T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-19T17:00:00</EarlyFinish>
+            <LateStart>2027-03-17T08:00:00</LateStart>
+            <LateFinish>2027-04-07T17:00:00</LateFinish>
+            <TotalSlack>57600</TotalSlack>
+            <StartSlack>57600</StartSlack>
+            <FinishSlack>57600</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT120H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>36</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>38</UID>
+            <ID>38</ID>
+            <Name>Build volunteer schedule and station assignments</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>6.3</WBS>
+            <OutlineNumber>6.3</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-03-22T08:00:00</Start>
+            <Finish>2027-03-24T17:00:00</Finish>
+            <Duration>PT24H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-22T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-24T17:00:00</EarlyFinish>
+            <LateStart>2027-04-08T08:00:00</LateStart>
+            <LateFinish>2027-04-12T17:00:00</LateFinish>
+            <FreeSlack>48000</FreeSlack>
+            <TotalSlack>57600</TotalSlack>
+            <StartSlack>57600</StartSlack>
+            <FinishSlack>57600</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1789,18 +2107,18 @@
         <Task>
             <UID>39</UID>
             <ID>39</ID>
-            <Name>Order T-shirts and medals (incl. supplier lead time)</Name>
+            <Name>Train and brief volunteers</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>7.3</WBS>
-            <OutlineNumber>7.3</OutlineNumber>
+            <WBS>6.4</WBS>
+            <OutlineNumber>6.4</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-15T08:00:00</Start>
-            <Finish>2027-04-02T17:00:00</Finish>
-            <Duration>PT120H0M0S</Duration>
+            <Start>2027-04-09T08:00:00</Start>
+            <Finish>2027-04-09T17:00:00</Finish>
+            <Duration>PT8H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -1813,13 +2131,22 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-09T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-09T17:00:00</EarlyFinish>
+            <LateStart>2027-04-13T08:00:00</LateStart>
+            <LateFinish>2027-04-13T17:00:00</LateFinish>
+            <FreeSlack>9600</FreeSlack>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>9600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT120H0M0S</RemainingDuration>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Mostly supplier lead time, so the ELC is assigned at 20%.</Notes>
+            <Notes>Held once the participant list is final, so stations can be staffed to actual numbers.</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
@@ -1831,7 +2158,7 @@
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>24</PredecessorUID>
+                <PredecessorUID>23</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -1841,18 +2168,18 @@
         <Task>
             <UID>40</UID>
             <ID>40</ID>
-            <Name>Book chip-timing service and race bibs</Name>
+            <Name>Race Kit &amp; Logistics</Name>
             <Active>1</Active>
             <Manual>0</Manual>
-            <Type>1</Type>
+            <Type>0</Type>
             <IsNull>0</IsNull>
-            <WBS>7.4</WBS>
-            <OutlineNumber>7.4</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
+            <WBS>7</WBS>
+            <OutlineNumber>7</OutlineNumber>
+            <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-01T08:00:00</Start>
-            <Finish>2027-03-03T17:00:00</Finish>
-            <Duration>PT24H0M0S</Duration>
+            <Start>2027-02-19T08:00:00</Start>
+            <Finish>2027-04-13T17:00:00</Finish>
+            <Duration>PT296H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -1860,13 +2187,21 @@
             <OverAllocated>0</OverAllocated>
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Summary>1</Summary>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-19T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-13T17:00:00</EarlyFinish>
+            <LateStart>2027-03-09T08:00:00</LateStart>
+            <LateFinish>2027-04-14T17:00:00</LateFinish>
+            <FreeSlack>4800</FreeSlack>
+            <TotalSlack>4800</TotalSlack>
+            <StartSlack>57600</StartSlack>
+            <FinishSlack>4800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <RemainingDuration>PT296H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -1874,28 +2209,21 @@
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>38</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
         </Task>
         <Task>
             <UID>41</UID>
             <ID>41</ID>
-            <Name>Arrange water stations, barriers, signage and first aid</Name>
+            <Name>Obtain quotes and select vendors</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>7.5</WBS>
-            <OutlineNumber>7.5</OutlineNumber>
+            <WBS>7.1</WBS>
+            <OutlineNumber>7.1</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
-            <Start>2027-03-04T08:00:00</Start>
-            <Finish>2027-03-10T17:00:00</Finish>
+            <Start>2027-02-19T08:00:00</Start>
+            <Finish>2027-02-25T17:00:00</Finish>
             <Duration>PT40H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
@@ -1909,7 +2237,15 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-19T08:00:00</EarlyStart>
+            <EarlyFinish>2027-02-25T17:00:00</EarlyFinish>
+            <LateStart>2027-03-09T08:00:00</LateStart>
+            <LateFinish>2027-03-15T17:00:00</LateFinish>
+            <TotalSlack>57600</TotalSlack>
+            <StartSlack>57600</StartSlack>
+            <FinishSlack>57600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT40H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -1919,14 +2255,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>38</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>12</PredecessorUID>
+                <PredecessorUID>13</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -1936,6 +2265,232 @@
         <Task>
             <UID>42</UID>
             <ID>42</ID>
+            <Name>Sign vendor contracts</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>7.2</WBS>
+            <OutlineNumber>7.2</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-02-26T08:00:00</Start>
+            <Finish>2027-03-01T17:00:00</Finish>
+            <Duration>PT16H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-02-26T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-01T17:00:00</EarlyFinish>
+            <LateStart>2027-03-16T08:00:00</LateStart>
+            <LateFinish>2027-03-17T17:00:00</LateFinish>
+            <TotalSlack>57600</TotalSlack>
+            <StartSlack>57600</StartSlack>
+            <FinishSlack>57600</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT16H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>41</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>43</UID>
+            <ID>43</ID>
+            <Name>Order T-shirts and medals (incl. supplier lead time)</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>7.3</WBS>
+            <OutlineNumber>7.3</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-03-16T08:00:00</Start>
+            <Finish>2027-04-06T17:00:00</Finish>
+            <Duration>PT120H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-16T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-06T17:00:00</EarlyFinish>
+            <LateStart>2027-03-18T08:00:00</LateStart>
+            <LateFinish>2027-04-08T17:00:00</LateFinish>
+            <FreeSlack>9600</FreeSlack>
+            <TotalSlack>9600</TotalSlack>
+            <StartSlack>9600</StartSlack>
+            <FinishSlack>9600</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT120H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <Notes>Mostly supplier lead time, so the ELC is assigned at 20%.</Notes>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>42</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>28</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>44</UID>
+            <ID>44</ID>
+            <Name>Book chip-timing service and race bibs</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>7.4</WBS>
+            <OutlineNumber>7.4</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-03-02T08:00:00</Start>
+            <Finish>2027-03-04T17:00:00</Finish>
+            <Duration>PT24H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-02T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-04T17:00:00</EarlyFinish>
+            <LateStart>2027-04-06T08:00:00</LateStart>
+            <LateFinish>2027-04-08T17:00:00</LateFinish>
+            <FreeSlack>115200</FreeSlack>
+            <TotalSlack>115200</TotalSlack>
+            <StartSlack>115200</StartSlack>
+            <FinishSlack>115200</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT24H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>42</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>45</UID>
+            <ID>45</ID>
+            <Name>Arrange water stations, barriers, signage and first aid</Name>
+            <Active>1</Active>
+            <Manual>0</Manual>
+            <Type>1</Type>
+            <IsNull>0</IsNull>
+            <WBS>7.5</WBS>
+            <OutlineNumber>7.5</OutlineNumber>
+            <OutlineLevel>2</OutlineLevel>
+            <Priority>500</Priority>
+            <Start>2027-03-05T08:00:00</Start>
+            <Finish>2027-03-11T17:00:00</Finish>
+            <Duration>PT40H0M0S</Duration>
+            <DurationFormat>7</DurationFormat>
+            <ResumeValid>0</ResumeValid>
+            <EffortDriven>0</EffortDriven>
+            <Recurring>0</Recurring>
+            <OverAllocated>0</OverAllocated>
+            <Estimated>0</Estimated>
+            <Milestone>0</Milestone>
+            <Summary>0</Summary>
+            <Critical>0</Critical>
+            <IsSubproject>0</IsSubproject>
+            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
+            <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-03-05T08:00:00</EarlyStart>
+            <EarlyFinish>2027-03-11T17:00:00</EarlyFinish>
+            <LateStart>2027-04-08T08:00:00</LateStart>
+            <LateFinish>2027-04-14T17:00:00</LateFinish>
+            <FreeSlack>110400</FreeSlack>
+            <TotalSlack>110400</TotalSlack>
+            <StartSlack>110400</StartSlack>
+            <FinishSlack>110400</FinishSlack>
+            <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
+            <RemainingDuration>PT40H0M0S</RemainingDuration>
+            <CalendarUID>-1</CalendarUID>
+            <LevelAssignments>0</LevelAssignments>
+            <LevelingCanSplit>0</LevelingCanSplit>
+            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
+            <HideBar>0</HideBar>
+            <Rollup>0</Rollup>
+            <EarnedValueMethod>0</EarnedValueMethod>
+            <PredecessorLink>
+                <PredecessorUID>42</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorUID>16</PredecessorUID>
+                <Type>1</Type>
+                <CrossProject>0</CrossProject>
+                <LinkLag>0</LinkLag>
+                <LagFormat>7</LagFormat>
+            </PredecessorLink>
+        </Task>
+        <Task>
+            <UID>46</UID>
+            <ID>46</ID>
             <Name>Assemble race kits</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -1956,11 +2511,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-09T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-13T17:00:00</EarlyFinish>
+            <LateStart>2027-04-09T08:00:00</LateStart>
+            <LateFinish>2027-04-13T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT24H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -1970,21 +2530,21 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>39</PredecessorUID>
+                <PredecessorUID>43</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>40</PredecessorUID>
+                <PredecessorUID>44</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>19</PredecessorUID>
+                <PredecessorUID>23</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -1992,8 +2552,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>43</UID>
-            <ID>43</ID>
+            <UID>47</UID>
+            <ID>47</ID>
             <Name>Race Day</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2004,8 +2564,8 @@
             <OutlineLevel>1</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-04-14T08:00:00</Start>
-            <Finish>2027-04-19T17:00:00</Finish>
-            <Duration>PT32H0M0S</Duration>
+            <Finish>2027-04-20T17:00:00</Finish>
+            <Duration>PT40H0M0S</Duration>
             <DurationFormat>7</DurationFormat>
             <ResumeValid>0</ResumeValid>
             <EffortDriven>0</EffortDriven>
@@ -2014,12 +2574,17 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>1</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-14T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-20T17:00:00</EarlyFinish>
+            <LateStart>2027-04-14T08:00:00</LateStart>
+            <LateFinish>2027-04-28T17:00:00</LateFinish>
+            <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT32H0M0S</RemainingDuration>
+            <RemainingDuration>PT40H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
@@ -2029,8 +2594,8 @@
             <EarnedValueMethod>0</EarnedValueMethod>
         </Task>
         <Task>
-            <UID>44</UID>
-            <ID>44</ID>
+            <UID>48</UID>
+            <ID>48</ID>
             <Name>Run race-kit pick-up</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2051,11 +2616,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-14T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-14T17:00:00</EarlyFinish>
+            <LateStart>2027-04-14T08:00:00</LateStart>
+            <LateFinish>2027-04-14T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -2065,14 +2635,14 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>42</PredecessorUID>
+                <PredecessorUID>46</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>35</PredecessorUID>
+                <PredecessorUID>39</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -2080,8 +2650,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>45</UID>
-            <ID>45</ID>
+            <UID>49</UID>
+            <ID>49</ID>
             <Name>Set up course and start/finish area</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2102,11 +2672,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-15T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-15T17:00:00</EarlyFinish>
+            <LateStart>2027-04-15T08:00:00</LateStart>
+            <LateFinish>2027-04-15T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -2116,14 +2691,14 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>44</PredecessorUID>
+                <PredecessorUID>48</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
                 <LagFormat>7</LagFormat>
             </PredecessorLink>
             <PredecessorLink>
-                <PredecessorUID>41</PredecessorUID>
+                <PredecessorUID>45</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -2131,9 +2706,9 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>46</UID>
-            <ID>46</ID>
-            <Name>Run race, awards and sponsor recognition</Name>
+            <UID>50</UID>
+            <ID>50</ID>
+            <Name>Hold race, awards ceremony and sponsor recognition</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2153,11 +2728,16 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-16T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-16T17:00:00</EarlyFinish>
+            <LateStart>2027-04-16T08:00:00</LateStart>
+            <LateFinish>2027-04-16T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -2167,7 +2747,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>45</PredecessorUID>
+                <PredecessorUID>49</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -2175,8 +2755,8 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>47</UID>
-            <ID>47</ID>
+            <UID>51</UID>
+            <ID>51</ID>
             <Name>Race day completed</Name>
             <Active>1</Active>
             <Manual>0</Manual>
@@ -2197,21 +2777,27 @@
             <Estimated>0</Estimated>
             <Milestone>1</Milestone>
             <Summary>0</Summary>
-            <Critical>0</Critical>
+            <Critical>1</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-16T17:00:00</EarlyStart>
+            <EarlyFinish>2027-04-16T17:00:00</EarlyFinish>
+            <LateStart>2027-04-16T17:00:00</LateStart>
+            <LateFinish>2027-04-16T17:00:00</LateFinish>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <CalendarUID>-1</CalendarUID>
+            <Deadline>2027-04-16T17:00:00</Deadline>
             <LevelAssignments>0</LevelAssignments>
             <LevelingCanSplit>0</LevelingCanSplit>
             <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Milestone.</Notes>
+            <Notes>Milestone. Deadline set to the target race date, Fri Apr 16, 2027.</Notes>
             <HideBar>0</HideBar>
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>46</PredecessorUID>
+                <PredecessorUID>50</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -2219,9 +2805,9 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>48</UID>
-            <ID>48</ID>
-            <Name>Tear down course and clean up</Name>
+            <UID>52</UID>
+            <ID>52</ID>
+            <Name>Tear down course and return rentals</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
@@ -2245,7 +2831,16 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-19T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-19T17:00:00</EarlyFinish>
+            <LateStart>2027-04-28T08:00:00</LateStart>
+            <LateFinish>2027-04-28T17:00:00</LateFinish>
+            <FreeSlack>33600</FreeSlack>
+            <TotalSlack>33600</TotalSlack>
+            <StartSlack>33600</StartSlack>
+            <FinishSlack>33600</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT8H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -2255,7 +2850,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>46</PredecessorUID>
+                <PredecessorUID>50</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -2263,52 +2858,15 @@
             </PredecessorLink>
         </Task>
         <Task>
-            <UID>49</UID>
-            <ID>49</ID>
-            <Name>Project Close-out</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>0</Type>
-            <IsNull>0</IsNull>
-            <WBS>9</WBS>
-            <OutlineNumber>9</OutlineNumber>
-            <OutlineLevel>1</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-04-19T08:00:00</Start>
-            <Finish>2027-04-28T17:00:00</Finish>
-            <Duration>PT64H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>1</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT64H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-        </Task>
-        <Task>
-            <UID>50</UID>
-            <ID>50</ID>
-            <Name>Publish results and send thank-you messages</Name>
+            <UID>53</UID>
+            <ID>53</ID>
+            <Name>Publish official results and thank participants</Name>
             <Active>1</Active>
             <Manual>0</Manual>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <WBS>9.1</WBS>
-            <OutlineNumber>9.1</OutlineNumber>
+            <WBS>8.6</WBS>
+            <OutlineNumber>8.6</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
             <Priority>500</Priority>
             <Start>2027-04-19T08:00:00</Start>
@@ -2326,7 +2884,16 @@
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
+            <EarlyStart>2027-04-19T08:00:00</EarlyStart>
+            <EarlyFinish>2027-04-20T17:00:00</EarlyFinish>
+            <LateStart>2027-04-27T08:00:00</LateStart>
+            <LateFinish>2027-04-28T17:00:00</LateFinish>
+            <FreeSlack>28800</FreeSlack>
+            <TotalSlack>28800</TotalSlack>
+            <StartSlack>28800</StartSlack>
+            <FinishSlack>28800</FinishSlack>
             <FixedCostAccrual>3</FixedCostAccrual>
+            <PercentComplete>0</PercentComplete>
             <RemainingDuration>PT16H0M0S</RemainingDuration>
             <CalendarUID>-1</CalendarUID>
             <LevelAssignments>0</LevelAssignments>
@@ -2336,204 +2903,7 @@
             <Rollup>0</Rollup>
             <EarnedValueMethod>0</EarnedValueMethod>
             <PredecessorLink>
-                <PredecessorUID>47</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>51</UID>
-            <ID>51</ID>
-            <Name>Reconcile funds and present donation to food bank</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>9.2</WBS>
-            <OutlineNumber>9.2</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-04-19T08:00:00</Start>
-            <Finish>2027-04-22T17:00:00</Finish>
-            <Duration>PT32H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT32H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>47</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>52</UID>
-            <ID>52</ID>
-            <Name>Run participant, volunteer and sponsor feedback survey</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>9.3</WBS>
-            <OutlineNumber>9.3</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-04-19T08:00:00</Start>
-            <Finish>2027-04-23T17:00:00</Finish>
-            <Duration>PT40H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT40H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>47</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>53</UID>
-            <ID>53</ID>
-            <Name>Write final report and lessons learned</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>9.4</WBS>
-            <OutlineNumber>9.4</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-04-26T08:00:00</Start>
-            <Finish>2027-04-28T17:00:00</Finish>
-            <Duration>PT24H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>0</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <RemainingDuration>PT24H0M0S</RemainingDuration>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
                 <PredecessorUID>51</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>52</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-        </Task>
-        <Task>
-            <UID>54</UID>
-            <ID>54</ID>
-            <Name>Project closed</Name>
-            <Active>1</Active>
-            <Manual>0</Manual>
-            <Type>1</Type>
-            <IsNull>0</IsNull>
-            <WBS>9.5</WBS>
-            <OutlineNumber>9.5</OutlineNumber>
-            <OutlineLevel>2</OutlineLevel>
-            <Priority>500</Priority>
-            <Start>2027-04-28T17:00:00</Start>
-            <Finish>2027-04-28T17:00:00</Finish>
-            <Duration>PT0H0M0S</Duration>
-            <DurationFormat>7</DurationFormat>
-            <ResumeValid>0</ResumeValid>
-            <EffortDriven>0</EffortDriven>
-            <Recurring>0</Recurring>
-            <OverAllocated>0</OverAllocated>
-            <Estimated>0</Estimated>
-            <Milestone>1</Milestone>
-            <Summary>0</Summary>
-            <Critical>0</Critical>
-            <IsSubproject>0</IsSubproject>
-            <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
-            <ExternalTask>0</ExternalTask>
-            <FixedCostAccrual>3</FixedCostAccrual>
-            <CalendarUID>-1</CalendarUID>
-            <LevelAssignments>0</LevelAssignments>
-            <LevelingCanSplit>0</LevelingCanSplit>
-            <IgnoreResourceCalendar>0</IgnoreResourceCalendar>
-            <Notes>Milestone.</Notes>
-            <HideBar>0</HideBar>
-            <Rollup>0</Rollup>
-            <EarnedValueMethod>0</EarnedValueMethod>
-            <PredecessorLink>
-                <PredecessorUID>53</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>50</PredecessorUID>
-                <Type>1</Type>
-                <CrossProject>0</CrossProject>
-                <LinkLag>0</LinkLag>
-                <LagFormat>7</LagFormat>
-            </PredecessorLink>
-            <PredecessorLink>
-                <PredecessorUID>48</PredecessorUID>
                 <Type>1</Type>
                 <CrossProject>0</CrossProject>
                 <LinkLag>0</LinkLag>
@@ -2637,7 +3007,7 @@
             <MaxUnits>1</MaxUnits>
             <PeakUnits>1</PeakUnits>
             <OverAllocated>0</OverAllocated>
-            <Start>2027-02-15T08:00:00</Start>
+            <Start>2027-02-16T08:00:00</Start>
             <Finish>2027-04-19T17:00:00</Finish>
             <CanLevel>0</CanLevel>
             <StandardRateFormat>2</StandardRateFormat>
@@ -2690,566 +3060,7 @@
         </Assignment>
         <Assignment>
             <UID>4</UID>
-            <TaskUID>7</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-02-12T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-02-10T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>5</UID>
-            <TaskUID>8</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-02-16T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2027-02-15T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>6</UID>
-            <TaskUID>8</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-02-16T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2027-02-15T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>7</UID>
-            <TaskUID>9</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-02-17T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-02-17T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>8</UID>
-            <TaskUID>11</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-02-23T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2027-02-17T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT40H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>9</UID>
-            <TaskUID>14</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-02-12T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-02-10T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>10</UID>
-            <TaskUID>15</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-02-18T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT32H0M0S</RemainingWork>
-            <Start>2027-02-15T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT32H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>11</UID>
-            <TaskUID>16</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-02-23T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-02-19T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>12</UID>
-            <TaskUID>17</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-02-25T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2027-02-24T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>13</UID>
-            <TaskUID>19</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-04-08T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-08T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>14</UID>
-            <TaskUID>21</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2027-02-12T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-02-10T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>15</UID>
-            <TaskUID>22</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2027-02-26T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT80H0M0S</RemainingWork>
-            <Start>2027-02-15T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT80H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>16</UID>
-            <TaskUID>23</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2027-03-09T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT56H0M0S</RemainingWork>
-            <Start>2027-03-01T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT56H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>17</UID>
-            <TaskUID>24</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2027-03-12T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-03-10T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>18</UID>
-            <TaskUID>26</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2027-02-15T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT32H0M0S</RemainingWork>
-            <Start>2027-02-10T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT32H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>19</UID>
-            <TaskUID>27</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2027-02-22T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2027-02-16T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT40H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>20</UID>
-            <TaskUID>28</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2027-03-31T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT160H0M0S</RemainingWork>
-            <Start>2027-03-04T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT160H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>21</UID>
-            <TaskUID>29</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-03-26T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT48H0M0S</RemainingWork>
-            <Start>2027-03-11T08:00:00</Start>
-            <Units>0.5</Units>
-            <Work>PT48H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>22</UID>
-            <TaskUID>30</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2027-04-07T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2027-04-01T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT40H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>23</UID>
-            <TaskUID>32</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-02-25T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2027-02-24T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>24</UID>
-            <TaskUID>33</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-03-18T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT120H0M0S</RemainingWork>
-            <Start>2027-02-26T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT120H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>25</UID>
-            <TaskUID>34</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-03-23T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-03-19T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>26</UID>
-            <TaskUID>35</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-03-24T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-03-24T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>27</UID>
-            <TaskUID>37</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-02-24T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2027-02-18T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT40H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>28</UID>
-            <TaskUID>38</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-02-26T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2027-02-25T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>29</UID>
-            <TaskUID>39</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-04-02T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-03-15T08:00:00</Start>
-            <Units>0.2</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>30</UID>
-            <TaskUID>40</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-03-03T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-03-01T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>31</UID>
-            <TaskUID>41</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-03-10T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT40H0M0S</RemainingWork>
-            <Start>2027-03-04T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT40H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>32</UID>
-            <TaskUID>42</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-04-13T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-04-09T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>33</UID>
-            <TaskUID>42</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-04-13T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT24H0M0S</RemainingWork>
-            <Start>2027-04-09T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT24H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>34</UID>
-            <TaskUID>44</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-04-14T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-14T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>35</UID>
-            <TaskUID>44</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-04-14T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-14T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>36</UID>
-            <TaskUID>44</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-04-14T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-14T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>37</UID>
-            <TaskUID>45</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-04-15T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-15T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>38</UID>
-            <TaskUID>45</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-04-15T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-15T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>39</UID>
-            <TaskUID>46</TaskUID>
-            <ResourceUID>1</ResourceUID>
-            <Finish>2027-04-16T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-16T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>40</UID>
-            <TaskUID>46</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-04-16T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-16T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>41</UID>
-            <TaskUID>46</TaskUID>
-            <ResourceUID>3</ResourceUID>
-            <Finish>2027-04-16T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-16T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>42</UID>
-            <TaskUID>46</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-04-16T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-16T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>43</UID>
-            <TaskUID>46</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-04-16T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-16T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>44</UID>
-            <TaskUID>48</TaskUID>
-            <ResourceUID>2</ResourceUID>
-            <Finish>2027-04-19T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-19T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>45</UID>
-            <TaskUID>48</TaskUID>
-            <ResourceUID>5</ResourceUID>
-            <Finish>2027-04-19T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT8H0M0S</RemainingWork>
-            <Start>2027-04-19T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT8H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>46</UID>
-            <TaskUID>50</TaskUID>
-            <ResourceUID>4</ResourceUID>
-            <Finish>2027-04-20T17:00:00</Finish>
-            <HasFixedRateUnits>1</HasFixedRateUnits>
-            <FixedMaterial>0</FixedMaterial>
-            <LevelingDelayFormat>7</LevelingDelayFormat>
-            <RemainingWork>PT16H0M0S</RemainingWork>
-            <Start>2027-04-19T08:00:00</Start>
-            <Units>1</Units>
-            <Work>PT16H0M0S</Work>
-        </Assignment>
-        <Assignment>
-            <UID>47</UID>
-            <TaskUID>51</TaskUID>
+            <TaskUID>6</TaskUID>
             <ResourceUID>1</ResourceUID>
             <Finish>2027-04-22T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
@@ -3261,8 +3072,8 @@
             <Work>PT32H0M0S</Work>
         </Assignment>
         <Assignment>
-            <UID>48</UID>
-            <TaskUID>52</TaskUID>
+            <UID>5</UID>
+            <TaskUID>7</TaskUID>
             <ResourceUID>3</ResourceUID>
             <Finish>2027-04-23T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
@@ -3274,8 +3085,8 @@
             <Work>PT40H0M0S</Work>
         </Assignment>
         <Assignment>
-            <UID>49</UID>
-            <TaskUID>53</TaskUID>
+            <UID>6</UID>
+            <TaskUID>8</TaskUID>
             <ResourceUID>1</ResourceUID>
             <Finish>2027-04-28T17:00:00</Finish>
             <HasFixedRateUnits>1</HasFixedRateUnits>
@@ -3285,6 +3096,565 @@
             <Start>2027-04-26T08:00:00</Start>
             <Units>1</Units>
             <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>7</UID>
+            <TaskUID>11</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-02-12T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-02-10T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>8</UID>
+            <TaskUID>12</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-02-17T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2027-02-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>9</UID>
+            <TaskUID>12</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-02-17T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2027-02-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>10</UID>
+            <TaskUID>13</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-02-18T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-02-18T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>11</UID>
+            <TaskUID>15</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-02-24T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT40H0M0S</RemainingWork>
+            <Start>2027-02-18T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT40H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>12</UID>
+            <TaskUID>18</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-02-12T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-02-10T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>13</UID>
+            <TaskUID>19</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-02-19T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT32H0M0S</RemainingWork>
+            <Start>2027-02-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT32H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>14</UID>
+            <TaskUID>20</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-02-24T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-02-22T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>15</UID>
+            <TaskUID>21</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-02-26T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2027-02-25T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>16</UID>
+            <TaskUID>23</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-04-08T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-08T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>17</UID>
+            <TaskUID>25</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2027-02-12T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-02-10T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>18</UID>
+            <TaskUID>26</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2027-03-01T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT80H0M0S</RemainingWork>
+            <Start>2027-02-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT80H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>19</UID>
+            <TaskUID>27</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2027-03-10T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT56H0M0S</RemainingWork>
+            <Start>2027-03-02T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT56H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>20</UID>
+            <TaskUID>28</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2027-03-15T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-03-11T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>21</UID>
+            <TaskUID>30</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2027-02-16T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT32H0M0S</RemainingWork>
+            <Start>2027-02-10T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT32H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>22</UID>
+            <TaskUID>31</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2027-02-23T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT40H0M0S</RemainingWork>
+            <Start>2027-02-17T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT40H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>23</UID>
+            <TaskUID>32</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2027-03-31T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT144H0M0S</RemainingWork>
+            <Start>2027-03-05T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT144H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>24</UID>
+            <TaskUID>33</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-03-30T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT48H0M0S</RemainingWork>
+            <Start>2027-03-12T08:00:00</Start>
+            <Units>0.5</Units>
+            <Work>PT48H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>25</UID>
+            <TaskUID>34</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2027-04-07T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT40H0M0S</RemainingWork>
+            <Start>2027-04-01T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT40H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>26</UID>
+            <TaskUID>36</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-02-26T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2027-02-25T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>27</UID>
+            <TaskUID>37</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-03-19T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT120H0M0S</RemainingWork>
+            <Start>2027-03-01T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT120H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>28</UID>
+            <TaskUID>38</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-03-24T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-03-22T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>29</UID>
+            <TaskUID>39</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-04-09T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-09T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>30</UID>
+            <TaskUID>41</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-02-25T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT40H0M0S</RemainingWork>
+            <Start>2027-02-19T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT40H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>31</UID>
+            <TaskUID>42</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-03-01T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2027-02-26T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>32</UID>
+            <TaskUID>43</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-04-06T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-03-16T08:00:00</Start>
+            <Units>0.2</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>33</UID>
+            <TaskUID>44</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-03-04T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-03-02T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>34</UID>
+            <TaskUID>45</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-03-11T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT40H0M0S</RemainingWork>
+            <Start>2027-03-05T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT40H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>35</UID>
+            <TaskUID>46</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-04-13T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-04-09T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>36</UID>
+            <TaskUID>46</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-04-13T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT24H0M0S</RemainingWork>
+            <Start>2027-04-09T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT24H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>37</UID>
+            <TaskUID>48</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-04-14T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-14T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>38</UID>
+            <TaskUID>48</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-04-14T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-14T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>39</UID>
+            <TaskUID>48</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-04-14T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-14T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>40</UID>
+            <TaskUID>49</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-04-15T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-15T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>41</UID>
+            <TaskUID>49</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-04-15T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-15T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>42</UID>
+            <TaskUID>50</TaskUID>
+            <ResourceUID>1</ResourceUID>
+            <Finish>2027-04-16T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>43</UID>
+            <TaskUID>50</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-04-16T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>44</UID>
+            <TaskUID>50</TaskUID>
+            <ResourceUID>3</ResourceUID>
+            <Finish>2027-04-16T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>45</UID>
+            <TaskUID>50</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-04-16T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>46</UID>
+            <TaskUID>50</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-04-16T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-16T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>47</UID>
+            <TaskUID>52</TaskUID>
+            <ResourceUID>2</ResourceUID>
+            <Finish>2027-04-19T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-19T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>48</UID>
+            <TaskUID>52</TaskUID>
+            <ResourceUID>5</ResourceUID>
+            <Finish>2027-04-19T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT8H0M0S</RemainingWork>
+            <Start>2027-04-19T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT8H0M0S</Work>
+        </Assignment>
+        <Assignment>
+            <UID>49</UID>
+            <TaskUID>53</TaskUID>
+            <ResourceUID>4</ResourceUID>
+            <Finish>2027-04-20T17:00:00</Finish>
+            <HasFixedRateUnits>1</HasFixedRateUnits>
+            <FixedMaterial>0</FixedMaterial>
+            <LevelingDelayFormat>7</LevelingDelayFormat>
+            <RemainingWork>PT16H0M0S</RemainingWork>
+            <Start>2027-04-19T08:00:00</Start>
+            <Units>1</Units>
+            <Work>PT16H0M0S</Work>
         </Assignment>
     </Assignments>
 </Project>
