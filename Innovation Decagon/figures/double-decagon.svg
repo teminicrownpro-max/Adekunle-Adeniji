@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="title">The Double Decagon</title>
+<desc id="desc">Two concentric decagons. The inner ring holds Volume I's ten design obligations; the outer ring holds ten future-fitness tests. Each vertex scores 0 to 5, for 100 points in total.</desc>
+<rect width="1000" height="1000" fill="#fcfcfb"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0b0b0b">The Double Decagon</text>
+<text x="40" y="80" font-size="15" fill="#52514e">Ten design obligations (Volume I) inside ten future-fitness tests (Volume II). Each vertex scores 0–5; the index is out of 100.</text>
+<rect x="40" y="102" width="22" height="14" fill="#e8eff9" stroke="#2a78d6" stroke-width="2"/>
+<text x="72" y="114" font-size="14" fill="#0b0b0b">Inner ring: is it well designed? (50 points)</text>
+<rect x="40" y="128" width="22" height="14" fill="#fdf1ea" stroke="#eb6834" stroke-width="2"/>
+<text x="72" y="140" font-size="14" fill="#0b0b0b">Outer ring: will it thrive in 2030–2050? (50 points)</text>
+<polygon points="500.0,215.0 702.8,280.9 828.1,453.4 828.1,666.6 702.8,839.1 500.0,905.0 297.2,839.1 171.9,666.6 171.9,453.4 297.2,280.9" fill="#fdf1ea" stroke="#eb6834" stroke-width="2.5"/>
+<polygon points="555.6,388.8 645.6,454.2 680.0,560.0 645.6,665.8 555.6,731.2 444.4,731.2 354.4,665.8 320.0,560.0 354.4,454.2 444.4,388.8" fill="#e8eff9" stroke="#2a78d6" stroke-width="2.5"/>
+<line x1="500" y1="388" x2="500" y2="732" stroke="#52514e" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="512" y="490" font-size="12" font-weight="700" letter-spacing="1.2" fill="#52514e">ENGINE →</text>
+<text x="488" y="490" font-size="12" font-weight="700" letter-spacing="1.2" fill="#52514e" text-anchor="end">← CONSCIENCE</text>
+<text x="500" y="562" font-size="19" font-weight="700" fill="#0b0b0b" text-anchor="middle">Double Decagon</text>
+<text x="500" y="586" font-size="15" fill="#52514e" text-anchor="middle">Index 0–100</text>
+<circle cx="555.6" cy="388.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="559.9" y="369.5" font-size="13.5" fill="#0b0b0b" text-anchor="start">V1 Latency</text>
+<circle cx="645.6" cy="454.2" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="656.9" y="440.0" font-size="13.5" fill="#0b0b0b" text-anchor="start">V2 Friction</text>
+<circle cx="680.0" cy="560.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="694.0" y="565.0" font-size="13.5" fill="#0b0b0b" text-anchor="start">V3 Trust</text>
+<circle cx="645.6" cy="665.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="656.9" y="690.0" font-size="13.5" fill="#0b0b0b" text-anchor="start">V4 Liquidity</text>
+<circle cx="555.6" cy="731.2" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="559.9" y="760.5" font-size="13.5" fill="#0b0b0b" text-anchor="start">V5 Intelligence</text>
+<circle cx="444.4" cy="731.2" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="440.1" y="760.5" font-size="13.5" fill="#0b0b0b" text-anchor="end">V6 Distribution</text>
+<circle cx="354.4" cy="665.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="343.1" y="690.0" font-size="13.5" fill="#0b0b0b" text-anchor="end">V7 Legitimacy</text>
+<circle cx="320.0" cy="560.0" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="306.0" y="565.0" font-size="13.5" fill="#0b0b0b" text-anchor="end">V8 Stewardship</text>
+<circle cx="354.4" cy="454.2" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="343.1" y="440.0" font-size="13.5" fill="#0b0b0b" text-anchor="end">V9 Meaning</text>
+<circle cx="444.4" cy="388.8" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="440.1" y="369.5" font-size="13.5" fill="#0b0b0b" text-anchor="end">V10 Antifragility</text>
+<rect x="495.0" y="210.0" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="500.0" y="193.0" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">F1 Agent</text>
+<rect x="697.8" y="275.9" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="711.0" y="261.6" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="start">F2 Robot</text>
+<rect x="823.1" y="448.4" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="841.4" y="454.1" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="start">F3 Climate</text>
+<rect x="823.1" y="661.6" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="841.4" y="675.9" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="start">F4 Pre-embedding</text>
+<rect x="697.8" y="834.1" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="711.0" y="868.4" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="start">F5 Exit</text>
+<rect x="495.0" y="900.0" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="500.0" y="937.0" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">F6 Sovereignty</text>
+<rect x="292.2" y="834.1" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="289.0" y="868.4" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="end">F7 Global South</text>
+<rect x="166.9" y="661.6" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="158.6" y="675.9" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="end">F8 Self-disruption</text>
+<rect x="166.9" y="448.4" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="158.6" y="454.1" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="end">F9 Good ancestor</text>
+<rect x="292.2" y="275.9" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="289.0" y="261.6" font-size="13.5" font-weight="600" fill="#0b0b0b" text-anchor="end">F10 Synthetic reality</text>
+</svg>

@@ -60,6 +60,8 @@ Working paper · October 2026
 | IX | Portfolio synthesis, roadmap and closing philosophy | Act on it |
 | Appendices | Canvas, scoring rubric, glossary, sources | Apply the framework yourself |
 
+**Companion volume.** *The Next Decagon* (Volume II) uses this document as its baseline and benchmark. It adds a second-generation framework for 2030–2050 (the Double Decagon and the Disruption Genome) and ten further venture concepts.
+
 A note on evidence: company figures come from published results (cited in Appendix D). Scores and scenario judgements are the author's analytical judgement and are labelled as such. Every startup concept is a hypothesis to be tested, not a forecast.
 
 ---
