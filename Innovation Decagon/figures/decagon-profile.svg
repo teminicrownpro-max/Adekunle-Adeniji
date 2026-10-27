@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 900" width="960" height="900" role="img" aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="title">The Innovation Decagon: first-generation platforms vs the ten Decagon ventures</title>
+<desc id="desc">Ten-axis profile scored 0 to 5. First generation (Uber and Airbnb around 2012, average 30.5 of 50) is strong on the engine vertices and weak on the conscience vertices. The ten ventures (average 42.3 of 50) are balanced, but lower on liquidity and antifragility.</desc>
+<rect width="960" height="900" fill="#fcfcfb"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0b0b0b">The Innovation Decagon</text>
+<text x="40" y="80" font-size="15" fill="#52514e">Average score per vertex (0–5). Engine vertices create and move value; conscience vertices distribute and sustain it.</text>
+<line x1="40" y1="112" x2="74" y2="112" stroke="#2a78d6" stroke-width="3"/>
+<circle cx="57" cy="112" r="5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="84" y="117" font-size="15" fill="#0b0b0b">Next generation: the ten Decagon ventures <tspan fill="#52514e">(average 42.3 / 50)</tspan></text>
+<line x1="40" y1="140" x2="74" y2="140" stroke="#eb6834" stroke-width="3" stroke-dasharray="7 5"/>
+<rect x="52" y="135" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="84" y="145" font-size="15" fill="#0b0b0b">First generation: Uber + Airbnb, c.2012 <tspan fill="#52514e">(average 30.5 / 50)</tspan></text>
+<polygon points="495.5,472.4 520.5,490.6 530.0,520.0 520.5,549.4 495.5,567.6 464.5,567.6 439.5,549.4 430.0,520.0 439.5,490.6 464.5,472.4" fill="none" stroke="#d6d5d0" stroke-width="1"/>
+<polygon points="510.9,424.9 560.9,461.2 580.0,520.0 560.9,578.8 510.9,615.1 449.1,615.1 399.1,578.8 380.0,520.0 399.1,461.2 449.1,424.9" fill="none" stroke="#d6d5d0" stroke-width="1"/>
+<polygon points="526.4,377.3 601.4,431.8 630.0,520.0 601.4,608.2 526.4,662.7 433.6,662.7 358.6,608.2 330.0,520.0 358.6,431.8 433.6,377.3" fill="none" stroke="#d6d5d0" stroke-width="1"/>
+<polygon points="541.8,329.8 641.8,402.4 680.0,520.0 641.8,637.6 541.8,710.2 418.2,710.2 318.2,637.6 280.0,520.0 318.2,402.4 418.2,329.8" fill="none" stroke="#d6d5d0" stroke-width="1"/>
+<polygon points="557.3,282.2 682.3,373.1 730.0,520.0 682.3,666.9 557.3,757.8 402.7,757.8 277.7,666.9 230.0,520.0 277.7,373.1 402.7,282.2" fill="none" stroke="#d6d5d0" stroke-width="1.5"/>
+<line x1="480" y1="520" x2="557.3" y2="282.2" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="682.3" y2="373.1" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="730.0" y2="520.0" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="682.3" y2="666.9" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="557.3" y2="757.8" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="402.7" y2="757.8" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="277.7" y2="666.9" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="230.0" y2="520.0" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="277.7" y2="373.1" stroke="#d6d5d0" stroke-width="1"/>
+<line x1="480" y1="520" x2="402.7" y2="282.2" stroke="#d6d5d0" stroke-width="1"/>
+<text x="486" y="474.0" font-size="11" fill="#52514e">1</text>
+<text x="486" y="424.0" font-size="11" fill="#52514e">2</text>
+<text x="486" y="374.0" font-size="11" fill="#52514e">3</text>
+<text x="486" y="324.0" font-size="11" fill="#52514e">4</text>
+<text x="486" y="274.0" font-size="11" fill="#52514e">5</text>
+<line x1="480" y1="185" x2="480" y2="810" stroke="#52514e" stroke-width="1" stroke-dasharray="3 5"/>
+<text x="494" y="175" font-size="13" font-weight="700" letter-spacing="1.5" fill="#52514e">ENGINE →</text>
+<text x="466" y="175" font-size="13" font-weight="700" letter-spacing="1.5" fill="#52514e" text-anchor="end">← CONSCIENCE</text>
+<polygon points="557.3,282.2 662.0,387.7 655.0,520.0 662.0,652.3 534.1,686.4 441.4,638.9 439.5,549.4 430.0,520.0 358.6,431.8 449.1,424.9" fill="#eb6834" fill-opacity="0.10" stroke="#eb6834" stroke-width="2.5" stroke-dasharray="7 5" stroke-linejoin="round"/>
+<polygon points="554.2,291.7 645.8,399.5 695.0,520.0 621.6,622.9 546.4,724.5 412.0,729.2 310.1,643.4 250.0,520.0 298.0,387.7 424.4,348.8" fill="#2a78d6" fill-opacity="0.12" stroke="#2a78d6" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="552.3" y="277.2" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V1 Latency: first generation 5.0</title></rect>
+<rect x="657.0" y="382.7" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V2 Friction: first generation 4.5</title></rect>
+<rect x="650.0" y="515.0" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V3 Trust: first generation 3.5</title></rect>
+<rect x="657.0" y="647.3" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V4 Liquidity: first generation 4.5</title></rect>
+<rect x="529.1" y="681.4" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V5 Intelligence: first generation 3.5</title></rect>
+<rect x="436.4" y="633.9" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V6 Distribution: first generation 2.5</title></rect>
+<rect x="434.5" y="544.4" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V7 Legitimacy: first generation 1.0</title></rect>
+<rect x="425.0" y="515.0" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V8 Stewardship: first generation 1.0</title></rect>
+<rect x="353.6" y="426.8" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V9 Meaning: first generation 3.0</title></rect>
+<rect x="444.1" y="419.9" width="10" height="10" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>V10 Antifragility: first generation 2.0</title></rect>
+<circle cx="554.2" cy="291.7" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V1 Latency: next generation 4.8</title></circle>
+<circle cx="645.8" cy="399.5" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V2 Friction: next generation 4.1</title></circle>
+<circle cx="695.0" cy="520.0" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V3 Trust: next generation 4.3</title></circle>
+<circle cx="621.6" cy="622.9" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V4 Liquidity: next generation 3.5</title></circle>
+<circle cx="546.4" cy="724.5" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V5 Intelligence: next generation 4.3</title></circle>
+<circle cx="412.0" cy="729.2" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V6 Distribution: next generation 4.4</title></circle>
+<circle cx="310.1" cy="643.4" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V7 Legitimacy: next generation 4.2</title></circle>
+<circle cx="250.0" cy="520.0" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V8 Stewardship: next generation 4.6</title></circle>
+<circle cx="298.0" cy="387.7" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V9 Meaning: next generation 4.5</title></circle>
+<circle cx="424.4" cy="348.8" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>V10 Antifragility: next generation 3.6</title></circle>
+<text x="569.6" y="230.2" text-anchor="start" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V1</tspan> Latency</text>
+<text x="569.6" y="249.2" text-anchor="start" font-size="13" fill="#52514e">4.8 vs 5.0</text>
+<text x="714.6" y="335.5" text-anchor="start" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V2</tspan> Friction</text>
+<text x="714.6" y="354.5" text-anchor="start" font-size="13" fill="#52514e">4.1 vs 4.5</text>
+<text x="770.0" y="516.0" text-anchor="start" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V3</tspan> Trust</text>
+<text x="770.0" y="535.0" text-anchor="start" font-size="13" fill="#52514e">4.3 vs 3.5</text>
+<text x="714.6" y="698.5" text-anchor="start" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V4</tspan> Liquidity</text>
+<text x="714.6" y="717.5" text-anchor="start" font-size="13" fill="#52514e">3.5 vs 4.5</text>
+<text x="569.6" y="803.8" text-anchor="start" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V5</tspan> Intelligence</text>
+<text x="569.6" y="822.8" text-anchor="start" font-size="13" fill="#52514e">4.3 vs 3.5</text>
+<text x="390.4" y="803.8" text-anchor="end" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V6</tspan> Distribution</text>
+<text x="390.4" y="822.8" text-anchor="end" font-size="13" fill="#52514e">4.4 vs 2.5</text>
+<text x="245.4" y="698.5" text-anchor="end" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V7</tspan> Legitimacy</text>
+<text x="245.4" y="717.5" text-anchor="end" font-size="13" fill="#52514e">4.2 vs 1.0</text>
+<text x="190.0" y="516.0" text-anchor="end" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V8</tspan> Stewardship</text>
+<text x="190.0" y="535.0" text-anchor="end" font-size="13" fill="#52514e">4.6 vs 1.0</text>
+<text x="245.4" y="335.5" text-anchor="end" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V9</tspan> Meaning</text>
+<text x="245.4" y="354.5" text-anchor="end" font-size="13" fill="#52514e">4.5 vs 3.0</text>
+<text x="390.4" y="230.2" text-anchor="end" font-size="15" fill="#0b0b0b"><tspan font-weight="700">V10</tspan> Antifragility</text>
+<text x="390.4" y="249.2" text-anchor="end" font-size="13" fill="#52514e">3.6 vs 2.0</text>
+<text x="40" y="876" font-size="12" fill="#52514e">Labels show next-generation vs first-generation average. Scores are analytical judgement; venture scores are design intent. See Sections 5.3 and 7.1.</text>
+</svg>
