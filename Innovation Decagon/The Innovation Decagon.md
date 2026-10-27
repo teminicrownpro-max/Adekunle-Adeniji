@@ -17,7 +17,7 @@ Working paper · October 2026
 1. **Benchmarks** Uber and Airbnb across 21 dimensions. Six "shared genes" explain their success, and twelve differences explain why the two businesses behave differently.
 2. **Models them as systems.** It uses causal loop diagrams, stock-and-flow logic, Senge's system archetypes, Meadows' leverage points, Ashby's law of requisite variety and Beer's Viable System Model.
 3. **Theorizes and philosophizes.** It reads the two companies through Coase, Hayek, Schumpeter, Christensen, Polanyi, Heidegger, Illich, Ostrom, Zuboff, Rawls and the African ethic of *Ubuntu*. The conclusion is that they are *latency compilers*: they turned invisible slack into a market. They also *commodified fictitious commodities* (labour and land) at a finer grain than ever before, which is why society pushed back.
-4. **Projects their futures** (2026–2040). It uses three-horizon analysis, the panarchy adaptive cycle and a 2×2 scenario matrix (*Walled Gardens, Agent Bazaar, Civic Platforms, Protocol Commons*). The main forecast is that **in the agentic era, aggregators of demand lose power and aggregators of trust gain it.**
+4. **Projects their futures** (2026–2050). It uses five foresight tools: the futures cone, Three Horizons, Causal Layered Analysis, Dator's four futures and Carlota Perez's techno-economic surges. It sets out ten future innovations each company could build, three possible 2040 identities for each, a 2035 scenario matrix (*Walled Gardens, Agent Bazaar, Civic Platforms, Protocol Commons*), 2050 futures, wildcards and strategic options. The main forecast is that **in the agentic era, aggregators of demand lose power and aggregators of trust gain it.**
 5. **Builds the Innovation Decagon.** This is a ten-vertex framework for designing disruptive ventures. Five "engine" vertices create and move value: *Latency, Friction, Trust, Liquidity, Intelligence*. Five "conscience" vertices distribute and sustain it: *Distribution, Legitimacy, Stewardship, Meaning, Antifragility*. The framework comes with a 50-point scoring rubric, a seven-stage *Systemic Design Spiral* process, a canvas and ten design principles.
 6. **Proposes a Decagon of Ventures.** These are ten disruptive startup concepts, each aimed at a *new* problem of the late 2020s, each inheriting Uber/Airbnb DNA and each *inverting* one of their failures:
 
@@ -34,6 +34,8 @@ Working paper · October 2026
 | 9 | **HarvestGrid** | Perishable food loss and climate heat stress (Africa-first) | Empty backhauls, solar cold rooms, warehouse receipts |
 | 10 | **Bastion** | Insurers retreating from climate risk | Community spare capacity; satellite triggers; mutual traditions |
 
+7. **Projects the ventures' futures** (2026–2050). For each venture it gives a 2040 end-state, a three-horizon growth path, four spin-off innovations, an illustrative estimate of potential at maturity, and its probable and failure futures. It then shows ten *fusions* that combine ventures into new innovations, and the **Stewardship Stack**: a layered, interoperable infrastructure the ten could form by 2040.
+
 **The central design insight.** Uber and Airbnb maximized the engine vertices and neglected the conscience vertices. The regulatory, labour and housing backlash they now face is the conscience vertices arriving with interest. The ventures in this paper are designed in the opposite order. Ex-ante, they score higher on stewardship and distribution but *lower on liquidity and antifragility*. That gap is the **stewardship premium**. Paying it deliberately, rather than discovering it in court, is the strategic opportunity of the coming decade.
 
 > **A heuristic, not a law:**
@@ -49,10 +51,11 @@ Working paper · October 2026
 | I | The benchmark: anatomy of Uber and Airbnb | Understand the baseline in depth |
 | II | The systems lens: loops, archetypes, leverage points, cybernetics | See *why* they worked and where they break |
 | III | Theory and philosophy | Understand what they *mean* |
-| IV | Futures of Uber and Airbnb, 2026–2040 | Anticipate where platforms are going |
+| IV | Futures of Uber and Airbnb, 2026–2050 | Anticipate where platforms are going |
 | V | The Innovation Decagon framework | Design or evaluate a venture |
 | VI | The Decagon of Ventures: ten startup concepts | Get concrete opportunities |
-| VII | Portfolio synthesis, roadmap and closing philosophy | Act on it |
+| VII | Future potential of the ten ventures, 2026–2050 | See what the ventures could become |
+| VIII | Portfolio synthesis, roadmap and closing philosophy | Act on it |
 | Appendices | Canvas, scoring rubric, glossary, sources | Apply the framework yourself |
 
 A note on evidence: company figures come from published results (cited in Appendix D). Scores and scenario judgements are the author's analytical judgement and are labelled as such. Every startup concept is a hypothesis to be tested, not a forecast.
@@ -417,9 +420,36 @@ Pulling the threads together:
 
 ---
 
-# Part IV: The Future Potential of Uber and Airbnb (2026–2040)
+# Part IV: The Future Potential of Uber and Airbnb (2026–2050)
 
-## 4.1 The adaptive cycle: where each company stands
+> "Any useful statement about the future should at first appear to be ridiculous." (Jim Dator)
+
+## 4.1 How to think about platform futures
+
+Forecasts about platforms tend to fail in one of two ways. They extrapolate the present (more of the same, faster), or they over-dramatize one technology (robotaxis will end Uber; AI agents will end Airbnb). This part uses five foresight tools to avoid both:
+
+| Tool | Origin | What it reveals here |
+|---|---|---|
+| **The futures cone** | Hancock and Bezold (1994); Voros (2003) | Separates *possible*, *plausible*, *probable* and *preferable* futures, so the most likely and the most desirable futures are not confused |
+| **Three Horizons** | Sharpe and Hodgson, International Futures Forum | H1 is the dominant system in decline, H3 is the emerging future, and H2 is the turbulent transition. H2 innovations either bridge to H3 ("H2+") or prolong H1 ("H2−") |
+| **Causal Layered Analysis (CLA)** | Inayatullah (1998) | Reads the future at four depths: the headlines (*litany*), the systemic causes, the worldview, and the underlying myth or metaphor |
+| **Dator's four futures** | Jim Dator, Hawaii Research Center for Futures Studies | Every society's images of the future reduce to four archetypes: *continuation*, *collapse*, *discipline* (living within limits) and *transformation* |
+| **Techno-economic surges** | Carlota Perez (2002) | Each technological revolution has an *installation* period (frenzy and bubble), a *turning point* (crash and institutional reform) and a *deployment* period (a "golden age" when institutions catch up) |
+
+A note on the other "three horizons": Sections 4.4 and 4.6 use the McKinsey version (H1 core, H2 emerging, H3 transformational business lines). That describes a *company's* portfolio. The Sharpe version describes a *system's* transition. Both are useful, and they answer different questions.
+
+## 4.2 The long wave: where platforms sit in history
+
+Perez dates the information-and-communications revolution to 1971, with Intel's microprocessor. Its **installation period** ran through the dot-com frenzy and crash (2000) and ended in the financial crisis of 2008, the **turning point**. History suggests that what follows a turning point is a **deployment period**: a potential "golden age" in which the technology spreads through the whole economy. Perez stresses that this happens *only if institutions are recomposed*: regulation, finance, welfare and labour rules are rebuilt for the new technology.
+
+Uber and Airbnb were born exactly at the turning point (2008–2010). They are deployment-era businesses: they spread ICT into everyday mobility and lodging. But for a decade they were financed in the style of the installation era, with zero-interest-rate capital, blitzscaling and indifference to institutions. Their regulatory battles are best read as the **institutional recomposition** Perez describes, and as Polanyi's double movement (Part III) seen from the economics side.
+
+Two implications follow for the next 25 years:
+
+1. **The platform settlement is still being written.** The EU Platform Work Directive, short-term-rental registration rules, data-sharing mandates and AV regulation are the institutional recomposition of the deployment age. Firms that help write the settlement (co-regulation) will shape the golden age. Firms that resist it will be shaped by it.
+2. **AI may be a new installation period inside the old deployment period.** The AI capital-expenditure boom of 2023–2026 has frenzy characteristics: concentrated investment, extreme valuations, infrastructure built ahead of proven demand. If Perez's pattern holds, a correction and a new institutional settlement for AI (liability, data rights, agent accountability, energy) will follow. Ventures positioned for that settlement, such as Covenant and DataGuild, are positioned for the golden age that follows.
+
+## 4.3 The adaptive cycle: where each company stands
 
 Ecologists C.S. Holling and Lance Gunderson describe complex systems as moving through an **adaptive cycle** (*panarchy*). **Exploitation (r)** is rapid growth into open niches. **Conservation (K)** is efficiency, connectedness and rigidity. **Release (Ω)** is creative destruction. **Reorganization (α)** is novelty and recombination.
 
@@ -432,11 +462,11 @@ Ecologists C.S. Holling and Lance Gunderson describe complex systems as moving t
 
 Systems in a mature K phase are efficient but fragile: highly connected and optimized for current conditions. **Both companies are entering the release phase of their founding structure**, and their futures depend on how they reorganize.
 
-## 4.2 Uber: three horizons
+## 4.4 Uber: three horizons
 
 | Horizon | Time | Opportunities |
 |---|---|---|
-| **H1: extend the core** | 2026–2028 | Mobility and delivery growth; Uber One membership; advertising; grocery and retail; Uber for Business; financial services for earners |
+| **H1: extend the core** | 2026–2028 | Mobility and delivery growth. **Uber One** passed 50 million members in Q1 2026, and members now drive about half of Mobility and Delivery gross bookings. Advertising (reported at above a $2bn annual run rate). Grocery and retail; Uber for Business; financial services for earners |
 | **H2: build the emerging** | 2027–2032 | **Autonomous-vehicle aggregation.** Uber has struck deals with 20–30+ AV companies across robotaxi, delivery and freight. Robotaxi rides are offered through the Uber app in cities including Phoenix, Austin, Atlanta and Abu Dhabi, and a Lucid–Nuro robotaxi programme targets 20,000+ vehicles over six years. **Uber AI Solutions** (data labelling and AI-training work by its gig network, launched 2024). Autonomous freight; drone delivery |
 | **H3: create the transformational** | 2030+ | A **city mobility operating system** integrating transit, micromobility, AVs and air taxis. A **"physical-world API"** that AI agents call to move people and goods. Fleet financing; EV and AV fleets as grid batteries |
 
@@ -444,12 +474,39 @@ Systems in a mature K phase are efficient but fragile: highly connected and opti
 
 **The human question.** Millions of drivers worldwide earn a living through ride-hail and delivery. The release phase threatens their livelihoods. How that transition is handled is a Polanyi double movement waiting to happen, and Venture 7 (CommonFleet) is designed around it.
 
-## 4.3 Airbnb: three horizons
+## 4.5 Uber: ten future innovations
+
+The innovations below are concepts Uber is structurally well placed to build. Some extend existing initiatives; most are new.
+
+| # | Innovation | What it would be | Why Uber can win | Horizon |
+|---|---|---|---|---|
+| 1 | **AV Utilization Exchange** | A real-time market where AV fleet owners sell capacity and Uber routes demand across fleets to maximize every vehicle's paid hours | The largest multi-city demand pool; multi-partner AV strategy | H2 |
+| 2 | **Mobility-as-a-Utility** | Flat monthly subscriptions bundling rides, transit passes, micromobility and delivery, priced like a phone plan | Uber One's 50m members are the base | H1–H2 |
+| 3 | **Physical-world API for AI agents** | A standard interface any AI agent can call to move a person or parcel, with verified identity, mandate and liability | Global logistics network plus payments and trust stack | H2–H3 |
+| 4 | **Fleet-to-grid** | Aggregating parked EV and AV fleets into virtual power plants that sell flexibility to grids | Fleet scheduling data; depots; scale | H2 |
+| 5 | **Driver-to-owner transition fund** | Giving long-serving drivers equity stakes or fractional ownership in the AV fleets that replace them | Unique access to the affected workforce; political licence to operate | H2 |
+| 6 | **Curb and city data partnership** | Paid curb-space management and anonymized mobility data shared with cities for planning | Data on billions of trips | H1–H2 |
+| 7 | **Health and care logistics** | Non-emergency medical transport, prescription delivery, home-care visit logistics | Existing health partnerships; dispatch expertise | H1–H2 |
+| 8 | **Autonomous freight network** | Linking autonomous long-haul trucks with human-driven last-mile, coordinated through Uber Freight | Freight marketplace plus AV partnerships | H2–H3 |
+| 9 | **Earner financial services and portable benefits** | Savings, insurance, pensions and credit for gig earners, portable across platforms | Earnings data; regulatory pressure makes this valuable | H1 |
+| 10 | **Human-in-the-loop workforce for AI** | Scaling Uber AI Solutions into a global marketplace for AI evaluation, supervision and remote AV assistance | Large flexible workforce already onboarded and verified | H2 |
+
+**Uber in 2040: three possible identities**
+
+- **The Utilization Utility.** Uber becomes the operating layer for autonomous capital, the system that keeps millions of robotaxis, delivery robots and trucks busy. Margins are modest but stable, like a utility's.
+- **The Physical-World API.** AI agents become the main source of demand, and Uber becomes the default service they call to move atoms, as cloud platforms became the default for computation. This is the highest-value identity.
+- **The Commoditized Dispatcher.** AV makers go direct in dense cities, AI agents compare prices across every network, and Uber competes on price as one supplier among many. This is the lowest-value identity.
+
+Which identity emerges depends less on technology than on **who owns demand** (the app or the agent) and **who owns the vehicles** (manufacturers, Uber, or third parties).
+
+**Illustrative growth arithmetic (not a forecast).** Uber's gross bookings were about $193bn in FY2025, growing around 20%. At a 15% compound annual rate they would roughly double to about $390bn by 2030; at 10%, they would reach about $310bn. The spread between those paths depends mostly on AV unit economics and agentic demand, the two release-phase forces in Section 4.3.
+
+## 4.6 Airbnb: three horizons
 
 | Horizon | Time | Opportunities |
 |---|---|---|
-| **H1: extend the core** | 2026–2028 | Core stays; "Reserve Now, Pay Later"; co-hosting network; boutique hotels; long stays; growth in under-penetrated markets |
-| **H2: build the emerging** | 2027–2032 | **AI-native app.** Its AI customer-service agent now resolves about a third of issues without a human in North America, and an AI concierge is planned for end-to-end trip planning. **Services and Experiences** (relaunched 2025: chefs, photographers, wellness) make Airbnb an "everyday" app. Identity and trust as a platform |
+| **H1: extend the core** | 2026–2028 | Core stays; "Reserve Now, Pay Later"; co-hosting network; long stays; growth in under-penetrated markets. Q2 2026 revenue grew 17% to about $3.6bn, and app bookings were 64% of nights. **Hotels** are growing about three times faster than homes, though still a single-digit share of nights |
+| **H2: build the emerging** | 2027–2032 | **AI-native app.** Its AI customer-service agent now resolves about a third of issues without a human in North America; AI cut customer-service cost per booking by about 16% (Q2 2026); Airbnb is building its own AI pricing model and an AI concierge. **Services and Experiences** (relaunched 2025) now include car rental, airport pickup, luggage storage, grocery delivery and hotel resort passes, making Airbnb an "everyday" app. Identity and trust as a platform |
 | **H3: create the transformational** | 2030+ | A **living platform**: housing-as-a-service, co-living, nomad infrastructure. A **portable trust passport** for the agent economy. Community and civic hosting (e.g., Airbnb.org for disaster housing) |
 
 **The strategic tension: agentic disintermediation.** If travellers ask a general-purpose AI assistant to "find me a quiet two-bedroom near the beach in Lisbon under €200," the assistant becomes the aggregator of demand, and every lodging platform becomes a supply feed ranked by the agent. Booking.com and Expedia were among the first travel apps inside ChatGPT (October 2025), while Airbnb chose to prioritize its own AI-native app.
@@ -466,7 +523,30 @@ In short, its defensible asset is **the trust layer**.
 
 > **Forecast:** *In the agentic era, aggregators of demand lose power and aggregators of trust gain it.*
 
-## 4.4 Convergence
+## 4.7 Airbnb: ten future innovations
+
+| # | Innovation | What it would be | Why Airbnb can win | Horizon |
+|---|---|---|---|---|
+| 1 | **Personal travel agent** | An AI concierge that plans, books, adapts and supports an entire trip, across stays, services, experiences and transport | Preference, review and identity data; Services catalogue | H1–H2 |
+| 2 | **Trust passport (identity-as-a-service)** | Portable verified identity and reputation that guests and hosts can present to other services, and that AI agents can verify | Fifteen years of two-sided reviews and ID verification | H2 |
+| 3 | **Airbnb for living** | Medium- and long-term furnished housing, co-living and "live anywhere" subscriptions | Long-stay demand; flexible-work trends | H2 |
+| 4 | **Home-services marketplace** | Chefs, cleaners, carers, photographers and repairers booked into *any* home, not only rentals | Services relaunch; trusted provider vetting | H2 |
+| 5 | **Host business OS** | Pricing, cleaning, maintenance, accounting and compliance tools that make hosting a professional micro-business | Millions of hosts; co-hosting network | H1 |
+| 6 | **Housing-positive hosting** | In high-pressure cities, a share of fees funds new homes, and listings are capped or prioritized for primary-residence hosts | Turns the housing backlash loop into an alliance loop (see Hearth) | H2 |
+| 7 | **Disaster and displacement hosting as a service** | Formalizing Airbnb.org into a standing capability that governments and insurers contract for emergency housing | Proven host willingness; global supply | H2 |
+| 8 | **Experiences as learning** | Experiences that teach crafts, languages and skills, with credentials that travel | Experience hosts; global reach | H2–H3 |
+| 9 | **Nomad infrastructure bundle** | Visas, coworking, insurance, banking and community for remote workers in one package | Long-stay data; partner network | H2 |
+| 10 | **Belonging index for destinations** | Data and tools that help cities manage tourism load, distribute visitors and measure resident wellbeing | Booking data; regulatory goodwill | H2–H3 |
+
+**Airbnb in 2040: three possible identities**
+
+- **The Trust and Belonging OS.** Airbnb becomes the identity, reputation and guarantee layer for human hospitality, the infrastructure agents rely on to decide whom to trust. This is the highest-value identity.
+- **The Everyday Concierge.** Airbnb becomes a high-frequency life app for stays, services and experiences at home and away, closing its old frequency gap with Uber.
+- **The Supply Feed.** General-purpose AI agents own the traveller relationship, and Airbnb supplies inventory ranked by price and rating. This is the lowest-value identity.
+
+**Illustrative growth arithmetic (not a forecast).** Airbnb's gross booking value was about $91.3bn in FY2025. At a 12% compound annual rate it would reach about $160bn by 2030; at 8%, about $134bn. The upper path requires the Services, hotels and AI bets to succeed while housing regulation stays manageable.
+
+## 4.8 Convergence
 
 Uber and Airbnb are converging on the same five strategic assets:
 
@@ -476,9 +556,22 @@ Uber and Airbnb are converging on the same five strategic assets:
 4. **AI agents as the front door**: conversational booking and support.
 5. **Identity and trust**: verified people, verified providers and guarantees.
 
-The fifth is the most important. Both companies spent fifteen years building **the world's largest repositories of stranger-to-stranger trust data**. In a world where AI-generated fraud and synthetic identities are becoming cheap, that trust is worth more than the matching algorithms that produced it.
+The fifth is the most important. Both companies spent fifteen years building **the world's largest repositories of stranger-to-stranger trust data**. In a world where AI-generated fraud and synthetic identities are becoming cheap, that trust is worth more than the matching algorithms that produced it. A partnership or bundle between the two (rides plus stays, a shared trust passport) is plausible in the 2030s, and so is competition as both expand into services and travel.
 
-## 4.5 Scenario matrix: the platform world in 2035
+## 4.9 Causal Layered Analysis: the deeper story
+
+CLA reads a future at four depths. Surface changes (the litany) are easy to make and easy to reverse. Changes at the level of worldview and myth are slow but durable. The table compares today's story with a transformed one.
+
+| Layer | Uber today | Uber transformed | Airbnb today | Airbnb transformed |
+|---|---|---|---|---|
+| **Litany** (headlines) | "Robotaxis will replace drivers"; "gig workers win employment rights" | "Drivers become fleet owners"; "the city runs on a shared mobility utility" | "Airbnb drives up rents"; "cities ban short-term rentals" | "Airbnb funds new homes"; "hosts become stewards of their neighbourhood" |
+| **Systemic causes** | Labour classification; AV unit economics; take-rate pressure; congestion | Shared ownership of autonomous capital; public data partnerships; congestion pricing | Yield gap between short- and long-term renting; zoning; over-tourism | Housing-positive fee structures; registration and caps; visitor distribution |
+| **Worldview** | Markets allocate best; efficiency and convenience come first | Mobility as a shared public good delivered by markets under civic rules | The home as an investment asset; access over ownership | The home as a place within a community; access *with* belonging |
+| **Myth / metaphor** | "The city as a vending machine": press a button, a ride appears | "The city as a commons we co-steward" | "Belong anywhere" (as a guest) | "Belong somewhere" (as a neighbour, even when visiting) |
+
+**Insight.** Most corporate strategy works at the litany and systemic layers. The durable transformations happen when the **metaphor** changes. The shift from "vending machine" to "commons" and from "belong anywhere" to "belong somewhere" is where the stewardship economy begins.
+
+## 4.10 Scenario matrix: the platform world in 2035
 
 Two critical uncertainties drive the future:
 
@@ -503,13 +596,55 @@ Two critical uncertainties drive the future:
 
 **Strategic implication for new ventures:** *build for Protocol Commons (D) while surviving the Agent Bazaar (B).* Be agent-native, interoperable and trust-rich. Do not depend on owning the user interface, because the interface may belong to someone's AI agent.
 
-## 4.6 What the futures teach the next generation
+## 4.11 Dator's four futures: 2050
+
+Looking further out, Dator's four archetypes give a fuller range of 2050 outcomes. None is a prediction; each is internally consistent and worth preparing for.
+
+| | **Continuation** (growth) | **Collapse** | **Discipline** (living within limits) | **Transformation** |
+|---|---|---|---|---|
+| **The world** | AI and autonomy drive strong growth; markets stay dominant | Climate shocks, conflict or financial crisis break global supply chains and travel | Carbon budgets, housing caps and labour protections strictly bound platform activity | Abundant clean energy, autonomous systems and AI make coordination nearly free; ownership and work are redefined |
+| **Uber** | A global autonomous-mobility utility with very high volume and thin margins | Fragmented local services; fleets nationalized or idle; mobility re-localizes | A licensed public-interest mobility operator under concession contracts | One protocol among many in a mobility commons; value accrues to fleet owners and trust providers |
+| **Airbnb** | Global trust-and-belonging OS; travel volume grows strongly | International travel collapses; hosting turns to local displacement housing | Strict quotas on tourist homes; Airbnb as a licensed, housing-positive operator | Hospitality as gift-and-reciprocity networks verified by portable trust; Airbnb as a steward of place |
+| **Drivers and hosts** | Drivers largely displaced; hosts professionalize | Informal work rises; hosting becomes survival income | Strong protections; fewer but better-paid roles | Co-owners and members of the networks they serve |
+| **Cities** | Congestion solved by autonomy; housing pressure persists | Cities shrink or fragment | Cities set binding limits and capture value | Cities co-own data and infrastructure as commons |
+
+**Preferable future.** This paper argues for a blend of **Discipline and Transformation**: binding limits on externalities, combined with ownership and governance innovations that share the gains of automation. That is the territory the ten ventures are designed for.
+
+## 4.12 Wildcards
+
+Wildcards are low-probability, high-impact events that would bend every trajectory above. Each should be monitored, not predicted.
+
+| Wildcard | Impact on Uber | Impact on Airbnb | Early signals |
+|---|---|---|---|
+| A fatal multi-vehicle AV failure causing a national pause | AV strategy delayed by years; human drivers temporarily more valuable | Minor | Recalls; regulator investigations |
+| A dominant AI assistant blocks or taxes platform APIs | Becomes a supply feed overnight | Becomes a supply feed overnight | Exclusive deals; changes to assistant app policies |
+| A pandemic-scale health event | Mobility collapses, delivery booms (as in 2020) | Travel collapses, local and long stays rise | Outbreak surveillance; travel advisories |
+| A global ban on independent-contractor platform work | Business model rebuilt around employment or co-ops | Limited (hosts are not workers) | Court rulings; EU and US labour reforms |
+| A large cyberattack or identity breach | Trust crisis in payments and safety | Trust crisis in identity and reviews | Breach disclosures; regulator alerts |
+| A climate-migration shock (tens of millions displaced in a decade) | Demand for evacuation and logistics services | Hosting becomes humanitarian infrastructure | Disaster displacement data |
+| An energy price shock | Higher operating costs; EV and AV economics improve relative to fuel | Travel costs rise; domestic travel shifts | Oil and gas markets |
+| Public digital infrastructure mandates open marketplaces (national open networks) | Take rates compressed; must compete on service | Discovery opened to all; trust layer becomes the moat | ONDC-style policies spreading |
+
+## 4.13 Strategic options for Uber and Airbnb
+
+Using real-options logic, each company's choices fall into three groups: **no-regret moves** (valuable in every scenario), **big bets** (valuable in some scenarios, decisive if right) and **options** (small investments that keep doors open).
+
+| | Uber | Airbnb |
+|---|---|---|
+| **No-regret moves** | Build agent-ready APIs; invest in trust and safety ahead of demand; portable benefits for earners; city data partnerships | Make the trust layer agent-verifiable; AI customer service and pricing; host business tools; registration compliance everywhere |
+| **Big bets** | AV Utilization Exchange; physical-world API for agents | Personal travel agent; trust passport; Airbnb for living |
+| **Options** | Fleet-to-grid pilots; driver-to-owner transition fund; autonomous freight | Housing-positive hosting pilots; disaster hosting contracts; destination belonging index |
+| **The stewardship move** | *A driver-to-owner transition fund* answers the coming double movement over AV displacement before it begins | *Housing-positive hosting* turns the housing backlash loop into an alliance loop |
+
+## 4.14 What the futures teach the next generation
 
 1. **The founding structure always gets released.** Design for the release phase of your own model from the beginning (Antifragility, vertex 10).
 2. **Trust compounds; matching commoditizes.** Invest in the trust layer more than the matching layer.
 3. **Automation flips the scarce input.** When labour becomes software, capital utilization becomes the game. Ask early *who will own the robots*.
 4. **Agents are the new users.** Every venture must be legible to and transactable by AI agents.
 5. **The double movement is coming either way.** Design for embedded legitimacy.
+6. **Change the metaphor, not just the product.** The deepest layer of CLA is where durable futures are made.
+7. **Golden ages are institutional.** Perez's lesson: technology alone does not deliver broad prosperity; the institutional settlement does. Ventures that help build that settlement inherit the golden age.
 
 ---
 
@@ -526,7 +661,7 @@ The Innovation Decagon combines both into **ten vertices**, each a *design oblig
 
 ![The Innovation Decagon: first-generation platforms versus the ten ventures](figures/decagon-profile.svg)
 
-*Figure 1. The ten vertices of the Innovation Decagon, scored 0–5. The first-generation profile is the average of Uber and Airbnb at launch (c. 2012). The next-generation profile is the average design-intent score of the ten ventures in Part VI. Full scores are in Sections 5.3 and 7.1.*
+*Figure 1. The ten vertices of the Innovation Decagon, scored 0–5. The first-generation profile is the average of Uber and Airbnb at launch (c. 2012). The next-generation profile is the average design-intent score of the ten ventures in Part VI. Full scores are in Sections 5.3 and 8.1.*
 
 ## 5.2 The ten vertices
 
@@ -641,8 +776,8 @@ The product is an *opportunity index* (maximum 625). These are judgement scores 
 | EVs, batteries, compute heat | Grid stress from electrification and AI | 5 | 5 | 4 | 3 | 300 | FluxCommons |
 | Backhauls, cold rooms, receipts | Food loss and climate heat stress | 5 | 4 | 4 | 4 | 320 | HarvestGrid |
 | Community spare capacity and satellite data | Climate protection gap | 5 | 4 | 4 | 5 | 400 | Bastion |
-| Diaspora capital and trust | Fraud in long-distance building and investing | 4 | 4 | 4 | 3 | 192 | (seed list, §7.4) |
-| Products' remaining useful life | Waste and repair barriers | 3 | 5 | 3 | 3 | 135 | (seed list, §7.4) |
+| Diaspora capital and trust | Fraud in long-distance building and investing | 4 | 4 | 4 | 3 | 192 | (seed list, §8.4) |
+| Products' remaining useful life | Waste and repair barriers | 3 | 5 | 3 | 3 | 135 | (seed list, §8.4) |
 
 ## 5.7 Ten design principles (the "decalogue")
 
@@ -1326,9 +1461,411 @@ flowchart LR
 
 ---
 
-# Part VII: Portfolio Synthesis, Roadmap and Closing Philosophy
+# Part VII: The Future Potential of the Ten Ventures (2026–2050)
 
-## 7.1 The Decagon scoreboard
+> "The best way to predict the future is to invent it." (Alan Kay)
+>
+> "Act so that the effects of your action are compatible with the permanence of genuine human life." (Hans Jonas, *The Imperative of Responsibility*)
+
+Part VI described each venture at launch. This part asks what each could *become*: how it might grow through three horizons, which further innovations it would spawn, what its potential is at maturity, and how it could fail. It then looks at what the ten could become *together*.
+
+## 7.1 How to read the venture futures
+
+Each venture is examined with the same template:
+
+| Element | Question it answers |
+|---|---|
+| **2040 end-state** | If everything goes right, what is this venture in 2040? (The *preferable* future.) |
+| **Three horizons** | H1 (2026–2028): from pilot to proof. H2 (2028–2033): from proof to platform. H3 (2033–2040+): from platform to institution. |
+| **Spin-off innovations** | Which new products, services or institutions does the venture make possible? These are its *adjacent possible* (Stuart Kauffman's term for the set of next steps a system can reach). |
+| **Potential at maturity** | An *illustrative*, assumption-based estimate of scale or impact. Every figure states its assumptions and none is a forecast. |
+| **Probable and failure futures** | What is most likely to happen, and how the venture could die. |
+| **Triggers and signposts** | What must happen in technology and policy, and what to watch. |
+
+Two cautions. First, potential is not probability: most ventures fail, and these are hypotheses. Second, the estimates use round numbers on purpose, to show orders of magnitude rather than false precision.
+
+## 7.2 The forces behind the next 25 years
+
+Eleven macro forces power the ten ventures. Each is backed by current evidence.
+
+| Force | Evidence | Ventures it powers |
+|---|---|---|
+| **Agentic AI** | McKinsey estimates AI agents could orchestrate roughly $0.9–1 trillion of US consumer retail revenue by 2030, and $3–5 trillion globally (goods only, excluding services) | Covenant, DataGuild |
+| **Demographic ageing** | WHO: by 2050, people aged 60+ will reach 2.1 billion and those aged 80+ about 426 million (roughly triple 2020); two-thirds of over-60s will live in low- and middle-income countries | KinGrid, Agora, Hearth |
+| **Africa's youth bulge** | Africa's population is projected to approach 2.5 billion by 2050 (UN) | Guildhall, HarvestGrid, DataGuild |
+| **AI and the first career rung** | Early evidence of falling entry-level employment in AI-exposed jobs (Stanford Digital Economy Lab, 2025) | Guildhall |
+| **Electrification** | Electric car sales passed 20 million in 2025, about a quarter of global sales, but only about 5% of the global car stock is electric (IEA), so most of the transition is still ahead | FluxCommons, CommonFleet |
+| **AI's power demand** | IEA: data-centre electricity use set to more than double to around 945 TWh by 2030 | FluxCommons |
+| **Grid flexibility** | US DOE: 80–160 GW of virtual power plants by 2030 could meet 10–20% of peak demand and save about $10bn a year in grid costs | FluxCommons, CommonFleet |
+| **Autonomy** | Waymo reached around 500,000 paid rides a week in early 2026; Uber has deals with 20–30+ AV companies | CommonFleet |
+| **The climate protection gap** | Swiss Re: global natural-catastrophe protection gap of about $424bn (2025); 80–90% of catastrophe losses uninsured in emerging markets | Bastion, HarvestGrid |
+| **Loneliness** | WHO: about 1 in 6 people lonely; linked to about 871,000 deaths a year | Agora, KinGrid |
+| **Diaspora capital** | Officially recorded remittances to low- and middle-income countries reached an estimated $685bn in 2024 (World Bank) | KinGrid, Hearth, BuildBridge |
+
+---
+
+## 7.3 Covenant: from agent passport to the trust protocol of the agentic economy
+
+**2040 end-state.** Every transaction an AI agent makes, whether with a merchant, another agent, a government service or a robot at a building's door, carries a verifiable identity, a signed mandate, a reputation and a guarantee. Covenant is to agentic commerce what card networks were to plastic: the rulebook and the trust layer, governed by its members.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | A vertical trust service for agent-made travel bookings | First insurer partner; 1,000 guaranteed bookings | Merchants accept agents without CAPTCHAs |
+| **H2 (2028–33)** | A cross-industry agent passport integrated with payment networks and digital identity wallets | Interoperable with major agent-payment protocols; agent liability cover becomes a recognized insurance line | Millions of certified agents |
+| **H3 (2033–40+)** | The commercial law of machines: agent-to-agent contracts, dispute resolution, and credentials for robots in the physical world | Courts and regulators recognize Covenant mandates as evidence of authority | A large share of agent transactions in member markets carry a Covenant mandate |
+
+**Spin-off innovations**
+
+- **Agent Ombudsman.** Fast, AI-first dispute resolution for agent errors, with human appeal: a new kind of consumer-protection institution.
+- **Guardian mandates.** Protective spending limits for elderly or vulnerable people, set with family or carers, to block financial abuse and scams.
+- **Robot entry credentials.** Verifiable permissions that let delivery robots and autonomous vehicles enter buildings, lifts and loading bays.
+- **Provenance seals.** Proof that a piece of content or a transaction came from a verified human or a verified agent acting for one.
+
+**Potential at maturity (illustrative).** If agents orchestrate $3–5 trillion of global goods commerce by 2030 (McKinsey's range) and that grows further with services, a trust layer touching even 5–10% of it would sit under **$150–500bn of annual transactions**. Revenue at fractions of a percent would be modest relative to that volume. The larger value is *systemic*: fraud prevented, disputes resolved quickly and commerce that would not happen at all without trust.
+
+**Probable future.** Several competing trust schemes emerge, built by payment networks, AI firms and governments. Covenant's realistic path is to become the neutral, interoperable layer *between* them rather than the only scheme.
+
+**Failure future.** One dominant AI firm builds a closed trust system for its own agents and wins on convenience, or national schemes fragment into incompatible silos.
+
+**Triggers and signposts.** Adoption of agent-payment protocols; digital identity wallets (e.g., the EU's) accepting agent credentials; the first large agent-fraud scandal, which would accelerate demand; liability rulings on agent errors.
+
+---
+
+## 7.4 DataGuild: from one guild to the collective-bargaining institution of the AI age
+
+**2040 end-state.** A global federation of data and knowledge cooperatives. Members earn royalties whenever AI systems use their knowledge, guilds co-own specialist AI models, and the world's languages and professional know-how are preserved in machine-usable form under the control of the communities that hold them.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | One guild (West African languages and agriculture) | First quarterly royalties; published royalty formula | Repeat licences from the same buyers |
+| **H2 (2028–33)** | A federation of 50+ guilds across professions and languages | Standard licence terms accepted by major AI developers; public-interest datasets for governments | Guild membership in the millions |
+| **H3 (2033–40+)** | Guild-owned models and "knowledge pensions" | Members co-own specialist models (e.g., an African agriculture model) and royalties continue for life | Royalties a meaningful income line for members |
+
+**Spin-off innovations**
+
+- **Knowledge pensions.** Royalty streams that continue into retirement and can be inherited.
+- **Language revival studios.** Communities create speech and text resources for endangered languages, funded by licensing.
+- **Expert evaluation marketplace.** Doctors, engineers and lawyers test AI systems for safety in their domains, a growing need as AI is used in high-stakes settings.
+- **Royalty-backed lending.** Members borrow against future royalty streams at fair rates.
+
+**Potential at maturity (illustrative).** If DataGuild reached **10 million members** earning **$100–500 a year** in royalties, it would transfer **$1–5bn a year** to contributors. For members in lower-income economies, that is a meaningful supplementary income. Equally important is what money cannot easily measure: thousands of languages kept alive in the digital world.
+
+**Probable future.** AI developers license from many sources, and DataGuild becomes one important supplier, strongest in domains and languages that are scarce elsewhere.
+
+**Failure future.** Courts adopt very broad "fair use" for training, synthetic data substitutes for most human data, and buyers refuse collective terms.
+
+**Triggers and signposts.** Copyright rulings and settlements; training-data transparency rules; prices in data-licensing deals; evidence on model collapse from synthetic data.
+
+---
+
+## 7.5 Guildhall: from ten pods to the world's largest apprenticeship system
+
+**2040 end-state.** A portable, outcome-verified alternative to the entry-level job. For a significant share of young people, especially in Africa and other youthful regions, the first rung of a career is a Guildhall pod, and lifelong guild membership supports re-skilling every few years.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | 10 pods → 200 pods in two cities and three domains | 70%+ of graduates placed within 90 days | SMEs return with second projects |
+| **H2 (2028–33)** | National partnerships funded through training levies; 50+ domains, including energy-transition trades (EV, solar, heat pumps) and AI supervision work | Employers accept Guildhall portfolios in place of degrees for entry roles | Hundreds of thousands of apprentices a year |
+| **H3 (2033–40+)** | Lifelong guild membership with portable benefits | Guilds become recognized professional bodies | Guild alumni are a measurable share of the workforce in partner countries |
+
+**Spin-off innovations**
+
+- **Proof-of-work credential exchange.** Verified portfolios that employers anywhere can query, replacing CV screening.
+- **Retiree mentor marketplace.** Paid, part-time mentoring careers for experienced professionals.
+- **"AI department as a service" for SMEs.** Pods act as a small business's ongoing AI and digital team.
+- **Guild mutual.** Portable insurance, pensions and income smoothing for independent workers.
+
+**Potential at maturity (illustrative).** If Guildhall trained **one million apprentices a year** by the late 2030s, each completing projects worth **$5,000–10,000**, it would deliver **$5–10bn a year** of real work for small businesses while building a skilled workforce. The larger impact is generational: a career ladder rebuilt for the AI age.
+
+**Probable future.** Strong uptake in countries with training levies and youthful populations; slower uptake where degrees remain the dominant gatekeeper.
+
+**Failure future.** The model drifts into cheap labour (the *Eroding Goals* archetype), or AI automates even supervised junior work so far that projects no longer teach.
+
+**Triggers and signposts.** Entry-level hiring data; reform of apprenticeship and training levies; employer acceptance of portfolio credentials.
+
+---
+
+## 7.6 KinGrid: from one neighbourhood to the care infrastructure of ageing societies
+
+**2040 end-state.** Every elder who wants one has a care circle, every helper builds care credit, and KinGrid is the "community layer" of health and social-care systems, working alongside hospitals, clinics and professional carers. Care credits work across borders, so a nurse in London can earn credit that pays for a parent's care in Abeokuta.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | One neighbourhood → 20 neighbourhoods; diaspora pilot | Measured fall in avoidable hospital admissions | Municipal contract signed |
+| **H2 (2028–33)** | Municipal and health-system partnerships; integration with hospital-at-home and social prescribing; human-supervised assistive robotics | Care credits backed by a mutual or public guarantee | Hundreds of thousands of elders served |
+| **H3 (2033–40+)** | National and cross-border care-credit systems | Credits recognized like pension entitlements; diaspora care corridors | Care circles as standard in partner regions |
+
+**Spin-off innovations**
+
+- **Diaspora care corridors.** Verified, coordinated care for parents in one country, paid for and overseen by children in another.
+- **Care-credit pensions.** Time-credits as a formal pillar of retirement security.
+- **Dementia-friendly neighbourhoods.** Certification and training for shops, transport and neighbours.
+- **Assistive robot leasing.** Lifting, monitoring and medication robots deployed only with human oversight and the elder's consent.
+
+**Potential at maturity (illustrative).** WHO projects about 426 million people aged 80+ by 2050. If just **1% (about 4 million)** had a KinGrid circle providing **four hours a week** of coordinated help, that would be roughly **830 million hours of care a year** (4m × 4 × 52), equivalent to the annual hours of several hundred thousand full-time carers.
+
+**Probable future.** Strongest uptake where public care systems are stretched and municipalities pay for prevention; diaspora corridors grow fastest in countries with large emigrant populations.
+
+**Failure future.** A safeguarding scandal destroys trust; the credit system cannot honour its obligations (the "demographic Ponzi" risk described for KinGrid in Part VI); or sensing turns into surveillance.
+
+**Triggers and signposts.** Long-term care funding reforms; care-workforce shortages; laws recognizing time-banking; outcomes data from hospital-at-home programmes.
+
+---
+
+## 7.7 Agora: from one city to social infrastructure as a service
+
+**2040 end-state.** Every city has a "connection grid": its idle spaces and hours woven into recurring small-group gatherings. Loneliness is measured and managed as a public-health indicator, like air quality, and Agora also serves civic purposes such as welcoming newcomers and hosting citizens' assemblies.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | 1 city → 10 cities | Independent evaluation shows reduced loneliness | Health payers fund places |
+| **H2 (2028–33)** | Reimbursed social prescribing; employer and university contracts; integration with KinGrid for elders | Social prescribing codes cover Agora cohorts | Millions of participants a year |
+| **H3 (2033–40+)** | Civic infrastructure: newcomer integration, intergenerational bridging, deliberative democracy | Cities publish a connection index alongside health statistics | "Third places" designed into new housing (with Hearth) |
+
+**Spin-off innovations**
+
+- **Civic assemblies.** Randomly selected citizens' assemblies (sortition), hosted and facilitated through Agora's venue and facilitator network.
+- **Newcomer circles.** Integration groups for migrants, refugees and people who move for work.
+- **Workplace belonging.** Cross-team cohorts for remote and hybrid workforces.
+- **Off-peak economy analytics.** Data helping venues and cities fill dead hours.
+
+**Potential at maturity (illustrative).** About 1 in 6 people worldwide, over a billion, experience loneliness (WHO). If Agora reached **10 million participants a year** across **500 cities** by the late 2030s, and validated scales showed a meaningful share moved out of chronic loneliness, the health and economic value would be substantial, given loneliness's links to heart disease, diabetes, depression and early death.
+
+**Probable future.** Strongest where governments already treat loneliness as policy. The UK appointed a minister for loneliness in 2018 and Japan in 2021.
+
+**Failure future.** Agora drifts toward an engagement-maximizing events app; a safety incident; or no third party will pay.
+
+**Triggers and signposts.** National loneliness strategies; social-prescribing reimbursement; venue economics after the pandemic.
+
+---
+
+## 7.8 Hearth: from homeshare to the engine of gentle density
+
+**2040 end-state.** A distributed housing-supply engine. Millions of small homes are added within existing neighbourhoods: backyard homes, duplexes, courtyard clusters and converted upper floors. Homeshare is a normal option for under-occupied homes. Hearth's homes are energy-positive (with FluxCommons), climate-adapted (with Bastion) and designed for intergenerational life (with KinGrid and Agora).
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | Homeshare in one city; 10 backyard-home pilots | First rent-backed financing closed | Cities request pre-approved plans |
+| **H2 (2028–33)** | Tens of thousands of units; rent-backed loans pooled and sold to institutional investors; in Africa, incremental building finance and verified diaspora building | A city or state adopts Hearth's pre-approved plan library | Thousands of units a year per market |
+| **H3 (2033–40+)** | "Gentle density as a service": AI-designed neighbourhood infill, community land trusts, intergenerational villages | Hearth homes become a recognized housing category | A measurable contribution to housing supply in partner cities |
+
+**Spin-off innovations**
+
+- **Rent-backed home securities.** Pools of backyard-home loans sold to pension funds, recycling capital into more homes.
+- **Pre-approved plan libraries.** Cities adopt standard designs that can be permitted in days.
+- **Verified diaspora building.** Escrowed milestones and photo or drone verification for families building at home from abroad (merging with the BuildBridge seed, Section 8.4).
+- **Community land trust toolkit.** Software and legal templates for neighbourhoods that want to hold land in common to keep it affordable.
+
+**Potential at maturity (illustrative).** California's reforms took backyard-home permits from a few hundred a year to tens of thousands. If Hearth delivered **5,000 homes a year in one large market**, that would be **50,000 homes in a decade**, roughly a city's worth. Replicated across ten markets, the order of magnitude becomes half a million homes.
+
+**Probable future.** Fastest growth where "by-right" backyard-home and duplex laws exist; slow growth where zoning is restrictive or interest rates are high.
+
+**Failure future.** Construction and interest-rate risk overwhelm thin margins; neighbourhood opposition; a homeshare safeguarding incident.
+
+**Triggers and signposts.** The spread of by-right zoning reforms; modular-construction cost curves; interest rates; institutional appetite for rent-backed assets.
+
+---
+
+## 7.9 CommonFleet: from a driver co-op to the credit union of robot capital
+
+**2040 end-state.** A federation of community-owned fleets owns a significant share of urban robotaxis and delivery robots. Dividends flow to former drivers, local savers and pension funds. The model has generalized beyond vehicles: communities co-own the robots that automate their work.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | A 50-vehicle human-driven EV co-op; a 10-vehicle AV pilot | First dividends paid | Driver waiting list for membership |
+| **H2 (2028–33)** | Thousands of vehicles across several cities; pension-fund co-investment; transit contracts for night and suburban service; delivery-robot fleets | A city procurement rule favours community-owned fleets | Co-op fleets a visible share of robotaxis in partner cities |
+| **H3 (2033–40+)** | Robot capital co-ops for warehouses, farms and buildings | "Universal basic capital" at local level: citizens own shares in automation | Robot dividends a meaningful income for members |
+
+**Spin-off innovations**
+
+- **Remote operations centres** staffed by former drivers, supervising and assisting autonomous fleets.
+- **AV insurance mutual** owned by fleet co-ops.
+- **Depot-as-energy-hub.** Fleet depots that double as grid batteries and charging hubs (with FluxCommons).
+- **Robot ownership co-ops** for other automated sectors.
+
+**Potential at maturity (illustrative).** Assume a co-op fleet of **10,000 vehicles** each generating **$10,000–20,000 of net annual cash flow** after costs and depreciation. That would distribute **$100–200m a year** to members. The per-vehicle figure is an assumption: robotaxi unit economics are not yet proven at scale.
+
+**Probable future.** A mixed ownership landscape: AV makers own some fleets, platforms own some, and financial investors own most of the rest. Community ownership succeeds where cities and pension funds actively support it.
+
+**Failure future.** AV makers refuse third-party ownership; hardware depreciates faster than expected; capital costs stay high; autonomy arrives later than planned.
+
+**Triggers and signposts.** Rules for third-party fleet ownership; separable fleet-operations partnerships (as with Waymo and Moove); robotaxi unit economics; city procurement policies.
+
+---
+
+## 7.10 FluxCommons: from 200 homes to the neighbourhood as a power plant and data centre
+
+**2040 end-state.** Every home with an EV, battery or heat pump can join a community virtual power plant. Computation runs where and when clean power is abundant and its heat warms homes, greenhouses and pools. Communities own a share of the grid-flexibility value they create.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | 200 homes, 20 compute boilers, one mini-grid in Accra | Households earn more from flexibility than they pay in charging fees | Utility partnership signed |
+| **H2 (2028–33)** | 100,000+ homes; bidirectional (vehicle-to-grid) charging at scale; compute boilers in apartment blocks, pools and greenhouses | Admission to wholesale and local flexibility markets | Hundreds of megawatts aggregated |
+| **H3 (2033–40+)** | Local energy markets with peer-to-peer trading; community-owned flexibility; grid-aware AI training | AI developers schedule training around renewable output via FluxCommons | Gigawatt-scale community flexibility |
+
+**Spin-off innovations**
+
+- **Compute-heated greenhouses** producing food and computation from the same kilowatt-hour.
+- **Fleet-as-a-battery** with CommonFleet depots.
+- **Neighbourhood energy co-ops** with shared batteries and solar.
+- **Grid-aware AI scheduling API** that lets any AI developer run interruptible jobs when and where power is clean and cheap.
+
+**Potential at maturity (illustrative).** The US DOE sees 80–160 GW of virtual power plants by 2030 as achievable and valuable. **One gigawatt** of flexibility equals the output of a large power station. At **2.5–5 kW** of flexible capacity per home, that would take **200,000–400,000 homes** (1,000,000 kW ÷ 5 kW = 200,000; ÷ 2.5 kW = 400,000). Several gigawatts across multiple countries is a plausible 2040 ambition.
+
+**Probable future.** Aggregators of many kinds (utilities, carmakers, energy retailers) compete. FluxCommons' advantages are its community ownership model and the compute-heat stream, which competitors lack.
+
+**Failure future.** Market rules exclude small aggregators; fear of battery wear; a security incident in distributed computing.
+
+**Triggers and signposts.** Vehicle-to-grid standards; flexibility-market reform; data-centre grid-connection constraints; heat-pump adoption rates.
+
+---
+
+## 7.11 HarvestGrid: from one corridor to Africa's perishable-food operating system
+
+**2040 end-state.** Perishable-food corridors span the continent. Smallholders store, finance, insure and sell like commercial farms; post-harvest loss of perishables is halved on HarvestGrid corridors; and price and yield forecasts are a public good.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | Five hubs on the Kano–Lagos tomato corridor | Loss reduction and price uplift measured; loans repaid | Traders ask to become cold hosts |
+| **H2 (2028–33)** | 500 hubs across ten corridors in several countries; cross-border trade under the African Continental Free Trade Area (AfCFTA); forward contracts and processing partnerships | Warehouse receipts accepted as collateral by banks | Hundreds of thousands of farmers |
+| **H3 (2033–40+)** | Continental food intelligence; farmer-owned cold-chain cooperatives; climate-adaptive crop planning; export corridors | Price and yield forecasts published as a public good | Measurable fall in perishable losses on served corridors |
+
+**Spin-off innovations**
+
+- **Public agri-price forecasting API** for governments, traders and researchers.
+- **Warehouse-receipt exchange** for trading stored produce.
+- **Local manufacturing of solar cold rooms**, creating jobs and cutting import costs.
+- **Food-waste upcycling network** turning unsold produce into dried goods, paste and feed.
+
+**Potential at maturity (illustrative).** Consider a corridor that handles **100,000 tonnes** of perishables a year. Cutting losses from **40% to 20%** saves **20,000 tonnes** of food a year on that corridor alone. Across ten corridors, that is roughly 200,000 tonnes, enough to feed hundreds of thousands of people, while raising farmer incomes.
+
+**Probable future.** Success corridor by corridor where security, roads and mobile money work; slower expansion elsewhere.
+
+**Failure future.** Insecurity, currency crises, over-rapid capital-intensive expansion (the sector has seen high-profile struggles) or resistance from incumbent intermediaries.
+
+**Triggers and signposts.** AfCFTA implementation; mobile-money interoperability; the cost of solar cold rooms; climate heat-stress trends.
+
+---
+
+## 7.12 Bastion: from 2,000 traders to a global network of resilience mutuals
+
+**2040 end-state.** In every disaster-prone region there is a member-owned resilience mutual, a 21st-century friendly society, that pays out within days, rewards prevention and coordinates community resources when disaster strikes. Governments use Bastion triggers to scale social protection automatically.
+
+| Horizon | What it becomes | Key milestone | Scale signal |
+|---|---|---|---|
+| **H1 (2026–28)** | Flood cover for 2,000 traders; a 500-household pledge network; heat-income cover | First automatic payouts within 48 hours | Renewal rate above 80% |
+| **H2 (2028–33)** | About a million members across several countries; catastrophe-bond reinsurance; integration with national social-protection systems and early-warning systems (the UN's *Early Warnings for All* initiative aims to cover everyone by 2027) | Governments co-fund premiums for the poorest | Payouts trusted as fast and fair |
+| **H3 (2033–40+)** | A resilience commons: parametric cover for income, homes, crops and health; support for climate relocation; verified adaptation credits | Mutuals federated across regions to share risk | Tens of millions covered |
+
+**Spin-off innovations**
+
+- **Heat-income protection** for outdoor and informal workers.
+- **Climate relocation network** offering pledged housing, jobs and support for families who must move.
+- **Resilience-retrofit marketplace** connecting members with vetted builders for flood-proofing and heat-proofing.
+- **City disaster resource registry**: a live map of community boats, generators, rooms and skills for emergency services.
+
+**Potential at maturity (illustrative).** Swiss Re estimates the global protection gap at about $424bn. If Bastion mutuals covered **50 million people** with an average sum insured of **$500**, that would be **$25bn of protection** for people who currently have none. Fast payouts prevent families from selling productive assets or falling into debt after a disaster.
+
+**Probable future.** Growth through partnerships with governments, development agencies and licensed insurers, fastest where mobile money is widespread.
+
+**Failure future.** A basis-risk scandal (people harmed but not paid); a correlated catastrophe exhausts capital; regulators block the model.
+
+**Triggers and signposts.** Early-warning coverage; parametric insurance uptake; insurer retreats from high-risk areas; public co-funding of premiums.
+
+---
+
+## 7.13 Combinatorial innovation: what the ventures create together
+
+W. Brian Arthur argues in *The Nature of Technology* that new technologies are mostly *combinations* of existing ones. The ten ventures follow that logic: their greatest future potential lies in what they create in combination. The ten fusions below are innovations that no single venture could build alone.
+
+| Fusion | New innovation | What it does |
+|---|---|---|
+| **KinGrid × Hearth** | Intergenerational villages | Clusters of small homes where younger residents pay lower rent in exchange for agreed help with older neighbours |
+| **FluxCommons × CommonFleet** | The mobile grid | Community-owned autonomous fleets that serve as batteries when parked |
+| **Covenant × DataGuild** | The consent and provenance layer for AI | Every training licence and every agent action carries verifiable consent and attribution |
+| **HarvestGrid × Bastion** | Climate-resilient food corridors | Cold chains with parametric cover against heat, flood and route disruption |
+| **Guildhall × CommonFleet** | Robot technician academies | Former drivers and young apprentices trained to operate and maintain autonomous fleets |
+| **Agora × KinGrid** | Social prescribing for ageing | Clinicians prescribe Agora cohorts and KinGrid circles together for isolated older patients |
+| **DataGuild × HarvestGrid** | An African agriculture foundation model | A farmer-owned AI model trained on local-language farming knowledge and HarvestGrid data |
+| **Covenant × Bastion** | Verified mutual aid | Pledges, payouts and volunteer identities verified instantly during disasters, cutting fraud |
+| **Hearth × FluxCommons** | Energy-positive backyard homes | Every new small home comes with solar, battery and flexibility income |
+| **Bastion × Hearth** | Climate-adaptive housing | Homes designed and retrofitted to cut insured losses, with premiums reduced accordingly |
+
+## 7.14 The 2040 end-state: the Stewardship Stack
+
+Taken together, the ten ventures form a layered infrastructure, which this paper calls the **Stewardship Stack**. Each layer serves those above it, and all are governed by the conscience vertices of the Decagon.
+
+```mermaid
+flowchart TB
+    L5["5. Planetary resilience: HarvestGrid, Bastion"]
+    L4["4. Physical capacity: Hearth, CommonFleet, FluxCommons"]
+    L3["3. Human capacity: Guildhall, KinGrid, Agora"]
+    L2["2. Knowledge and data: DataGuild"]
+    L1["1. Identity and trust: Covenant"]
+    G["Governance across all layers: member ownership, open protocols, externality ledger, public partnership"]
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+    L4 --> L5
+    G -.-> L1
+    G -.-> L3
+    G -.-> L5
+```
+
+| Layer | Function | Ownership model | Key protocol or standard |
+|---|---|---|---|
+| **1. Identity and trust** | Who (or which agent) is acting, with what authority and what guarantee | Member-owned foundation plus operating company | Verifiable credentials; signed mandates |
+| **2. Knowledge and data** | Who owns knowledge and how it is licensed | Data trusts and cooperatives | Machine-readable licences; provenance |
+| **3. Human capacity** | Care, skill and connection | Cooperatives and social enterprises with public contracts | Portable credentials; care credits |
+| **4. Physical capacity** | Housing, vehicles, energy, compute | Community and pension-fund ownership; co-ops | Open energy and mobility protocols |
+| **5. Planetary resilience** | Food security and disaster protection | Mutuals with public backstops | Parametric triggers; open early-warning data |
+
+**Why this matters.** The first platform era produced *vertically integrated* platforms: each company owned its whole stack and captured its value. The Stewardship Stack is *layered and interoperable*. Different owners hold different layers under common protocols, as the internet itself was built. This structure makes the Protocol Commons scenario (Section 4.10) achievable rather than utopian.
+
+## 7.15 Backcasting from 2040
+
+Backcasting starts from a desired future and works backwards to the steps that make it reachable.
+
+| Year | Milestones required |
+|---|---|
+| **2040** | The Stewardship Stack operates in dozens of countries; tens of millions of people are members of at least one Decagon network; externality ledgers are a standard reporting practice |
+| **2035** | Each venture operates at national scale in at least one country; at least three cross-venture fusions are live; governments contract for outcomes (care hours, homes added, losses avoided) |
+| **2030** | All ten ventures past proof of concept; shared trust and data layers in use by at least five ventures; first public outcome-based contracts renewed |
+| **2028** | Wave 1 ventures (Covenant, DataGuild, Guildhall, Agora) at proof; Wave 2 (KinGrid, HarvestGrid, Bastion, Hearth homeshare) piloting |
+| **2026–27** | Studio formed; Decagon Canvas and externality-ledger standard published; first pilots launched |
+
+## 7.16 The future-potential scorecard
+
+| Venture | Illustrative reach by 2040 (if successful) | Key impact metric | Biggest uncertainty | Potential | Difficulty |
+|---|---|---|---|---|---|
+| Covenant | $150–500bn of annual agent transactions under its trust layer | Fraud prevented; disputes resolved | Whether a dominant AI firm closes the market | Very high | High |
+| DataGuild | 10m members; $1–5bn a year in royalties | Income to contributors; languages preserved | Copyright law; synthetic data | High | High |
+| Guildhall | 1m apprentices a year | Placement and earnings of graduates | Employer acceptance | Very high | Medium |
+| KinGrid | ~4m elders; ~830m care hours a year | Avoided admissions; wellbeing | Safeguarding; credit backing | Very high | High |
+| Agora | 10m participants a year in 500 cities | Validated loneliness reduction | Who pays | High | Medium |
+| Hearth | Hundreds of thousands of homes | Homes added; affordability | Interest rates; zoning | High | High |
+| CommonFleet | Tens of thousands of community-owned vehicles | Dividends to former drivers | AV economics; ownership rules | High | Very high |
+| FluxCommons | Gigawatt-scale community flexibility | Grid costs avoided; emissions | Market rules | Very high | High |
+| HarvestGrid | Ten corridors; ~200,000 tonnes of food saved a year | Loss reduction; farmer income | Security; currency | Very high | High |
+| Bastion | 50m members; $25bn of cover | Speed of recovery after disasters | Basis risk; capital | Very high | High |
+
+*All reach figures are the illustrative estimates from Sections 7.3–7.12, with their stated assumptions.*
+
+## 7.17 The philosophy of the future: becoming good ancestors
+
+Three ideas frame how these futures should be pursued.
+
+1. **The future is designed, not predicted.** Dator observes that "the future" cannot be predicted, but *preferred* futures can be envisioned, invented and evaluated. The ten ventures are deliberate attempts to invent a preferable future, not bets on a probable one.
+2. **Responsibility grows with power.** Hans Jonas argued that technological civilization requires a new ethic: because our actions now reach far into the future, we must act so that their effects are compatible with the permanence of genuine human life. Platforms are among the most powerful tools ever built for shaping everyday life, so their designers carry that responsibility.
+3. **Be a good ancestor.** Roman Krznaric's *The Good Ancestor* calls for "cathedral thinking": projects whose benefits will be enjoyed by people not yet born. Ubuntu teaches the same thing in relational terms: we are who we are through others, including those who come after us. The ultimate measure of the Decagon ventures is not their valuations in 2030 but whether people in 2050 are glad they were built.
+
+> **The question for every founder:** *Will the people who inherit the system you are building thank you for it?*
+
+---
+
+# Part VIII: Portfolio Synthesis, Roadmap and Closing Philosophy
+
+## 8.1 The Decagon scoreboard
 
 | Venture | V1 Lat | V2 Fri | V3 Tru | V4 Liq | V5 Int | **Engine** | V6 Dis | V7 Leg | V8 Ste | V9 Mea | V10 Ant | **Conscience** | **Total** |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -1354,7 +1891,7 @@ flowchart LR
 3. **The stewardship premium is paid in liquidity and antifragility.** Governance, safeguarding and fair distribution slow the cold start (V4) and add regulatory and capital exposure (V10). This is the honest cost of the approach. It is best managed with *very* small atomic networks, third-party payers (health systems, municipalities, insurers) who value the conscience vertices, and patient, blended capital.
 4. **The highest scorers (Bastion, KinGrid, HarvestGrid) start from non-consumption.** They serve people currently served by nothing, Christensen's strongest foothold, where incumbents have the weakest motivation to respond.
 
-## 7.2 Feasibility and sequencing
+## 8.2 Feasibility and sequencing
 
 | Venture | Capital intensity | Time to MVP | Regulatory complexity | Best first market | Wave |
 |---|---|---|---|---|---|
@@ -1371,7 +1908,7 @@ flowchart LR
 
 **Sequencing logic.** Wave 1 builds the **shared infrastructure**: trust (Covenant), knowledge (DataGuild) and talent (Guildhall). Agora is included because it is cheap, fast and generates evidence for health payers. Wave 2 builds **human and food-system networks** on that infrastructure. Wave 3 deploys **capital-intensive physical networks** once trust, talent and payer relationships exist.
 
-## 7.3 The decagon as an ecosystem
+## 8.3 The decagon as an ecosystem
 
 The ten ventures are not separate bets. They form an ecosystem in which each venture's output is another's input, a reinforcing structure at the portfolio level.
 
@@ -1399,7 +1936,7 @@ flowchart TB
 - **Blended capital:** grants and concessional capital for the stewardship premium, revenue-based financing for operating networks, and equity for software layers.
 - **Outcome-based contracts** with governments, health systems and insurers that *pay* for conscience vertices (avoided admissions, housing added, losses avoided).
 
-## 7.4 Ten more seeds beyond the Decagon
+## 8.4 Ten more seeds beyond the Decagon
 
 | Seed | One-line concept |
 |---|---|
@@ -1414,7 +1951,7 @@ flowchart TB
 | **HabitatShare** | Paying landowners for verified biodiversity stewardship (satellite plus environmental-DNA verification) |
 | **PeerCare Minds** | Peer-support mental-health network with AI triage and clinical escalation |
 
-## 7.5 Implementation roadmap
+## 8.5 Implementation roadmap
 
 | Horizon | Milestones |
 |---|---|
@@ -1423,7 +1960,7 @@ flowchart TB
 | **3–7 years** | Launch FluxCommons and CommonFleet at city scale. Expand corridors and cities. Transition provider-members toward meaningful ownership. Publish independent impact evaluations. |
 | **7–15 years** | A protocol-level ecosystem in the *Protocol Commons* scenario. Ventures become networks of networks, partly member-owned and interoperable with public digital infrastructure. |
 
-## 7.6 Closing philosophy: from the sharing economy to the stewardship economy
+## 8.6 Closing philosophy: from the sharing economy to the stewardship economy
 
 The first platform era called itself the "sharing economy". It was more accurately an **access economy**. It shared access, not ownership; it monetized trust without returning it; and it commodified labour and land at the finest grain in history. Its achievements are real. Billions of journeys and nights were made possible, millions of people earned income, and the world learned to trust strangers at scale. Its costs are also real, and society has spent a decade reclaiming them through Polanyi's double movement.
 
@@ -1448,7 +1985,7 @@ The next era can be a **stewardship economy**.
 2. **Rawls: the veil of ignorance.** Design the rules you would accept without knowing whether you would be the rider or the driver, the guest or the neighbour, the elder or the carer, the farmer or the trader.
 3. **Ubuntu: I am because we are.** The highest-value problems of this century, such as care, loneliness, food and climate, are relational. Platforms that understand they are building *relationships among people*, not only transactions between strangers, will create the most enduring value.
 
-## 7.7 Ten aphorisms for builders
+## 8.7 Ten aphorisms for builders
 
 1. *Every idle thing is a sentence waiting for a grammar. A platform is that grammar.*
 2. *Legibility is power; what you make visible, you make governable.*
@@ -1540,6 +2077,8 @@ Score each vertex 0–5. The anchors for 0, 1, 3 and 5 are below; use 2 and 4 fo
 - Bloomberg, *Waymo Co-CEO Outlines Path to 1 Million Weekly Trips in 2026* (Feb 2026): [link](https://www.bloomberg.com/news/articles/2026-02-11/waymo-co-ceo-outlines-path-to-1-million-weekly-trips-in-2026); Claims Journal: [link](https://amp.claimsjournal.com/news/national/2026/02/12/335668.htm)
 - CX Today, *AI Agents Handle 30% of Airbnb Customer Support Tickets*: [link](https://cxtoday.com/ai-agents-handle-30-of-airbnb-customer-support-tickets-as-company-expands-automation); Constellation Research, *Airbnb: A look at its AI strategy*: [link](https://www.constellationr.com/insights/news/airbnb-look-its-ai-strategy)
 - TechCrunch, *Uber is building a fleet of gig workers to label data for AI models* (Nov 2024): [link](https://techcrunch.com/2024/11/26/uber-is-building-a-fleet-of-gig-workers-to-label-data-for-ai-models)
+- Uber Technologies, Q1 2026 results (8-K): [SEC](https://www.sec.gov/Archives/edgar/data/0001543151/000154315126000019/uberq126earningspressrelea.htm)
+- Airbnb Q2 2026 results, as reported by [PhocusWire](https://www.phocuswire.com/news/finance/airbnb-q2-2026-earnings) and [Nasdaq](https://www.nasdaq.com/articles/airbnb-q2-earnings-call-highlights)
 
 **Problem evidence**
 
@@ -1556,6 +2095,11 @@ Score each vertex 0–5. The anchors for 0, 1, 3 and 5 are below; use 2 and 4 fo
 - Hall, J. (2019). How many hours does it take to make a friend? *Journal of Social and Personal Relationships* 36(4).
 - Hall, J., Horton, J. and Knoepfle, D. *Labor Market Equilibration: Evidence from Uber* (working paper).
 - Imperva (2025). *Bad Bot Report.*
+- McKinsey (2025). *The agentic commerce opportunity: How AI agents are ushering in a new era for consumers and merchants*: [link](https://www.mckinsey.com/industries/retail/our-insights/the-agentic-commerce-opportunity-how-ai-agents-are-ushering-in-a-new-era-for-consumers-and-merchants)
+- WHO, *Ageing and health* fact sheet (Oct 2025): [link](https://www.who.int/news-room/fact-sheets/detail/ageing-and-health)
+- World Bank, *In 2024, remittance flows to low- and middle-income countries are expected to reach $685 billion*: [link](https://blogs.worldbank.org/en/peoplemove/in-2024--remittance-flows-to-low--and-middle-income-countries-ar)
+- IEA, *Global EV Outlook 2026*: [link](https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars)
+- US Department of Energy (2023). *Pathways to Commercial Liftoff: Virtual Power Plants*: [link](https://liftoff.energy.gov/wp-content/uploads/2023/10/LIFTOFF_DOE_VVP_10062023_v4.pdf)
 
 **Systems theory, design and innovation**
 
@@ -1573,6 +2117,19 @@ Score each vertex 0–5. The anchors for 0, 1, 3 and 5 are below; use 2 and 4 fo
 - Parker, G., Van Alstyne, M. and Choudary, S. (2016). *Platform Revolution.*
 - Rochet, J.-C. and Tirole, J. (2003). Platform Competition in Two-Sided Markets. *JEEA* 1(4).
 - Taleb, N.N. (2012). *Antifragile.*
+
+**Futures studies**
+
+- Arthur, W.B. (2009). *The Nature of Technology: What It Is and How It Evolves.*
+- Dator, J. (2009). Alternative Futures at the Manoa School. *Journal of Futures Studies* 14(2).
+- Hancock, T. and Bezold, C. (1994). Possible futures, preferable futures. *Healthcare Forum Journal* 37(2).
+- Inayatullah, S. (1998). Causal Layered Analysis: Poststructuralism as Method. *Futures* 30(8).
+- Jonas, H. (1984). *The Imperative of Responsibility.*
+- Kauffman, S. (2000). *Investigations.*
+- Krznaric, R. (2020). *The Good Ancestor.*
+- Perez, C. (2002). *Technological Revolutions and Financial Capital.*
+- Sharpe, B. (2013). *Three Horizons: The Patterning of Hope.*
+- Voros, J. (2003). A generic foresight process framework. *Foresight* 5(3).
 
 **Economics, political economy and philosophy**
 
