@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 980" width="1000" height="980" role="img" aria-labelledby="title desc" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="title">The Arbitrage Decagon</title>
+<desc id="desc">Ten kinds of AI spread arranged around a decagon, each marked by its expected half-life (long, medium or short) and the venture designed for it. At the centre, the Spread-to-Moat Ladder: spot, exploit, bridge, own, steward.</desc>
+<rect width="1000" height="980" fill="#fcfcfb"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#0b0b0b">The Arbitrage Decagon</text>
+<text x="40" y="80" font-size="15" fill="#52514e">Ten AI spreads, their expected half-life, and the venture designed for each. Every spread climbs the same ladder.</text>
+<circle cx="48.0" cy="112.0" r="6.4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="64" y="117" font-size="14.5" fill="#0b0b0b">Long half-life (five years or more)</text>
+<polygon points="358.0,104.4 365.2,116.9 350.8,116.9" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="374" y="117" font-size="14.5" fill="#0b0b0b">Medium (two to five years)</text>
+<rect x="662.0" y="106.0" width="12.0" height="12.0" fill="#eb6834" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="684" y="117" font-size="14.5" fill="#0b0b0b">Short (months to about two years)</text>
+<polygon points="500.0,260.0 676.3,317.3 785.3,467.3 785.3,652.7 676.3,802.7 500.0,860.0 323.7,802.7 214.7,652.7 214.7,467.3 323.7,317.3" fill="#f3f6fb" stroke="#d6d5d0" stroke-width="2"/>
+<text x="500" y="432" font-size="15" font-weight="700" fill="#0b0b0b" text-anchor="middle">The Spread-to-Moat Ladder</text>
+<rect x="420" y="462" width="160" height="34" rx="6" fill="#ffffff" stroke="#2a5da8" stroke-width="1.5"/>
+<text x="500" y="484" font-size="14.5" fill="#0b0b0b" text-anchor="middle">1. Spot</text>
+<line x1="500" y1="496" x2="500" y2="508" stroke="#52514e" stroke-width="1.5"/>
+<rect x="420" y="508" width="160" height="34" rx="6" fill="#ffffff" stroke="#2a5da8" stroke-width="1.5"/>
+<text x="500" y="530" font-size="14.5" fill="#0b0b0b" text-anchor="middle">2. Exploit</text>
+<line x1="500" y1="542" x2="500" y2="554" stroke="#52514e" stroke-width="1.5"/>
+<rect x="420" y="554" width="160" height="34" rx="6" fill="#e8eff9" stroke="#2a5da8" stroke-width="1.5"/>
+<text x="500" y="576" font-size="14.5" fill="#0b0b0b" text-anchor="middle">3. Bridge</text>
+<line x1="500" y1="588" x2="500" y2="600" stroke="#52514e" stroke-width="1.5"/>
+<rect x="420" y="600" width="160" height="34" rx="6" fill="#e8eff9" stroke="#2a5da8" stroke-width="1.5"/>
+<text x="500" y="622" font-size="14.5" fill="#0b0b0b" text-anchor="middle">4. Own</text>
+<line x1="500" y1="634" x2="500" y2="646" stroke="#52514e" stroke-width="1.5"/>
+<rect x="420" y="646" width="160" height="34" rx="6" fill="#e8eff9" stroke="#2a5da8" stroke-width="1.5"/>
+<text x="500" y="668" font-size="14.5" fill="#0b0b0b" text-anchor="middle">5. Steward</text>
+<text x="592" y="496" font-size="12" fill="#52514e">capture the spread</text>
+<text x="592" y="600" font-size="12" fill="#52514e">build what lasts</text>
+<circle cx="500.0" cy="260.0" r="8.0" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="500.0" y="199.0" font-size="15" fill="#0b0b0b" text-anchor="middle"><tspan font-weight="700">S1</tspan> Energy–compute</text>
+<text x="500.0" y="218.0" font-size="13" fill="#52514e" text-anchor="middle">StrandedWatts</text>
+<rect x="668.8" y="309.8" width="15.0" height="15.0" fill="#eb6834" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="696.9" y="263.0" font-size="15" fill="#0b0b0b" text-anchor="start"><tspan font-weight="700">S2</tspan> Model price</text>
+<text x="696.9" y="282.0" font-size="13" fill="#52514e" text-anchor="start">ComputeCoop</text>
+<polygon points="785.3,457.8 794.3,473.5 776.3,473.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="818.6" y="450.5" font-size="15" fill="#0b0b0b" text-anchor="start"><tspan font-weight="700">S3</tspan> Adoption</text>
+<text x="818.6" y="469.5" font-size="13" fill="#52514e" text-anchor="start">OfficePilot</text>
+<polygon points="785.3,643.2 794.3,658.9 776.3,658.9" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="818.6" y="657.5" font-size="15" fill="#0b0b0b" text-anchor="start"><tspan font-weight="700">S4</tspan> Language</text>
+<text x="818.6" y="676.5" font-size="13" fill="#52514e" text-anchor="start">TongueBridge</text>
+<rect x="668.8" y="795.2" width="15.0" height="15.0" fill="#eb6834" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="696.9" y="845.0" font-size="15" fill="#0b0b0b" text-anchor="start"><tspan font-weight="700">S5</tspan> Labour and skill</text>
+<text x="696.9" y="864.0" font-size="13" fill="#52514e" text-anchor="start">OutcomeWorks</text>
+<circle cx="500.0" cy="860.0" r="8.0" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="500.0" y="909.0" font-size="15" fill="#0b0b0b" text-anchor="middle"><tspan font-weight="700">S6</tspan> Expertise</text>
+<text x="500.0" y="928.0" font-size="13" fill="#52514e" text-anchor="middle">ScanBridge</text>
+<circle cx="323.7" cy="802.7" r="8.0" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="303.1" y="845.0" font-size="15" fill="#0b0b0b" text-anchor="end"><tspan font-weight="700">S7</tspan> Learning</text>
+<text x="303.1" y="864.0" font-size="13" fill="#52514e" text-anchor="end">TutorGrid</text>
+<polygon points="214.7,643.2 223.7,658.9 205.7,658.9" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="181.4" y="657.5" font-size="15" fill="#0b0b0b" text-anchor="end"><tspan font-weight="700">S8</tspan> Risk pricing</text>
+<text x="181.4" y="676.5" font-size="13" fill="#52514e" text-anchor="end">FairScore</text>
+<circle cx="214.7" cy="467.3" r="8.0" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="181.4" y="450.5" font-size="15" fill="#0b0b0b" text-anchor="end"><tspan font-weight="700">S9</tspan> Backlog</text>
+<text x="181.4" y="469.5" font-size="13" fill="#52514e" text-anchor="end">BacklogZero</text>
+<polygon points="323.7,307.8 332.7,323.5 314.6,323.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2.5"/>
+<text x="303.1" y="263.0" font-size="15" fill="#0b0b0b" text-anchor="end"><tspan font-weight="700">S10</tspan> Compliance</text>
+<text x="303.1" y="282.0" font-size="13" fill="#52514e" text-anchor="end">ExportReady</text>
+<text x="40" y="958" font-size="12" fill="#52514e">Half-life: how long before competition or regulation halves the spread (author's estimate). See Sections 3.1 and 5.1.</text>
+</svg>
