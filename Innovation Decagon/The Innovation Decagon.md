@@ -19,7 +19,8 @@ Working paper · October 2026
 3. **Theorizes and philosophizes.** It reads the two companies through Coase, Hayek, Schumpeter, Christensen, Polanyi, Heidegger, Illich, Ostrom, Zuboff, Rawls and the African ethic of *Ubuntu*. The conclusion is that they are *latency compilers*: they turned invisible slack into a market. They also *commodified fictitious commodities* (labour and land) at a finer grain than ever before, which is why society pushed back.
 4. **Projects their futures** (2026–2050). It uses five foresight tools: the futures cone, Three Horizons, Causal Layered Analysis, Dator's four futures and Carlota Perez's techno-economic surges. It sets out ten future innovations each company could build, three possible 2040 identities for each, a 2035 scenario matrix (*Walled Gardens, Agent Bazaar, Civic Platforms, Protocol Commons*), 2050 futures, wildcards and strategic options. The main forecast is that **in the agentic era, aggregators of demand lose power and aggregators of trust gain it.**
 5. **Builds the Innovation Decagon.** This is a ten-vertex framework for designing disruptive ventures. Five "engine" vertices create and move value: *Latency, Friction, Trust, Liquidity, Intelligence*. Five "conscience" vertices distribute and sustain it: *Distribution, Legitimacy, Stewardship, Meaning, Antifragility*. The framework comes with a 50-point scoring rubric, a seven-stage *Systemic Design Spiral* process, a canvas and ten design principles.
-6. **Proposes a Decagon of Ventures.** These are ten disruptive startup concepts, each aimed at a *new* problem of the late 2020s, each inheriting Uber/Airbnb DNA and each *inverting* one of their failures:
+6. **Applies the models beyond rides and rooms.** It separates the Uber model (on-demand dispatch) from the Airbnb model (idle-asset marketplace), gives a decision guide and a ten-question fit test, learns from failed "Uber for X" startups, and maps both models across sixteen sectors, from freight, farming and healthcare to energy, finance and construction, with an African and Nigerian lens and a prioritized list of opportunities.
+7. **Proposes a Decagon of Ventures.** These are ten disruptive startup concepts, each aimed at a *new* problem of the late 2020s, each inheriting Uber/Airbnb DNA and each *inverting* one of their failures:
 
 | # | Venture | New problem it solves | Latent capacity it unlocks |
 |---|---|---|---|
@@ -34,7 +35,7 @@ Working paper · October 2026
 | 9 | **HarvestGrid** | Perishable food loss and climate heat stress (Africa-first) | Empty backhauls, solar cold rooms, warehouse receipts |
 | 10 | **Bastion** | Insurers retreating from climate risk | Community spare capacity; satellite triggers; mutual traditions |
 
-7. **Projects the ventures' futures** (2026–2050). For each venture it gives a 2040 end-state, a three-horizon growth path, four spin-off innovations, an illustrative estimate of potential at maturity, and its probable and failure futures. It then shows ten *fusions* that combine ventures into new innovations, and the **Stewardship Stack**: a layered, interoperable infrastructure the ten could form by 2040.
+8. **Projects the ventures' futures** (2026–2050). For each venture it gives a 2040 end-state, a three-horizon growth path, four spin-off innovations, an illustrative estimate of potential at maturity, and its probable and failure futures. It then shows ten *fusions* that combine ventures into new innovations, and the **Stewardship Stack**: a layered, interoperable infrastructure the ten could form by 2040.
 
 **The central design insight.** Uber and Airbnb maximized the engine vertices and neglected the conscience vertices. The regulatory, labour and housing backlash they now face is the conscience vertices arriving with interest. The ventures in this paper are designed in the opposite order. Ex-ante, they score higher on stewardship and distribution but *lower on liquidity and antifragility*. That gap is the **stewardship premium**. Paying it deliberately, rather than discovering it in court, is the strategic opportunity of the coming decade.
 
@@ -53,9 +54,10 @@ Working paper · October 2026
 | III | Theory and philosophy | Understand what they *mean* |
 | IV | Futures of Uber and Airbnb, 2026–2050 | Anticipate where platforms are going |
 | V | The Innovation Decagon framework | Design or evaluate a venture |
-| VI | The Decagon of Ventures: ten startup concepts | Get concrete opportunities |
-| VII | Future potential of the ten ventures, 2026–2050 | See what the ventures could become |
-| VIII | Portfolio synthesis, roadmap and closing philosophy | Act on it |
+| VI | Beyond rides and rooms: where the Uber and Airbnb models work, across sixteen sectors | Apply the models to other services and pain points |
+| VII | The Decagon of Ventures: ten startup concepts | Get concrete opportunities |
+| VIII | Future potential of the ten ventures, 2026–2050 | See what the ventures could become |
+| IX | Portfolio synthesis, roadmap and closing philosophy | Act on it |
 | Appendices | Canvas, scoring rubric, glossary, sources | Apply the framework yourself |
 
 A note on evidence: company figures come from published results (cited in Appendix D). Scores and scenario judgements are the author's analytical judgement and are labelled as such. Every startup concept is a hypothesis to be tested, not a forecast.
@@ -290,7 +292,7 @@ Meadows ranked twelve places to intervene in a system, from least to most powerf
 
 > **Disruption corollary (Ashby):** disruption happens where an incumbent's *regulated or structural variety* is lower than its environment's variety, and a newcomer can supply the missing variety cheaply.
 
-This corollary is a search heuristic. Look for sectors where demand variety is rising (ageing, climate, AI) while incumbent response variety is fixed by regulation, capital structure or culture. Care homes, insurers, universities, utilities and housing developers are all candidates, and Part VI targets each of them.
+This corollary is a search heuristic. Look for sectors where demand variety is rising (ageing, climate, AI) while incumbent response variety is fixed by regulation, capital structure or culture. Care homes, insurers, universities, utilities and housing developers are all candidates, and Part VII targets each of them.
 
 **Beer's Viable System Model (VSM)** describes the five functions any system needs to remain viable:
 
@@ -350,7 +352,7 @@ The platform is also a hybrid: an **algorithmic firm** that coordinates through 
 
 **Christensen's disruption theory, applied strictly.** In *What Is Disruptive Innovation?* (HBR, 2015), Clayton Christensen and co-authors argued that **Uber is not a disruptive innovation in the technical sense**. It did not start with a low-end foothold (customers over-served by incumbents) or a new-market foothold (non-consumers). It started in the mainstream with a product often *better* than taxis. Airbnb is closer to the theory: its first customers were budget travellers and conference overflow who would not have stayed in hotels at all, a **new-market foothold**. It then moved upmarket.
 
-**Why this matters for founders.** The popular use of "disruption" (any big change) hides the mechanism that makes disruption *hard to fight*: **asymmetric motivation**. Incumbents rationally ignore footholds that look unattractive to them. The ten ventures in Part VI are each classified by their foothold. The strongest begin with **non-consumption**, people currently served by nothing: uninsured traders, smallholders without cold storage, lonely people without a "third place", juniors with no first rung.
+**Why this matters for founders.** The popular use of "disruption" (any big change) hides the mechanism that makes disruption *hard to fight*: **asymmetric motivation**. Incumbents rationally ignore footholds that look unattractive to them. The ten ventures in Part VII are each classified by their foothold. The strongest begin with **non-consumption**, people currently served by nothing: uninsured traders, smallholders without cold storage, lonely people without a "third place", juniors with no first rung.
 
 ## 3.3 Political economy: Polanyi and the double movement
 
@@ -399,7 +401,7 @@ John Rawls asked what rules people would choose if they did not know their place
 
 > **The Veil-of-Ignorance Test:** *Would you accept this platform's rules if you did not know whether you would be the rider or the driver, the guest, the host or the neighbour, the shareholder or the city?*
 
-Uber's early rules (opaque pay, unilateral deactivation, risk borne by drivers) and Airbnb's early rules (externalities borne by neighbours) would struggle to pass. Each venture in Part VI is designed to pass it.
+Uber's early rules (opaque pay, unilateral deactivation, risk borne by drivers) and Airbnb's early rules (externalities borne by neighbours) would struggle to pass. Each venture in Part VII is designed to pass it.
 
 ## 3.9 Ubuntu: belonging as an operating principle
 
@@ -661,7 +663,7 @@ The Innovation Decagon combines both into **ten vertices**, each a *design oblig
 
 ![The Innovation Decagon: first-generation platforms versus the ten ventures](figures/decagon-profile.svg)
 
-*Figure 1. The ten vertices of the Innovation Decagon, scored 0–5. The first-generation profile is the average of Uber and Airbnb at launch (c. 2012). The next-generation profile is the average design-intent score of the ten ventures in Part VI. Full scores are in Sections 5.3 and 8.1.*
+*Figure 1. The ten vertices of the Innovation Decagon, scored 0–5. The first-generation profile is the average of Uber and Airbnb at launch (c. 2012). The next-generation profile is the average design-intent score of the ten ventures in Part VII. Full scores are in Sections 5.3 and 9.1.*
 
 ## 5.2 The ten vertices
 
@@ -734,7 +736,7 @@ flowchart LR
 
 ## 5.5 The digital and AI opportunity stack: 2008 vs 2026
 
-Uber and Airbnb rode the **2008 stack**. The next generation rides a new one. Every venture in Part VI is built on at least four of these layers.
+Uber and Airbnb rode the **2008 stack**. The next generation rides a new one. Every venture in Part VII is built on at least four of these layers.
 
 | 2008 enabler | 2026 successor | What becomes possible |
 |---|---|---|
@@ -747,11 +749,11 @@ Uber and Airbnb rode the **2008 stack**. The next generation rides a new one. Ev
 | Human drivers and hosts | **Autonomy and robotics** (AVs, drones, warehouse robots) | Labour-free supply, so *capital utilization* becomes the game |
 | Spreadsheets and dashboards | **Digital twins and simulation** | Model a city, grid or care system *before* deploying into it |
 | Cheap capital (ZIRP) | **Expensive capital** (higher interest rates) | Ventures must be capital-efficient, cash-generating earlier, and less dependent on subsidy wars |
-| Recession slack | **New slack**: AI-displaced entry-level labour; healthy retirees; post-pandemic empty offices; midday solar surplus; idle GPUs at night; under-occupied homes | The latent pools of Part VI |
+| Recession slack | **New slack**: AI-displaced entry-level labour; healthy retirees; post-pandemic empty offices; midday solar surplus; idle GPUs at night; under-occupied homes | The latent pools of Part VII |
 
 **The new design rule: agent-native by default.** Every next-generation platform should treat AI agents as first-class users. That means machine-readable inventory, verifiable claims, programmatic negotiation within human-set mandates, and clear liability rules for agent actions. A platform that can only be used through its own app risks being left out when demand starts arriving through agents.
 
-**Digital transformation, reframed.** Uber and Airbnb did not undergo digital transformation. They were born digital and *forced it on* taxi companies and hotels. The ventures in Part VI will likewise force transformation on insurers, care agencies, utilities, universities, housing developers and food wholesalers. For incumbents, the right response is to **become a participant in the protocol** before a newcomer becomes its owner.
+**Digital transformation, reframed.** Uber and Airbnb did not undergo digital transformation. They were born digital and *forced it on* taxi companies and hotels. The ventures in Part VII will likewise force transformation on insurers, care agencies, utilities, universities, housing developers and food wholesalers. For incumbents, the right response is to **become a participant in the protocol** before a newcomer becomes its owner.
 
 ## 5.6 The latency map: where market gaps are now
 
@@ -776,8 +778,8 @@ The product is an *opportunity index* (maximum 625). These are judgement scores 
 | EVs, batteries, compute heat | Grid stress from electrification and AI | 5 | 5 | 4 | 3 | 300 | FluxCommons |
 | Backhauls, cold rooms, receipts | Food loss and climate heat stress | 5 | 4 | 4 | 4 | 320 | HarvestGrid |
 | Community spare capacity and satellite data | Climate protection gap | 5 | 4 | 4 | 5 | 400 | Bastion |
-| Diaspora capital and trust | Fraud in long-distance building and investing | 4 | 4 | 4 | 3 | 192 | (seed list, §8.4) |
-| Products' remaining useful life | Waste and repair barriers | 3 | 5 | 3 | 3 | 135 | (seed list, §8.4) |
+| Diaspora capital and trust | Fraud in long-distance building and investing | 4 | 4 | 4 | 3 | 192 | (seed list, §9.4) |
+| Products' remaining useful life | Waste and repair barriers | 3 | 5 | 3 | 3 | 135 | (seed list, §9.4) |
 
 ## 5.7 Ten design principles (the "decalogue")
 
@@ -794,7 +796,316 @@ The product is an *opportunity index* (maximum 625). These are judgement scores 
 
 ---
 
-# Part VI: The Decagon of Ventures
+# Part VI: Beyond Rides and Rooms: Where the Uber and Airbnb Models Work
+
+Uber is known for transport and Airbnb for accommodation. But neither is really "about" cars or homes. Each is a **general-purpose model for turning idle or hard-to-find capacity into a service people can trust and book in seconds**. This part asks where else those models work, which pain points they solve, and how to apply them. It also covers where they fail.
+
+## 6.1 Two models, not one
+
+"Uber for X" and "Airbnb for X" are often used interchangeably, but they are different machines. Choosing the wrong one is a common cause of failure.
+
+| | **The Uber model: on-demand dispatch** | **The Airbnb model: idle-asset marketplace** |
+|---|---|---|
+| **What is matched** | A *service* performed by a person (or machine) at a time and place | An *asset* (space, equipment, vehicle) that sits unused |
+| **Supply** | Fairly standardized: one driver is much like another | Unique: every home, venue or tool differs |
+| **How matching works** | The platform assigns the nearest available provider in real time | The customer searches, compares and chooses |
+| **Who sets the price** | The platform (dynamic, surge pricing) | The owner, guided by platform suggestions |
+| **What the customer values most** | Speed and reliability ("a car in four minutes") | Selection, fit and trust ("the right place for me") |
+| **Frequency** | High (daily or weekly) | Lower (occasional, larger purchases) |
+| **Key trust tools** | Ratings, background checks, live tracking, insurance | Reviews, verified identity, photos, guarantees, escrow |
+| **Biggest risk** | Thin margins; worker-classification disputes | Disintermediation (repeat users go direct); neighbourhood externalities |
+
+A third, hybrid pattern sits between them: the **skills marketplace** (e.g., TaskRabbit, Thumbtack, Upwork, Urban Company). Providers have profiles and reviews like Airbnb hosts, but the service is performed like an Uber trip, often scheduled rather than instant.
+
+## 6.2 Which model fits? A decision guide
+
+```mermaid
+flowchart TB
+    Start["A pain point:<br/>something people need is hard to find,<br/>slow, costly or unreliable"] --> Q1(["What is idle<br/>or hard to find?"])
+    Q1 -->|"People's time<br/>and skills"| Q2(["Is the need urgent and<br/>tied to a location?"])
+    Q1 -->|"Assets: space,<br/>equipment, vehicles"| Q3(["Does the customer care<br/>which specific asset they get?"])
+    Q2 -->|"Yes"| U["Uber model:<br/>on-demand dispatch;<br/>platform sets the price"]
+    Q2 -->|"No"| S["Skills marketplace:<br/>scheduled booking<br/>with provider profiles"]
+    Q3 -->|"Yes"| A["Airbnb model:<br/>listings; owner sets<br/>the price; reviews"]
+    Q3 -->|"No"| P["Pooled access:<br/>platform-managed shared assets<br/>(fleet or locker model)"]
+    S --> Q4(["Will the same customer and<br/>provider work together<br/>again and again?"])
+    Q4 -->|"Yes"| R["Relationship platform:<br/>keep both sides with scheduling,<br/>payments, insurance and guarantees"]
+```
+
+**The ten-question fit test.** A sector suits these models when most answers are "yes":
+
+1. **Is supply fragmented?** Many small providers or owners, none dominant.
+2. **Is there idle capacity?** Time, skills or assets that sit unused for long periods.
+3. **Is demand fragmented and recurring?** Many customers with a repeated need.
+4. **Is finding and trusting a provider the main pain**, more than the price itself?
+5. **Can quality be standardized or reliably reviewed?**
+6. **Is frequency high enough, or the ticket large enough,** for the platform's fee to cover its costs?
+7. **Can trust be engineered** through identity checks, reviews, insurance, escrow or tracking?
+8. **Does the platform keep adding value after the first match** (payments, scheduling, guarantees), so users don't simply go direct?
+9. **Do providers earn more, or more flexibly,** than in their alternatives?
+10. **Does regulation allow it,** or can it be negotiated with regulators?
+
+## 6.3 Why many "Uber for X" startups failed
+
+Between 2012 and 2018, hundreds of startups pitched themselves as "Uber for X". Many failed, and their failures teach as much as Uber's success.
+
+| Startup (sector) | What happened | Lesson |
+|---|---|---|
+| **Homejoy** (home cleaning, US; closed 2015) | Cited worker-classification lawsuits; customers also kept the same cleaner and could book them directly | Recurring relationships leak off-platform unless the platform keeps adding value (fit-test question 8) |
+| **Washio** (laundry pickup, US; closed 2016) | Low order values could not cover two trips plus the cleaning | Physical handling with small tickets rarely works (question 6) |
+| **Shyp** (parcel pickup, US; closed 2018) | Expensive in-house couriers and packing; thin margins | Asset-light only works when the platform does not take on the heavy physical work |
+| **Sendy** (logistics, Kenya; wound down 2023) | Ran short of funding after costly expansion, including fulfilment operations, then entered administration | Capital discipline matters; expand corridor by corridor, as in HarvestGrid |
+
+The successful applications described below share one thing: **the platform removes a real pain repeatedly, and keeps earning its fee after the first match.**
+
+## 6.4 The application map: sixteen sectors
+
+For each sector: the pain points, how each model applies, real examples where they exist, and the factor that decides success.
+
+### 1. Logistics, freight and delivery
+
+| | |
+|---|---|
+| **Pain points** | Trucks return empty after deliveries; shippers can't find reliable carriers; opaque pricing; slow payment for truckers; last-mile delivery is costly |
+| **Uber model** | Load matching: shippers post loads, nearby trucks or motorbikes are dispatched; tracking, proof of delivery and fast payment for drivers |
+| **Airbnb model** | Renting idle warehouse space, cold rooms and loading bays by the day |
+| **Examples** | Uber Freight (US, Europe); Kobo360 (Nigeria); Lori Systems (Kenya); Trella (Egypt); Gokada, which pivoted from passenger motorbike taxis to delivery after Lagos restricted okadas in 2020 |
+| **Make-or-break** | Backhaul matching (filling the empty return trip) and paying truckers quickly |
+
+### 2. Agriculture and food production
+
+| | |
+|---|---|
+| **Pain points** | Smallholders can't afford tractors or machinery; equipment sits idle most of the year; harvest losses for lack of storage; poor price information |
+| **Uber model** | On-demand tractor, harvester, spraying-drone and transport services booked by phone, SMS or USSD |
+| **Airbnb model** | Owners of tractors, cold rooms and storage list them for rent; farmers pay per use |
+| **Examples** | Hello Tractor (founded in Nigeria in 2014, now in many countries): GPS-equipped tractors that owners rent to nearby smallholders, with booking by SMS and payment by mobile money; ColdHubs (Nigeria): pay-as-you-store solar cold rooms |
+| **Make-or-break** | Pooling demand across many small farms so a machine's route is efficient; mobile-money payment |
+
+### 3. Healthcare
+
+| | |
+|---|---|
+| **Pain points** | Long waits; clinicians and nurses in short supply in some places and under-used in others; patients missing appointments for lack of transport; emergency supplies (blood, oxygen) hard to locate |
+| **Uber model** | Home visits by doctors, nurses and phlebotomists; dispatch of emergency supplies; non-emergency medical transport; nurse shift-filling apps that fill hospital gaps the same day |
+| **Airbnb model** | Renting idle clinic rooms, scan slots and lab capacity to independent practitioners and patients |
+| **Examples** | LifeBank (Nigeria): locates and delivers blood and oxygen to hospitals; Flare by Rescue.co (Kenya): ambulance dispatch, often described as "Uber for ambulances"; Uber Health (US): medical transport; Clipboard Health (US): nurse shift marketplace |
+| **Make-or-break** | Clinical safety, licensing and liability. Trust tools must meet medical standards, not consumer standards |
+
+### 4. Care: elders, children and pets
+
+| | |
+|---|---|
+| **Pain points** | Families can't find trustworthy carers; care is expensive; older people are isolated; parents need flexible childcare; pet owners travel |
+| **Uber model** | On-demand companionship visits, errands and respite care |
+| **Airbnb model** | Carers and sitters with detailed profiles, reviews and verified background checks; families choose |
+| **Examples** | Care.com (childcare, eldercare); Papa (US): companionship visits for older adults; Rover (pet sitting, often called "Airbnb for dogs") |
+| **Make-or-break** | Safeguarding: background checks, two-way reviews, insurance and incident escalation. This is where Venture 4 (KinGrid) extends the model |
+
+### 5. Home services and skilled trades
+
+| | |
+|---|---|
+| **Pain points** | Finding a plumber, electrician, mechanic or cleaner who is competent, honest and on time; no price transparency; poor-quality work with no recourse |
+| **Uber model** | Instant dispatch for urgent jobs (burst pipe, lock-out, generator failure) |
+| **Airbnb / skills-marketplace model** | Verified artisans with portfolios, reviews and fixed-price menus; scheduled jobs |
+| **Examples** | Urban Company (India and other markets): standardized home and beauty services with trained professionals; it listed in India in 2025 and reported an average of about 54,000 monthly active service professionals in mid-2025. TaskRabbit and Thumbtack (US) |
+| **Make-or-break** | Standardizing quality (training, tools, fixed prices) and a guarantee that work is redone if poor. Urban Company's success came from standardization, not just matching |
+
+### 6. Education, tutoring and skills
+
+| | |
+|---|---|
+| **Pain points** | Good tutors are hard to find and expensive; schools and classrooms are empty in evenings and holidays; young people lack practical experience |
+| **Uber model** | On-demand homework help and tutoring sessions, online or in person |
+| **Airbnb model** | Teachers and experts list courses; schools rent idle classrooms and labs; skill "experiences" taught by craftspeople |
+| **Examples** | Preply (online tutoring marketplace); Outschool (online classes); Airbnb Experiences (skills and crafts) |
+| **Make-or-break** | Verified outcomes, not just ratings. Venture 3 (Guildhall) extends this into paid apprenticeships |
+
+### 7. Energy and water
+
+| | |
+|---|---|
+| **Pain points** | Unreliable grid power and costly generators; solar and batteries too expensive to buy outright; water shortages; EV charging gaps |
+| **Uber model** | On-demand fuel, gas-cylinder or water-tanker delivery with transparent prices; mobile battery delivery |
+| **Airbnb model** | Homeowners rent their EV chargers; neighbours share batteries and solar on mini-grids; households sell flexibility to the grid |
+| **Examples** | Pay-as-you-go solar companies (e.g., M-KOPA, Lumos, d.light) apply the "access over ownership" principle; virtual power plants aggregate home batteries |
+| **Make-or-break** | Metering and safety standards; regulatory permission to sell energy. Venture 8 (FluxCommons) extends this |
+
+### 8. Space: storage, parking, offices, kitchens and venues
+
+| | |
+|---|---|
+| **Pain points** | Storage and parking are scarce and costly; offices and halls sit empty much of the week; food entrepreneurs can't afford their own kitchens |
+| **Uber model** | Rarely the right fit, since space is not dispatched |
+| **Airbnb model** | Spare rooms, garages and driveways listed for storage or parking; idle offices, meeting rooms and halls rented by the hour; commercial kitchens shared between food businesses |
+| **Examples** | Neighbor (US) and Stashbee (UK): storage; JustPark (UK) and SpotHero (US): parking; Peerspace: venues and meeting space |
+| **Make-or-break** | Insurance and access control (smart locks, verified renters) |
+
+### 9. Equipment, vehicles and goods rental
+
+| | |
+|---|---|
+| **Pain points** | Expensive items (cars, cameras, tools, generators, construction equipment, formal clothes) are used rarely but must be bought |
+| **Uber model** | Delivery and pickup of the rented item |
+| **Airbnb model** | Owners list items; renters book by the day; deposits and insurance protect owners |
+| **Examples** | Turo and Getaround (peer-to-peer car rental, "Airbnb for cars"); Fat Llama (peer-to-peer rentals); Outdoorsy (campervans); Rent the Runway (clothing) |
+| **Make-or-break** | Damage protection and identity verification; the item must be valuable enough to justify the logistics |
+
+### 10. Work and professional talent
+
+| | |
+|---|---|
+| **Pain points** | Businesses need short-term staff or specialist skills quickly; workers want flexible income; hiring is slow and costly |
+| **Uber model** | Same-day shift filling for hospitality, warehouses and events |
+| **Airbnb / skills-marketplace model** | Freelancers with portfolios and reviews hired by the project |
+| **Examples** | Instawork (shifts); Upwork and Fiverr (freelance projects); Uber AI Solutions (AI data work) |
+| **Make-or-break** | Fair pay and classification; portable benefits. The Polanyi double movement applies directly here |
+
+### 11. Finance and insurance
+
+| | |
+|---|---|
+| **Pain points** | Small businesses and individuals can't get affordable credit or insurance; savings earn little; informal savings groups lack records and protection |
+| **Uber model** | Not a natural fit |
+| **Airbnb model** | Idle capital matched with borrowers (peer-to-peer lending, crowdfunded microloans); digitized rotating savings groups (*ajo*, *esusu*); peer-to-peer and mutual insurance pools |
+| **Examples** | Kiva (crowdfunded microloans) |
+| **Make-or-break** | Licensing and consumer protection. Finance is heavily regulated, so platforms usually partner with licensed institutions. Venture 10 (Bastion) applies this to climate insurance |
+
+### 12. Food beyond restaurants
+
+| | |
+|---|---|
+| **Pain points** | Good home cooks have no route to market; restaurants and bakeries throw away surplus food; travellers want authentic local meals |
+| **Uber model** | Delivery of home-cooked and surplus meals |
+| **Airbnb model** | Home cooks list meals or dinners in their homes; shops list end-of-day surplus at a discount |
+| **Examples** | Too Good To Go (surplus food); Shef (home cooks, US); EatWith (dinners in hosts' homes) |
+| **Make-or-break** | Food-safety certification and kitchen inspection |
+
+### 13. Emergency and public services
+
+| | |
+|---|---|
+| **Pain points** | Slow ambulance response; irregular waste collection; poor public transport outside main routes |
+| **Uber model** | Dispatching the nearest available ambulance, including private ones; on-demand waste pickup; on-demand minibuses that pool riders on flexible routes (microtransit) |
+| **Airbnb model** | Registries of private assets (boats, trucks, generators, rooms) pledged for use in emergencies |
+| **Examples** | Flare by Rescue.co (Kenya): ambulances; Wecyclers (Lagos): household recycling collection; Via: microtransit for cities |
+| **Make-or-break** | Partnership with government. These services are public goods, so the platform must work *with* the state, not around it |
+
+### 14. Circular economy: repair, resale and recycling
+
+| | |
+|---|---|
+| **Pain points** | Products are thrown away while still repairable; second-hand selling is slow and untrusted; recyclables are not collected |
+| **Uber model** | On-demand repair technicians and recyclable pickup |
+| **Airbnb model** | Peer-to-peer resale marketplaces with buyer protection; repair cafés and workshop space |
+| **Examples** | Vinted (second-hand clothing); Wecyclers (recycling) |
+| **Make-or-break** | Buyer protection and logistics cost per item |
+
+### 15. Beauty, wellness and fitness
+
+| | |
+|---|---|
+| **Pain points** | Salons are busy at peak times; mobile beauticians and trainers struggle to find clients; gyms are empty at off-peak hours |
+| **Uber model** | At-home beauty, massage and personal training |
+| **Airbnb model** | Gyms and studios sell their empty class slots |
+| **Examples** | Urban Company (beauty at home); ClassPass (spare class capacity at gyms and studios) |
+| **Make-or-break** | Hygiene standards, provider safety and quality consistency |
+
+### 16. Construction and property
+
+| | |
+|---|---|
+| **Pain points** | Finding reliable builders and artisans; cost overruns and fraud, especially for diaspora families building at home; costly equipment |
+| **Uber model** | On-demand verified artisans and equipment with operators |
+| **Airbnb model** | Contractors and equipment with portfolios and reviews; escrowed payment released at each verified building stage |
+| **Examples** | This is a large gap. The BuildBridge seed (Section 9.4) and Venture 6 (Hearth) are designed for it |
+| **Make-or-break** | Verified milestones (photos, drone footage, independent inspection) before each payment |
+
+## 6.5 The African and Nigerian lens
+
+Many of the strongest applications are in African cities, where infrastructure gaps create both severe pain and large amounts of informal, fragmented supply. That is the classic setting for these models.
+
+| Pain point | Platform response | Local design requirements | Examples |
+|---|---|---|---|
+| Unreliable power | Battery and solar sharing; generator and inverter rental; pay-as-you-go solar | Pay-as-you-go pricing; local technicians | Pay-as-you-go solar companies |
+| Water scarcity | Water-tanker dispatch with transparent prices and quality testing | Cash and mobile money; water-quality verification | Tanker-dispatch apps in several cities |
+| Informal transport | Booking, safety and fair pricing for okadas, kekes and danfos | Regulatory volatility (bans on okadas in parts of Lagos); rider safety training | Gokada (pivoted to delivery); SafeBoda (Uganda) |
+| Untrusted artisans | Verified artisans with guarantees | Community vouching; training and certification | Urban Company-style standardization is an open opportunity |
+| Healthcare access | Emergency supply delivery; ambulance dispatch; home visits | Integration with hospitals; cold chain | LifeBank (Nigeria); Flare (Kenya) |
+| Farm mechanization and storage | Tractor sharing; pay-as-you-store cold rooms | Booking by SMS or USSD; mobile money | Hello Tractor; ColdHubs |
+| Freight | Load matching and backhaul | Fast payment to truckers; route security | Kobo360; Lori Systems |
+| Land and building fraud | Verified building and land records; escrowed stage payments | Diaspora access; satellite and drone verification | An open gap (BuildBridge seed) |
+
+**Design rules for African markets**
+
+1. **Work offline and on any phone.** USSD, SMS and voice in local languages, not just smartphone apps.
+2. **Accept every way of paying.** Cash, bank transfer, cards and mobile money.
+3. **Use agent networks.** Trusted local agents onboard users who are not yet digital.
+4. **Build trust through community.** Vouching, cooperatives and local leaders complement ratings.
+5. **Design for regulatory volatility.** Rules can change quickly (as the Lagos okada restrictions showed), so keep the business able to pivot.
+6. **Manage currency risk.** Earn in local currency and avoid dollar-denominated costs where possible.
+7. **Assume weak infrastructure.** Plan for power cuts, poor roads and patchy connectivity.
+
+## 6.6 Where these models do not work
+
+The models are powerful but not universal. They tend to fail when:
+
+- **The relationship is the product.** Long-term therapy, family doctors and trusted advisers depend on continuity; a marketplace that keeps rematching adds little.
+- **The stakes need deep accountability.** Surgery, structural engineering and childcare in the home require licensing and supervision far beyond star ratings.
+- **The margin cannot carry the logistics.** Low-value items that need two trips (the Washio lesson).
+- **Customers will go direct.** If the first match is all the value, repeat users leave (the Homejoy lesson).
+- **The capacity is not really idle.** If "spare" supply is actually taken from someone else, such as homes taken from residents, the externality returns as regulation (the Airbnb housing lesson in Part II).
+- **The service is a public good.** Emergency response, water and public transport need government partnership, not regulatory arbitrage.
+
+## 6.7 Prioritizing the opportunities
+
+The table rates sixteen applications on four criteria (1–5) and adds them up (maximum 20):
+
+- **Pain**: how severe the problem is.
+- **Idle supply**: how much unused capacity exists.
+- **Frequency**: how often people need the service, or how valuable each transaction is.
+- **Ease of trust**: how easy it is to engineer trust (5 = easy).
+
+These are analytical judgements to guide exploration, especially for African and other emerging markets.
+
+| Application | Model | Pain | Idle supply | Frequency | Ease of trust | Total |
+|---|---|---|---|---|---|---|
+| Freight load matching and backhaul | Uber | 5 | 5 | 5 | 3 | **18** |
+| Shift work and freelancing | Uber / skills | 4 | 5 | 5 | 4 | **18** |
+| Verified artisans and home repairs | Skills marketplace | 5 | 5 | 4 | 3 | **17** |
+| Tractor and farm-equipment sharing | Airbnb / Uber | 5 | 5 | 3 | 4 | **17** |
+| Cold storage by the day | Airbnb | 5 | 4 | 4 | 4 | **17** |
+| Tutoring and skills | Skills marketplace | 4 | 5 | 4 | 4 | **17** |
+| Solar, battery and energy sharing | Airbnb | 5 | 4 | 4 | 3 | **16** |
+| Water-tanker dispatch | Uber | 5 | 3 | 5 | 3 | **16** |
+| Waste and recycling pickup | Uber | 4 | 4 | 4 | 4 | **16** |
+| Elder companionship and care | Skills marketplace | 5 | 4 | 4 | 2 | **15** |
+| Storage and parking | Airbnb | 3 | 5 | 3 | 4 | **15** |
+| Emergency supplies and ambulances | Uber | 5 | 3 | 3 | 3 | **14** |
+| Equipment and vehicle rental | Airbnb | 3 | 5 | 3 | 3 | **14** |
+| Surplus and home-cooked food | Airbnb | 3 | 4 | 4 | 3 | **14** |
+| Home healthcare visits | Uber | 4 | 3 | 3 | 2 | **12** |
+| Verified diaspora building | Airbnb / escrow | 5 | 3 | 2 | 2 | **12** |
+
+**Reading the table.** The highest totals combine severe pain, abundant idle supply and high frequency: freight, shift work, artisans, tractors, cold storage and tutoring. Lower totals are not bad opportunities. Healthcare and diaspora building score lower mainly because trust is *hard*, which also means a venture that solves trust there builds a strong moat.
+
+## 6.8 From any pain point to a platform: an eight-step playbook
+
+1. **Find the friction.** Observe where people wait, search, overpay or are let down. Write the pain in the customer's own words.
+2. **Find the idle supply.** List who or what could solve it but sits unused: people's hours, skills, rooms, machines, vehicles, capital.
+3. **Choose the model.** Use the decision guide in Section 6.2: on-demand dispatch, idle-asset marketplace, skills marketplace or pooled access.
+4. **Engineer trust first.** Identity checks, reviews, guarantees, escrow and insurance, designed before launch.
+5. **Seed one atomic network by hand.** One neighbourhood, one corridor or one trade. Serve it manually until the loop works (Airbnb's founders photographed listings themselves).
+6. **Price for both sides.** Make sure providers earn more than in their alternatives, and keep the fee justified by ongoing value so neither side goes direct.
+7. **Design the conscience in.** Score the idea on the Innovation Decagon (Part V), especially distribution, legitimacy and externalities.
+8. **Expand to adjacent services.** Once trusted, add neighbouring services for the same users, as Uber added food and freight and Airbnb added experiences and services.
+
+> **The principle in one sentence:** *Wherever something valuable sits idle while someone else urgently needs it, and trust is the missing link, the Uber or Airbnb model can work. Design the trust and the fairness first, and the market follows.*
+
+---
+
+# Part VII: The Decagon of Ventures
 
 Ten disruptive startup concepts, each designed with the Innovation Decagon. They are arranged in four layers, from the most abstract (trust and intelligence) to the most physical (planetary resilience):
 
@@ -1461,15 +1772,15 @@ flowchart LR
 
 ---
 
-# Part VII: The Future Potential of the Ten Ventures (2026–2050)
+# Part VIII: The Future Potential of the Ten Ventures (2026–2050)
 
 > "The best way to predict the future is to invent it." (Alan Kay)
 >
 > "Act so that the effects of your action are compatible with the permanence of genuine human life." (Hans Jonas, *The Imperative of Responsibility*)
 
-Part VI described each venture at launch. This part asks what each could *become*: how it might grow through three horizons, which further innovations it would spawn, what its potential is at maturity, and how it could fail. It then looks at what the ten could become *together*.
+Part VII described each venture at launch. This part asks what each could *become*: how it might grow through three horizons, which further innovations it would spawn, what its potential is at maturity, and how it could fail. It then looks at what the ten could become *together*.
 
-## 7.1 How to read the venture futures
+## 8.1 How to read the venture futures
 
 Each venture is examined with the same template:
 
@@ -1484,7 +1795,7 @@ Each venture is examined with the same template:
 
 Two cautions. First, potential is not probability: most ventures fail, and these are hypotheses. Second, the estimates use round numbers on purpose, to show orders of magnitude rather than false precision.
 
-## 7.2 The forces behind the next 25 years
+## 8.2 The forces behind the next 25 years
 
 Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
@@ -1504,7 +1815,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.3 Covenant: from agent passport to the trust protocol of the agentic economy
+## 8.3 Covenant: from agent passport to the trust protocol of the agentic economy
 
 **2040 end-state.** Every transaction an AI agent makes, whether with a merchant, another agent, a government service or a robot at a building's door, carries a verifiable identity, a signed mandate, a reputation and a guarantee. Covenant is to agentic commerce what card networks were to plastic: the rulebook and the trust layer, governed by its members.
 
@@ -1531,7 +1842,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.4 DataGuild: from one guild to the collective-bargaining institution of the AI age
+## 8.4 DataGuild: from one guild to the collective-bargaining institution of the AI age
 
 **2040 end-state.** A global federation of data and knowledge cooperatives. Members earn royalties whenever AI systems use their knowledge, guilds co-own specialist AI models, and the world's languages and professional know-how are preserved in machine-usable form under the control of the communities that hold them.
 
@@ -1558,7 +1869,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.5 Guildhall: from ten pods to the world's largest apprenticeship system
+## 8.5 Guildhall: from ten pods to the world's largest apprenticeship system
 
 **2040 end-state.** A portable, outcome-verified alternative to the entry-level job. For a significant share of young people, especially in Africa and other youthful regions, the first rung of a career is a Guildhall pod, and lifelong guild membership supports re-skilling every few years.
 
@@ -1585,7 +1896,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.6 KinGrid: from one neighbourhood to the care infrastructure of ageing societies
+## 8.6 KinGrid: from one neighbourhood to the care infrastructure of ageing societies
 
 **2040 end-state.** Every elder who wants one has a care circle, every helper builds care credit, and KinGrid is the "community layer" of health and social-care systems, working alongside hospitals, clinics and professional carers. Care credits work across borders, so a nurse in London can earn credit that pays for a parent's care in Abeokuta.
 
@@ -1606,13 +1917,13 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 **Probable future.** Strongest uptake where public care systems are stretched and municipalities pay for prevention; diaspora corridors grow fastest in countries with large emigrant populations.
 
-**Failure future.** A safeguarding scandal destroys trust; the credit system cannot honour its obligations (the "demographic Ponzi" risk described for KinGrid in Part VI); or sensing turns into surveillance.
+**Failure future.** A safeguarding scandal destroys trust; the credit system cannot honour its obligations (the "demographic Ponzi" risk described for KinGrid in Part VII); or sensing turns into surveillance.
 
 **Triggers and signposts.** Long-term care funding reforms; care-workforce shortages; laws recognizing time-banking; outcomes data from hospital-at-home programmes.
 
 ---
 
-## 7.7 Agora: from one city to social infrastructure as a service
+## 8.7 Agora: from one city to social infrastructure as a service
 
 **2040 end-state.** Every city has a "connection grid": its idle spaces and hours woven into recurring small-group gatherings. Loneliness is measured and managed as a public-health indicator, like air quality, and Agora also serves civic purposes such as welcoming newcomers and hosting citizens' assemblies.
 
@@ -1639,7 +1950,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.8 Hearth: from homeshare to the engine of gentle density
+## 8.8 Hearth: from homeshare to the engine of gentle density
 
 **2040 end-state.** A distributed housing-supply engine. Millions of small homes are added within existing neighbourhoods: backyard homes, duplexes, courtyard clusters and converted upper floors. Homeshare is a normal option for under-occupied homes. Hearth's homes are energy-positive (with FluxCommons), climate-adapted (with Bastion) and designed for intergenerational life (with KinGrid and Agora).
 
@@ -1653,7 +1964,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 - **Rent-backed home securities.** Pools of backyard-home loans sold to pension funds, recycling capital into more homes.
 - **Pre-approved plan libraries.** Cities adopt standard designs that can be permitted in days.
-- **Verified diaspora building.** Escrowed milestones and photo or drone verification for families building at home from abroad (merging with the BuildBridge seed, Section 8.4).
+- **Verified diaspora building.** Escrowed milestones and photo or drone verification for families building at home from abroad (merging with the BuildBridge seed, Section 9.4).
 - **Community land trust toolkit.** Software and legal templates for neighbourhoods that want to hold land in common to keep it affordable.
 
 **Potential at maturity (illustrative).** California's reforms took backyard-home permits from a few hundred a year to tens of thousands. If Hearth delivered **5,000 homes a year in one large market**, that would be **50,000 homes in a decade**, roughly a city's worth. Replicated across ten markets, the order of magnitude becomes half a million homes.
@@ -1666,7 +1977,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.9 CommonFleet: from a driver co-op to the credit union of robot capital
+## 8.9 CommonFleet: from a driver co-op to the credit union of robot capital
 
 **2040 end-state.** A federation of community-owned fleets owns a significant share of urban robotaxis and delivery robots. Dividends flow to former drivers, local savers and pension funds. The model has generalized beyond vehicles: communities co-own the robots that automate their work.
 
@@ -1693,7 +2004,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.10 FluxCommons: from 200 homes to the neighbourhood as a power plant and data centre
+## 8.10 FluxCommons: from 200 homes to the neighbourhood as a power plant and data centre
 
 **2040 end-state.** Every home with an EV, battery or heat pump can join a community virtual power plant. Computation runs where and when clean power is abundant and its heat warms homes, greenhouses and pools. Communities own a share of the grid-flexibility value they create.
 
@@ -1720,7 +2031,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.11 HarvestGrid: from one corridor to Africa's perishable-food operating system
+## 8.11 HarvestGrid: from one corridor to Africa's perishable-food operating system
 
 **2040 end-state.** Perishable-food corridors span the continent. Smallholders store, finance, insure and sell like commercial farms; post-harvest loss of perishables is halved on HarvestGrid corridors; and price and yield forecasts are a public good.
 
@@ -1747,7 +2058,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.12 Bastion: from 2,000 traders to a global network of resilience mutuals
+## 8.12 Bastion: from 2,000 traders to a global network of resilience mutuals
 
 **2040 end-state.** In every disaster-prone region there is a member-owned resilience mutual, a 21st-century friendly society, that pays out within days, rewards prevention and coordinates community resources when disaster strikes. Governments use Bastion triggers to scale social protection automatically.
 
@@ -1774,7 +2085,7 @@ Eleven macro forces power the ten ventures. Each is backed by current evidence.
 
 ---
 
-## 7.13 Combinatorial innovation: what the ventures create together
+## 8.13 Combinatorial innovation: what the ventures create together
 
 W. Brian Arthur argues in *The Nature of Technology* that new technologies are mostly *combinations* of existing ones. The ten ventures follow that logic: their greatest future potential lies in what they create in combination. The ten fusions below are innovations that no single venture could build alone.
 
@@ -1791,7 +2102,7 @@ W. Brian Arthur argues in *The Nature of Technology* that new technologies are m
 | **Hearth × FluxCommons** | Energy-positive backyard homes | Every new small home comes with solar, battery and flexibility income |
 | **Bastion × Hearth** | Climate-adaptive housing | Homes designed and retrofitted to cut insured losses, with premiums reduced accordingly |
 
-## 7.14 The 2040 end-state: the Stewardship Stack
+## 8.14 The 2040 end-state: the Stewardship Stack
 
 Taken together, the ten ventures form a layered infrastructure, which this paper calls the **Stewardship Stack**. Each layer serves those above it, and all are governed by the conscience vertices of the Decagon.
 
@@ -1822,7 +2133,7 @@ flowchart TB
 
 **Why this matters.** The first platform era produced *vertically integrated* platforms: each company owned its whole stack and captured its value. The Stewardship Stack is *layered and interoperable*. Different owners hold different layers under common protocols, as the internet itself was built. This structure makes the Protocol Commons scenario (Section 4.10) achievable rather than utopian.
 
-## 7.15 Backcasting from 2040
+## 8.15 Backcasting from 2040
 
 Backcasting starts from a desired future and works backwards to the steps that make it reachable.
 
@@ -1834,7 +2145,7 @@ Backcasting starts from a desired future and works backwards to the steps that m
 | **2028** | Wave 1 ventures (Covenant, DataGuild, Guildhall, Agora) at proof; Wave 2 (KinGrid, HarvestGrid, Bastion, Hearth homeshare) piloting |
 | **2026–27** | Studio formed; Decagon Canvas and externality-ledger standard published; first pilots launched |
 
-## 7.16 The future-potential scorecard
+## 8.16 The future-potential scorecard
 
 | Venture | Illustrative reach by 2040 (if successful) | Key impact metric | Biggest uncertainty | Potential | Difficulty |
 |---|---|---|---|---|---|
@@ -1849,9 +2160,9 @@ Backcasting starts from a desired future and works backwards to the steps that m
 | HarvestGrid | Ten corridors; ~200,000 tonnes of food saved a year | Loss reduction; farmer income | Security; currency | Very high | High |
 | Bastion | 50m members; $25bn of cover | Speed of recovery after disasters | Basis risk; capital | Very high | High |
 
-*All reach figures are the illustrative estimates from Sections 7.3–7.12, with their stated assumptions.*
+*All reach figures are the illustrative estimates from Sections 8.3–8.12, with their stated assumptions.*
 
-## 7.17 The philosophy of the future: becoming good ancestors
+## 8.17 The philosophy of the future: becoming good ancestors
 
 Three ideas frame how these futures should be pursued.
 
@@ -1863,9 +2174,9 @@ Three ideas frame how these futures should be pursued.
 
 ---
 
-# Part VIII: Portfolio Synthesis, Roadmap and Closing Philosophy
+# Part IX: Portfolio Synthesis, Roadmap and Closing Philosophy
 
-## 8.1 The Decagon scoreboard
+## 9.1 The Decagon scoreboard
 
 | Venture | V1 Lat | V2 Fri | V3 Tru | V4 Liq | V5 Int | **Engine** | V6 Dis | V7 Leg | V8 Ste | V9 Mea | V10 Ant | **Conscience** | **Total** |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -1891,7 +2202,7 @@ Three ideas frame how these futures should be pursued.
 3. **The stewardship premium is paid in liquidity and antifragility.** Governance, safeguarding and fair distribution slow the cold start (V4) and add regulatory and capital exposure (V10). This is the honest cost of the approach. It is best managed with *very* small atomic networks, third-party payers (health systems, municipalities, insurers) who value the conscience vertices, and patient, blended capital.
 4. **The highest scorers (Bastion, KinGrid, HarvestGrid) start from non-consumption.** They serve people currently served by nothing, Christensen's strongest foothold, where incumbents have the weakest motivation to respond.
 
-## 8.2 Feasibility and sequencing
+## 9.2 Feasibility and sequencing
 
 | Venture | Capital intensity | Time to MVP | Regulatory complexity | Best first market | Wave |
 |---|---|---|---|---|---|
@@ -1908,7 +2219,7 @@ Three ideas frame how these futures should be pursued.
 
 **Sequencing logic.** Wave 1 builds the **shared infrastructure**: trust (Covenant), knowledge (DataGuild) and talent (Guildhall). Agora is included because it is cheap, fast and generates evidence for health payers. Wave 2 builds **human and food-system networks** on that infrastructure. Wave 3 deploys **capital-intensive physical networks** once trust, talent and payer relationships exist.
 
-## 8.3 The decagon as an ecosystem
+## 9.3 The decagon as an ecosystem
 
 The ten ventures are not separate bets. They form an ecosystem in which each venture's output is another's input, a reinforcing structure at the portfolio level.
 
@@ -1936,7 +2247,7 @@ flowchart TB
 - **Blended capital:** grants and concessional capital for the stewardship premium, revenue-based financing for operating networks, and equity for software layers.
 - **Outcome-based contracts** with governments, health systems and insurers that *pay* for conscience vertices (avoided admissions, housing added, losses avoided).
 
-## 8.4 Ten more seeds beyond the Decagon
+## 9.4 Ten more seeds beyond the Decagon
 
 | Seed | One-line concept |
 |---|---|
@@ -1951,7 +2262,7 @@ flowchart TB
 | **HabitatShare** | Paying landowners for verified biodiversity stewardship (satellite plus environmental-DNA verification) |
 | **PeerCare Minds** | Peer-support mental-health network with AI triage and clinical escalation |
 
-## 8.5 Implementation roadmap
+## 9.5 Implementation roadmap
 
 | Horizon | Milestones |
 |---|---|
@@ -1960,7 +2271,7 @@ flowchart TB
 | **3–7 years** | Launch FluxCommons and CommonFleet at city scale. Expand corridors and cities. Transition provider-members toward meaningful ownership. Publish independent impact evaluations. |
 | **7–15 years** | A protocol-level ecosystem in the *Protocol Commons* scenario. Ventures become networks of networks, partly member-owned and interoperable with public digital infrastructure. |
 
-## 8.6 Closing philosophy: from the sharing economy to the stewardship economy
+## 9.6 Closing philosophy: from the sharing economy to the stewardship economy
 
 The first platform era called itself the "sharing economy". It was more accurately an **access economy**. It shared access, not ownership; it monetized trust without returning it; and it commodified labour and land at the finest grain in history. Its achievements are real. Billions of journeys and nights were made possible, millions of people earned income, and the world learned to trust strangers at scale. Its costs are also real, and society has spent a decade reclaiming them through Polanyi's double movement.
 
@@ -1985,7 +2296,7 @@ The next era can be a **stewardship economy**.
 2. **Rawls: the veil of ignorance.** Design the rules you would accept without knowing whether you would be the rider or the driver, the guest or the neighbour, the elder or the carer, the farmer or the trader.
 3. **Ubuntu: I am because we are.** The highest-value problems of this century, such as care, loneliness, food and climate, are relational. Platforms that understand they are building *relationships among people*, not only transactions between strangers, will create the most enduring value.
 
-## 8.7 Ten aphorisms for builders
+## 9.7 Ten aphorisms for builders
 
 1. *Every idle thing is a sentence waiting for a grammar. A platform is that grammar.*
 2. *Legibility is power; what you make visible, you make governable.*
