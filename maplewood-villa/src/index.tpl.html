@@ -1,0 +1,294 @@
+<title>Maplewood Villa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="The Maplewood redesigned as a transitional-contemporary luxury villa: plans, elevations, materials and areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Marcellus&display=swap">
+<style>
+/* Layout: an architect's folio. A title-block strip, full-width drawing sheets, plans paired with keyed notes. */
+:root {
+  --paper: #f3f2ee;
+  --sheet: #fbfaf7;
+  --ink: #1d1c1a;
+  --muted: #69645c;
+  --rule: #d8d4cb;
+  --accent: #8a6a3b;
+  --f-display: 'Marcellus', 'Trajan Pro', 'Cormorant Garamond', Georgia, serif;
+  --f-body: 'Jost', 'Futura', 'Century Gothic', 'Helvetica Neue', Arial, sans-serif;
+  --f-label: 'Jost', 'Futura', 'Century Gothic', 'Helvetica Neue', Arial, sans-serif;
+@@LIGHT@@
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #131312; --sheet: #1a1917; --ink: #ece8e1; --muted: #a59f94; --rule: #35322d; --accent: #cda86d;
+@@DARK@@
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #131312; --sheet: #1a1917; --ink: #ece8e1; --muted: #a59f94; --rule: #35322d; --accent: #cda86d;
+@@DARK@@
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--f-body); font-size: 16px; line-height: 1.6; font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+.wrap {
+  max-width: 1280px; margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--f-display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: 0.01em; line-height: 1.15; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- title-block bar ---------- */
+.tb { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.tb-in { display: flex; align-items: center; gap: 24px; min-height: 56px; }
+.tb-name { font-family: var(--f-display); font-size: 19px; white-space: nowrap; }
+.tb nav { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.tb nav::-webkit-scrollbar { display: none; }
+.tb nav a {
+  text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); white-space: nowrap; padding: 6px 0;
+}
+.tb nav a:hover { color: var(--ink); }
+.tog { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); cursor: pointer; white-space: nowrap; }
+.tog input { appearance: none; width: 30px; height: 18px; border-radius: 9px; background: var(--rule); position: relative; margin: 0; cursor: pointer; transition: background .2s; }
+.tog input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--sheet); transition: transform .2s; }
+.tog input:checked { background: var(--accent); }
+.tog input:checked::after { transform: translateX(12px); }
+@media (max-width: 720px) { .tb-name { display: none; } .tb-in { gap: 16px; } }
+
+/* ---------- hero ---------- */
+.hero { padding-block: 64px 40px; display: grid; gap: 28px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+.hero h1 { font-size: clamp(48px, 8.4vw, 104px); line-height: 0.98; }
+.lede { max-width: 62ch; font-size: 18px; line-height: 1.65; color: var(--ink); font-weight: 300; }
+.stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.stat { display: grid; gap: 2px; padding: 14px 16px 14px 0; }
+.stat + .stat { border-left: 1px solid var(--rule); padding-left: 16px; }
+.stat .v { font-family: var(--f-display); font-size: 30px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.stat .k { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+@media (max-width: 860px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat, .stat + .stat { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); }
+  .stat:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--rule); }
+  .stat:nth-child(-n+2) { border-top: 0; }
+  .stat:last-child { grid-column: 1 / -1; padding-left: 0; border-left: 0; }
+}
+
+/* ---------- drawing sheets ---------- */
+.sheet { background: var(--sheet); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding-block: 40px 44px; }
+.sheethead { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--ink); padding-bottom: 10px; margin-bottom: 18px; }
+.sheethead h2 { font-size: clamp(26px, 3.2vw, 36px); line-height: 1.1; }
+.sheetno { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dwg { min-width: 0; }
+.scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.dwg-elev svg, .dwg-plan svg { min-width: 0; }
+.hint { display: none; font-size: 12px; color: var(--muted); margin-top: 8px; }
+@media (max-width: 720px) { .hint { display: block; } }
+.caption { margin-top: 12px; font-size: 13px; color: var(--muted); max-width: 70ch; }
+
+.plan-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.plan-grid aside { position: sticky; top: 76px; }
+.plan-grid.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); }
+.plan-grid.flip aside { order: -1; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--muted); margin-bottom: 18px; font-variant-numeric: tabular-nums; }
+.meta b { color: var(--ink); font-weight: 500; }
+@media (max-width: 960px) {
+  .plan-grid, .plan-grid.flip { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .plan-grid aside { position: static; }
+  .plan-grid.flip aside { order: 0; }
+}
+
+.notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.notes li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 14px; align-items: start; }
+.notes .num {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--d-on-accent);
+  display: grid; place-items: center; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.notes h4 { margin: 2px 0 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.notes p { font-size: 15px; line-height: 1.6; color: var(--muted); }
+
+/* ---------- ideas ---------- */
+.section { padding-block: 64px; }
+.section > h2, .section .h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 8px; }
+.section .sub { color: var(--muted); max-width: 62ch; margin-bottom: 32px; }
+.prgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 40px; }
+.pr { border-top: 1px solid var(--ink); padding-block: 16px 28px; }
+.pr h3 { font-size: 23px; margin-bottom: 8px; }
+.pr p { color: var(--muted); font-size: 15px; max-width: 42ch; }
+@media (max-width: 900px) { .prgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .prgrid { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- comparison ---------- */
+.tablebox { overflow-x: auto; border-top: 1px solid var(--ink); }
+.cmp { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px; }
+.cmp th, .cmp td { text-align: left; vertical-align: top; padding: 13px 16px 13px 0; border-bottom: 1px solid var(--rule); }
+.cmp thead th { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.cmp thead th:last-child { color: var(--accent); }
+.cmp tbody th { font-weight: 500; width: 18%; white-space: nowrap; }
+.cmp td { color: var(--muted); width: 38%; }
+.cmp td:last-child { color: var(--ink); }
+
+/* ---------- materials + areas ---------- */
+.mat-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+@media (max-width: 900px) { .mat-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
+.swatches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px; }
+@media (max-width: 560px) { .swatches { grid-template-columns: minmax(0, 1fr); } }
+.sw { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: center; }
+.chip { width: 64px; height: 64px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+.sw:nth-child(1) .chip { background-image: repeating-linear-gradient(0deg, transparent 0 15px, rgba(0,0,0,.09) 15px 16px); }
+.sw:nth-child(3) .chip { background-image: repeating-linear-gradient(90deg, transparent 0 5px, rgba(0,0,0,.10) 5px 6px); }
+.sw:nth-child(4) .chip { background-image: repeating-linear-gradient(90deg, transparent 0 12px, rgba(255,255,255,.12) 12px 13px); }
+.sw h4 { margin: 0 0 2px; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.sw p { font-size: 14px; color: var(--muted); }
+.areas { width: 100%; border-collapse: collapse; border-top: 1px solid var(--ink); font-variant-numeric: tabular-nums; }
+.areas th, .areas td { padding: 11px 0; border-bottom: 1px solid var(--rule); text-align: left; font-weight: 400; }
+.areas td { text-align: right; font-family: var(--f-display); font-size: 20px; }
+.areas td::after { content: " sq ft"; font-family: var(--f-body); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
+.areas tr.tot th { font-weight: 600; }
+.areas tr.tot td { color: var(--accent); }
+.cav { margin: 28px 0 0; padding: 0 0 0 18px; display: grid; gap: 10px; font-size: 14px; color: var(--muted); }
+
+footer { border-top: 1px solid var(--rule); padding-block: 28px 48px; font-size: 13px; color: var(--muted); }
+
+@@CSS@@
+.no-furn svg.plan .furn, .no-furn svg.plan .furnline, .no-furn svg.plan .furnln,
+.no-furn svg.plan .rug, .no-furn svg.plan .car, .no-furn svg.plan .plant { display: none; }
+</style>
+
+<header class="tb">
+  <div class="wrap tb-in">
+    <span class="tb-name">Maplewood Villa</span>
+    <nav aria-label="Sheets">
+      <a href="#elevation">Elevation</a>
+      <a href="#ideas">Ideas</a>
+      <a href="#main-floor">Main</a>
+      <a href="#second-floor">Second</a>
+      <a href="#lower-level">Lower</a>
+      <a href="#garden">Garden side</a>
+      <a href="#changes">Changes</a>
+      <a href="#materials">Materials</a>
+    </nav>
+    <label class="tog" for="furn"><input type="checkbox" id="furn" checked> Furniture</label>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <p class="eyebrow">Transitional-contemporary redesign · Concept A · October 2026</p>
+    <h1>Maplewood Villa</h1>
+    <p class="lede">The Maplewood, redrawn as a transitional-contemporary villa. It keeps the 50-ft lot and the two-car garage,
+      and gains a calmer plan: one line of sight from the front door to the garden, fewer and larger rooms, no angled walls,
+      and a façade of limestone, lime stucco, oak and black steel.</p>
+    <div class="stats">@@STATS@@</div>
+  </section>
+
+  <section id="elevation" class="sheet">
+    <div class="wrap">
+      <div class="sheethead"><h2>Street elevation</h2><span class="sheetno">A-201</span></div>
+      <div class="dwg dwg-elev scroll">@@FRONT@@</div>
+      <p class="hint">Pinch to zoom into the drawings.</p>
+      <p class="caption">The garage sits under a quiet hipped eave with a limestone base. The entrance is the tallest element:
+        a recessed two-storey limestone portal. A steep white gable marks the study and bedroom 4.</p>
+    </div>
+  </section>
+
+  <section id="ideas" class="section wrap">
+    <h2>Six ideas behind the plan</h2>
+    <p class="sub">Each one fixes something specific in the original layout.</p>
+    <div class="prgrid">@@PRINCIPLES@@</div>
+  </section>
+
+  <section id="main-floor" class="sheet">
+    <div class="wrap plan-grid">
+      <div class="dwg dwg-plan scroll">@@MAIN@@</div>
+      <aside>
+        <div class="sheethead"><h2>Main floor</h2><span class="sheetno">A-101</span></div>
+        <p class="meta"><span><b>1,680</b> sq ft</span><span><b>10 ft</b> ceilings</span><span><b>20 ft</b> foyer + great room</span></p>
+        @@NOTES_MAIN@@
+      </aside>
+    </div>
+  </section>
+
+  <section id="second-floor" class="sheet">
+    <div class="wrap plan-grid flip">
+      <aside>
+        <div class="sheethead"><h2>Second floor</h2><span class="sheetno">A-102</span></div>
+        <p class="meta"><span><b>1,650</b> sq ft</span><span><b>9 ft</b> ceilings</span><span><b>4</b> bedrooms · <b>3</b> baths</span></p>
+        @@NOTES_SECOND@@
+      </aside>
+      <div class="dwg dwg-plan scroll">@@SECOND@@</div>
+    </div>
+  </section>
+
+  <section id="lower-level" class="sheet">
+    <div class="wrap plan-grid">
+      <div class="dwg dwg-plan scroll">@@LOWER@@</div>
+      <aside>
+        <div class="sheethead"><h2>Lower level</h2><span class="sheetno">A-100</span></div>
+        <p class="meta"><span><b>1,375</b> sq ft finished</span><span><b>9 ft</b> ceilings</span></p>
+        @@NOTES_LOWER@@
+      </aside>
+    </div>
+  </section>
+
+  <section id="garden" class="sheet">
+    <div class="wrap">
+      <div class="sheethead"><h2>Garden elevation</h2><span class="sheetno">A-202</span></div>
+      <div class="dwg dwg-elev scroll">@@REAR@@</div>
+      <p class="caption">Three 20-ft glazed bays light the great room. The kitchen opens under a limestone loggia,
+        and the primary bedroom looks over its roof to the garden.</p>
+    </div>
+  </section>
+
+  <section id="changes" class="section wrap">
+    <h2>What changed from the original</h2>
+    <p class="sub">The Maplewood 2026 brochure against the villa scheme, room by room.</p>
+    <div class="tablebox">@@COMPARE@@</div>
+  </section>
+
+  <section id="materials" class="section wrap">
+    <div class="mat-grid">
+      <div>
+        <h2 class="h2">Materials</h2>
+        <p class="sub">Six materials, used the same way on every face of the house.</p>
+        <div class="swatches">@@MATERIALS@@</div>
+      </div>
+      <div>
+        <h2 class="h2">Areas</h2>
+        <p class="sub">Measured from the drawings.</p>
+        @@AREAS@@
+        @@CAVEATS@@
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Concept design for discussion, not for construction. All drawings are generated to scale from one model;
+    use the graphic scale bars.</div>
+</footer>
+
+<script>
+(function () {
+  var box = document.getElementById('furn');
+  function apply() { document.body.classList.toggle('no-furn', !box.checked); }
+  try { if (localStorage.getItem('mv-furn') === 'off') box.checked = false; } catch (e) {}
+  apply();
+  box.addEventListener('change', function () {
+    apply();
+    try { localStorage.setItem('mv-furn', box.checked ? 'on' : 'off'); } catch (e) {}
+  });
+})();
+</script>

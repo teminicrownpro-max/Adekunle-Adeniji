@@ -1,0 +1,117 @@
+/* Drawing styles shared by every plan and elevation. Colours come from page tokens. */
+svg.plan, svg.elev { width: 100%; height: auto; display: block; font-family: var(--f-label); }
+.plan .wall { fill: var(--d-wall); }
+.plan .glasswall { fill: var(--d-glass); }
+.plan .post { fill: var(--d-wall); }
+.plan .winframe { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.05; }
+.plan .glass, .plan .glass2 { stroke: var(--d-glass); stroke-width: 0.07; }
+.plan .mullion { stroke: var(--d-line); stroke-width: 0.06; }
+.plan .leaf { stroke: var(--d-line); stroke-width: 0.09; }
+.plan .swing { fill: none; stroke: var(--d-line); stroke-width: 0.04; stroke-dasharray: 0.25 0.18; }
+.plan .jamb { stroke: none; }
+.plan .pocketln { stroke: var(--d-line); stroke-width: 0.08; stroke-dasharray: 0.3 0.2; }
+.plan .garageln { stroke: var(--d-line); stroke-width: 0.07; stroke-dasharray: 0.6 0.3; }
+.plan .thin { stroke: var(--d-line); stroke-width: 0.05; fill: none; }
+.plan .fx { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .counter { fill: var(--d-counter); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .island { fill: var(--d-counter); stroke: var(--d-line); stroke-width: 0.08; }
+.plan .appl { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .shelf { fill: var(--d-builtin); stroke: var(--d-line); stroke-width: 0.05; }
+.plan .builtin { fill: var(--d-builtin); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .fireplace { fill: var(--d-stone2); stroke: var(--d-line); stroke-width: 0.07; }
+.plan .firebox { fill: var(--d-wall); }
+.plan .hearth { fill: var(--d-stone2); stroke: var(--d-line); stroke-width: 0.05; }
+.plan .tag { font-size: 0.62px; letter-spacing: 0.06px; fill: var(--d-muted); font-weight: 500; }
+.plan .tag.strong { fill: var(--d-ink); font-weight: 600; }
+.plan .stairbg { fill: var(--d-paper); }
+.plan .tread { stroke: var(--d-line); stroke-width: 0.05; }
+.plan .treadlow { stroke: var(--d-muted); stroke-width: 0.04; stroke-dasharray: 0.2 0.15; }
+.plan .stairedge { fill: none; stroke: var(--d-line); stroke-width: 0.07; }
+.plan .landing { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.07; }
+.plan .breakln { stroke: var(--d-line); stroke-width: 0.07; fill: none; }
+.plan .arrow { fill: none; stroke: var(--d-ink); stroke-width: 0.07; }
+.plan .arrowhead { fill: var(--d-ink); }
+.plan .overhead, .plan .roofline { fill: none; stroke: var(--d-muted); stroke-width: 0.05; stroke-dasharray: 0.45 0.25; }
+.plan .overheadln, .plan .beam { stroke: var(--d-muted); stroke-width: 0.05; stroke-dasharray: 0.45 0.25; }
+.plan .guard { stroke: var(--d-line); stroke-width: 0.12; }
+.plan .wetzone { fill: var(--d-wet); }
+.plan .glassln { stroke: var(--d-glass); stroke-width: 0.1; }
+.plan .mirror { fill: var(--d-glass); }
+.plan .screen { fill: var(--d-wall); }
+.plan .steps { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.05; }
+
+/* floor finishes */
+.plan .oak { fill: var(--d-oak); }
+.plan .stone { fill: var(--d-stone); }
+.plan .tile { fill: var(--d-tile); }
+.plan .carpet { fill: var(--d-carpet); }
+.plan .porch { fill: var(--d-porch); }
+.plan .terrace { fill: var(--d-porch); opacity: 0.6; }
+.plan .paver { stroke: var(--d-paper); stroke-width: 0.08; }
+.plan .garagefl { fill: var(--d-garage); }
+.plan .unex { fill: var(--d-garage); }
+.plan .wine { fill: var(--d-stone); }
+.plan .roofbelow { fill: var(--d-garage); }
+.plan .voidfill { fill: var(--d-void); }
+.plan .voidx { stroke: var(--d-muted); stroke-width: 0.04; stroke-dasharray: 0.4 0.3; }
+
+/* furniture */
+.plan .furn { fill: var(--d-furn); stroke: var(--d-furnline); stroke-width: 0.05; }
+.plan .furnline { fill: none; stroke: var(--d-furnline); stroke-width: 0.05; }
+.plan .furnln { stroke: var(--d-furnline); stroke-width: 0.05; }
+.plan .rug { fill: var(--d-rug); stroke: var(--d-furnline); stroke-width: 0.04; stroke-dasharray: 0.15 0.15; }
+.plan .car { fill: none; stroke: var(--d-furnline); stroke-width: 0.05; stroke-dasharray: 0.3 0.2; }
+.plan .plant { fill: var(--d-plant); stroke: var(--d-plantline); stroke-width: 0.05; }
+
+/* text */
+.plan .rname { font-size: 0.82px; font-weight: 600; letter-spacing: 0.12px; fill: var(--d-ink); }
+.plan .rname.sm { font-size: 0.66px; letter-spacing: 0.08px; }
+.plan .rdim { font-size: 0.68px; fill: var(--d-ink); font-variant-numeric: tabular-nums; }
+.plan .rdim.sm { font-size: 0.56px; }
+.plan .rsub { font-size: 0.5px; letter-spacing: 0.08px; fill: var(--d-accent); font-weight: 600; }
+.plan .voidtxt { font-size: 0.62px; letter-spacing: 0.1px; fill: var(--d-muted); font-weight: 500; }
+.plan .dimln { stroke: var(--d-muted); stroke-width: 0.04; }
+.plan .dimtick { stroke: var(--d-ink); stroke-width: 0.08; }
+.plan .dimtxt { font-size: 0.72px; fill: var(--d-ink); font-variant-numeric: tabular-nums; }
+.plan .callout { fill: var(--d-accent); }
+.plan .callnum { font-size: 1.05px; font-weight: 600; fill: var(--d-on-accent); }
+.plan .sb1 { fill: var(--d-ink); }
+.plan .sb0 { fill: var(--d-paper); stroke: var(--d-ink); stroke-width: 0.05; }
+.plan .sbtxt, .plan .streettxt { font-size: 0.7px; fill: var(--d-ink); letter-spacing: 0.1px; }
+.plan .streettxt { font-weight: 600; letter-spacing: 0.5px; }
+
+/* elevations */
+.elev .m-stucco { fill: var(--e-stucco); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-stone { fill: var(--e-stone); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-joint { stroke: var(--e-joint); stroke-width: 0.035; }
+.elev .m-oak { fill: var(--e-oak); }
+.elev .m-oakln { stroke: var(--e-oakln); stroke-width: 0.035; }
+.elev .m-roof { fill: var(--e-roof); }
+.elev .m-seam { stroke: var(--e-seam); stroke-width: 0.05; }
+.elev .m-fascia, .elev .m-rake { fill: var(--e-steel); }
+.elev .m-band { fill: var(--e-stone); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-frame { fill: var(--e-steel); }
+.elev .m-frame2 { stroke: var(--e-steel); stroke-width: 0.12; }
+.elev .m-glass { fill: var(--e-glass); }
+.elev .m-glint { fill: var(--e-glint); }
+.elev .m-steel { fill: var(--e-steel); }
+.elev .m-sill, .elev .m-coping { fill: var(--e-stone); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-shade { fill: var(--e-shade); }
+.elev .m-shadow { fill: var(--e-shade); }
+.elev .m-spandrel { fill: var(--e-bronze); }
+.elev .m-louver { stroke: var(--e-stucco); stroke-width: 0.08; }
+.elev .m-ground { fill: var(--d-ink); }
+.elev .m-earth { fill: var(--e-earth); }
+.elev .m-tree { fill: var(--e-tree); stroke: var(--e-treeln); stroke-width: 0.06; }
+.elev .m-treehi { fill: var(--e-treehi); }
+.elev .m-trunk { stroke: var(--e-treeln); stroke-width: 0.3; }
+.elev .m-shrub { fill: var(--e-shrub); stroke: var(--e-treeln); stroke-width: 0.05; }
+.elev .m-grass { stroke: var(--e-treeln); stroke-width: 0.07; }
+.elev .m-person { fill: var(--e-person); }
+.elev .m-leader { fill: none; stroke: var(--d-ink); stroke-width: 0.045; }
+.elev .m-dot { fill: var(--d-ink); }
+.elev .m-note { font-size: 0.78px; fill: var(--d-ink); letter-spacing: 0.02px; }
+.elev .m-lvl { fill: var(--d-accent); }
+.elev .m-lvlln { stroke: var(--d-accent); stroke-width: 0.045; stroke-dasharray: 0.3 0.2; }
+.elev .m-lvltxt { font-size: 0.66px; fill: var(--d-accent); font-weight: 600; letter-spacing: 0.06px; }
+.elev .m-lamp { fill: var(--e-lamp); }

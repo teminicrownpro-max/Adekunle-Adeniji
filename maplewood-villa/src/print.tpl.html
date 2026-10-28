@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Maplewood Villa — print folio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Marcellus&display=swap">
+<style>
+@page { size: 17in 11in; margin: 0; }
+:root {
+  --paper: #fbfaf7; --ink: #1d1c1a; --muted: #69645c; --rule: #d8d4cb; --accent: #8a6a3b;
+  --f-display: 'Marcellus', Georgia, serif;
+  --f-body: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  --f-label: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+@@LIGHT@@
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-body); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h1, h2, h3, h4, p { margin: 0; }
+.page { width: 17in; height: 11in; padding: 0.42in 0.5in 0.36in; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 0.18in; break-after: page; overflow: hidden; }
+.page:last-child { break-after: auto; }
+.tb { display: grid; grid-template-columns: 1fr auto auto auto; gap: 0.35in; align-items: baseline; border-top: 1.5px solid var(--ink); padding-top: 0.08in; font-size: 9.5pt; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+.tb b { font-family: var(--f-display); font-weight: 400; color: var(--ink); text-transform: none; letter-spacing: 0.01em; font-size: 15pt; }
+.tb .no { color: var(--accent); font-weight: 600; }
+.eyebrow { font-size: 9pt; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: 62pt; line-height: 1; }
+h2 { font-family: var(--f-display); font-weight: 400; font-size: 20pt; }
+.lede { font-size: 11.5pt; line-height: 1.55; font-weight: 300; max-width: 60ch; }
+.stats { display: grid; grid-template-columns: repeat(5, auto); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.stat { display: grid; padding: 0.07in 0.18in 0.07in 0; }
+.stat + .stat { border-left: 1px solid var(--rule); padding-left: 0.18in; }
+.stat .v { font-family: var(--f-display); font-size: 19pt; font-variant-numeric: tabular-nums; }
+.stat .k { font-size: 7.5pt; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.p1 { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 0.2in; min-height: 0; }
+.p1-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.6in; align-items: end; }
+.p1-head .r { display: grid; gap: 0.14in; }
+.fit { min-height: 0; display: flex; align-items: center; justify-content: center; }
+.fit svg { width: auto; height: 100%; max-width: 100%; }
+.prgrid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.22in; }
+.pr { border-top: 1px solid var(--ink); padding-top: 0.08in; }
+.pr h3 { font-family: var(--f-display); font-weight: 400; font-size: 13pt; margin-bottom: 0.04in; }
+.pr p { font-size: 8.6pt; line-height: 1.45; color: var(--muted); }
+
+.p2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 3.4in; gap: 0.3in; min-height: 0; }
+.col { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 0.1in; min-height: 0; }
+.sh { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 0.05in; }
+.sh .no { font-size: 8.5pt; font-weight: 600; letter-spacing: 0.14em; color: var(--accent); }
+.sh .m { font-size: 8.5pt; color: var(--muted); }
+.notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.1in; }
+.notes li { display: grid; grid-template-columns: 0.24in minmax(0, 1fr); gap: 0.08in; }
+.notes .num { width: 0.22in; height: 0.22in; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 7.5pt; font-weight: 600; }
+.notes h4 { font-size: 7.8pt; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.02in; }
+.notes p { font-size: 8.4pt; line-height: 1.4; color: var(--muted); }
+.side { display: grid; align-content: start; gap: 0.16in; }
+.side h2 { font-size: 15pt; }
+
+.p3 { display: grid; grid-template-columns: 6.1in minmax(0, 1fr); gap: 0.35in; min-height: 0; }
+.p3 .right { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 0.16in; min-height: 0; }
+.p3 .rear { height: 3.55in; }
+.p3 .low { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 0.3in; min-height: 0; }
+.cmp { width: 100%; border-collapse: collapse; font-size: 7.9pt; line-height: 1.32; }
+.cmp th, .cmp td { text-align: left; vertical-align: top; padding: 0.04in 0.08in 0.04in 0; border-bottom: 1px solid var(--rule); }
+.cmp thead th { font-size: 7pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); }
+.cmp thead th:last-child { color: var(--accent); }
+.cmp tbody th { font-weight: 500; white-space: nowrap; }
+.cmp td { color: var(--muted); }
+.cmp td:last-child { color: var(--ink); }
+.swatches { display: grid; grid-template-columns: 1fr 1fr; gap: 0.08in 0.16in; }
+.sw { display: grid; grid-template-columns: 0.36in minmax(0, 1fr); gap: 0.08in; align-items: center; }
+.chip { width: 0.36in; height: 0.36in; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+.sw h4 { font-size: 7.2pt; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.sw p { font-size: 7.2pt; color: var(--muted); line-height: 1.3; }
+.areas { width: 100%; border-collapse: collapse; font-size: 8.4pt; font-variant-numeric: tabular-nums; margin-top: 0.06in; }
+.areas th, .areas td { padding: 0.03in 0; border-bottom: 1px solid var(--rule); text-align: left; font-weight: 400; }
+.areas td { text-align: right; }
+.areas td::after { content: " sq ft"; color: var(--muted); font-size: 7pt; }
+.areas tr.tot th, .areas tr.tot td { font-weight: 600; color: var(--accent); }
+.cav { margin: 0.08in 0 0; padding-left: 0.14in; font-size: 7pt; line-height: 1.35; color: var(--muted); display: grid; gap: 0.03in; }
+.lbl { font-size: 7.5pt; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.05in; }
+@@CSS@@
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="p1">
+    <div class="p1-head">
+      <div><p class="eyebrow">Transitional-contemporary redesign · Concept A</p><h1>Maplewood Villa</h1></div>
+      <div class="r">
+        <p class="lede">The Maplewood, redrawn as a transitional-contemporary villa. It keeps the 50-ft lot and the two-car garage,
+          and gains a calmer plan: one line of sight from the front door to the garden, fewer and larger rooms, no angled walls,
+          and a façade of limestone, lime stucco, oak and black steel.</p>
+        <div class="stats">@@STATS@@</div>
+      </div>
+    </div>
+    <div class="fit">@@FRONT@@</div>
+    <div class="prgrid">@@PRINCIPLES@@</div>
+  </div>
+  <div class="tb"><b>Maplewood Villa</b><span>Street elevation</span><span>October 2026</span><span class="no">A-201 · 1 / 3</span></div>
+</section>
+
+<section class="page">
+  <div class="p2">
+    <div class="col"><div class="sh"><h2>Main floor</h2><span class="m">1,680 sq ft · 10-ft ceilings</span><span class="no">A-101</span></div><div class="fit">@@MAIN@@</div></div>
+    <div class="col"><div class="sh"><h2>Second floor</h2><span class="m">1,650 sq ft · 9-ft ceilings</span><span class="no">A-102</span></div><div class="fit">@@SECOND@@</div></div>
+    <div class="side">
+      <div><p class="lbl">Main floor</p>@@NOTES_MAIN@@</div>
+      <div><p class="lbl">Second floor</p>@@NOTES_SECOND@@</div>
+      <div><p class="lbl">Materials</p><div class="swatches">@@MATERIALS@@</div></div>
+    </div>
+  </div>
+  <div class="tb"><b>Maplewood Villa</b><span>Floor plans</span><span>October 2026</span><span class="no">A-101 / A-102 · 2 / 3</span></div>
+</section>
+
+<section class="page">
+  <div class="p3">
+    <div class="col"><div class="sh"><h2>Lower level</h2><span class="m">1,375 sq ft finished</span><span class="no">A-100</span></div><div class="fit">@@LOWER@@</div></div>
+    <div class="right">
+      <div class="col"><div class="sh"><h2>Garden elevation</h2><span class="no">A-202</span></div><div class="fit rear">@@REAR@@</div></div>
+      <div class="low">
+        <div><p class="lbl">What changed</p>@@COMPARE@@</div>
+        <div class="side">
+          <div><p class="lbl">Lower level</p>@@NOTES_LOWER@@</div>
+          <div><p class="lbl">Areas</p>@@AREAS@@@@CAVEATS_SHORT@@</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tb"><b>Maplewood Villa</b><span>Lower level · garden side</span><span>October 2026</span><span class="no">A-100 / A-202 · 3 / 3</span></div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7.5 -15.5 57.5 76.0" class="plan" role="img" aria-label="Second floor plan"><style>:root{--f-label:'Jost','Futura','Helvetica Neue',Arial,sans-serif;
+  --d-wall:#25231f; --d-paper:#fbfaf7; --d-line:#2d2a25; --d-glass:#7d9aa6; --d-ink:#1f1d1a; --d-muted:#8a857c;
+  --d-counter:#e4ded3; --d-builtin:#ddd5c6; --d-stone2:#cfc6b6; --d-wet:#dfe7ea; --d-oak:#efe4d2; --d-stone:#ece8e1;
+  --d-tile:#e9ebea; --d-carpet:#f3f0ea; --d-porch:#e6e0d4; --d-garage:#ecebe8; --d-void:#f7f6f3; --d-furn:#fbfaf7;
+  --d-furnline:#a59d90; --d-rug:#f6efe3; --d-plant:#dfe6d6; --d-plantline:#8c9a7c; --d-accent:#8a6a3b; --d-on-accent:#fff;
+  --e-stucco:#f6f3ee; --e-edge:#b9b1a3; --e-stone:#ddd3c2; --e-joint:#bfb39f; --e-oak:#c69c6d; --e-oakln:#a87d50;
+  --e-roof:#3a3d40; --e-seam:#55595d; --e-steel:#1f2124; --e-glass:#46525c; --e-glint:rgba(255,255,255,.10);
+  --e-shade:rgba(30,25,20,.28); --e-bronze:#6d5a3f; --e-earth:#e7e2d8; --e-tree:#cfd8c4; --e-treehi:rgba(255,255,255,.35);
+  --e-treeln:#8c9a7c; --e-shrub:#c4cfb6; --e-person:#3a3833; --e-lamp:#f3d9a4;}svg{background:#fbfaf7}/* Drawing styles shared by every plan and elevation. Colours come from page tokens. */
+svg.plan, svg.elev { width: 100%; height: auto; display: block; font-family: var(--f-label); }
+.plan .wall { fill: var(--d-wall); }
+.plan .glasswall { fill: var(--d-glass); }
+.plan .post { fill: var(--d-wall); }
+.plan .winframe { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.05; }
+.plan .glass, .plan .glass2 { stroke: var(--d-glass); stroke-width: 0.07; }
+.plan .mullion { stroke: var(--d-line); stroke-width: 0.06; }
+.plan .leaf { stroke: var(--d-line); stroke-width: 0.09; }
+.plan .swing { fill: none; stroke: var(--d-line); stroke-width: 0.04; stroke-dasharray: 0.25 0.18; }
+.plan .jamb { stroke: none; }
+.plan .pocketln { stroke: var(--d-line); stroke-width: 0.08; stroke-dasharray: 0.3 0.2; }
+.plan .garageln { stroke: var(--d-line); stroke-width: 0.07; stroke-dasharray: 0.6 0.3; }
+.plan .thin { stroke: var(--d-line); stroke-width: 0.05; fill: none; }
+.plan .fx { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .counter { fill: var(--d-counter); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .island { fill: var(--d-counter); stroke: var(--d-line); stroke-width: 0.08; }
+.plan .appl { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .shelf { fill: var(--d-builtin); stroke: var(--d-line); stroke-width: 0.05; }
+.plan .builtin { fill: var(--d-builtin); stroke: var(--d-line); stroke-width: 0.06; }
+.plan .fireplace { fill: var(--d-stone2); stroke: var(--d-line); stroke-width: 0.07; }
+.plan .firebox { fill: var(--d-wall); }
+.plan .hearth { fill: var(--d-stone2); stroke: var(--d-line); stroke-width: 0.05; }
+.plan .tag { font-size: 0.62px; letter-spacing: 0.06px; fill: var(--d-muted); font-weight: 500; }
+.plan .tag.strong { fill: var(--d-ink); font-weight: 600; }
+.plan .stairbg { fill: var(--d-paper); }
+.plan .tread { stroke: var(--d-line); stroke-width: 0.05; }
+.plan .treadlow { stroke: var(--d-muted); stroke-width: 0.04; stroke-dasharray: 0.2 0.15; }
+.plan .stairedge { fill: none; stroke: var(--d-line); stroke-width: 0.07; }
+.plan .landing { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.07; }
+.plan .breakln { stroke: var(--d-line); stroke-width: 0.07; fill: none; }
+.plan .arrow { fill: none; stroke: var(--d-ink); stroke-width: 0.07; }
+.plan .arrowhead { fill: var(--d-ink); }
+.plan .overhead, .plan .roofline { fill: none; stroke: var(--d-muted); stroke-width: 0.05; stroke-dasharray: 0.45 0.25; }
+.plan .overheadln, .plan .beam { stroke: var(--d-muted); stroke-width: 0.05; stroke-dasharray: 0.45 0.25; }
+.plan .guard { stroke: var(--d-line); stroke-width: 0.12; }
+.plan .wetzone { fill: var(--d-wet); }
+.plan .glassln { stroke: var(--d-glass); stroke-width: 0.1; }
+.plan .mirror { fill: var(--d-glass); }
+.plan .screen { fill: var(--d-wall); }
+.plan .steps { fill: var(--d-paper); stroke: var(--d-line); stroke-width: 0.05; }
+
+/* floor finishes */
+.plan .oak { fill: var(--d-oak); }
+.plan .stone { fill: var(--d-stone); }
+.plan .tile { fill: var(--d-tile); }
+.plan .carpet { fill: var(--d-carpet); }
+.plan .porch { fill: var(--d-porch); }
+.plan .terrace { fill: var(--d-porch); opacity: 0.6; }
+.plan .paver { stroke: var(--d-paper); stroke-width: 0.08; }
+.plan .garagefl { fill: var(--d-garage); }
+.plan .unex { fill: var(--d-garage); }
+.plan .wine { fill: var(--d-stone); }
+.plan .roofbelow { fill: var(--d-garage); }
+.plan .voidfill { fill: var(--d-void); }
+.plan .voidx { stroke: var(--d-muted); stroke-width: 0.04; stroke-dasharray: 0.4 0.3; }
+
+/* furniture */
+.plan .furn { fill: var(--d-furn); stroke: var(--d-furnline); stroke-width: 0.05; }
+.plan .furnline { fill: none; stroke: var(--d-furnline); stroke-width: 0.05; }
+.plan .furnln { stroke: var(--d-furnline); stroke-width: 0.05; }
+.plan .rug { fill: var(--d-rug); stroke: var(--d-furnline); stroke-width: 0.04; stroke-dasharray: 0.15 0.15; }
+.plan .car { fill: none; stroke: var(--d-furnline); stroke-width: 0.05; stroke-dasharray: 0.3 0.2; }
+.plan .plant { fill: var(--d-plant); stroke: var(--d-plantline); stroke-width: 0.05; }
+
+/* text */
+.plan .rname { font-size: 0.82px; font-weight: 600; letter-spacing: 0.12px; fill: var(--d-ink); }
+.plan .rname.sm { font-size: 0.66px; letter-spacing: 0.08px; }
+.plan .rdim { font-size: 0.68px; fill: var(--d-ink); font-variant-numeric: tabular-nums; }
+.plan .rdim.sm { font-size: 0.56px; }
+.plan .rsub { font-size: 0.5px; letter-spacing: 0.08px; fill: var(--d-accent); font-weight: 600; }
+.plan .voidtxt { font-size: 0.62px; letter-spacing: 0.1px; fill: var(--d-muted); font-weight: 500; }
+.plan .dimln { stroke: var(--d-muted); stroke-width: 0.04; }
+.plan .dimtick { stroke: var(--d-ink); stroke-width: 0.08; }
+.plan .dimtxt { font-size: 0.72px; fill: var(--d-ink); font-variant-numeric: tabular-nums; }
+.plan .callout { fill: var(--d-accent); }
+.plan .callnum { font-size: 1.05px; font-weight: 600; fill: var(--d-on-accent); }
+.plan .sb1 { fill: var(--d-ink); }
+.plan .sb0 { fill: var(--d-paper); stroke: var(--d-ink); stroke-width: 0.05; }
+.plan .sbtxt, .plan .streettxt { font-size: 0.7px; fill: var(--d-ink); letter-spacing: 0.1px; }
+.plan .streettxt { font-weight: 600; letter-spacing: 0.5px; }
+
+/* elevations */
+.elev .m-stucco { fill: var(--e-stucco); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-stone { fill: var(--e-stone); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-joint { stroke: var(--e-joint); stroke-width: 0.035; }
+.elev .m-oak { fill: var(--e-oak); }
+.elev .m-oakln { stroke: var(--e-oakln); stroke-width: 0.035; }
+.elev .m-roof { fill: var(--e-roof); }
+.elev .m-seam { stroke: var(--e-seam); stroke-width: 0.05; }
+.elev .m-fascia, .elev .m-rake { fill: var(--e-steel); }
+.elev .m-band { fill: var(--e-stone); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-frame { fill: var(--e-steel); }
+.elev .m-frame2 { stroke: var(--e-steel); stroke-width: 0.12; }
+.elev .m-glass { fill: var(--e-glass); }
+.elev .m-glint { fill: var(--e-glint); }
+.elev .m-steel { fill: var(--e-steel); }
+.elev .m-sill, .elev .m-coping { fill: var(--e-stone); stroke: var(--e-edge); stroke-width: 0.05; }
+.elev .m-shade { fill: var(--e-shade); }
+.elev .m-shadow { fill: var(--e-shade); }
+.elev .m-spandrel { fill: var(--e-bronze); }
+.elev .m-louver { stroke: var(--e-stucco); stroke-width: 0.08; }
+.elev .m-ground { fill: var(--d-ink); }
+.elev .m-earth { fill: var(--e-earth); }
+.elev .m-tree { fill: var(--e-tree); stroke: var(--e-treeln); stroke-width: 0.06; }
+.elev .m-treehi { fill: var(--e-treehi); }
+.elev .m-trunk { stroke: var(--e-treeln); stroke-width: 0.3; }
+.elev .m-shrub { fill: var(--e-shrub); stroke: var(--e-treeln); stroke-width: 0.05; }
+.elev .m-grass { stroke: var(--e-treeln); stroke-width: 0.07; }
+.elev .m-person { fill: var(--e-person); }
+.elev .m-leader { fill: none; stroke: var(--d-ink); stroke-width: 0.045; }
+.elev .m-dot { fill: var(--d-ink); }
+.elev .m-note { font-size: 0.78px; fill: var(--d-ink); letter-spacing: 0.02px; }
+.elev .m-lvl { fill: var(--d-accent); }
+.elev .m-lvlln { stroke: var(--d-accent); stroke-width: 0.045; stroke-dasharray: 0.3 0.2; }
+.elev .m-lvltxt { font-size: 0.66px; fill: var(--d-accent); font-weight: 600; letter-spacing: 0.06px; }
+.elev .m-lamp { fill: var(--e-lamp); }
+</style><title>Second floor plan</title>
+<rect x="0.500" y="0.500" width="20.630" height="14.500" class="carpet"/>
+<rect x="21.530" y="20.700" width="19.970" height="3.700" class="oak"/>
+<rect x="21.530" y="24.200" width="9.600" height="13.900" class="oak"/>
+<rect x="31.530" y="34.300" width="9.970" height="3.800" class="oak"/>
+<rect x="0.500" y="15.400" width="9.500" height="11.600" class="tile"/>
+<rect x="0.500" y="27.400" width="9.300" height="6.000" class="tile"/>
+<rect x="10.200" y="27.400" width="10.930" height="6.000" class="tile"/>
+<rect x="31.530" y="24.600" width="5.900" height="9.300" class="tile"/>
+<rect x="0.500" y="37.700" width="10.100" height="13.800" class="carpet"/>
+<rect x="11.000" y="37.700" width="10.130" height="13.800" class="carpet"/>
+<rect x="31.530" y="38.500" width="9.970" height="13.000" class="carpet"/>
+<rect x="10.400" y="15.400" width="6.600" height="11.600" class="carpet"/>
+<rect x="17.400" y="15.400" width="3.730" height="11.600" class="oak"/>
+<rect x="4.600" y="33.800" width="16.730" height="3.500" class="oak"/>
+<rect x="21.530" y="0.500" width="19.970" height="20.000" class="voidfill"/>
+<line x1="21.530" y1="0.500" x2="41.500" y2="20.500" class="voidx"/>
+<line x1="41.500" y1="0.500" x2="21.530" y2="20.500" class="voidx"/>
+<rect x="21.530" y="38.200" width="9.600" height="8.800" class="voidfill"/>
+<line x1="21.530" y1="38.200" x2="31.130" y2="47.000" class="voidx"/>
+<line x1="31.130" y1="38.200" x2="21.530" y2="47.000" class="voidx"/>
+<rect x="21.580" y="47.500" width="9.500" height="4.500" class="roofbelow"/>
+<rect x="0.000" y="-12.500" width="21.330" height="12.500" class="roofbelow"/>
+<rect x="0.500" y="23.200" width="5.100" height="3.800" class="wetzone"/>
+<rect x="37.830" y="25.130" width="3.670" height="9.170" class="stairbg"/>
+<rect x="6.400" y="4.000" width="12.200" height="10.000" rx="0.100" class="rug"/>
+<g transform="translate(2.500 20.200) rotate(90)"><rect x="-2.800" y="-1.400" width="5.600" height="2.800" rx="1.400" class="fx"/><rect x="-2.500" y="-1.100" width="5.000" height="2.200" rx="1.100" class="fx"/></g>
+<rect x="8.200" y="16.000" width="1.800" height="6.600" class="counter"/>
+<g transform="translate(9.000 17.600) rotate(90)"><ellipse cx="0" cy="0" rx="0.7" ry="0.5" class="fx"/><circle cx="0" cy="-0.05" r="0.06" class="fx"/></g>
+<g transform="translate(9.000 21.000) rotate(90)"><ellipse cx="0" cy="0" rx="0.7" ry="0.5" class="fx"/><circle cx="0" cy="-0.05" r="0.06" class="fx"/></g>
+<circle cx="3.050" cy="25.100" r="0.120" class="fx"/>
+<line x1="0.500" y1="23.200" x2="5.600" y2="23.200" class="glassln"/>
+<g transform="translate(8.000 26.950) rotate(180)"><rect x="-0.85" y="0" width="1.7" height="0.6" rx="0.1" class="fx"/><ellipse cx="0" cy="1.45" rx="0.68" ry="0.9" class="fx"/></g>
+<rect x="10.400" y="15.400" width="1.900" height="11.600" class="shelf"/>
+<rect x="15.100" y="15.400" width="1.900" height="11.600" class="shelf"/>
+<rect x="11.800" y="19.200" width="2.800" height="4.400" class="island"/>
+<rect x="0.500" y="27.400" width="2.600" height="5.400" rx="0.150" class="fx"/>
+<rect x="0.750" y="27.650" width="2.100" height="4.900" rx="0.600" class="fx"/>
+<rect x="4.000" y="27.400" width="5.800" height="1.800" class="counter"/>
+<g transform="translate(5.500 28.300) rotate(0)"><ellipse cx="0" cy="0" rx="0.7" ry="0.5" class="fx"/><circle cx="0" cy="-0.05" r="0.06" class="fx"/></g>
+<g transform="translate(8.300 28.300) rotate(0)"><ellipse cx="0" cy="0" rx="0.7" ry="0.5" class="fx"/><circle cx="0" cy="-0.05" r="0.06" class="fx"/></g>
+<g transform="translate(9.800 31.600) rotate(90)"><rect x="-0.85" y="0" width="1.7" height="0.6" rx="0.1" class="fx"/><ellipse cx="0" cy="1.45" rx="0.68" ry="0.9" class="fx"/></g>
+<rect x="0.500" y="33.800" width="3.900" height="3.500" class="shelf"/>
+<rect x="10.400" y="27.400" width="2.600" height="2.400" class="appl"/>
+<rect x="13.100" y="27.400" width="2.600" height="2.400" class="appl"/>
+<rect x="15.800" y="27.400" width="5.330" height="2.000" class="counter"/>
+<rect x="17.400" y="27.700" width="1.800" height="1.300" rx="0.150" class="fx"/>
+<rect x="0.500" y="37.700" width="6.000" height="2.000" class="shelf"/>
+<rect x="15.000" y="37.700" width="6.130" height="2.000" class="shelf"/>
+<rect x="21.530" y="25.200" width="1.200" height="8.000" class="shelf"/>
+<rect x="31.530" y="24.600" width="5.900" height="2.600" rx="0.150" class="fx"/>
+<rect x="31.780" y="24.850" width="5.400" height="2.100" rx="0.600" class="fx"/>
+<rect x="35.630" y="27.400" width="1.800" height="3.600" class="counter"/>
+<g transform="translate(36.530 29.200) rotate(90)"><ellipse cx="0" cy="0" rx="0.7" ry="0.5" class="fx"/><circle cx="0" cy="-0.05" r="0.06" class="fx"/></g>
+<g transform="translate(37.430 32.300) rotate(90)"><rect x="-0.85" y="0" width="1.7" height="0.6" rx="0.1" class="fx"/><ellipse cx="0" cy="1.45" rx="0.68" ry="0.9" class="fx"/></g>
+<line x1="37.830" y1="25.964" x2="41.500" y2="25.964" class="tread"/>
+<line x1="37.830" y1="26.797" x2="41.500" y2="26.797" class="tread"/>
+<line x1="37.830" y1="27.631" x2="41.500" y2="27.631" class="tread"/>
+<line x1="37.830" y1="28.465" x2="41.500" y2="28.465" class="tread"/>
+<line x1="37.830" y1="29.298" x2="41.500" y2="29.298" class="tread"/>
+<line x1="37.830" y1="30.132" x2="41.500" y2="30.132" class="tread"/>
+<line x1="37.830" y1="30.965" x2="41.500" y2="30.965" class="tread"/>
+<line x1="37.830" y1="31.799" x2="41.500" y2="31.799" class="tread"/>
+<line x1="37.830" y1="32.633" x2="41.500" y2="32.633" class="tread"/>
+<line x1="37.830" y1="33.466" x2="41.500" y2="33.466" class="tread"/>
+<rect x="37.830" y="25.130" width="3.670" height="9.170" class="stairedge"/>
+<rect x="31.530" y="41.000" width="2.000" height="6.400" class="shelf"/>
+<rect x="9.200" y="8.000" width="6.600" height="7.000" rx="0.200" class="furn"/>
+<rect x="9.550" y="13.450" width="2.750" height="1.200" rx="0.250" class="furn"/>
+<rect x="12.700" y="13.450" width="2.750" height="1.200" rx="0.250" class="furn"/>
+<line x1="9.200" y1="10.660" x2="15.800" y2="10.660" class="furnln"/>
+<rect x="7.350" y="13.300" width="1.700" height="1.600" rx="0.100" class="furn"/>
+<rect x="15.950" y="13.300" width="1.700" height="1.600" rx="0.100" class="furn"/>
+<rect x="2.000" y="2.300" width="2.600" height="2.600" rx="0.300" class="furn"/>
+<rect x="2.000" y="2.300" width="0.750" height="2.600" rx="0.300" class="furnline"/>
+<rect x="2.000" y="6.300" width="2.600" height="2.600" rx="0.300" class="furn"/>
+<rect x="2.000" y="6.300" width="0.750" height="2.600" rx="0.300" class="furnline"/>
+<circle cx="5.600" cy="5.600" r="0.800" class="furn"/>
+<rect x="0.500" y="44.100" width="6.600" height="4.600" rx="0.200" class="furn"/>
+<rect x="0.850" y="44.450" width="1.200" height="1.750" rx="0.250" class="furn"/>
+<rect x="0.850" y="46.600" width="1.200" height="1.750" rx="0.250" class="furn"/>
+<line x1="4.592" y1="44.100" x2="4.592" y2="48.700" class="furnln"/>
+<rect x="0.600" y="42.250" width="1.600" height="1.700" rx="0.100" class="furn"/>
+<rect x="0.600" y="48.850" width="1.600" height="1.700" rx="0.100" class="furn"/>
+<rect x="14.530" y="44.100" width="6.600" height="4.600" rx="0.200" class="furn"/>
+<rect x="19.580" y="44.450" width="1.200" height="1.750" rx="0.250" class="furn"/>
+<rect x="19.580" y="46.600" width="1.200" height="1.750" rx="0.250" class="furn"/>
+<line x1="17.038" y1="44.100" x2="17.038" y2="48.700" class="furnln"/>
+<rect x="19.430" y="42.250" width="1.600" height="1.700" rx="0.100" class="furn"/>
+<rect x="19.430" y="48.850" width="1.600" height="1.700" rx="0.100" class="furn"/>
+<rect x="23.800" y="28.000" width="2.400" height="2.400" rx="0.300" class="furn"/>
+<rect x="23.800" y="28.000" width="0.750" height="2.400" rx="0.300" class="furnline"/>
+<rect x="34.900" y="44.300" width="6.600" height="4.600" rx="0.200" class="furn"/>
+<rect x="39.950" y="44.650" width="1.200" height="1.750" rx="0.250" class="furn"/>
+<rect x="39.950" y="46.800" width="1.200" height="1.750" rx="0.250" class="furn"/>
+<line x1="37.408" y1="44.300" x2="37.408" y2="48.900" class="furnln"/>
+<rect x="39.800" y="42.450" width="1.600" height="1.700" rx="0.100" class="furn"/>
+<rect x="39.800" y="49.050" width="1.600" height="1.700" rx="0.100" class="furn"/>
+<polygon points="7.000,0.000 10.500,0.000 10.500,0.500 7.000,0.500" class="winframe"/>
+<line x1="7.000" y1="0.190" x2="10.500" y2="0.190" class="glass"/>
+<line x1="7.000" y1="0.310" x2="10.500" y2="0.310" class="glass"/>
+<polygon points="14.500,0.000 18.000,0.000 18.000,0.500 14.500,0.500" class="winframe"/>
+<line x1="14.500" y1="0.190" x2="18.000" y2="0.190" class="glass"/>
+<line x1="14.500" y1="0.310" x2="18.000" y2="0.310" class="glass"/>
+<polygon points="23.830,0.000 28.830,0.000 28.830,0.500 23.830,0.500" class="winframe"/>
+<line x1="23.830" y1="0.190" x2="28.830" y2="0.190" class="glass"/>
+<line x1="23.830" y1="0.310" x2="28.830" y2="0.310" class="glass"/>
+<polygon points="30.000,0.000 33.000,0.000 33.000,0.500 30.000,0.500" class="winframe"/>
+<line x1="30.000" y1="0.190" x2="33.000" y2="0.190" class="glass"/>
+<line x1="30.000" y1="0.310" x2="33.000" y2="0.310" class="glass"/>
+<polygon points="34.200,0.000 39.200,0.000 39.200,0.500 34.200,0.500" class="winframe"/>
+<line x1="34.200" y1="0.190" x2="39.200" y2="0.190" class="glass"/>
+<line x1="34.200" y1="0.310" x2="39.200" y2="0.310" class="glass"/>
+<polygon points="0.000,3.600 0.000,7.600 0.500,7.600 0.500,3.600" class="winframe"/>
+<line x1="0.190" y1="3.600" x2="0.190" y2="7.600" class="glass"/>
+<line x1="0.310" y1="3.600" x2="0.310" y2="7.600" class="glass"/>
+<polygon points="0.000,18.400 0.000,21.400 0.500,21.400 0.500,18.400" class="winframe"/>
+<line x1="0.190" y1="18.400" x2="0.190" y2="21.400" class="glass"/>
+<line x1="0.310" y1="18.400" x2="0.310" y2="21.400" class="glass"/>
+<polygon points="0.000,28.600 0.000,31.000 0.500,31.000 0.500,28.600" class="winframe"/>
+<line x1="0.190" y1="28.600" x2="0.190" y2="31.000" class="glass"/>
+<line x1="0.310" y1="28.600" x2="0.310" y2="31.000" class="glass"/>
+<polygon points="0.000,40.000 0.000,42.200 0.500,42.200 0.500,40.000" class="winframe"/>
+<line x1="0.190" y1="40.000" x2="0.190" y2="42.200" class="glass"/>
+<line x1="0.310" y1="40.000" x2="0.310" y2="42.200" class="glass"/>
+<polygon points="41.500,3.600 41.500,5.600 42.000,5.600 42.000,3.600" class="winframe"/>
+<line x1="41.690" y1="3.600" x2="41.690" y2="5.600" class="glass"/>
+<line x1="41.810" y1="3.600" x2="41.810" y2="5.600" class="glass"/>
+<polygon points="41.500,15.600 41.500,17.600 42.000,17.600 42.000,15.600" class="winframe"/>
+<line x1="41.690" y1="15.600" x2="41.690" y2="17.600" class="glass"/>
+<line x1="41.810" y1="15.600" x2="41.810" y2="17.600" class="glass"/>
+<polygon points="41.500,35.200 41.500,37.400 42.000,37.400 42.000,35.200" class="winframe"/>
+<line x1="41.690" y1="35.200" x2="41.690" y2="37.400" class="glass"/>
+<line x1="41.810" y1="35.200" x2="41.810" y2="37.400" class="glass"/>
+<polygon points="3.550,51.500 7.550,51.500 7.550,52.000 3.550,52.000" class="winframe"/>
+<line x1="3.550" y1="51.690" x2="7.550" y2="51.690" class="glass"/>
+<line x1="3.550" y1="51.810" x2="7.550" y2="51.810" class="glass"/>
+<polygon points="14.070,51.500 18.070,51.500 18.070,52.000 14.070,52.000" class="winframe"/>
+<line x1="14.070" y1="51.690" x2="18.070" y2="51.690" class="glass"/>
+<line x1="14.070" y1="51.810" x2="18.070" y2="51.810" class="glass"/>
+<polygon points="34.000,51.500 39.000,51.500 39.000,52.000 34.000,52.000" class="winframe"/>
+<line x1="34.000" y1="51.690" x2="39.000" y2="51.690" class="glass"/>
+<line x1="34.000" y1="51.810" x2="39.000" y2="51.810" class="glass"/>
+<line x1="36.500" y1="51.500" x2="36.500" y2="52.000" class="mullion"/>
+<polygon points="22.330,47.000 30.330,47.000 30.330,47.500 22.330,47.500" class="winframe"/>
+<line x1="22.330" y1="47.190" x2="30.330" y2="47.190" class="glass"/>
+<line x1="22.330" y1="47.310" x2="30.330" y2="47.310" class="glass"/>
+<line x1="24.330" y1="47.000" x2="24.330" y2="47.500" class="mullion"/>
+<line x1="26.330" y1="47.000" x2="26.330" y2="47.500" class="mullion"/>
+<line x1="28.330" y1="47.000" x2="28.330" y2="47.500" class="mullion"/>
+<line x1="21.130" y1="21.100" x2="19.130" y2="21.100" class="leaf"/>
+<polyline points="21.130,23.100 20.956,23.092 20.783,23.070 20.612,23.032 20.446,22.979 20.285,22.913 20.130,22.832 19.983,22.738 19.844,22.632 19.716,22.514 19.598,22.386 19.492,22.247 19.398,22.100 19.317,21.945 19.251,21.784 19.198,21.618 19.160,21.447 19.138,21.274 19.130,21.100" class="swing"/>
+<line x1="21.130" y1="25.100" x2="19.130" y2="25.100" class="leaf"/>
+<polyline points="21.130,23.100 20.956,23.108 20.783,23.130 20.612,23.168 20.446,23.221 20.285,23.287 20.130,23.368 19.983,23.462 19.844,23.568 19.716,23.686 19.598,23.814 19.492,23.953 19.398,24.100 19.317,24.255 19.251,24.416 19.198,24.582 19.160,24.753 19.138,24.926 19.130,25.100" class="swing"/>
+<line x1="21.130" y1="21.100" x2="21.130" y2="25.100" class="jamb"/>
+<line x1="21.530" y1="21.100" x2="21.530" y2="25.100" class="jamb"/>
+<line x1="3.250" y1="15.400" x2="3.250" y2="17.400" class="leaf"/>
+<polyline points="5.250,15.400 5.242,15.574 5.220,15.747 5.182,15.918 5.129,16.084 5.063,16.245 4.982,16.400 4.888,16.547 4.782,16.686 4.664,16.814 4.536,16.932 4.397,17.038 4.250,17.132 4.095,17.213 3.934,17.279 3.768,17.332 3.597,17.370 3.424,17.392 3.250,17.400" class="swing"/>
+<line x1="7.250" y1="15.400" x2="7.250" y2="17.400" class="leaf"/>
+<polyline points="5.250,15.400 5.258,15.574 5.280,15.747 5.318,15.918 5.371,16.084 5.437,16.245 5.518,16.400 5.612,16.547 5.718,16.686 5.836,16.814 5.964,16.932 6.103,17.038 6.250,17.132 6.405,17.213 6.566,17.279 6.732,17.332 6.903,17.370 7.076,17.392 7.250,17.400" class="swing"/>
+<line x1="3.250" y1="15.000" x2="7.250" y2="15.000" class="jamb"/>
+<line x1="3.250" y1="15.400" x2="7.250" y2="15.400" class="jamb"/>
+<line x1="17.800" y1="15.000" x2="17.800" y2="15.400" class="thin"/>
+<line x1="20.800" y1="15.000" x2="20.800" y2="15.400" class="thin"/>
+<line x1="17.000" y1="25.200" x2="14.400" y2="25.200" class="leaf"/>
+<polyline points="17.000,22.600 16.773,22.610 16.549,22.639 16.327,22.689 16.111,22.757 15.901,22.844 15.700,22.948 15.509,23.070 15.329,23.208 15.162,23.362 15.008,23.529 14.870,23.709 14.748,23.900 14.644,24.101 14.557,24.311 14.489,24.527 14.439,24.749 14.410,24.973 14.400,25.200" class="swing"/>
+<line x1="17.000" y1="22.600" x2="17.000" y2="25.200" class="jamb"/>
+<line x1="17.400" y1="22.600" x2="17.400" y2="25.200" class="jamb"/>
+<line x1="6.600" y1="22.800" x2="6.600" y2="20.500" class="leaf"/>
+<polyline points="8.900,22.800 8.891,22.600 8.865,22.401 8.822,22.205 8.761,22.013 8.685,21.828 8.592,21.650 8.484,21.481 8.362,21.322 8.226,21.174 8.078,21.038 7.919,20.916 7.750,20.808 7.572,20.715 7.387,20.639 7.195,20.578 6.999,20.535 6.800,20.509 6.600,20.500" class="swing"/>
+<line x1="6.600" y1="22.800" x2="8.900" y2="22.800" class="jamb"/>
+<line x1="6.600" y1="23.200" x2="8.900" y2="23.200" class="jamb"/>
+<line x1="4.400" y1="33.400" x2="4.400" y2="30.800" class="leaf"/>
+<polyline points="7.000,33.400 6.990,33.173 6.961,32.949 6.911,32.727 6.843,32.511 6.756,32.301 6.652,32.100 6.530,31.909 6.392,31.729 6.238,31.562 6.071,31.408 5.891,31.270 5.700,31.148 5.499,31.044 5.289,30.957 5.073,30.889 4.851,30.839 4.627,30.810 4.400,30.800" class="swing"/>
+<line x1="4.400" y1="33.400" x2="7.000" y2="33.400" class="jamb"/>
+<line x1="4.400" y1="33.800" x2="7.000" y2="33.800" class="jamb"/>
+<line x1="18.400" y1="33.400" x2="18.400" y2="30.800" class="leaf"/>
+<polyline points="15.800,33.400 15.810,33.173 15.839,32.949 15.889,32.727 15.957,32.511 16.044,32.301 16.148,32.100 16.270,31.909 16.408,31.729 16.562,31.562 16.729,31.408 16.909,31.270 17.100,31.148 17.301,31.044 17.511,30.957 17.727,30.889 17.949,30.839 18.173,30.810 18.400,30.800" class="swing"/>
+<line x1="15.800" y1="33.400" x2="18.400" y2="33.400" class="jamb"/>
+<line x1="15.800" y1="33.800" x2="18.400" y2="33.800" class="jamb"/>
+<line x1="4.800" y1="34.000" x2="7.900" y2="34.000" class="leaf"/>
+<polyline points="4.800,37.100 5.070,37.088 5.338,37.053 5.602,36.994 5.860,36.913 6.110,36.810 6.350,36.685 6.578,36.539 6.793,36.375 6.992,36.192 7.175,35.993 7.339,35.778 7.485,35.550 7.610,35.310 7.713,35.060 7.794,34.802 7.853,34.538 7.888,34.270 7.900,34.000" class="swing"/>
+<line x1="4.400" y1="34.000" x2="4.400" y2="37.100" class="jamb"/>
+<line x1="4.800" y1="34.000" x2="4.800" y2="37.100" class="jamb"/>
+<line x1="9.900" y1="37.700" x2="9.900" y2="40.400" class="leaf"/>
+<polyline points="7.200,37.700 7.210,37.935 7.241,38.169 7.292,38.399 7.363,38.623 7.453,38.841 7.562,39.050 7.688,39.249 7.832,39.436 7.991,39.609 8.164,39.768 8.351,39.912 8.550,40.038 8.759,40.147 8.977,40.237 9.201,40.308 9.431,40.359 9.665,40.390 9.900,40.400" class="swing"/>
+<line x1="7.200" y1="37.300" x2="9.900" y2="37.300" class="jamb"/>
+<line x1="7.200" y1="37.700" x2="9.900" y2="37.700" class="jamb"/>
+<line x1="11.600" y1="37.700" x2="11.600" y2="40.400" class="leaf"/>
+<polyline points="14.300,37.700 14.290,37.935 14.259,38.169 14.208,38.399 14.137,38.623 14.047,38.841 13.938,39.050 13.812,39.249 13.668,39.436 13.509,39.609 13.336,39.768 13.149,39.912 12.950,40.038 12.741,40.147 12.523,40.237 12.299,40.308 12.069,40.359 11.835,40.390 11.600,40.400" class="swing"/>
+<line x1="11.600" y1="37.300" x2="14.300" y2="37.300" class="jamb"/>
+<line x1="11.600" y1="37.700" x2="14.300" y2="37.700" class="jamb"/>
+<line x1="31.530" y1="28.000" x2="34.130" y2="28.000" class="leaf"/>
+<polyline points="31.530,30.600 31.757,30.590 31.981,30.561 32.203,30.511 32.419,30.443 32.629,30.356 32.830,30.252 33.021,30.130 33.201,29.992 33.368,29.838 33.522,29.671 33.660,29.491 33.782,29.300 33.886,29.099 33.973,28.889 34.041,28.673 34.091,28.451 34.120,28.227 34.130,28.000" class="swing"/>
+<line x1="31.130" y1="28.000" x2="31.130" y2="30.600" class="jamb"/>
+<line x1="31.530" y1="28.000" x2="31.530" y2="30.600" class="jamb"/>
+<line x1="41.400" y1="38.500" x2="41.400" y2="41.100" class="leaf"/>
+<polyline points="38.800,38.500 38.810,38.727 38.839,38.951 38.889,39.173 38.957,39.389 39.044,39.599 39.148,39.800 39.270,39.991 39.408,40.171 39.562,40.338 39.729,40.492 39.909,40.630 40.100,40.752 40.301,40.856 40.511,40.943 40.727,41.011 40.949,41.061 41.173,41.090 41.400,41.100" class="swing"/>
+<line x1="38.800" y1="38.100" x2="41.400" y2="38.100" class="jamb"/>
+<line x1="38.800" y1="38.500" x2="41.400" y2="38.500" class="jamb"/>
+<rect x="0.000" y="0.000" width="7.000" height="0.500" class="wall"/>
+<rect x="10.500" y="0.000" width="4.000" height="0.500" class="wall"/>
+<rect x="18.000" y="0.000" width="5.830" height="0.500" class="wall"/>
+<rect x="28.830" y="0.000" width="1.170" height="0.500" class="wall"/>
+<rect x="33.000" y="0.000" width="1.200" height="0.500" class="wall"/>
+<rect x="39.200" y="0.000" width="2.800" height="0.500" class="wall"/>
+<rect x="0.000" y="0.000" width="0.500" height="3.600" class="wall"/>
+<rect x="0.000" y="7.600" width="0.500" height="10.800" class="wall"/>
+<rect x="0.000" y="21.400" width="0.500" height="7.200" class="wall"/>
+<rect x="0.000" y="31.000" width="0.500" height="9.000" class="wall"/>
+<rect x="0.000" y="42.200" width="0.500" height="9.800" class="wall"/>
+<rect x="41.500" y="0.000" width="0.500" height="3.600" class="wall"/>
+<rect x="41.500" y="5.600" width="0.500" height="10.000" class="wall"/>
+<rect x="41.500" y="17.600" width="0.500" height="17.600" class="wall"/>
+<rect x="41.500" y="37.400" width="0.500" height="14.600" class="wall"/>
+<rect x="0.000" y="51.500" width="3.550" height="0.500" class="wall"/>
+<rect x="7.550" y="51.500" width="6.520" height="0.500" class="wall"/>
+<rect x="18.070" y="51.500" width="3.510" height="0.500" class="wall"/>
+<rect x="31.080" y="51.500" width="2.920" height="0.500" class="wall"/>
+<rect x="39.000" y="51.500" width="3.000" height="0.500" class="wall"/>
+<rect x="21.330" y="47.000" width="1.000" height="0.500" class="wall"/>
+<rect x="30.330" y="47.000" width="1.000" height="0.500" class="wall"/>
+<rect x="21.080" y="47.000" width="0.500" height="5.000" class="wall"/>
+<rect x="31.080" y="47.000" width="0.500" height="5.000" class="wall"/>
+<line x1="21.530" y1="20.600" x2="41.500" y2="20.600" class="guard"/>
+<line x1="21.530" y1="38.200" x2="31.130" y2="38.200" class="guard"/>
+<line x1="37.830" y1="34.300" x2="41.500" y2="34.300" class="guard"/>
+<rect x="21.130" y="0.500" width="0.400" height="20.200" class="wall"/>
+<rect x="21.130" y="20.700" width="0.400" height="0.400" class="wall"/>
+<rect x="21.130" y="25.100" width="0.400" height="2.100" class="wall"/>
+<rect x="0.500" y="15.000" width="2.750" height="0.400" class="wall"/>
+<rect x="7.250" y="15.000" width="10.550" height="0.400" class="wall"/>
+<rect x="20.800" y="15.000" width="0.530" height="0.400" class="wall"/>
+<rect x="10.000" y="15.200" width="0.400" height="12.000" class="wall"/>
+<rect x="17.000" y="15.200" width="0.400" height="7.400" class="wall"/>
+<rect x="17.000" y="25.200" width="0.400" height="2.000" class="wall"/>
+<rect x="0.500" y="27.000" width="20.830" height="0.400" class="wall"/>
+<rect x="5.600" y="23.000" width="0.400" height="4.200" class="wall"/>
+<rect x="5.800" y="22.800" width="0.800" height="0.400" class="wall"/>
+<rect x="8.900" y="22.800" width="1.300" height="0.400" class="wall"/>
+<rect x="21.130" y="27.200" width="0.400" height="6.400" class="wall"/>
+<rect x="21.130" y="37.500" width="0.400" height="9.500" class="wall"/>
+<rect x="9.800" y="27.200" width="0.400" height="6.400" class="wall"/>
+<rect x="0.500" y="33.400" width="3.900" height="0.400" class="wall"/>
+<rect x="7.000" y="33.400" width="8.800" height="0.400" class="wall"/>
+<rect x="18.400" y="33.400" width="2.930" height="0.400" class="wall"/>
+<rect x="4.400" y="33.600" width="0.400" height="0.400" class="wall"/>
+<rect x="4.400" y="37.100" width="0.400" height="0.400" class="wall"/>
+<rect x="0.500" y="37.300" width="6.700" height="0.400" class="wall"/>
+<rect x="9.900" y="37.300" width="1.700" height="0.400" class="wall"/>
+<rect x="14.300" y="37.300" width="7.030" height="0.400" class="wall"/>
+<rect x="10.600" y="37.500" width="0.400" height="14.000" class="wall"/>
+<rect x="31.330" y="24.200" width="6.500" height="0.400" class="wall"/>
+<rect x="31.130" y="24.400" width="0.400" height="3.600" class="wall"/>
+<rect x="31.130" y="30.600" width="0.400" height="3.700" class="wall"/>
+<rect x="31.330" y="33.900" width="6.500" height="0.400" class="wall"/>
+<rect x="37.430" y="24.400" width="0.400" height="9.900" class="wall"/>
+<rect x="31.330" y="38.100" width="7.470" height="0.400" class="wall"/>
+<rect x="41.400" y="38.100" width="0.100" height="0.400" class="wall"/>
+<line x1="0.000" y1="-14.000" x2="42.000" y2="-14.000" class="dimln"/>
+<line x1="-0.300" y1="-13.700" x2="0.300" y2="-14.300" class="dimtick"/>
+<line x1="0.000" y1="-14.600" x2="0.000" y2="-13.400" class="dimln"/>
+<line x1="41.700" y1="-13.700" x2="42.300" y2="-14.300" class="dimtick"/>
+<line x1="42.000" y1="-14.600" x2="42.000" y2="-13.400" class="dimln"/>
+<text x="21.000" y="-14.450" text-anchor="middle" class="dimtxt">42'-0"</text>
+<line x1="-5.500" y1="0.000" x2="-5.500" y2="52.000" class="dimln"/>
+<line x1="-5.800" y1="0.300" x2="-5.200" y2="-0.300" class="dimtick"/>
+<line x1="-6.100" y1="0.000" x2="-4.900" y2="0.000" class="dimln"/>
+<line x1="-5.800" y1="52.300" x2="-5.200" y2="51.700" class="dimtick"/>
+<line x1="-6.100" y1="52.000" x2="-4.900" y2="52.000" class="dimln"/>
+<text x="-5.950" y="26.000" text-anchor="middle" class="dimtxt" transform="rotate(-90 -5.950 26.000)">52'-0"</text>
+<text x="31.500" y="10.000" text-anchor="middle" class="voidtxt">OPEN TO</text>
+<text x="31.500" y="11.000" text-anchor="middle" class="voidtxt">GREAT ROOM</text>
+<text x="26.330" y="42.300" text-anchor="middle" class="voidtxt">OPEN TO</text>
+<text x="26.330" y="43.300" text-anchor="middle" class="voidtxt">FOYER</text>
+<text x="10.665" y="-6.600" text-anchor="middle" class="voidtxt">LOGGIA ROOF BELOW</text>
+<text x="10.665" y="-5.600" text-anchor="middle" class="voidtxt">STANDING-SEAM METAL</text>
+<text x="12.500" y="2.550" text-anchor="middle" class="rname">PRIMARY BEDROOM</text>
+<text x="12.500" y="3.550" text-anchor="middle" class="rdim">20'-8" × 14'-6"</text>
+<text x="6.100" y="18.640" text-anchor="middle" class="rname sm">ENSUITE</text>
+<text x="6.100" y="19.440" text-anchor="middle" class="rdim sm">9'-6" × 11'-8"</text>
+<text x="13.700" y="17.500" text-anchor="middle" class="rname sm">DRESSING</text>
+<text x="19.200" y="18.268" text-anchor="middle" class="rname sm">ENTRY</text>
+<text x="19.200" y="18.933" text-anchor="middle" class="rname sm">GALLERY</text>
+<text x="5.600" y="31.400" text-anchor="middle" class="rname sm">BATH</text>
+<text x="2.500" y="35.800" text-anchor="middle" class="tag">LINEN</text>
+<text x="11.700" y="28.820" text-anchor="middle" class="tag">W</text>
+<text x="14.400" y="28.820" text-anchor="middle" class="tag">D</text>
+<text x="15.600" y="31.263" text-anchor="middle" class="rname sm">LAUNDRY</text>
+<text x="15.600" y="32.013" text-anchor="middle" class="rdim sm">10'-11" × 6'-0"</text>
+<text x="12.800" y="35.700" text-anchor="middle" class="tag">HALL</text>
+<text x="6.500" y="41.517" text-anchor="middle" class="rname sm">BEDROOM 2</text>
+<text x="6.500" y="42.367" text-anchor="middle" class="rdim sm">10'-1" × 13'-10"</text>
+<text x="15.600" y="41.517" text-anchor="middle" class="rname sm">BEDROOM 3</text>
+<text x="15.600" y="42.367" text-anchor="middle" class="rdim sm">10'-1" × 13'-10"</text>
+<text x="27.700" y="31.544" text-anchor="middle" class="rname sm">LIBRARY</text>
+<text x="27.700" y="32.256" text-anchor="middle" class="rname sm">BRIDGE</text>
+<text x="34.000" y="30.600" text-anchor="middle" class="rname sm">BATH</text>
+<text x="36.400" y="41.218" text-anchor="middle" class="rname sm">BEDROOM 4</text>
+<text x="36.400" y="42.068" text-anchor="middle" class="rdim sm">10'-0" × 13'-0"</text>
+<text x="36.400" y="22.800" text-anchor="middle" class="tag">GALLERY LANDING</text>
+<polyline points="39.600,23.200 39.600,30.000" class="arrow"/>
+<polygon points="39.361,29.505 39.600,30.000 39.839,29.505" class="arrowhead"/>
+<text x="40.800" y="22.600" text-anchor="middle" class="tag strong">DN</text>
+<circle cx="28.600" cy="22.400" r="0.950" class="callout"/>
+<text x="28.600" y="22.820" text-anchor="middle" class="callnum">7</text>
+<circle cx="19.200" cy="21.800" r="0.950" class="callout"/>
+<text x="19.200" y="22.220" text-anchor="middle" class="callnum">8</text>
+<circle cx="3.000" cy="13.600" r="0.950" class="callout"/>
+<text x="3.000" y="14.020" text-anchor="middle" class="callnum">9</text>
+<circle cx="26.330" cy="36.000" r="0.950" class="callout"/>
+<text x="26.330" y="36.420" text-anchor="middle" class="callnum">10</text>
+<rect x="0.000" y="58.600" width="4.000" height="0.450" class="sb1"/>
+<rect x="4.000" y="58.600" width="4.000" height="0.450" class="sb0"/>
+<rect x="8.000" y="58.600" width="8.000" height="0.450" class="sb1"/>
+<text x="0.000" y="60.100" text-anchor="middle" class="sbtxt">0</text>
+<text x="4.000" y="60.100" text-anchor="middle" class="sbtxt">4</text>
+<text x="8.000" y="60.100" text-anchor="middle" class="sbtxt">8</text>
+<text x="16.000" y="60.100" text-anchor="middle" class="sbtxt">16</text>
+<text x="17.200" y="60.100" text-anchor="start" class="sbtxt">FT</text>
+<text x="42.000" y="59.100" text-anchor="end" class="streettxt">STREET</text>
+</svg>
