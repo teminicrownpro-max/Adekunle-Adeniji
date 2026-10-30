@@ -198,4 +198,17 @@ If you'd like packages for any of these, say which ones.
 - **Core Skills** are re-ordered and renamed to mirror each posting's keywords (for applicant tracking systems), using only skills your resume supports.
 - **Competencies** drop from 10 to the 5 most relevant per role, so the experience section starts higher on page 1.
 - **Experience bullets** are re-ordered, trimmed or reworded per role. The facts, titles, dates and employers are unchanged.
-- **Education and certifications** are unchanged, with the two IBM product courses combined onto one line.
+- **Education and certifications** are unchanged.
+
+## ATS format (updated Oct 30, 2026)
+
+All resumes and cover letters are rebuilt to standard ATS rules and exported as **tagged PDFs** (selectable text, embedded fonts, correct reading order):
+
+- Single column with no tables, text boxes, headers/footers or images. Name and contact details are in the body text.
+- Standard section headings: Professional Summary, Skills, Core Competencies / Key Qualifications, Work Experience, Education, Certifications.
+- Dates sit on the employer line (`Employer, City | Month YYYY - Month YYYY`) instead of a right-aligned tab, so parsers attach them to the right job.
+- Skills are a plain comma-separated list. No skill keyword can be split by a line-break hyphen.
+- One certification per line; plain hyphens in date ranges.
+- Every PDF was checked by extracting its text: name, email, phone, all headings and all four date lines parse correctly, with no garbled characters.
+- **BOF keyword coverage: 32 of 40** job-description terms. The 8 missing (disbursement, database, spreadsheet, Microsoft Office, grant, loan, French, adjudication) aren't on your base resume, so they were left out on purpose. Add any that are true for you.
+- Wording was also tightened to match your original resume exactly (e.g., "document decisions from planning meetings" instead of "after every planning meeting").
