@@ -18,7 +18,7 @@
 |---|------|----------|----------|-----|-----------------------------|-------|---------|
 | 1 | Project Coordinator – Research | Queen's University | Kingston, ON (on-site, permanent FT) | $80,596–$99,974 | Posted Sep 8, 2026. May have closed, so confirm | **90%** | [Folder](01%20Queens%20University%20-%20Project%20Coordinator%20Research/) |
 | 2 | Manager, Programs | Enactus Canada | Toronto, ON (national office, travel) | Not listed | Posted ~Sep 21, 2026. Confirm | **90%** | [Folder](02%20Enactus%20Canada%20-%20Manager%20Programs/) |
-| 3 | Entrepreneur Program Coordinator | Black Opportunity Fund | Toronto, ON (2-yr contract) | $70,000 + benefits | No closing date shown. Confirm | **85%** | [Folder](03%20Black%20Opportunity%20Fund%20-%20Entrepreneur%20Program%20Coordinator/) |
+| 3 | Entrepreneur Program Coordinator | Black Opportunity Fund | Toronto, ON (2-yr contract) | $70,000 + benefits | **Deadline passed:** page says Oct 25, 2025; JD PDF says Oct 30, 2023. Email to ask if it's still open | **85%** | [Folder](03%20Black%20Opportunity%20Fund%20-%20Entrepreneur%20Program%20Coordinator/) |
 | 4 | Gallery Activation Coordinator | Royal Ontario Museum | Toronto, ON (18-mo contract) | ~$74,303–$84,917 | Seen on aggregators. Confirm on ROM site | **80% (Stretch)** | [Folder](04%20Royal%20Ontario%20Museum%20-%20Gallery%20Activation%20Coordinator/) |
 | 5 | Program Coordinator, Family & Community Programs | Art Gallery of Ontario | Toronto, ON (permanent FT) | $77,932–$97,388 | Posted Sep 21; listed through **Nov 18, 2026** | **75% (Stretch)** | [Folder](05%20Art%20Gallery%20of%20Ontario%20-%20Program%20Coordinator%20Family%20and%20Community/) |
 | 6 | Curatorial Project Director, Canada | Royal Ontario Museum | Toronto, ON (24-mo contract, starts Dec 2026) | CA$100K–$140K | **Open: posted Oct 27, 2026** | **70% (Stretch)** | [Folder](06%20Royal%20Ontario%20Museum%20-%20Curatorial%20Project%20Director%20Canada/) |
@@ -68,21 +68,35 @@ Each folder holds a tailored **resume** and **cover letter** in `.docx` (editabl
 
 - **Posting:** https://blackopportunityfund.ca/volunteer-and-job-opportunities/current-career-opportunities/entrepreneur-program-coordinator/
 - **Job description (PDF):** https://blackopportunityfund.ca/wp-content/uploads/Entrepreneur-Program-Coordinator-Job-Description.pdf
-- **How to apply:** Email a resume and cover letter to **info@blackopportunityfund.org** with the subject line **"RE: Current Career Opportunities–Entrepreneur Program Coordinator"**.
-- **Terms:** 2-year contract, full-time (up to 37.5 hrs/week), $70,000 plus extended benefits, reports to the Programs Manager.
+- **How to apply:** Email a resume and cover letter to **info@blackopportunityfund.org** with the subject line **"RE: Current Career Opportunities–Entrepreneur Program Coordinator"** (the older PDF asked for "Re: Program Coordinator BOF").
+- **Terms:** 2-year contract, full-time (up to 37.5 hrs/week), $70,000 plus extended benefits, hybrid, reports to the Programs Manager. Office: 77 King St W., 33rd Floor, Toronto.
+- **⚠️ Deadline has passed.** The posting page says **October 25, 2025** and the job-description PDF (created Oct 2, 2023) says **October 30, 2023**. The page is still live, but the role may be filled or may reopen. Send the package with a short note asking whether the role, or a similar one, is still open.
 
-| Stated requirement | Your evidence | Met? |
+**Package re-tailored on Oct 30, 2026 to the full job description**, line by line:
+
+| Job-description requirement | Your evidence | Met? |
 |---|---|---|
-| Program administration for Black entrepreneurs | Lead the *Black Youth in Business* program | ✅ |
-| Payment tracking and budget monitoring | Track spend against a baselined budget, update expense reports, analyse variance, verify completion before payment | ✅ |
-| Reports for the accounting team | Regular expense reports, dashboards and outcome summaries | ✅ |
-| Spreadsheets, data systems, database management | Survey data analysis and dashboards; no named database tools on your resume | ◐ |
-| Grant or loan administration (highly desirable) | Not directly on your resume | ◐ |
-| Attention to detail | Multi-stage review and approval cycles at the Met and DAM | ✅ |
+| Program administration with many stakeholders | Coordinate *Black Youth in Business* for participants, schools, mentors and partners across 4 workstreams | ✅ |
+| Reports to accounting so payments go out on time; payment tracking | Regular expense reports; verify deliverables before payment; track spend on facilitator fees | ✅ |
+| Budget administration and monitoring (listed twice) | Baselined budget, variance analysis, forecasting | ✅ |
+| Liaise with partners and training providers on capacity-building training | Plan facilitator engagements for workshops and mentoring; quality-review their output | ✅ |
+| Implement and monitor adjudication and assessment criteria | Intake completeness review; validating deliverables against acceptance criteria; evaluation methods | ◐ (no grant adjudication) |
+| Monitor progress: activities, deadlines, problems, progress reports, recommendations | Exactly your Emole and Met tracking and escalation bullets | ✅ |
+| Presentation materials; stakeholder and client meetings | Dashboards, outcome summaries, presentations; run planning and triage meetings | ✅ |
+| Documentation in line with service-provider agreements | Monitor supplier deliverables against agreed scope and cost; document decisions | ✅ |
+| Clear, concise, analytic writing | 3 published essays (Met Heilbrunn Timeline); reports and dashboards | ✅ |
+| Detail, accuracy, **protocol**, deadlines | Federal-standard protocols (Smithsonian); fixed public opening dates met | ✅ |
+| High level of service to multiple customers, ideally nonprofit | Participants, partners, mentors at a community organization | ✅ |
+| Spreadsheets, data management systems, database administration | Not named on your resume | ◐ |
+| Advanced Microsoft Office Suite | Not named on your resume | ◐ |
+| Grant or loan administration (highly desirable) | Not on your resume | ❌ |
+| Bilingual French/English (asset) | Not on your resume | ❌ |
+| Coordinating training for adult learners (asset) | Workshop and mentoring coordination (youth) | ◐ |
+| Commitment to social and economic justice; understanding of systemic barriers | Lead a Black youth business program; African art scholarship; community-advisor work | ✅ |
 
-**Why you fit:** The mission matches your current program, and the job is mostly the administrative discipline you already use: completeness checks, payment and budget tracking, and reporting.
-**How the package is tailored:** The headline becomes "Program Coordinator | Entrepreneurship Program Administration". Cost, procurement/payment and quality competencies come first. The cover letter speaks directly to "files complete, payments tracked, reports accounting can rely on."
-**Gap to address in an interview:** Have one example ready of a data tool you've used (for example, the spreadsheet or survey platform behind your 27-question survey).
+**Why you fit:** The mission matches your current program, and most of the day-to-day work (complete files, payment and budget tracking, partner and training-provider liaison, progress reporting) is what you already do.
+**How the package is tailored:** The headline becomes "Program Coordinator | Program Administration, Budget Tracking, and Stakeholder Service". A new "Qualifications for This Role" section maps your experience to the job description's own wording. The cover letter opens on BOF's mandate and speaks to "files complete, payments tracked, reports accounting can act on."
+**Before sending:** If true, add the tools you actually use (e.g., "Microsoft Office Suite (Excel, Word, PowerPoint)", plus any database or CRM) to the Core Skills line. The job description asks for them explicitly, and the resume doesn't name any. Make the second-to-last cover-letter paragraph your own words about why this mission matters to you.
 
 ---
 
