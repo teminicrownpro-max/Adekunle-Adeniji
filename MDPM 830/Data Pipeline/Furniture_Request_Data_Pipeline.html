@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Furniture Request Data Pipeline</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: an engineering-drawing page. A wide pipeline drawing on top, then one section per rubric step, each a tight table or card set. */
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #55616e;
+  --line: #c7cfd8;
+  --accent: #2b5880;
+  --accent-soft: #e5ecf3;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f141a; --surface: #161d25; --ink: #e2e7ed; --muted: #9ba7b4;
+    --line: #34414f; --accent: #8db5db; --accent-soft: #1c2936; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f141a; --surface: #161d25; --ink: #e2e7ed; --muted: #9ba7b4;
+  --line: #34414f; --accent: #8db5db; --accent-soft: #1c2936; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--f-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 64px;
+}
+.wrap { max-width: 1200px; margin: 0 auto; display: grid; gap: 56px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: clamp(1.9rem, 4vw, 2.7rem); font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); font-weight: 700; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+p { margin: 0; max-width: 72ch; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.eyebrow {
+  font-family: var(--f-mono); font-size: 0.78rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+.code { font-family: var(--f-mono); font-size: 0.86em; font-weight: 500; }
+.tag { font-style: italic; color: var(--muted); }
+.small { font-size: 0.88rem; color: var(--muted); }
+section { display: grid; gap: 20px; }
+.sec-head { display: grid; gap: 6px; border-top: 2px solid var(--ink); padding-top: 14px; }
+.sec-head p { color: var(--muted); }
+
+/* header */
+header { display: grid; gap: 14px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 0.92rem; color: var(--muted); }
+.meta b { color: var(--ink); font-weight: 600; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: 0.88rem; color: var(--muted); align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.swatch-dash { width: 34px; height: 0; border-top: 2px dashed var(--ink); display: inline-block; }
+.swatch-arrow { width: 34px; height: 2px; background: var(--accent); display: inline-block; position: relative; }
+.swatch-arrow::after { content: ""; position: absolute; right: -2px; top: -5px; border-left: 8px solid var(--accent); border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+
+/* rubric map */
+.rubric { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.rubric a { background: var(--surface); padding: 16px 18px; text-decoration: none; color: var(--ink); display: grid; gap: 6px; align-content: start; }
+.rubric a:hover { background: var(--accent-soft); }
+.rubric .w { font-family: var(--f-mono); font-size: 0.8rem; color: var(--accent); }
+.rubric .n { font-family: var(--f-display); font-weight: 700; font-size: 1.02rem; }
+.rubric .d { font-size: 0.88rem; color: var(--muted); }
+
+/* the drawing */
+.drawing { background: var(--surface); border: 1px solid var(--line); overflow-x: auto; }
+.scroll-hint { display: none; }
+.d-grid {
+  min-width: 1140px; padding: 26px 30px 30px;
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) minmax(0, 1.35fr);
+  column-gap: 34px; row-gap: 0;
+}
+.scope-label { grid-column: 1 / 7; grid-row: 1; padding: 0 0 14px; display: flex; justify-content: space-between; gap: 20px; }
+.scope-label b { font-family: var(--f-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.boundary { grid-column: 1 / 7; grid-row: 2 / 5; border: 2px dashed var(--ink); margin: 0 -16px; pointer-events: none; border-radius: 4px; }
+.st-head { grid-row: 2; padding: 18px 0 10px; display: grid; gap: 2px; align-content: start; }
+.st-head .num { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); }
+.st-head .nm { font-family: var(--f-display); font-weight: 800; font-size: 1.12rem; }
+.st-head .df { font-size: 0.8rem; color: var(--muted); font-style: italic; line-height: 1.35; }
+.st-body {
+  grid-row: 3; position: relative; background: var(--bg); border: 1px solid var(--line);
+  border-top: 3px solid var(--ink); padding: 12px 12px 14px; display: flex; flex-direction: column; gap: 10px;
+  font-size: 0.84rem; line-height: 1.4; min-width: 0;
+}
+.st-body .own { font-weight: 600; }
+.st-body .own small { display: block; font-weight: 400; color: var(--muted); font-size: 0.78rem; }
+.st-body ul { margin: 0; padding-left: 16px; display: grid; gap: 4px; }
+.st-body .src { list-style: none; padding: 0; }
+.st-body .src li { display: grid; gap: 0; border-bottom: 1px dotted var(--line); padding-bottom: 3px; }
+.st-body .src li span:last-child { color: var(--muted); font-style: italic; font-size: 0.76rem; }
+.st-body .pass { margin-top: auto; padding-top: 8px; border-top: 1px solid var(--line); color: var(--accent); font-weight: 600; font-size: 0.8rem; }
+.st-body .ret { font-size: 0.78rem; color: var(--muted); border-left: 2px solid var(--line); padding-left: 8px; }
+.st-body.flow::after { content: ""; position: absolute; top: 46px; right: -32px; width: 26px; height: 2px; background: var(--accent); }
+.st-body.flow::before { content: ""; position: absolute; top: 41px; right: -34px; border-left: 9px solid var(--accent); border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+.store-icon { display: flex; gap: 10px; align-items: center; }
+.store-icon svg { flex: none; }
+.sink-body { background: var(--accent-soft); border-top-color: var(--accent); }
+.sink-grp { display: grid; gap: 5px; }
+.sink-grp h4 { margin: 0; font-family: var(--f-display); font-size: 0.86rem; font-weight: 700; }
+.sink-grp .it { background: var(--surface); border: 1px solid var(--line); padding: 4px 8px; }
+.loop-row { grid-column: 1 / 7; grid-row: 4; padding: 22px 0 18px; display: grid; grid-template-columns: 40px minmax(0, 1fr) 40px; gap: 14px; align-items: stretch; }
+.loop-band { border: 2px dashed var(--accent); padding: 12px 16px; display: grid; gap: 6px; font-size: 0.86rem; }
+.loop-band b { font-family: var(--f-display); }
+.loop-arrow { display: flex; align-items: stretch; justify-content: center; }
+.outside { grid-column: 1 / 7; grid-row: 5; margin-top: 22px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; font-size: 0.82rem; }
+.outside div { border: 1px solid var(--line); padding: 10px 12px; display: grid; gap: 4px; align-content: start; }
+.outside h4 { margin: 0; font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+/* tables */
+.tbl { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 0.9rem; line-height: 1.45; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { font-family: var(--f-mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; background: var(--bg); }
+tr:last-child td { border-bottom: 0; }
+td.grp { font-family: var(--f-display); font-weight: 700; background: var(--bg); }
+td b { font-weight: 600; }
+
+/* cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); padding: 16px 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.card .k { display: flex; align-items: baseline; gap: 10px; }
+.card .k .code { color: var(--accent); }
+dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; font-size: 0.88rem; }
+dt { color: var(--muted); font-weight: 600; }
+dd { margin: 0; }
+.req { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 6px; }
+.req .eyebrow { font-size: 0.72rem; }
+
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+ol.rules { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+
+/* compounding cycle */
+.cycle { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px; position: relative; }
+.cycle .c { background: var(--surface); border: 1px solid var(--line); padding: 12px 14px; position: relative; font-size: 0.88rem; display: grid; gap: 4px; align-content: start; }
+.cycle .c b { font-family: var(--f-display); }
+.cycle .c:not(:last-child)::after { content: ""; position: absolute; right: -24px; top: 50%; width: 18px; height: 2px; background: var(--accent); }
+.cycle .c:not(:last-child)::before { content: ""; position: absolute; right: -27px; top: calc(50% - 5px); border-left: 8px solid var(--accent); border-top: 6px solid transparent; border-bottom: 6px solid transparent; }
+.cycle-back { font-size: 0.86rem; color: var(--accent); font-weight: 600; border-top: 2px dashed var(--accent); padding-top: 8px; }
+
+.hw th:first-child, .hw td:first-child { width: 16%; }
+footer { display: grid; gap: 10px; font-size: 0.88rem; color: var(--muted); border-top: 2px solid var(--ink); padding-top: 14px; }
+
+@media (max-width: 860px) {
+  .rubric { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .two { grid-template-columns: minmax(0, 1fr); }
+  .cycle { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .cycle .c:not(:last-child)::after { right: auto; left: 50%; top: auto; bottom: -20px; width: 2px; height: 14px; }
+  .cycle .c:not(:last-child)::before { right: auto; left: calc(50% - 5px); top: auto; bottom: -24px; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid var(--accent); border-bottom: 0; }
+  .scroll-hint { display: block; padding: 10px 14px 0; }
+}
+@media (max-width: 520px) {
+  .rubric { grid-template-columns: minmax(0, 1fr); }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  dd { margin-bottom: 6px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">MDPM 830 Data Pipeline · Team DART</span>
+  <h1>Furniture Request Data Pipeline</h1>
+  <p>The Furniture Request Service within PRISM Requests, part of PRISM Core, replaces the WORTS request experience. This pipeline captures and organizes the information created across the Furniture Request lifecycle to support request processing, coordination, visibility and reporting.</p>
+  <div class="meta">
+    <span><b>Boundary:</b> Furniture Request only</span>
+    <span><b>Template:</b> conceptual pipeline template, Session Four; stages from Session Three</span>
+    <span><b>Miro board:</b> <a href="https://miro.com/app/board/uXjVETM6H0Q=/" target="_blank" rel="noopener">miro.com/app/board/uXjVETM6H0Q=</a></span>
+  </div>
+  <div class="legend">
+    <span><i class="swatch-dash"></i>Scope boundary</span>
+    <span><i class="swatch-arrow"></i>Data flow</span>
+    <span><b class="tag">(Proposed)</b>&nbsp;our suggestion, not yet confirmed</span>
+    <span><b class="tag">Open</b>&nbsp;needs the client's confirmation</span>
+  </div>
+</header>
+
+<section aria-labelledby="rub">
+  <div class="sec-head">
+    <span class="eyebrow">How this page answers the rubric</span>
+    <h2 id="rub">Rubric coverage</h2>
+  </div>
+  <nav class="rubric">
+    <a href="#pipeline"><span class="w">20%</span><span class="n">Data Pipeline Model</span><span class="d">Where each source is born, every stage with an owner, and where the flow ends: the drawing and Steps One and Two.</span></a>
+    <a href="#scope"><span class="w">15%</span><span class="n">Scope Definition</span><span class="d">In-scope, out-of-scope and open sources, elements and flows, each with its justification: Step One.</span></a>
+    <a href="#sinks"><span class="w">25%</span><span class="n">Sinks and Value Creation</span><span class="d">Every sink named with its value, consumer and storage and access requirements, plus PRD and Milestone 3 links: Step Three.</span></a>
+    <a href="#generated"><span class="w">15%</span><span class="n">Data Generated by the Pipeline</span><span class="d">New data created through use, who collects it, where it goes, and how it builds over time: Step Four.</span></a>
+    <a href="#gaps"><span class="w">15%</span><span class="n">Gaps, Leaks and Feasibility</span><span class="d">Each finding tied to a stage, framed across data, process, governance and organizational readiness, with an implication: Step Five.</span></a>
+    <a href="#pipeline"><span class="w">10%</span><span class="n">Presentation Quality</span><span class="d">One vocabulary shared with the deck and the Miro board, and the board link at the top of this page.</span></a>
+  </nav>
+</section>
+
+<section aria-labelledby="pipeline">
+  <div class="sec-head">
+    <span class="eyebrow">Step Two · Data Pipeline Model 20%</span>
+    <h2 id="pipeline">The pipeline, source to sink</h2>
+    <p>Five stages from Session Three, each with the person responsible. The flow ends in three sink groups. Using the service creates new data that loops back to the start. Items outside the dashed line are not part of this pipeline.</p>
+  </div>
+  <figure class="drawing" style="margin:0" aria-label="Pipeline drawing">
+    <p class="scroll-hint small">Scroll sideways to see the whole pipeline.</p>
+    <div class="d-grid">
+      <div class="scope-label"><b>Scope boundary: the Furniture Request journey</b><b>Sinks (Step Three)</b></div>
+      <div class="boundary" aria-hidden="true"></div>
+
+      <div class="st-head" style="grid-column:1"><span class="num">Stage 1</span><span class="nm">Generate</span><span class="df">someone or something creates data as work happens</span></div>
+      <div class="st-head" style="grid-column:2"><span class="num">Stage 2</span><span class="nm">Collect</span><span class="df">it gets captured, under someone's permission</span></div>
+      <div class="st-head" style="grid-column:3"><span class="num">Stage 3</span><span class="nm">Keep and Shape</span><span class="df">the original is kept; a consistent, trusted version is made</span></div>
+      <div class="st-head" style="grid-column:4"><span class="num">Stage 4</span><span class="nm">Store</span><span class="df">it lives somewhere more than one consumer can reach</span></div>
+      <div class="st-head" style="grid-column:5"><span class="num">Stage 5</span><span class="nm">Use</span><span class="df">a feature, a model, a report, a decision</span></div>
+      <div class="st-head" style="grid-column:6"><span class="num">Where the flow ends</span><span class="nm">Sinks</span><span class="df">where data stops moving and creates value</span></div>
+
+      <div class="st-body flow" style="grid-column:1">
+        <div class="own">Responsible: each creator, for what they state</div>
+        <ul class="src">
+          <li><span>Original requester</span><span>person</span></li>
+          <li><span>CMAC</span><span>person</span></li>
+          <li><span>Furniture Request Coordinator (FRC)</span><span>staff</span></li>
+          <li><span>Furniture Coordinator (FC)</span><span>staff</span></li>
+          <li><span>Vendor or supplier</span><span>third party</span></li>
+          <li><span>PRISM Requests</span><span>system (proposed)</span></li>
+        </ul>
+        <div class="ret">The need is born with the original requester and reaches the CMAC by email, Teams or phone.</div>
+        <div class="pass">Passes on: request details, documents, decisions, updates</div>
+      </div>
+
+      <div class="st-body flow" style="grid-column:2">
+        <div class="own">Responsible: CMAC, for the details submitted <span class="tag">(Proposed)</span><small>Staff, for the email and vendor information they capture</small></div>
+        <ul>
+          <li>Guided request form: fields, checklist and attachments</li>
+          <li>Case activity: FRC and FC decisions, status changes and messages</li>
+          <li>Vendor correspondence, captured by authorized staff</li>
+        </ul>
+        <div class="pass">Passes on: the request exactly as submitted</div>
+      </div>
+
+      <div class="st-body flow" style="grid-column:3">
+        <div class="own">Responsible: <span class="tag">Open</span><small>Proposed: Furniture Request Coordinator</small></div>
+        <ul>
+          <li>Keep the original as submitted</li>
+          <li>Check completeness by request type</li>
+          <li>Link every update to one Request ID, one status and a named owner</li>
+          <li>Prepare consistent reporting fields</li>
+        </ul>
+        <div class="ret">Incomplete: returned to the CMAC, then checked again.</div>
+        <div class="pass">Passes on: one consistent, trusted request record</div>
+      </div>
+
+      <div class="st-body flow" style="grid-column:4">
+        <div class="own">Responsible: data owner, <span class="tag">Open</span></div>
+        <div class="store-icon">
+          <svg width="34" height="40" viewBox="0 0 34 40" aria-hidden="true"><ellipse cx="17" cy="7" rx="15" ry="5" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/><path d="M2 7v26c0 2.8 6.7 5 15 5s15-2.2 15-5V7" fill="var(--surface)" stroke="var(--ink)" stroke-width="1.6"/><path d="M2 7c0 2.8 6.7 5 15 5s15-2.2 15-5" fill="none" stroke="var(--ink)" stroke-width="1.6"/></svg>
+          <b>One shared request record, keyed by Request ID</b>
+        </div>
+        <ul>
+          <li>Request and contact data</li>
+          <li>Status history; assignment and ownership</li>
+          <li>Supporting documents and completion records</li>
+          <li>Timestamps and audit history</li>
+        </ul>
+        <div class="ret">The original is never overwritten.</div>
+        <div class="pass">Passes on: authorized case data</div>
+      </div>
+
+      <div class="st-body flow" style="grid-column:5">
+        <div class="own">Responsible: data owner, for what views show<small>Report owners: Open</small></div>
+        <ul>
+          <li>Request views for CMACs and coordinators</li>
+          <li>Outcome measures for evaluators</li>
+          <li>Operational reports for Infrastructure management</li>
+        </ul>
+        <div class="pass">Passes on: each use to its sink</div>
+      </div>
+
+      <div class="st-body sink-body" style="grid-column:6">
+        <div class="sink-grp"><h4>Product functionality</h4>
+          <div class="it"><span class="code">P1</span> Guided request submission</div>
+          <div class="it"><span class="code">P2</span> Connected request visibility</div>
+          <div class="it"><span class="code">P3</span> Coordinator hand-off support <span class="tag">(proposed)</span></div>
+        </div>
+        <div class="sink-grp"><h4>Outcome measurement</h4>
+          <div class="it"><span class="code">M1</span> <span class="code">DVO 1</span> first-pass submission completeness</div>
+          <div class="it"><span class="code">M1</span> <span class="code">DVO 2</span> status comprehension, information retrieval, follow-up effort</div>
+          <div class="it"><span class="code">M1</span> <span class="code">DVO 6</span> manual reporting effort</div>
+        </div>
+        <div class="sink-grp"><h4>Business value</h4>
+          <div class="it"><span class="code">B1</span> Operational reporting</div>
+        </div>
+      </div>
+
+      <div class="loop-row">
+        <div class="loop-arrow" aria-hidden="true">
+          <svg width="24" height="100%" viewBox="0 0 24 100" preserveAspectRatio="none" style="min-height:90px"><path d="M12 100V8" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5" fill="none" vector-effect="non-scaling-stroke"/><path d="M4 14L12 2l8 12z" fill="var(--accent)"/></svg>
+        </div>
+        <div class="loop-band">
+          <b>The loop (Step Four): using the service creates data that did not exist before.</b>
+          <span>Activity, outcomes, feedback, corrections and derived data are recorded against the Request ID. They flow back to improve the form, the checklist and service levels, and onward to other teams and to leadership decisions. See Step Four for who collects each type.</span>
+        </div>
+        <div class="loop-arrow" aria-hidden="true">
+          <svg width="24" height="100%" viewBox="0 0 24 100" preserveAspectRatio="none" style="min-height:90px"><path d="M12 0V88" stroke="var(--accent)" stroke-width="2" stroke-dasharray="6 5" fill="none" vector-effect="non-scaling-stroke"/><path d="M4 86l8 12 8-12z" fill="var(--accent)"/></svg>
+        </div>
+      </div>
+
+      <div class="outside">
+        <div><h4>Outside the boundary: out of scope</h4><span>Direct integrations with SnapTracker, OneGX/SAP, BLIMS, EAMS and AutoCAD; other PRISM Core services; ministry-wide reference-data maintenance; a full vendor-facing workflow.</span></div>
+        <div><h4>Outside the boundary: open decision</h4><span>Historical WORTS migration. Legacy data requirements and access remain to be validated.</span></div>
+        <div><h4>Conditional future opportunities, not sinks</h4><span>Recycle Program reporting; asset and warranty history. Both need additional confirmed data and use cases.</span></div>
+      </div>
+    </div>
+  </figure>
+</section>
+
+<section aria-labelledby="scope">
+  <div class="sec-head">
+    <span class="eyebrow">Step One · Data Pipeline Model 20% and Scope Definition 15%</span>
+    <h2 id="scope">Data sources, where they are born, and the scope</h2>
+    <p>We separate where information is first created from where it is later communicated or stored. The original requester creates the furniture need; the CMAC prepares and submits the formal request.</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Source</th><th>Data elements it provides</th><th>Where it is born</th><th>How it enters the pipeline</th></tr></thead>
+    <tbody>
+      <tr><td><b>Original requester</b><br><span class="small">person</span></td><td>Furniture need, quantity, location, intended user, special requirements, budget and contact information</td><td>In the requester's own work, when a furniture need is identified</td><td>Told to the CMAC by email, Teams or phone; enters the service only when the CMAC submits</td></tr>
+      <tr><td><b>CMAC</b><br><span class="small">person</span></td><td>Submission details, supporting documents, requester and site-contact information, clarification responses, proposal feedback</td><td>The submission workflow, acting for the original requester</td><td>The guided request form and replies in the service</td></tr>
+      <tr><td><b>Furniture Request Coordinator</b><br><span class="small">Infrastructure staff</span></td><td>Intake decisions, assignments, clarification requests, final review and closure decisions</td><td>The intake, assignment and final-review workflow</td><td>Recorded as case activity on the request</td></tr>
+      <tr><td><b>Furniture Coordinator</b><br><span class="small">Infrastructure staff</span></td><td>Fulfilment updates, proposed furniture options, coordination decisions, approval status, vendor instructions, next actions</td><td>The fulfilment and coordination workflow</td><td>Recorded as case activity on the request</td></tr>
+      <tr><td><b>Vendor or supplier</b><br><span class="small">third party</span></td><td>Quotations, furniture availability, delivery schedules, delivery confirmations, installation updates, outstanding issues</td><td>Supply, delivery and installation work outside government</td><td>Through correspondence; enters only when staff capture it in the service</td></tr>
+      <tr><td><b>PRISM Requests</b><br><span class="small">system, proposed</span></td><td>Request ID, timestamps, assignments, status history, case activity, closure timestamp</td><td>Created by the service as people use it</td><td>Recorded automatically on the request</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Scope decisions and why</h3>
+  <div class="tbl"><table>
+    <thead><tr><th style="width:12%">Type</th><th style="width:30%">Boundary</th><th style="width:16%">Decision</th><th>Justification</th></tr></thead>
+    <tbody>
+      <tr><td class="grp" rowspan="4">Sources</td><td>The six sources above</td><td>In scope</td><td>They create or capture the information needed to process, track and report a Furniture Request.</td></tr>
+      <tr><td>SnapTracker, OneGX/SAP, BLIMS, EAMS, AutoCAD</td><td>Direct integration out of scope</td><td>None is integrated with WORTS today, and the approach to integrating them with PRISM Requests has not been established.</td></tr>
+      <tr><td>Other PRISM Core services</td><td>Out of scope</td><td>Outside the Furniture Request Service.</td></tr>
+      <tr><td>Historical WORTS records</td><td>Open decision</td><td>Migration is outside Team DART's implementation scope; legacy data requirements and access remain to be validated.</td></tr>
+      <tr><td class="grp" rowspan="4">Elements</td><td>Request, contact, document, decision, status, fulfilment, delivery and closure information</td><td>In scope</td><td>Core information for processing, coordination, accountability and reporting.</td></tr>
+      <tr><td>Furniture inventory for selecting items</td><td>Out of scope for now</td><td>A CMAC asked for a furniture-shopping experience during usability testing. SnapTracker could supply inventory, but connecting it needs integration work. The business need is kept as a requirement.</td></tr>
+      <tr><td>Ministry-wide floor-plan and reference-data maintenance</td><td>Out of scope</td><td>The service records which plan was used and any uncertainty about it; maintaining plans across ministries is outside the request journey.</td></tr>
+      <tr><td>Recycle Program and asset or warranty history</td><td>Conditional future opportunity</td><td>Needs additional confirmed data and use cases before it can become a sink.</td></tr>
+      <tr><td class="grp" rowspan="3">Flows</td><td>Requester to CMAC, CMAC to Infrastructure, FRC to FC hand-offs, record to views and reports</td><td>In scope</td><td>This is the agreed request journey: request information, coordination, fulfilment and closure.</td></tr>
+      <tr><td>Email and vendor information captured by authorized staff</td><td>In scope</td><td>Keeps the case complete without automated integration.</td></tr>
+      <tr><td>Automated system-to-system feeds; a full vendor-facing workflow</td><td>Out of scope</td><td>No integrations exist today; vendors take part through correspondence.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section aria-labelledby="stages">
+  <div class="sec-head">
+    <span class="eyebrow">Step Two · Data Pipeline Model 20%</span>
+    <h2 id="stages">Responsibility, preparation and constraints</h2>
+    <p>Entering data is not the same as being accountable for it. Creators answer for what they state. The stage owner answers for the rules that make the data trusted. The data owner answers for the request record from start to finish.</p>
+  </div>
+  <div class="two">
+    <div class="card">
+      <h3>What clean and trusted means here</h3>
+      <span class="small">Keep and Shape. Proposed rules, to confirm with the business.</span>
+      <ol class="rules">
+        <li>One Request ID, with every material update linked to it</li>
+        <li>One status from an agreed list, with a defined meaning</li>
+        <li>A named owner at every stage</li>
+        <li>Required fields and documents complete before review</li>
+        <li>Dates in one format and in true order</li>
+        <li>Duplicate requests checked on an agreed match key</li>
+      </ol>
+      <p class="small">A request that fails the checks goes back to the CMAC and is checked again. The prototype shows why the rules matter: one request appears as both "Awaiting initial review" and "Reviewing", and some activity is dated before submission. We state what preparation must achieve, not how it is engineered.</p>
+    </div>
+    <div class="card">
+      <h3>Constraints</h3>
+      <dl>
+        <dt>Quality</dt><dd>Floor plans may not be current; submission materials may be missing; status meanings and completion criteria are not yet confirmed; no agreed match key for duplicates.</dd>
+        <dt>Frequency</dt><dd>Requests are created by people, intermittently, one at a time. Updates are event-driven, at each decision or status change.</dd>
+        <dt>Format</dt><dd>Needs arrive by email, Teams and phone. Attachments include floor plans and PDFs. The prototype limits uploads to 10MB per file and 5MB per reply.</dd>
+        <dt>Ownership</dt><dd>Keep and Shape owner: Open (Proposed: Furniture Request Coordinator). Data owner for the request record: Open.</dd>
+        <dt>Access</dt><dd>Who may view, update or share each item is to be confirmed. Proposed: a CMAC sees only their own requests.</dd>
+        <dt>Retention</dt><dd>Requirements to confirm. Historical WORTS migration is an open decision.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <h3>Controls at every hand-off</h3>
+  <p class="small">Session Four: nodes do the work; connectors carry the data and its controls. Each hand-off answers five questions. Items marked Proposed or to confirm are not yet agreed.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Hand-off</th><th>Authenticate: who may move it</th><th>Validate: is it acceptable</th><th>Monitor: would we know it stopped</th><th>Mitigate: what happens on failure</th><th>Alarm: who is told</th></tr></thead>
+    <tbody>
+      <tr><td><b>Generate to Collect</b></td><td>Only an authorized requester submits for their ministry</td><td>Required fields and documents by request type</td><td>Needs kept in email or Teams stay invisible</td><td>Drafts are saved</td><td>Submission confirmed to the requester</td></tr>
+      <tr><td><b>Collect to Keep and Shape</b></td><td>Reviewing roles only (to confirm)</td><td>Completeness checked at review; incomplete requests return to the CMAC</td><td>Time from submission to first assignment</td><td>Original kept as submitted</td><td>CMAC told when action is required</td></tr>
+      <tr><td><b>Keep and Shape to Store</b></td><td>Only coordinators change status or merge duplicates (Proposed)</td><td>Standard status list; duplicate check (key to define)</td><td>Every stage change time-stamped and attributed</td><td>A merged duplicate keeps both histories</td><td>Coordinator alerted to a possible duplicate (Proposed)</td></tr>
+      <tr><td><b>Store to Use</b></td><td>Role-based access to every view (permissions to confirm)</td><td>Views read the trusted record only</td><td>A request with no stage change is flagged (threshold to define)</td><td>A failed update or upload is retried and the user told (Proposed)</td><td>Stalled request visible to the coordinator (Proposed)</td></tr>
+      <tr><td><b>Use to the sinks</b></td><td>Reports aggregated and role-restricted</td><td>Report figures traceable to the record</td><td>Report freshness on a set period (to confirm)</td><td>Retention per the records schedule (to confirm)</td><td>An unanswered Action Required item emails the requester</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section aria-labelledby="sinks">
+  <div class="sec-head">
+    <span class="eyebrow">Step Three · Sinks and Value Creation 25%</span>
+    <h2 id="sinks">Sinks and the value they create</h2>
+    <p>Each sink is a data use case. Together they set the storage and access requirements for the product: how fresh, how complete, in what form, and who may see it. These are requirements, not technology choices.</p>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <div class="k"><span class="code">P1</span><h3>Guided request submission</h3></div>
+      <dl><dt>Type</dt><dd>Product sink</dd><dt>Consumer</dt><dd>CMACs</dd><dt>Data used</dt><dd>Request details, location, checklists and attachments</dd><dt>Value</dt><dd>More complete requests at first submission; fixes the separate checklists and missing information found in WORTS</dd></dl>
+      <div class="req"><span class="eyebrow">Storage and access</span><dl><dt>Fresh</dt><dd>The current requirements for each request type at the time of submission</dd><dt>Complete</dt><dd>Required fields and documents present before review</dd><dt>Form</dt><dd>Structured fields plus attachments</dd><dt>Who sees</dt><dd>The submitting CMAC and reviewing staff</dd></dl></div>
+    </article>
+    <article class="card">
+      <div class="k"><span class="code">P2</span><h3>Connected request visibility</h3></div>
+      <dl><dt>Type</dt><dd>Product sink</dd><dt>Consumer</dt><dd>CMACs</dd><dt>Data used</dt><dd>Status, responsible party, dated updates, next action and request history</dd><dt>Value</dt><dd>CMACs understand progress and next steps without searching email or Teams</dd></dl>
+      <div class="req"><span class="eyebrow">Storage and access</span><dl><dt>Fresh</dt><dd>Updated at every status or ownership change</dd><dt>Complete</dt><dd>Every material update linked to the Request ID</dd><dt>Form</dt><dd>One dated history per request</dd><dt>Who sees</dt><dd>Authorized users only; proposed: a CMAC sees their own requests</dd></dl></div>
+    </article>
+    <article class="card">
+      <div class="k"><span class="code">P3</span><h3>Coordinator hand-off support <span class="tag">(proposed)</span></h3></div>
+      <dl><dt>Type</dt><dd>Product sink</dd><dt>Consumer</dt><dd>Infrastructure staff</dd><dt>Data used</dt><dd>Recorded decisions, ownership changes and outstanding actions</dd><dt>Value</dt><dd>Continuity when responsibility moves between coordinators. The hand-off process still needs client validation.</dd></dl>
+      <div class="req"><span class="eyebrow">Storage and access</span><dl><dt>Fresh</dt><dd>At each change of owner</dd><dt>Complete</dt><dd>Earlier decisions kept with the request</dd><dt>Form</dt><dd>Decision and ownership history per request</dd><dt>Who sees</dt><dd>Furniture Request Coordinators and Furniture Coordinators</dd></dl></div>
+    </article>
+    <article class="card">
+      <div class="k"><span class="code">M1</span><h3>Product outcome measurement</h3></div>
+      <dl><dt>Type</dt><dd>Measurement sink, tied to the DPO</dd><dt>Consumer</dt><dd>Product or service owner and authorized evaluators</dd><dt>Measures</dt><dd><span class="code">DVO 1</span> first-pass submission completeness. <span class="code">DVO 2</span> status comprehension, information retrieval and follow-up effort. <span class="code">DVO 6</span> manual reporting effort.</dd><dt>Value</dt><dd>Evidence of whether the product improves its intended outcomes. Targets are not yet set.</dd></dl>
+      <div class="req"><span class="eyebrow">Storage and access</span><dl><dt>Fresh</dt><dd>Per evaluation period</dd><dt>Complete</dt><dd>Consistent definitions, reliable dates, comparable periods; a follow-up baseline that includes communication outside the system</dd><dt>Form</dt><dd>One measure per DVO, with recorded evaluation results</dd><dt>Who sees</dt><dd>Authorized evaluators</dd></dl></div>
+    </article>
+    <article class="card">
+      <div class="k"><span class="code">B1</span><h3>Operational reporting</h3></div>
+      <dl><dt>Type</dt><dd>Business-value sink, beyond the product</dd><dt>Consumer</dt><dd>Authorized Infrastructure management</dd><dt>Data used</dt><dd>Request volumes, stage, age, completion trends and recorded hand-offs</dd><dt>Value</dt><dd>Identify bottlenecks, understand workload and support operational improvements</dd></dl>
+      <div class="req"><span class="eyebrow">Storage and access</span><dl><dt>Fresh</dt><dd>Current enough for decisions (period to confirm)</dd><dt>Complete</dt><dd>Reliable counts, consistent stage definitions, stage-change timestamps, completion dates and history</dd><dt>Form</dt><dd>Aggregated reports</dd><dt>Who sees</dt><dd>Authorized Infrastructure management</dd></dl></div>
+    </article>
+    <article class="card">
+      <h3>What goes into the PRD and Milestone 3</h3>
+      <ul class="plain">
+        <li><b>P1 to P3:</b> define what CMACs and coordinators see, and how updates, missing information and changes of responsibility are shown.</li>
+        <li><b>M1:</b> define how DVO 1, 2 and 6 are measured, what evidence is needed and what counts as success.</li>
+        <li><b>B1:</b> define the operational questions management needs answered and what the reports must provide.</li>
+        <li><b>Milestone 3:</b> decide how current and historical data is stored, maintained, kept accurate and made available to the right users.</li>
+      </ul>
+      <p class="small">Still to confirm: coordinator hand-offs, mandatory fields, status definitions, user permissions, measurement baselines and management reporting needs.</p>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="generated">
+  <div class="sec-head">
+    <span class="eyebrow">Step Four · Data Generated by the Pipeline 15%</span>
+    <h2 id="generated">The data the pipeline creates through use</h2>
+    <p>Every step of a furniture request, from the first email to closure, leaves behind data that did not exist before. Most of it is not used today.</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th style="width:13%">Type</th><th style="width:30%">What it is</th><th style="width:30%">Who collects it today</th><th>Where it can drive value</th></tr></thead>
+    <tbody>
+      <tr><td><b>Activity</b></td><td>Who did what, and when: submission, validation, assignment, quote, purchase order, delivery, closure</td><td>Recorded automatically by PRISM Requests against the Request ID. No one is yet named to review it.</td><td>Stage-duration reporting for management (B1); the timeline CMACs see (P2)</td></tr>
+      <tr><td><b>Outcome</b></td><td>Final cost against the quote, actual against scheduled delivery, total cycle time</td><td>Known only at fulfilment and closure, which the FC and FRC record. It is not yet compared or aggregated.</td><td>Realistic service levels; vendor and budget decisions</td></tr>
+      <tr><td><b>Feedback</b></td><td>Satisfaction ratings and notes on the request and the delivery</td><td>No collection point or owner is defined yet (to confirm).</td><td>Form and guidance improvements; evaluation evidence for M1</td></tr>
+      <tr><td><b>Corrections</b></td><td>Validation failures, returned requests, quote rejections, reschedules, cancellations, missed service levels</td><td>Recorded when a coordinator returns, reschedules or cancels a request. Not aggregated, although it is one of the most useful signals.</td><td>Smarter forms and checklists (P1, DVO 1); where requests stall</td></tr>
+      <tr><td><b>Derived</b></td><td>Stage-by-stage durations, vendor trends, volume by location and department, workload</td><td>Calculated for operational reporting. Report owners are Open.</td><td>Staffing evidence, preferred-vendor and bulk-purchasing decisions</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="cards">
+    <div class="card"><h3>Back into this pipeline</h3><p>Validation patterns improve the form and checklist. Cycle-time history sets realistic service levels. Assignment patterns can suggest the right Furniture Coordinator <span class="tag">(Proposed)</span>.</p></div>
+    <div class="card"><h3>Other teams and pipelines</h3><p>Potential uses: Finance for invoice matching, Procurement for vendor scorecards, Facilities for an asset register (a conditional future opportunity), and HR for workload evidence.</p></div>
+    <div class="card"><h3>Decisions elsewhere</h3><p>Volume, price and service-level trends inform leadership decisions on vendors, budget, purchasing policy and staffing.</p></div>
+  </div>
+
+  <h3>How the value builds over time</h3>
+  <div class="cycle">
+    <div class="c"><b>1. A request is handled</b><span>Each decision, return and update is dated and attributed.</span></div>
+    <div class="c"><b>2. Recorded against the Request ID</b><span>One request gives a dated timeline.</span></div>
+    <div class="c"><b>3. Patterns appear across requests</b><span>Many requests show which items are missed and where requests wait. Comparable periods give the baselines that DVO 1, 2 and 6 need.</span></div>
+    <div class="c"><b>4. The service improves</b><span>Better checklists, realistic service levels and clearer views produce more complete requests.</span></div>
+  </div>
+  <p class="cycle-back">More complete requests make the next round of data more reliable, so each cycle starts from better information.</p>
+  <p class="small">Who collects it, or whether anyone does: vendor lead times, prices and deliveries are already recorded as events, but no one aggregates them. Stage durations have no monitoring yet. Delivery data does not reach an asset register; that register is a conditional future opportunity outside the current scope.</p>
+</section>
+
+<section aria-labelledby="gaps">
+  <div class="sec-head">
+    <span class="eyebrow">Step Five · Gaps, Leaks and Feasibility 15%</span>
+    <h2 id="gaps">Gaps and leaks, by stage</h2>
+    <p><b>Gap:</b> data the product needs that is not generated, collected, accessible or trustworthy. <b>Leak:</b> data that exists but does not reach its intended use. <b>Potential leak:</b> evidence of underuse whose cause needs confirmation. <b>Validation need:</b> a requirement or dependency not yet confirmed.</p>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th style="width:10%">Stage</th><th style="width:22%">Finding</th><th style="width:30%">What it would take to close it</th><th style="width:16%">Dimensions</th><th>Implication</th></tr></thead>
+    <tbody>
+      <tr><td><b>Generate</b></td><td><b>Gap:</b> floor-plan currentness is hard to establish. Plans come from different sources with uneven upkeep.</td><td>Confirm the source, maintenance responsibility and review process. Record uncertainty where currentness cannot be established.</td><td>Data; Governance</td><td>Change the workflow for submission and review. Scope out ministry-wide plan maintenance.</td></tr>
+      <tr><td><b>Generate</b></td><td><b>Gap:</b> furniture inventory is not accessible to the service, although a CMAC asked to filter and select furniture.</td><td>Connect an inventory source such as SnapTracker. The integration approach has not been established.</td><td>Data; Process</td><td>Scope it out now. Budget for the integration if it is brought into scope later.</td></tr>
+      <tr><td><b>Collect</b></td><td><b>Gap:</b> required plans, dimensions or attachments may be missing at review, so requests are returned.</td><td>Confirm requirements by request type and check completeness earlier. Keep staff review where suitability needs judgment.</td><td>Data; Process</td><td>Change the workflow.</td></tr>
+      <tr><td><b>Collect</b></td><td><b>Validation need:</b> the original requester, CMAC, proposal recipient and delivery contact may differ, and some are known only later.</td><td>Confirm each contact's purpose, when it is needed and who may update it.</td><td>Data; Governance</td><td>Validate the rules, then change the collection and hand-off steps.</td></tr>
+      <tr><td><b>Collect</b></td><td><b>Validation need:</b> signed quotes and approval emails are used before work proceeds.</td><td>Confirm the evidence, collection point and responsible role. Keep proposal sharing, agreement and authorization distinct.</td><td>Data; Process; Governance</td><td>Validate first, then change the workflow. Do not assume one approval process.</td></tr>
+      <tr><td><b>Keep and Shape</b></td><td><b>Validation need:</b> status, responsibility and completion definitions are not confirmed.</td><td>Agree what each status means, who may change it and what supports the change. Use the same definitions in views and reports.</td><td>Data; Governance</td><td>Phase it: confirm the rules and accountable roles before fixing requirements.</td></tr>
+      <tr><td><b>Keep and Shape</b></td><td><b>Validation need:</b> some furniture requirements sit in open comments that staff must interpret.</td><td>Add structured fields only where an agreed use needs them; keep free text where it works.</td><td>Data; Process</td><td>Phase it.</td></tr>
+      <tr><td><b>Store</b></td><td><b>Leak:</b> material updates sit in email, Teams and PDF attachments, outside the shared request history.</td><td>Agree which updates stay with the request and who records them; link each to the correct Request ID.</td><td>Process; Organizational readiness</td><td>Change recording and hand-off practices. Automated integration can come later.</td></tr>
+      <tr><td><b>Use</b></td><td><b>Potential leak:</b> delivery contacts given to a coordinator were later requested again by the vendor's scheduler.</td><td>Confirm why. Where transfer or access is the problem, assign responsibility for passing on current details and checking receipt.</td><td>Process; Organizational readiness</td><td>Change the workflow.</td></tr>
+      <tr><td><b>Use</b></td><td><b>Gap:</b> a failed email can still show as sent, without warning the sender.</td><td>Define the outcome information needed, confirm what evidence exists and specify a recovery action.</td><td>Data; Process</td><td>Phase it according to the outcome data available.</td></tr>
+      <tr><td><b>Use</b></td><td><b>Validation need:</b> dates exist, but the meaning and completeness of stage-change events are unverified.</td><td>Inspect representative event histories first. Unused events mean a leak; missing events mean a gap. Missing history is never zero duration.</td><td>Data; Process</td><td>Phase measurement and reporting to verified data.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Headwinds and tailwinds</h3>
+  <div class="tbl hw"><table>
+    <thead><tr><th>Dimension</th><th>Headwind</th><th>Tailwind</th><th>Implication</th></tr></thead>
+    <tbody>
+      <tr><td><b>Data</b></td><td>Reference information is hard to verify; existing dates may not give complete event histories.</td><td>Request records, contacts, correspondence, attachments and dates already exist as a starting point, once checked.</td><td>Phase measures to verified data.</td></tr>
+      <tr><td><b>Process</b></td><td>Communication and evidence move across channels; a useful record needs explicit capture and hand-off steps.</td><td>Current checklists and staff review experience show common omissions and corrections.</td><td>Change the submission and hand-off workflow.</td></tr>
+      <tr><td><b>Governance</b></td><td>Contact purposes, approval requirements, status definitions, ownership and access are not all confirmed.</td><td>The agreed request journey gives a focused boundary, without designing the whole GoA data environment.</td><td>Confirm rules and owners before fixing requirements.</td></tr>
+      <tr><td><b>Organizational readiness</b></td><td>The workflow depends on staff keeping updates and completing hand-offs; practice differs between ministries.</td><td>The client supports focusing on the workflow and the information each step needs.</td><td>Assign recording responsibility; do not set an organization-wide rule from one ministry's practice.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="two">
+    <div class="card">
+      <h3>To confirm with the client</h3>
+      <ul class="plain">
+        <li>Which sources are authoritative for building, location and floor-plan information</li>
+        <li>Who is accountable for data quality and the request record throughout its lifecycle</li>
+        <li>Which roles may view, update or share each type of information</li>
+        <li>Which material updates must be retained, and for how long</li>
+        <li>What baseline and collection method can support claims about reduced follow-up effort</li>
+        <li>Which management decisions operational reporting must support</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Next steps for the PRD</h3>
+      <ol class="rules">
+        <li>Confirm business rules and authoritative sources with the relevant GoA owners.</li>
+        <li>Trace representative records through the pipeline, including hand-offs outside the product.</li>
+        <li>Confirm ownership and access for record quality, material updates and sharing.</li>
+        <li>Validate measurement feasibility: event coverage and practical collection methods.</li>
+        <li>Carry confirmed requirements into the PRD and keep unresolved dependencies as explicit conditions.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span><b>Evidence:</b> CMAC discovery interview; furniture-service workflow walkthrough with coordination staff; CMAC usability testing sessions; client discussion with the PRISM product team; Team DART pipeline mapping and sink analysis.</span>
+  <span><b>Miro board:</b> <a href="https://miro.com/app/board/uXjVETM6H0Q=/" target="_blank" rel="noopener">https://miro.com/app/board/uXjVETM6H0Q=/</a></span>
+</footer>
+
+</div>
+</body>
+</html>
