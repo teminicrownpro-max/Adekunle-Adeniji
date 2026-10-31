@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#f4f6f8;color:#17212b;font-family:"Public Sans",Arial,sans-serif;font-size:14px;line-height:1.45}
+.pn{width:1280px;height:720px;padding:30px 40px 26px;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:2px solid #17212b;padding-bottom:10px}
+.top h1{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:30px;line-height:1.1}
+.eb{font-family:"IBM Plex Mono",Menlo,monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#55616e}
+.no{font-family:"IBM Plex Mono",Menlo,monospace;font-size:13px;color:#55616e;white-space:nowrap}
+.lead{color:#55616e;max-width:110ch}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;gap:14px}
+.code{font-family:"IBM Plex Mono",Menlo,monospace;font-size:.9em;font-weight:500;color:#2b5880}
+.tag{font-style:italic;color:#55616e}
+.sm{font-size:12.5px;color:#55616e}
+h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:16px;line-height:1.2}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #c7cfd8;font-size:12.6px;line-height:1.38}
+th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid #c7cfd8}
+th{font-family:"IBM Plex Mono",Menlo,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#55616e;font-weight:500;background:#f4f6f8}
+tr:last-child td{border-bottom:0}
+td.g{font-family:"Archivo",Arial,sans-serif;font-weight:700;background:#f4f6f8}
+td b{font-weight:600}
+.card{background:#fff;border:1px solid #c7cfd8;padding:14px 16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.cols{display:grid;gap:14px;flex:1;min-height:0}
+dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 12px;font-size:12.8px}
+dt{color:#55616e;font-weight:600}
+dd{margin:0}
+.req{border-top:1px solid #c7cfd8;padding-top:8px;display:flex;flex-direction:column;gap:5px}
+ol,ul{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+dl{font-size:13.4px;gap:6px 12px}.card{gap:12px;padding:16px 18px}h3{font-size:17px}</style></head><body><div class="pn"><div class="top"><div><div class="eb">Step Three · Sinks and Value Creation 25%</div><h1>Product sinks</h1></div><div class="no">7 / 12</div></div><div class="body">
+<p class="lead">Each sink is a data use case. Together they set the storage and access requirements: how fresh, how complete, in what form, and who may see it. These are requirements, not technology choices.</p>
+<div class="cols" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="card"><h3><span class="code">P1</span> Guided request submission</h3><dl><dt>Type</dt><dd>Product sink</dd><dt>Consumer</dt><dd>CMACs</dd><dt>Data used</dt><dd>Request details, location, checklists and attachments</dd><dt>Value</dt><dd>More complete requests at first submission; fixes the separate checklists and missing information found in WORTS</dd></dl><div class="req"><span class="eb">Storage and access</span><dl><dt>Fresh</dt><dd>Current requirements for each request type at submission</dd><dt>Complete</dt><dd>Required fields and documents present before review</dd><dt>Form</dt><dd>Structured fields plus attachments</dd><dt>Who sees</dt><dd>The submitting CMAC and reviewing staff</dd></dl></div></div><div class="card"><h3><span class="code">P2</span> Connected request visibility</h3><dl><dt>Type</dt><dd>Product sink</dd><dt>Consumer</dt><dd>CMACs</dd><dt>Data used</dt><dd>Status, responsible party, dated updates, next action and history</dd><dt>Value</dt><dd>CMACs understand progress and next steps without searching email or Teams</dd></dl><div class="req"><span class="eb">Storage and access</span><dl><dt>Fresh</dt><dd>Updated at every status or ownership change</dd><dt>Complete</dt><dd>Every material update linked to the Request ID</dd><dt>Form</dt><dd>One dated history per request</dd><dt>Who sees</dt><dd>Authorized users; proposed: a CMAC sees their own requests</dd></dl></div></div><div class="card"><h3><span class="code">P3</span> Coordinator hand-off support <span class="tag">(proposed)</span></h3><dl><dt>Type</dt><dd>Product sink</dd><dt>Consumer</dt><dd>Infrastructure staff</dd><dt>Data used</dt><dd>Recorded decisions, ownership changes and outstanding actions</dd><dt>Value</dt><dd>Continuity when responsibility moves between coordinators; the hand-off process still needs client validation</dd></dl><div class="req"><span class="eb">Storage and access</span><dl><dt>Fresh</dt><dd>At each change of owner</dd><dt>Complete</dt><dd>Earlier decisions kept with the request</dd><dt>Form</dt><dd>Decision and ownership history per request</dd><dt>Who sees</dt><dd>Furniture Request Coordinators and Furniture Coordinators</dd></dl></div></div></div></div></div></body></html>

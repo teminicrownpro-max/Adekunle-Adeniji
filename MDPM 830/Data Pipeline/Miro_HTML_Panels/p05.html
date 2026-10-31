@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#f4f6f8;color:#17212b;font-family:"Public Sans",Arial,sans-serif;font-size:14px;line-height:1.45}
+.pn{width:1280px;height:720px;padding:30px 40px 26px;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:2px solid #17212b;padding-bottom:10px}
+.top h1{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:30px;line-height:1.1}
+.eb{font-family:"IBM Plex Mono",Menlo,monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#55616e}
+.no{font-family:"IBM Plex Mono",Menlo,monospace;font-size:13px;color:#55616e;white-space:nowrap}
+.lead{color:#55616e;max-width:110ch}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;gap:14px}
+.code{font-family:"IBM Plex Mono",Menlo,monospace;font-size:.9em;font-weight:500;color:#2b5880}
+.tag{font-style:italic;color:#55616e}
+.sm{font-size:12.5px;color:#55616e}
+h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:16px;line-height:1.2}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #c7cfd8;font-size:12.6px;line-height:1.38}
+th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid #c7cfd8}
+th{font-family:"IBM Plex Mono",Menlo,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#55616e;font-weight:500;background:#f4f6f8}
+tr:last-child td{border-bottom:0}
+td.g{font-family:"Archivo",Arial,sans-serif;font-weight:700;background:#f4f6f8}
+td b{font-weight:600}
+.card{background:#fff;border:1px solid #c7cfd8;padding:14px 16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.cols{display:grid;gap:14px;flex:1;min-height:0}
+dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 12px;font-size:12.8px}
+dt{color:#55616e;font-weight:600}
+dd{margin:0}
+.req{border-top:1px solid #c7cfd8;padding-top:8px;display:flex;flex-direction:column;gap:5px}
+ol,ul{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+dl{font-size:13.4px;gap:8px 14px}ol{font-size:13.6px;gap:5px}</style></head><body><div class="pn"><div class="top"><div><div class="eb">Step Two · Data Pipeline Model 20%</div><h1>Responsibility, preparation and constraints</h1></div><div class="no">5 / 12</div></div><div class="body">
+<p class="lead">Entering data is not the same as being accountable for it. Creators answer for what they state. The stage owner answers for the rules that make the data trusted. The data owner answers for the request record from start to finish.</p>
+<div class="cols" style="grid-template-columns:1fr 1.15fr">
+<div class="card"><h3>What clean and trusted means here</h3><span class="sm">Keep and Shape. Proposed rules, to confirm with the business.</span>
+<ol><li>One Request ID, with every material update linked to it</li><li>One status from an agreed list, with a defined meaning</li><li>A named owner at every stage</li><li>Required fields and documents complete before review</li><li>Dates in one format and in true order</li><li>Duplicate requests checked on an agreed match key</li></ol>
+<p class="sm">A request that fails the checks goes back to the CMAC and is checked again. The prototype shows why the rules matter: one request appears as both "Awaiting initial review" and "Reviewing", and some activity is dated before submission. We state what preparation must achieve, not how it is engineered.</p></div>
+<div class="card"><h3>Constraints</h3><dl>
+<dt>Quality</dt><dd>Floor plans may not be current; submission materials may be missing; status meanings and completion criteria not yet confirmed; no agreed match key for duplicates.</dd>
+<dt>Frequency</dt><dd>Requests are created by people, intermittently, one at a time. Updates are event-driven, at each decision or status change.</dd>
+<dt>Format</dt><dd>Needs arrive by email, Teams and phone. Attachments include floor plans and PDFs. The prototype limits uploads to 10MB per file and 5MB per reply.</dd>
+<dt>Ownership</dt><dd>Keep and Shape owner: Open (Proposed: Furniture Request Coordinator). Data owner for the request record: Open.</dd>
+<dt>Access</dt><dd>Who may view, update or share each item is to be confirmed. Proposed: a CMAC sees only their own requests.</dd>
+<dt>Retention</dt><dd>Requirements to confirm. Historical WORTS migration is an open decision.</dd></dl></div>
+</div></div></div></body></html>

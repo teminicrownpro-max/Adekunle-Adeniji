@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#f4f6f8;color:#17212b;font-family:"Public Sans",Arial,sans-serif;font-size:14px;line-height:1.45}
+.pn{width:1280px;height:720px;padding:30px 40px 26px;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:2px solid #17212b;padding-bottom:10px}
+.top h1{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:30px;line-height:1.1}
+.eb{font-family:"IBM Plex Mono",Menlo,monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#55616e}
+.no{font-family:"IBM Plex Mono",Menlo,monospace;font-size:13px;color:#55616e;white-space:nowrap}
+.lead{color:#55616e;max-width:110ch}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;gap:14px}
+.code{font-family:"IBM Plex Mono",Menlo,monospace;font-size:.9em;font-weight:500;color:#2b5880}
+.tag{font-style:italic;color:#55616e}
+.sm{font-size:12.5px;color:#55616e}
+h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:16px;line-height:1.2}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #c7cfd8;font-size:12.6px;line-height:1.38}
+th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid #c7cfd8}
+th{font-family:"IBM Plex Mono",Menlo,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#55616e;font-weight:500;background:#f4f6f8}
+tr:last-child td{border-bottom:0}
+td.g{font-family:"Archivo",Arial,sans-serif;font-weight:700;background:#f4f6f8}
+td b{font-weight:600}
+.card{background:#fff;border:1px solid #c7cfd8;padding:14px 16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.cols{display:grid;gap:14px;flex:1;min-height:0}
+dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 12px;font-size:12.8px}
+dt{color:#55616e;font-weight:600}
+dd{margin:0}
+.req{border-top:1px solid #c7cfd8;padding-top:8px;display:flex;flex-direction:column;gap:5px}
+ol,ul{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+table{font-size:13.6px}td{padding:11px 11px}</style></head><body><div class="pn"><div class="top"><div><div class="eb">Step Two · Data Pipeline Model 20%</div><h1>Controls at every hand-off</h1></div><div class="no">6 / 12</div></div><div class="body">
+<p class="lead">Session Four: nodes do the work; connectors carry the data and its controls. Each hand-off answers five questions. Items marked Proposed or to confirm are not yet agreed.</p>
+<table><thead><tr><th style="width:14%">Hand-off</th><th>Authenticate: who may move it</th><th>Validate: is it acceptable</th><th>Monitor: would we know it stopped</th><th>Mitigate: what happens on failure</th><th>Alarm: who is told</th></tr></thead><tbody>
+<tr><td><b>Generate to Collect</b></td><td>Only an authorized requester submits for their ministry</td><td>Required fields and documents by request type</td><td>Needs kept in email or Teams stay invisible</td><td>Drafts are saved</td><td>Submission confirmed to the requester</td></tr>
+<tr><td><b>Collect to Keep and Shape</b></td><td>Reviewing roles only (to confirm)</td><td>Completeness checked at review; incomplete requests return to the CMAC</td><td>Time from submission to first assignment</td><td>Original kept as submitted</td><td>CMAC told when action is required</td></tr>
+<tr><td><b>Keep and Shape to Store</b></td><td>Only coordinators change status or merge duplicates (Proposed)</td><td>Standard status list; duplicate check (key to define)</td><td>Every stage change time-stamped and attributed</td><td>A merged duplicate keeps both histories</td><td>Coordinator alerted to a possible duplicate (Proposed)</td></tr>
+<tr><td><b>Store to Use</b></td><td>Role-based access to every view (permissions to confirm)</td><td>Views read the trusted record only</td><td>A request with no stage change is flagged (threshold to define)</td><td>A failed update or upload is retried and the user told (Proposed)</td><td>Stalled request visible to the coordinator (Proposed)</td></tr>
+<tr><td><b>Use to the sinks</b></td><td>Reports aggregated and role-restricted</td><td>Report figures traceable to the record</td><td>Report freshness on a set period (to confirm)</td><td>Retention per the records schedule (to confirm)</td><td>An unanswered Action Required item emails the requester</td></tr>
+</tbody></table></div></div></body></html>

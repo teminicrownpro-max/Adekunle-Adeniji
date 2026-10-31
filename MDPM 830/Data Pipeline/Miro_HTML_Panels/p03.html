@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#f4f6f8;color:#17212b;font-family:"Public Sans",Arial,sans-serif;font-size:14px;line-height:1.45}
+.pn{width:1280px;height:720px;padding:30px 40px 26px;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:2px solid #17212b;padding-bottom:10px}
+.top h1{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:30px;line-height:1.1}
+.eb{font-family:"IBM Plex Mono",Menlo,monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#55616e}
+.no{font-family:"IBM Plex Mono",Menlo,monospace;font-size:13px;color:#55616e;white-space:nowrap}
+.lead{color:#55616e;max-width:110ch}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;gap:14px}
+.code{font-family:"IBM Plex Mono",Menlo,monospace;font-size:.9em;font-weight:500;color:#2b5880}
+.tag{font-style:italic;color:#55616e}
+.sm{font-size:12.5px;color:#55616e}
+h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:16px;line-height:1.2}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #c7cfd8;font-size:12.6px;line-height:1.38}
+th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid #c7cfd8}
+th{font-family:"IBM Plex Mono",Menlo,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#55616e;font-weight:500;background:#f4f6f8}
+tr:last-child td{border-bottom:0}
+td.g{font-family:"Archivo",Arial,sans-serif;font-weight:700;background:#f4f6f8}
+td b{font-weight:600}
+.card{background:#fff;border:1px solid #c7cfd8;padding:14px 16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.cols{display:grid;gap:14px;flex:1;min-height:0}
+dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 12px;font-size:12.8px}
+dt{color:#55616e;font-weight:600}
+dd{margin:0}
+.req{border-top:1px solid #c7cfd8;padding-top:8px;display:flex;flex-direction:column;gap:5px}
+ol,ul{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+table{font-size:13.4px}td{padding:9px 11px}</style></head><body><div class="pn"><div class="top"><div><div class="eb">Step One · Data Pipeline Model 20%</div><h1>Data sources and where they are born</h1></div><div class="no">3 / 12</div></div><div class="body">
+<p class="lead">We separate where information is first created from where it is later communicated or stored. The original requester creates the furniture need; the CMAC prepares and submits the formal request.</p>
+<table><thead><tr><th style="width:17%">Source</th><th style="width:33%">Data elements it provides</th><th style="width:23%">Where it is born</th><th>How it enters the pipeline</th></tr></thead><tbody>
+<tr><td><b>Original requester</b><br><span class="sm">person</span></td><td>Furniture need, quantity, location, intended user, special requirements, budget and contact information</td><td>In the requester's own work, when a furniture need is identified</td><td>Told to the CMAC by email, Teams or phone; enters the service only when the CMAC submits</td></tr>
+<tr><td><b>CMAC</b><br><span class="sm">person</span></td><td>Submission details, supporting documents, requester and site-contact information, clarification responses, proposal feedback</td><td>The submission workflow, acting for the original requester</td><td>The guided request form and replies in the service</td></tr>
+<tr><td><b>Furniture Request Coordinator</b><br><span class="sm">Infrastructure staff</span></td><td>Intake decisions, assignments, clarification requests, final review and closure decisions</td><td>The intake, assignment and final-review workflow</td><td>Recorded as case activity on the request</td></tr>
+<tr><td><b>Furniture Coordinator</b><br><span class="sm">Infrastructure staff</span></td><td>Fulfilment updates, proposed furniture options, coordination decisions, approval status, vendor instructions, next actions</td><td>The fulfilment and coordination workflow</td><td>Recorded as case activity on the request</td></tr>
+<tr><td><b>Vendor or supplier</b><br><span class="sm">third party</span></td><td>Quotations, furniture availability, delivery schedules, delivery confirmations, installation updates, outstanding issues</td><td>Supply, delivery and installation work outside government</td><td>Through correspondence; enters only when staff capture it in the service</td></tr>
+<tr><td><b>PRISM Requests</b><br><span class="sm">system, proposed</span></td><td>Request ID, timestamps, assignments, status history, case activity, closure timestamp</td><td>Created by the service as people use it</td><td>Recorded automatically on the request</td></tr>
+</tbody></table></div></div></body></html>

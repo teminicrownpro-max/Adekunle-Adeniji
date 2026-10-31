@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:720px;overflow:hidden;background:#f4f6f8;color:#17212b;font-family:"Public Sans",Arial,sans-serif;font-size:14px;line-height:1.45}
+.pn{width:1280px;height:720px;padding:30px 40px 26px;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:2px solid #17212b;padding-bottom:10px}
+.top h1{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:800;font-size:30px;line-height:1.1}
+.eb{font-family:"IBM Plex Mono",Menlo,monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#55616e}
+.no{font-family:"IBM Plex Mono",Menlo,monospace;font-size:13px;color:#55616e;white-space:nowrap}
+.lead{color:#55616e;max-width:110ch}
+.body{flex:1;min-height:0;display:flex;flex-direction:column;gap:14px}
+.code{font-family:"IBM Plex Mono",Menlo,monospace;font-size:.9em;font-weight:500;color:#2b5880}
+.tag{font-style:italic;color:#55616e}
+.sm{font-size:12.5px;color:#55616e}
+h3{font-family:"Archivo","Arial Narrow",Arial,sans-serif;font-weight:700;font-size:16px;line-height:1.2}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #c7cfd8;font-size:12.6px;line-height:1.38}
+th,td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid #c7cfd8}
+th{font-family:"IBM Plex Mono",Menlo,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#55616e;font-weight:500;background:#f4f6f8}
+tr:last-child td{border-bottom:0}
+td.g{font-family:"Archivo",Arial,sans-serif;font-weight:700;background:#f4f6f8}
+td b{font-weight:600}
+.card{background:#fff;border:1px solid #c7cfd8;padding:14px 16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.cols{display:grid;gap:14px;flex:1;min-height:0}
+dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 12px;font-size:12.8px}
+dt{color:#55616e;font-weight:600}
+dd{margin:0}
+.req{border-top:1px solid #c7cfd8;padding-top:8px;display:flex;flex-direction:column;gap:5px}
+ol,ul{padding-left:18px;display:flex;flex-direction:column;gap:4px}
+td{padding:6px 10px}</style></head><body><div class="pn"><div class="top"><div><div class="eb">Step One · Scope Definition 15%</div><h1>Scope decisions and why</h1></div><div class="no">4 / 12</div></div><div class="body">
+<table><thead><tr><th style="width:9%">Type</th><th style="width:30%">Boundary</th><th style="width:15%">Decision</th><th>Justification</th></tr></thead><tbody>
+<tr><td class="g" rowspan="4">Sources</td><td>The six sources in panel 3</td><td>In scope</td><td>They create or capture the information needed to process, track and report a Furniture Request.</td></tr>
+<tr><td>SnapTracker, OneGX/SAP, BLIMS, EAMS, AutoCAD</td><td>Direct integration out of scope</td><td>None is integrated with WORTS today, and the approach to integrating them with PRISM Requests has not been established.</td></tr>
+<tr><td>Other PRISM Core services</td><td>Out of scope</td><td>Outside the Furniture Request Service.</td></tr>
+<tr><td>Historical WORTS records</td><td>Open decision</td><td>Migration is outside Team DART's implementation scope; legacy data requirements and access remain to be validated.</td></tr>
+<tr><td class="g" rowspan="4">Elements</td><td>Request, contact, document, decision, status, fulfilment, delivery and closure information</td><td>In scope</td><td>Core information for processing, coordination, accountability and reporting.</td></tr>
+<tr><td>Furniture inventory for selecting items</td><td>Out of scope for now</td><td>A CMAC asked for a furniture-shopping experience in usability testing. SnapTracker could supply inventory, but connecting it needs integration work. The need is kept as a requirement.</td></tr>
+<tr><td>Ministry-wide floor-plan and reference-data maintenance</td><td>Out of scope</td><td>The service records which plan was used and any uncertainty; maintaining plans across ministries is outside the request journey.</td></tr>
+<tr><td>Recycle Program and asset or warranty history</td><td>Conditional future opportunity</td><td>Needs additional confirmed data and use cases before it can become a sink.</td></tr>
+<tr><td class="g" rowspan="3">Flows</td><td>Requester to CMAC, CMAC to Infrastructure, FRC to FC hand-offs, record to views and reports</td><td>In scope</td><td>The agreed request journey: request information, coordination, fulfilment and closure.</td></tr>
+<tr><td>Email and vendor information captured by authorized staff</td><td>In scope</td><td>Keeps the case complete without automated integration.</td></tr>
+<tr><td>Automated system-to-system feeds; a full vendor-facing workflow</td><td>Out of scope</td><td>No integrations exist today; vendors take part through correspondence.</td></tr>
+</tbody></table></div></div></body></html>
