@@ -4,7 +4,9 @@ Monochrome: no stage colours, no bronze/silver/gold, no coloured status. Status 
 import math, re, sys, json
 
 S = 10; SF = "Lato"; TF = "noto_sans"
-INK = "#1a1a1a"; BODY = "#595959"; LINE = "#313131"; EDGE = "#b0b0b0"; SURF = "#f7f7f7"; WHITE = "#ffffff"
+INK = "#1a1a1a"; BODY = "#3a3a3a"; LINE = "#4262ff"; EDGE = "#4262ff"; SURF = "#f7f7f7"; WHITE = "#ffffff"
+HEAD = ["#d6b56a", "#f6a5a5", "#f9c999", "#cfc9f7", "#8fdda5"]; CONT = [("#af7e04", 0.14), ("#ff6464", 0.12), ("#f8d3af", 0.17), ("#dedaff", 0.17), ("#2dc75c", 0.12)]
+PURPLE = "#6631d7"; SINKH = "#8fa9db"; SINKC = "#305bab"
 el, lines = [], []; n = [0]
 
 
@@ -60,10 +62,10 @@ def panel(x, y, w, html, f=17, fill=WHITE, h=None):
 W = 6100
 # ---------- title ----------
 text(100, 50, 5900, "<b>FURNITURE REQUEST DATA PIPELINE</b>", 72)
-text(100, 160, 5900, "Team DART, MDPM 830. Furniture Request Service within PRISM Requests (PRISM Core), replacing the WORTS request experience. "
-     "Stages follow the shape of every pipeline (Session Three); scope, owners, sinks, loop and controls follow the conceptual pipeline template (Session Four).", 22, BODY)
+text(100, 160, 5900, "<b>Team DART, MDPM 830. Furniture Request Service within PRISM Requests (PRISM Core), replacing the WORTS request experience. "
+     "Stages follow the shape of every pipeline (Session Three); scope, owners, sinks, loop and controls follow the conceptual pipeline template (Session Four).</b>", 24, BODY)
 text(100, 232, 5900, "<b>How to read it:</b> dashed outline = scope boundary; dashed arrow = the loop; (Proposed) = our suggestion, not yet confirmed; "
-     "Open = needs the client's confirmation. No colour carries meaning.", 20, BODY)
+     "Open = needs the client's confirmation. Stage colours only tell the stages apart.", 22, BODY)
 
 # ---------- layout constants ----------
 BX, BY = 50, 320
@@ -100,45 +102,45 @@ pending = []
 for k, (name, sub, items) in enumerate(stages):
     x = cols[k]; y = CY0 + 30; ids = []
     for t, b in items:
-        html = f"<b>{t}</b><br><i>{b}</i>"; h = est(html, CW - 60, 17)
-        pending.append((k, x + 30, y, CW - 60, h, html)); y += h + 18
+        html = f"<b>{t}</b><br><i>{b}</i>"; h = est(html, CW - 60, 22)
+        pending.append((k, x + 30, y, CW - 60, h, html)); y += h + 22
     ybottom = max(ybottom, y)
 CH = max(ybottom - CY0 + 12, 760)
 
 cont = []
 for k, (name, sub, items) in enumerate(stages):
     x = cols[k]
-    rect(x + 110, HY, CW - 220, 64, WHITE, f"<b>{name}</b>", f=28, stroke=INK, sw=3)
-    text(x, HY + 72, CW, f"<i>{sub}</i>", 16, BODY, "center")
-    cont.append(rect(x, CY0, CW, CH, SURF, stroke=EDGE, sw=3, rx=4, name="cont"))
+    rect(x + 90, HY, CW - 180, 70, HEAD[k], f"<b>{name}</b>", f=28, stroke="none")
+    text(x, HY + 78, CW, f"<i>{sub}</i>", 19, BODY, "center")
+    cont.append(rect(x, CY0, CW, CH, CONT[k][0], opacity=CONT[k][1], stroke=EDGE, sw=3, rx=4, name="cont"))
     item_ids.append([])
 for k, x, y, w, h, html in pending:
-    item_ids[k].append(rect(x, y, w, h, WHITE, html, f=17))
+    item_ids[k].append(rect(x, y, w, h, WHITE, html, f=22))
 
 # Store: cylinder and record list
 sx = cols[3]
-rect(sx + 150, CY0 + 30, 220, 250, "#595959", "<b>PRISM REQUEST CASE RECORDS</b>", f=17, stroke="#595959", sw=2, color=WHITE, shape="can")
+rect(sx + 150, CY0 + 30, 220, 250, "#595959", "<b>PRISM REQUEST CASE RECORDS</b>", f=20, stroke="#595959", sw=2, color=WHITE, shape="can")
 lst = ("<b>One shared request record, keyed by Request ID</b><br>Request and contact data<br>Status history<br>Assignment and ownership<br>"
        "Supporting records<br>Completion records<br>Timestamps and audit history<br><i>The original is never overwritten</i>")
-rect(sx + 30, CY0 + 310, CW - 60, est(lst, CW - 60, 17), WHITE, lst, f=17, align="left", valign="top")
+rect(sx + 30, CY0 + 310, CW - 60, est(lst, CW - 60, 21), WHITE, lst, f=21, align="left", valign="top")
 
 # flows between stages, labels above the line
 flows = ["Request details, documents, updates", "Submitted data and attachments", "Validated and structured data", "Authorized case data"]
 for k in range(4):
-    conn(cont[k], cont[k + 1], width=6)
-    rect(cols[k] + CW + 12, CY0 + CH / 2 - 100, 176, 84, WHITE, flows[k], f=15)
+    conn(cont[k], cont[k + 1], width=8)
+    rect(cols[k] + CW + 10, CY0 + CH / 2 - 170, 180, 150, WHITE, f"<b>{flows[k]}</b>", f=19, color=PURPLE)
 
 # owners and constraints under each stage
 OY = CY0 + CH + 24
-ch = max(est(f"<b>Constraints:</b> {c}", CW, 16) for c in cons)
+ch = max(est(f"<b>Constraints:</b> {c}", CW, 20) for c in cons)
 for k in range(5):
-    rect(cols[k], OY, CW, 84, WHITE, f"<b>{owners[k]}</b>", f=16)
-    rect(cols[k], OY + 98, CW, ch, WHITE, f"<b>Constraints:</b> {cons[k]}", f=16, align="left", valign="top")
-ROWS_END = OY + 98 + ch
+    rect(cols[k], OY, CW, 110, WHITE, f"<b>{owners[k]}</b>", f=20)
+    rect(cols[k], OY + 126, CW, ch, WHITE, f"<b>Constraints:</b> {cons[k]}", f=20, align="left", valign="top")
+ROWS_END = OY + 126 + ch
 
 # ---------- sinks panel (tree, as on the team board) ----------
-rect(SX0 + SW / 2 - 200, HY, 400, 64, WHITE, "<b>Sinks</b>", f=28, stroke=INK, sw=3)
-text(SX0, HY + 72, SW, "<i>where data stops moving and starts creating value (Step Three)</i>", 16, BODY, "center")
+rect(SX0 + SW / 2 - 220, HY, 440, 70, SINKH, "<b>Sinks</b>", f=28, stroke="none")
+text(SX0, HY + 78, SW, "<i>where data stops moving and starts creating value (Step Three)</i>", 19, BODY, "center")
 CATX, CATW, ITX, ITW, VX, VW = SX0 + 40, 420, SX0 + 520, 600, SX0 + 1180, SW - 1220
 groups = [
     ("Product", "request functions", [("P1", "Guided request submission"), ("P2", "Connected request visibility"), ("P3", "Coordinator hand-off support (proposed)")],
@@ -158,16 +160,16 @@ groups = [
 gy = CY0 + 30; cat_ids = []
 tree = []
 for gname, gsub, its, val in groups:
-    vh = est(val, VW, 16); ih = len(its) * 76 - 16; gh = max(vh, ih)
+    vh = est(val, VW, 19); ih = len(its) * 88 - 18; gh = max(vh, ih)
     tree.append((gname, gsub, its, val, gy, gh, vh)); gy += gh + 44
 SH = max(gy - CY0, ROWS_END - CY0)
-sink_box = rect(SX0, CY0, SW, SH, SURF, stroke=EDGE, sw=3, rx=4, name="sinks")
+sink_box = rect(SX0, CY0, SW, SH, SINKC, opacity=0.12, stroke=EDGE, sw=3, rx=4, name="sinks")
 for gname, gsub, its, val, y0, gh, vh in tree:
-    ci = rect(CATX, y0 + gh / 2 - 50, CATW, 100, WHITE, f"<b>{gname}</b><br><i>{gsub}</i>", f=18); cat_ids.append(ci)
+    ci = rect(CATX, y0 + gh / 2 - 60, CATW, 120, WHITE, f"<b>{gname}</b><br><i>{gsub}</i>", f=22); cat_ids.append(ci)
     for j, (code, label) in enumerate(its):
-        ii = rect(ITX, y0 + j * 76, ITW, 60, WHITE, f"<b>{code}</b>  {label}", f=16)
+        ii = rect(ITX, y0 + j * 88, ITW, 70, WHITE, f"<b>{code}</b>  <b>{label}</b>", f=20)
         conn(ci, ii, width=3)
-    rect(VX, y0, VW, gh, WHITE, val, f=16, align="left", valign="top")
+    rect(VX, y0, VW, gh, WHITE, val, f=19, align="left", valign="top")
 for k in range(3):
     conn(item_ids[4][k], cat_ids[k], width=4)
 
@@ -184,17 +186,17 @@ loop_cols = [
     "Comparable periods give the baselines DVO 1, 2 and 6 need.<br>Better forms then produce more complete requests, so each cycle starts from better data.",
 ]
 lw = (W - 2 * BX - 60 - 2 * 40) / 3
-lh = max(est(c, lw, 17) for c in loop_cols) + 80
-loop_band = rect(BX + 20, LY, W - 2 * BX - 40, lh, WHITE, stroke=LINE, sw=3, dash=True, rx=8, name="loop")
-text(BX + 50, LY + 14, 4000, "<b>THE LOOP (Step Four).</b> Using the service creates new data that did not exist before.", 22)
+lh = max(est(c, lw, 20) for c in loop_cols) + 90
+loop_band = rect(BX + 20, LY, W - 2 * BX - 40, lh, WHITE, stroke=PURPLE, sw=4, dash=True, rx=8, name="loop")
+text(BX + 50, LY + 14, 4000, "<b>THE LOOP (Step Four).</b> Using the service creates new data that did not exist before.", 26)
 for j, c in enumerate(loop_cols):
-    rect(BX + 50 + j * (lw + 40), LY + 64, lw, lh - 84, WHITE, c, f=17, align="left", valign="top")
+    rect(BX + 50 + j * (lw + 40), LY + 72, lw, lh - 92, WHITE, c, f=20, align="left", valign="top")
 conn(sink_box, loop_band, sa="bottom", eb="top", width=6, dash=True)
 conn(loop_band, cont[0], sa="left", eb="left", width=6, dash=True)
 
 # ---------- scope boundary ----------
 BH = LY + lh + 40 - BY
-text(BX + 30, BY + 22, 3600, "<b>SCOPE BOUNDARY (Step One).</b> Inside: the Furniture Request journey from need to closure, and the sinks it feeds.", 21)
+text(BX + 30, BY + 22, 3600, "<b>SCOPE BOUNDARY (Step One).</b> Inside: the Furniture Request journey from need to closure, and the sinks it feeds.", 24)
 rect(BX, BY, W - 2 * BX, BH, WHITE, opacity=0, stroke=INK, sw=5, dash=True, rx=12, name="scope")
 OUT_Y = BY + BH + 40
 outs = [
@@ -204,9 +206,9 @@ outs = [
     "<b>Conditional future opportunities, not sinks</b><br>Recycle Program reporting; asset and warranty history. Both need additional confirmed data and use cases.",
 ]
 ow = (W - 2 * BX - 2 * 40) / 3
-oh = max(est(o, ow, 17) for o in outs)
+oh = max(est(o, ow, 20) for o in outs)
 for j, o in enumerate(outs):
-    rect(BX + j * (ow + 40), OUT_Y, ow, oh, WHITE, o, f=17, align="left", valign="top")
+    rect(BX + j * (ow + 40), OUT_Y, ow, oh, WHITE, o, f=20, align="left", valign="top")
 PART1_END = len(el)
 
 # ---------- controls ----------
@@ -229,9 +231,9 @@ ctrl = [
 Q = ["Authenticate", "Validate", "Monitor", "Mitigate", "Alarm"]
 cw = (W - 2 * BX - 4 * 30) / 5
 htmls = [f"<b>{hd}</b><br>" + "<br>".join(f"<b>{q}:</b> {r}" for q, r in zip(Q, rows)) for hd, rows in ctrl]
-chh = max(est(h, cw, 17) for h in htmls)
+chh = max(est(h, cw, 20) for h in htmls)
 for j, h in enumerate(htmls):
-    rect(BX + j * (cw + 30), GY + 64, cw, chh, WHITE, h, f=17, align="left", valign="top")
+    rect(BX + j * (cw + 30), GY + 64, cw, chh, WHITE, h, f=20, align="left", valign="top")
 
 # ---------- gaps and leaks by stage (Step Five) ----------
 FY = GY + 64 + chh + 120
@@ -253,10 +255,10 @@ finds = [
 fy0 = FY + 110; fbottom = fy0
 for k, items in enumerate(finds):
     x = cols[k] - 70; w = CW + 140; y = fy0
-    rect(x + 170, y, w - 340, 54, WHITE, f"<b>{stages[k][0]}</b>", f=22, stroke=INK, sw=3); y += 72
+    rect(x + 150, y, w - 300, 64, HEAD[k], f"<b>{stages[k][0]}</b>", f=26, stroke="none"); y += 84
     for typ, ttl, issue, close, dims, imp in items:
         html = f"<b>{typ}: {ttl}</b><br>{issue}<br><b>To close:</b> {close}<br><i>Dimensions: {dims}</i><br><b>Implication:</b> {imp}"
-        y += panel(x, y, w, html, f=16) + 24
+        y += panel(x, y, w, html, f=19) + 26
     fbottom = max(fbottom, y)
 side = [
     "<b>Headwinds and tailwinds, by dimension</b><br><b>Data.</b> Headwind: reference information hard to verify; dates may not give full event histories. "
@@ -273,7 +275,7 @@ side = [
 ]
 sy = fy0
 for h in side:
-    sy += panel(SX0, sy, SW, h, f=17) + 30
+    sy += panel(SX0, sy, SW, h, f=20) + 30
 H = max(fbottom, sy) + 80
 
 frame = ['<svg xmlns="http://www.w3.org/2000/svg">', '<g id="pipe" transform="translate(0,0)" data-frame="FURNITURE REQUEST DATA PIPELINE (COMPLETE)">',
