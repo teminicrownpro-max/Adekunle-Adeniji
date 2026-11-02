@@ -56,7 +56,7 @@ HY, HH = 320, 130
 R, SH = [490, 650, 810, 970], 130
 
 box("bnd", 590, 300, 3140, 830, stroke="#8c8c8c", dash=True, fill="#ffffff")
-heads = [("1  GENERATE", "Owner: each creator, for what they state"), ("2  COLLECT", "Owner: CMAC (Proposed); staff for what they capture"),
+heads = [("1  GENERATE", "Owner: whoever enters it, for what they provide"), ("2  COLLECT", "Owner: CMAC (Proposed); staff for what they capture"),
          ("3  KEEP AND SHAPE", "Owner: Open, to confirm (Proposed: FRC)"), ("4  STORE", "Owner: data owner (Open)"),
          ("5  USE", "Owner: data owner; report owners Open")]
 for k, (n, o) in enumerate(heads):
@@ -103,8 +103,8 @@ step("u3", 4, 3, "Operational reports", "Infrastructure management")
 # sinks (aligned so each feedback riser leaves from its own sink)
 note("k1", KX, 490, KW, 190, "<b>SINK 1: PRODUCT</b><br>P1 guided request submission<br>P2 connected request visibility<br>"
      "P3 coordinator hand-off support (Proposed)<br><b>For:</b> CMACs and coordinators", font=18, fill="#f0f5fd", stroke="#659df2")
-note("k2", KX, 700, KW, 190, "<b>SINK 2: MEASUREMENT (M1)</b><br>DVO 1 first-pass completeness<br>DVO 2 status comprehension, retrieval, follow-up<br>"
-     "DVO 6 manual reporting effort<br><b>For:</b> product owner and evaluators", font=18, fill="#eaf9ef", stroke="#2dc75c")
+note("k2", KX, 700, KW, 190, "<b>SINK 2: MEASUREMENT (M1)</b><br>First-pass submission completeness<br>Status comprehension, retrieval and follow-up effort<br>"
+     "Manual reporting effort<br><b>For:</b> product owner and evaluators", font=18, fill="#eaf9ef", stroke="#2dc75c")
 note("k3", KX, 910, KW, 190, "<b>SINK 3: BUSINESS (B1)</b><br>Operational reporting: volumes, stage and age,<br>completion trends, recorded hand-offs<br>"
      "<b>For:</b> Infrastructure management", font=18, fill="#fffbed", stroke="#ffdc4a")
 
@@ -281,7 +281,7 @@ y4 = table("t4", 2420, Y, [360, 760, 640, 590],
 Y = max(y3, y4)
 note("comp", 2420, Y + 10, 2350, 110,
      "<b>How it compounds:</b> one request gives a dated timeline; many show what is missed and where requests wait; comparable periods give "
-     "DVO baselines; better forms start each cycle from better data. <b>Other products and decisions (conditional, to confirm):</b> Recycle Program "
+     "the measurement baselines; better forms start each cycle from better data. <b>Other products and decisions (conditional, to confirm):</b> Recycle Program "
      "reporting; asset and warranty history. Who records each item: to confirm.", font=17, fill="#ffffff", stroke=LOOP)
 note("out", 30, y3 + 10, 2330, Y + 120 - (y3 + 10),
      "<b>OUTSIDE THE BOUNDARY, WITH REASONS (STEP ONE)</b><br><b>Direct integrations</b> with SnapTracker, OneGX/SAP, BLIMS, EAMS, AutoCAD: not assumed; "
