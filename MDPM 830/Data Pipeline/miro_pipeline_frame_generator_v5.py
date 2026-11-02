@@ -4,8 +4,8 @@ Tier B: Miro diagram widget (Mermaid flowchart) as the process map of hand-offs.
 usage: python3 pipe_v5.py out_miro.svg out_preview.html"""
 import sys, html
 
-W, HA, H = 5060, 1915, 3100          # frame width, height of tier A (slide image), frame height
-FX, FY = 0, -8400
+W, HA, H = 5060, 2090, 3800          # frame width, height of tier A (slide image), frame height
+FX, FY = 0, -9100
 TITLE = "DATA PIPELINE: FURNITURE REQUEST SERVICE"
 INK, NAVY, LINE, LEAK, LOOP = "#1a1a1a", "#2d3e50", "#313131", "#305bab", "#6631d7"
 GAP_F, LEAK_F, CONF_F, NOTE_F, NOTE_S = "#ffc6c6", "#c6dcff", "#fff6b6", "#f7f7f7", "#bfbfbf"
@@ -41,7 +41,7 @@ SX, SW = 30, 560                       # sources
 CX = [650 + i * 660 for i in range(5)]  # stages
 CW = 560
 KX, KW = 3930, 1100                    # sinks
-box("bnd", 620, 165, 3260, 1480, "", stroke="#8c8c8c", dash=True)
+box("bnd", 620, 165, 3260, 1575, "", stroke="#8c8c8c", dash=True)
 
 stages = [("1. GENERATE", "Owner: each creator, for what they state"), ("2. COLLECT", "Owner: CMAC, for details submitted (Proposed)"),
           ("3. KEEP AND SHAPE", "Owner: Open (Proposed: FRC)"), ("4. STORE", "Owner: data owner (Open)"),
@@ -61,7 +61,7 @@ srcs = [("Original requester", "born when the furniture need is identified"),
         ("Outlook, shared inbox, Teams", "born in messages exchanged outside WORTS"),
         ("Reference data", "checklist, furniture selection reference, roles and authorization rules")]
 for j, (n, d) in enumerate(srcs):
-    box(f"so{j}", SX, 360 + j * 162, SW, 145, f"<b>{n}</b><br>{d}", fill=NOTE_F, stroke=NOTE_S, font=20)
+    box(f"so{j}", SX, 360 + j * 172, SW, 155, f"<b>{n}</b><br>{d}", fill=NOTE_F, stroke=NOTE_S, font=20)
 
 # ---------------- work steps ----------------
 R = [360, 510, 660, 810]
@@ -114,19 +114,19 @@ note("nacc", CX[4], NY, CW, NH,
      "Coordinators: decisions, ownership changes<br>Evaluators: outcome evidence<br>Management: aggregated reports", font=21)
 
 # ---------------- gap, leak and to-confirm cards (Gaps, Leaks and Feasibility) ----------------
-cards = {0: [("GAP", "Floor-plan currentness", "Data, governance. Phase it or scope it out.")],
-         1: [("GAP", "Incomplete request information", "Data, process. Change the workflow."),
-             ("GAP", "Unclear contact purposes", "Data, governance. Change the workflow.")],
-         2: [("TO CONFIRM", "Reusable requirement structure", "Data, process. Phase it.")],
-         3: [("LEAK", "Incomplete shared request history", "Collect to Store. Process, readiness. Change the workflow.")],
-         4: [("LEAK", "Delivery information is requested again", "Store to Use. Process, readiness. Change the workflow."),
-             ("GAP", "Notification failure feedback", "Data, process. Phase it."),
-             ("TO CONFIRM", "Stage-duration measurement", "Data, process. Phase it.")]}
+cards = {0: [("GAP", "Floor-plan currentness", "Headwind: plan upkeep sits beyond the form", "Data, governance. Phase it or scope it out.")],
+         1: [("GAP", "Incomplete request information", "Headwind: found only after submission<br>Tailwind: review practice shows what is needed", "Data, process. Change the workflow."),
+             ("GAP", "Unclear contact purposes", "Headwind: contact roles and approval authority unclear", "Data, governance. Change the workflow.")],
+         2: [("TO CONFIRM", "Reusable requirement structure", "Headwind: free text needs interpretation<br>Tailwind: useful detail is already captured", "Data, process. Phase it.")],
+         3: [("LEAK", "Incomplete shared request history (Collect to Store)", "Headwind: updates span people and channels<br>Tailwind: some records are already kept", "Process, readiness. Change the workflow.")],
+         4: [("LEAK", "Delivery information requested again (Store to Use)", "Headwind: onward transfer is inconsistent<br>Tailwind: contacts are already supplied", "Process, readiness. Change the workflow."),
+             ("GAP", "Notification failure feedback", "Headwind: sender cannot see a failed hand-off", "Data, process. Phase it."),
+             ("TO CONFIRM", "Stage-duration measurement", "Headwind: event meanings unverified<br>Tailwind: existing dates are a starting point", "Data, process. Phase it.")]}
 FILL = {"GAP": GAP_F, "LEAK": LEAK_F, "TO CONFIRM": CONF_F}
 for col, lst in cards.items():
-    for j, (kind, name, sub) in enumerate(lst):
-        box(f"x{col}{j}", CX[col], 1245 + j * 130, CW, 118, f"<b>{kind}:</b> {name}<br>{sub}",
-            fill=FILL[kind], stroke=FILL[kind], font=19, align="left")
+    for j, (kind, name, wind, impl) in enumerate(lst):
+        box(f"x{col}{j}", CX[col], 1245 + j * 162, CW, 152, f"<b>{kind}:</b> {name}<br>{wind}<br><b>Implication:</b> {impl}",
+            fill=FILL[kind], stroke=FILL[kind], font=18, align="left")
 
 # ---------------- sinks ----------------
 note("k1", KX, 360, KW, 250,
@@ -143,38 +143,41 @@ note("k3", KX, 890, KW, 215,
      "<b>SINK 3: BUSINESS VALUE</b><br>B1 operational reporting<br><b>Consumer:</b> Infrastructure management<br>"
      "<b>Value:</b> find recurring delays and bottlenecks<br><b>Needs:</b> consistent counts and stages, aggregation, period comparison",
      font=21, fill="#fffbed", stroke="#ffdc4a")
-note("gen", KX, 1125, KW, 520,
+note("gen", KX, 1125, KW, 615,
      "<b>DATA GENERATED THROUGH USE (THE LOOP)</b><br>"
      "<b>Activity:</b> submission, assignment, status, proposal and closure events. Service records them (Proposed). Value: visibility, hand-off history<br>"
      "<b>Corrections:</b> missing information, clarifications, resubmissions. CMACs and coordinators. Value: better guidance<br>"
      "<b>Outcomes:</b> completion and delivery outcomes. Coordinators. Value: visibility, reporting<br>"
      "<b>Feedback (Proposed):</b> CMAC comments. Evaluators. Value: better request experience<br>"
      "<b>Derived:</b> completeness, time in stage, trends. Owner or evaluators. Value: M1, B1<br>"
-     "<b>Compounds:</b> one request gives a timeline; many show what is missed and where requests wait; each cycle starts from better data. Who records each item: to confirm",
+     "<b>Compounds:</b> one request gives a timeline; many show what is missed and where requests wait; each cycle starts from better data. Who records each item: to confirm<br>"
+     "<b>Other products and decisions (conditional, to confirm):</b> Recycle Program reporting; asset and warranty history",
      font=22, fill="#ffffff", stroke=LOOP)
 
 # ---------------- bottom band ----------------
-BY, BH = 1685, 200
-note("out", 30, BY, 1850, BH,
+BY, BH = 1780, 290
+note("out", 30, BY, 1470, BH,
      "<b>OUTSIDE THE BOUNDARY, WITH REASONS (STEP ONE)</b><br>"
      "<b>Direct integrations</b> with SnapTracker, OneGX/SAP, BLIMS, EAMS, AutoCAD: not assumed; authorized staff capture or link the information<br>"
      "<b>Other WORTS and PRISM Core services:</b> different workflows, not the Furniture Request lifecycle<br>"
      "<b>Historical WORTS migration:</b> outside our current proposal; any future migration needs client confirmation<br>"
      "<b>Vendor-facing application:</b> vendor information is needed; a vendor application is not",
      font=20, fill="#ffffff", stroke="#8c8c8c", dash=True)
-note("ctl", 1920, BY, 1320, BH,
-     "<b>CONTROLS ON EVERY HAND-OFF (SESSION FOUR)</b><br>"
-     "<b>Authenticate:</b> who may move it. <b>Validate:</b> is it acceptable. <b>Monitor:</b> would we know it stopped. "
-     "<b>Mitigate:</b> what happens on failure. <b>Alarm:</b> who is told.<br>"
-     "<b>Example, Collect to Keep and Shape:</b> reviewing roles only; completeness checked; time to first assignment monitored; "
-     "original kept; CMAC told when action is required", font=20)
-note("prd", 3280, BY, 790, BH,
-     "<b>TO THE PRD AND MILESTONE 3</b><br>Each sink's needs (freshness, completeness, form, who may see it) become storage and access "
-     "requirements. Requirements, not technology. Open items go to the client.", font=20)
-note("leg", 4110, BY, 920, BH,
+note("ctl", 1540, BY, 2520, BH,
+     "<b>CONTROLS ON EACH HAND-OFF (SESSION FOUR):</b> authenticate; validate; monitor; mitigate; alarm<br>"
+     "<b>Generate to Collect:</b> authorized requester only; required fields and documents by request type; needs left in email or Teams stay invisible; drafts saved; submission confirmed<br>"
+     "<b>Collect to Keep and Shape:</b> reviewing roles only (to confirm); completeness checked, incomplete requests return to the CMAC; time to first assignment; original kept; CMAC told when action is required<br>"
+     "<b>Keep and Shape to Store:</b> only coordinators change status or merge duplicates (Proposed); standard status list and duplicate check (key to define); every stage change time-stamped and attributed; a merged duplicate keeps both histories; coordinator alerted to a possible duplicate (Proposed)<br>"
+     "<b>Store to Use:</b> role-based access (to confirm); views read the trusted record only; a request with no stage change is flagged (threshold to define); a failed update is retried and the user told (Proposed); stalled request visible to the coordinator (Proposed)<br>"
+     "<b>Use to the sinks:</b> reports aggregated and role-restricted; figures traceable to the record; report freshness on a set period (to confirm); retention per the records schedule (to confirm); an unanswered Action Required item emails the requester",
+     font=20)
+note("prd", 4100, BY, 930, 115,
+     "<b>TO THE PRD AND MILESTONE 3</b><br>Each sink's needs (freshness, completeness, form, who may see it) become storage and access requirements. "
+     "Requirements, not technology.", font=17)
+note("leg", 4100, BY + 125, 930, 165,
      "<b>HOW TO READ</b><br>Solid arrow: hand-off, labelled with its data<br>Dashed back arrow: return for missing information<br>"
-     "Dashed blue: leak<br>Dashed purple: the loop<br>Dashed outline: pipeline boundary<br>Cards: Gaps, Leaks and Feasibility",
-     font=18, fill="#ffffff")
+     "Dashed blue: leak. Dashed purple: the loop<br>Dashed outline: pipeline boundary<br>Cards: Gaps, Leaks and Feasibility section",
+     font=16, fill="#ffffff")
 
 # ---------------- connections ----------------
 link("src", "st0")
@@ -350,8 +353,26 @@ def preview():
     return "\n".join(out)
 
 
+IDS = dict(bnd=115, st0=116, st1=117, st2=118, st3=119, st4=120, src=121, snk=123, so0=124, so1=125, so2=126, so3=127, so4=128,
+           so5=129, so6=130, so7=131, g1=132, g2=133, c1=134, c2=135, c3=147, ka=148, kb=149, kd=150, s1=151, s2=152, s3=153, s4=154,
+           u1=155, u2=156, u4=157, u3=158, ncon=159, ntr=160, nrec=161, nacc=162, x00=163, x10=164, x11=165, x20=166, x30=185,
+           x40=186, x41=187, x42=188, k1=189, k2=190, k3=191, gen=192, out=193, ctl=194, prd=195, leg=196, t0=197, t1=198, t2=199, pmap=202)
+FRAME_ID = "3458764689103218099"
+
+
+def update_doc(m):
+    import re
+    m = re.sub(r'<g id="fr" ', f'<g id="fr" data-miro-id="{FRAME_ID}" ', m)
+    for k, v in IDS.items():
+        m = m.replace(f' id="{k}" ', f' id="{k}" data-miro-id="{3458764689103218000 + v}" ', 1)
+    lines = [ln for ln in m.split("\n") if not ln.startswith("<line ")]
+    return "\n".join(lines)
+
+
 m = miro()
 open(sys.argv[1], "w").write(m)
+if len(sys.argv) > 3:
+    open(sys.argv[3], "w").write(update_doc(m))
 open(sys.argv[2], "w").write(preview())
 allt = m + "".join(b["html"] for b in B.values()) + MERMAID
 print("boxes", len(B), "lines", len(L), "dashes", allt.count("—") + allt.count("–"), "len", len(m), "preview", PX, round(HA * S))
