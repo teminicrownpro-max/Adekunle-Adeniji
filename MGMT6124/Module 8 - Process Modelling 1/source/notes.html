@@ -1,0 +1,120 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Supporting Notes</title>
+<style>
+@page { size: 8.5in 11in; margin: 0.5in 0.6in 0.5in 0.6in; }
+:root { --ink:#1f2937; --muted:#4b5563; --rule:#cbd5e1; --head:#e3ecf7; --inc:#1d4ed8; --ext:#b45309; }
+html,body { margin:0; padding:0; background:#fff; }
+body { font-family: Inter, 'Liberation Sans', Arial, sans-serif; color: var(--ink); font-size: 9pt; line-height: 1.32; }
+h1 { font-size: 14pt; margin: 0 0 2px; }
+.sub { color: var(--muted); font-size: 8.5pt; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1.5px solid var(--ink); }
+h2 { font-size: 10.2pt; margin: 10px 0 4px; }
+p { margin: 0 0 6px; }
+table { width: 100%; border-collapse: collapse; margin: 2px 0 4px; }
+th, td { border: 1px solid var(--rule); padding: 3px 5px; vertical-align: top; text-align: left; }
+th { background: var(--head); font-weight: 700; font-size: 8.4pt; }
+td { font-size: 8.4pt; }
+td.rel { white-space: nowrap; }
+.id { white-space: nowrap; font-weight: 600; }
+.inc { color: var(--inc); font-weight: 700; white-space: nowrap; }
+.ext { color: var(--ext); font-weight: 700; white-space: nowrap; }
+ul { margin: 2px 0 0; padding-left: 16px; }
+li { margin: 0 0 3px; }
+.page { break-after: page; }
+.spec th { width: 19%; background: var(--head); }
+.spec td { font-size: 8.6pt; }
+.spec ol { margin: 2px 0 4px; padding-left: 18px; }
+.spec ol li { margin: 0 0 2px; }
+.flowhead { font-weight: 700; margin: 6px 0 2px; }
+.flowhead:first-child { margin-top: 0; }
+.alt { margin: 0 0 4px; }
+.alt b { white-space: nowrap; }
+.indent { padding-left: 14px; margin: 1px 0; }
+.small { color: var(--muted); font-size: 8.4pt; }
+</style></head>
+<body>
+
+<section class="page">
+<h1>Use Case Diagram: Supporting Notes</h1>
+<p class="sub">MGMT6124 Methods for Business Analysis &nbsp;|&nbsp; Module 8: Process Modelling 1 &nbsp;|&nbsp; Adekunle Adeniji &nbsp;|&nbsp; November 3, 2026</p>
+
+<h2>1. Scenario and scope</h2>
+<p>A customer at a Denny's restaurant orders food, eats it and pays for it, and may also order beer with dinner. The system modelled is the restaurant's <b>dine-in service</b>. The scenario starts once the customer is at the table, so arriving and being seated are preconditions of UC-01, not use cases. Reservations, take-out and delivery are out of scope.</p>
+
+<h2>2. Actors</h2>
+<table>
+<tr><th style="width:21%">Actor</th><th style="width:15%">Type</th><th>Role in the scenario</th></tr>
+<tr><td class="id">Customer</td><td>Primary (person)</td><td>The only primary actor. The customer starts every use case: ordering, eating and paying for the meal, and optionally ordering beer.</td></tr>
+<tr><td class="id">Server</td><td>Secondary (person)</td><td>Takes and confirms the order, checks ID when beer is ordered, serves the food and presents the bill.</td></tr>
+<tr><td class="id">Cook</td><td>Secondary (person)</td><td>Prepares the food the customer ordered.</td></tr>
+<tr><td class="id">Bartender</td><td>Secondary (person)</td><td>Pours the beer once the order has passed the age check. In Ontario, anyone who serves alcohol must hold Smart Serve certification.</td></tr>
+<tr><td class="id">Card Payment Processor</td><td>Secondary (system)</td><td>The bank or card network that approves debit and credit payments. It sits outside the restaurant, so it is shown as a «system» actor.</td></tr>
+</table>
+
+<h2>3. Use case catalogue and relationship rationale</h2>
+<table>
+<tr><th style="width:6%">ID</th><th style="width:17%">Use case</th><th style="width:9%">Type</th><th style="width:19%">Relationship</th><th>Why this relationship</th></tr>
+<tr><td class="id">UC-01</td><td><b>Order Food</b></td><td>Base</td><td class="rel">Includes UC-04<br>Extended by UC-05</td><td>Customer goal 1 in the scenario.</td></tr>
+<tr><td class="id">UC-02</td><td><b>Eat Food</b></td><td>Base</td><td class="rel">Includes UC-07</td><td>Customer goal 2 in the scenario.</td></tr>
+<tr><td class="id">UC-03</td><td><b>Pay for Food</b></td><td>Base</td><td class="rel">Includes UC-08<br>Extended by UC-09, UC-10</td><td>Customer goal 3 in the scenario.</td></tr>
+<tr><td class="id">UC-04</td><td>Prepare Food</td><td>Included</td><td class="rel">UC-01 <span class="inc">«include»</span> UC-04</td><td>An order is not fulfilled until the kitchen prepares it, so every order includes this step.</td></tr>
+<tr><td class="id">UC-05</td><td>Order Beer</td><td>Extending</td><td class="rel">UC-05 <span class="ext">«extend»</span> UC-01</td><td>The customer only <i>might</i> order beer, and Order Food is complete without it. Condition: the customer wants beer.</td></tr>
+<tr><td class="id">UC-06</td><td>Verify Legal Drinking Age</td><td>Included</td><td class="rel">UC-05 <span class="inc">«include»</span> UC-06</td><td>Required every time beer is ordered: no alcohol for anyone under 19 in Ontario (BR-01).</td></tr>
+<tr><td class="id">UC-07</td><td>Serve Food</td><td>Included</td><td class="rel">UC-02 <span class="inc">«include»</span> UC-07</td><td>The food must reach the table before it can be eaten.</td></tr>
+<tr><td class="id">UC-08</td><td>Present Bill</td><td>Included</td><td class="rel">UC-03 <span class="inc">«include»</span> UC-08</td><td>The customer cannot pay without an itemized bill for what was ordered.</td></tr>
+<tr><td class="id">UC-09</td><td>Process Card Payment</td><td>Extending</td><td class="rel">UC-09 <span class="ext">«extend»</span> UC-03</td><td>Needed only for debit or credit; cash payment skips it. Condition: the customer pays by card.</td></tr>
+<tr><td class="id">UC-10</td><td>Add Tip</td><td>Extending</td><td class="rel">UC-10 <span class="ext">«extend»</span> UC-03</td><td>Tipping is optional. Condition: the customer chooses to tip.</td></tr>
+</table>
+
+<h2>4. Modelling decisions</h2>
+<ul>
+<li><b>One primary actor.</b> Only the Customer starts a use case. Staff and the payment processor only support the customer's goals, so they are secondary actors on the opposite side of the boundary.</li>
+<li><b>Arrow direction.</b> <span class="inc">«include»</span> points from the base to the step it always performs. <span class="ext">«extend»</span> points from the optional use case back to its base, which is complete without it.</li>
+<li><b>No extra actor lines.</b> Included and extending use cases run inside a base use case, so its actors already take part (for example, the Server checks ID within Order Food).</li>
+<li><b>Business rules kept separate.</b> The age rule is recorded once as BR-01 and referenced from UC-06, as the BABOK recommends.</li>
+<li><b>Naming and detail.</b> Every use case is named with a verb and a noun. Staff tasks such as plating food are left for next module's BPMN process models.</li>
+</ul>
+</section>
+
+<section>
+<h1>Use Case Specification: UC-01 Order Food</h1>
+<p class="sub">Completed using the Module 8 Use Case Template &nbsp;|&nbsp; Adekunle Adeniji</p>
+<table class="spec">
+<tr><th>Use Case Name</th><td colspan="3"><b>UC-01 Order Food</b></td></tr>
+<tr><th>Date Created</th><td style="width:31%">November 3, 2026</td><th style="width:16%">Last Updated</th><td>November 3, 2026</td></tr>
+<tr><th>Goal</th><td colspan="3">The customer has ordered the meal they want, the order is recorded correctly, and the kitchen has prepared it, ready to be served.</td></tr>
+<tr><th>Actors</th><td colspan="3"><b>Primary:</b> Customer.<br><b>Secondary:</b> Server (takes and confirms the order, checks ID for beer), Cook (prepares the food), Bartender (pours beer, only when UC-05 Order Beer extends this use case).</td></tr>
+<tr><th>Preconditions</th><td colspan="3">The restaurant is open and the kitchen is operating. The customer is seated and has a menu. The point-of-sale (POS) ordering system is available.</td></tr>
+<tr><th>Trigger</th><td colspan="3">The customer signals that they are ready to order, for example by closing the menu or calling the server over.</td></tr>
+<tr><th>Flow of Events</th><td colspan="3">
+<div class="flowhead">Basic flow</div>
+<ol>
+<li>The Customer signals that they are ready to order.</li>
+<li>The Server comes to the table and asks for the order.</li>
+<li>The Customer chooses menu items and states any preferences or allergies. <span class="small">[Extension point: Beverage Order]</span></li>
+<li>The Server reads the order back and the Customer confirms it.</li>
+<li>The Server enters the order into the POS, which sends it to the kitchen and adds the items to the Customer's bill.</li>
+<li><span class="inc">Include UC-04 Prepare Food:</span> the Cook prepares the items as ordered.</li>
+<li>The prepared food is ready for UC-07 Serve Food. The use case ends.</li>
+</ol>
+<div class="flowhead">Alternative flows</div>
+<p class="alt"><b>A1 Order Beer</b> (<span class="ext">UC-05 extends</span> at step 3). Condition: the Customer asks for beer.</p>
+<p class="indent">A1.1 <span class="inc">Include UC-06 Verify Legal Drinking Age:</span> the Server checks the Customer's government photo ID.</p>
+<p class="indent">A1.2 The Customer is 19 or older, so the beer is added to the order and sent to the bar, and the Bartender pours it.</p>
+<p class="indent">A1.3 The flow resumes at step 4.</p>
+<p class="alt"><b>A2 Item unavailable</b> (at step 5). The POS shows that an item is sold out. The Server tells the Customer, who chooses a substitute. The flow resumes at step 4.</p>
+<p class="alt"><b>A3 Allergy declared</b> (at step 3). The Server flags the allergy on the order so the Cook follows the allergen procedure. The flow resumes at step 4.</p>
+<div class="flowhead">Exception flows</div>
+<p class="alt"><b>E1 Age not verified</b> (at A1.1). The Customer has no valid ID or is under 19. The beer is refused, and the food order continues at step 4 without beer.</p>
+<p class="alt"><b>E2 Customer leaves</b> (before step 4). No order is sent to the kitchen and nothing is added to the bill. The use case ends without success.</p>
+</td></tr>
+<tr><th>Post-conditions</th><td colspan="3"><b>Success:</b> The confirmed order, plus any beer, is on the Customer's bill, and the kitchen has prepared the food, ready for UC-07 Serve Food.<br><b>Failure:</b> No order reaches the kitchen and the bill has no items.</td></tr>
+<tr><th>Other</th><td colspan="3">
+<b>Related use cases:</b> includes UC-04 Prepare Food; extended by UC-05 Order Beer, which includes UC-06 Verify Legal Drinking Age. UC-01 is followed by UC-02 Eat Food and UC-03 Pay for Food.<br>
+<b>Business rule:</b> BR-01: alcohol is served only to customers aged 19 or older (Ontario). Staff ask for government photo ID whenever a customer's age is in doubt.<br>
+<b>Data inputs:</b> menu selections, preferences and allergies, and ID (beer only). <b>Outputs:</b> kitchen order ticket, bar order, and line items on the bill.<br>
+<b>Departments:</b> Front of house (Server, Bartender); Back of house (Cook).
+</td></tr>
+</table>
+</section>
+
+</body></html>
