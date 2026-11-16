@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1470" width="1100" height="1470" font-family="Inter, 'Liberation Sans', Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#46525e"/></marker><marker id="cp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1b2a3a"/></marker><marker id="gap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c62828"/></marker></defs>
+<rect width="1100" height="1470" fill="#ffffff"/>
+<text x="40" y="46" font-size="28" font-weight="700" fill="#1b2a3a" text-anchor="start">CV-4 Capability Dependencies</text>
+<text x="40" y="76" font-size="15" font-weight="400" fill="#5b6b7c" text-anchor="start">Maritime Search and Rescue (SAR) · As-Is · notional · DoDAF 2.02 Capability Viewpoint</text>
+<line x1="40" y1="92" x2="1060" y2="92" stroke="#d5dbe1" stroke-width="1"/>
+<rect x="30" y="1160" width="1040" height="110" rx="12" fill="#f4f6f8" stroke="#4b5a6a" stroke-width="1.6" stroke-dasharray="8 5"/>
+<text x="48" y="1186" font-size="13" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="1">C6 FOUNDATION ENABLERS</text>
+<text x="48" y="1208" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Underpin every capability above;</text>
+<text x="48" y="1226" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">drawn as one band, not 19 arrows each</text>
+<path d="M335 179.0 V233.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M470 179.0 V233.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M490 291.0 V345.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M760 179.0 V357 H660.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M800.0 390 H660.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M560 403.0 V457.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M560 515.0 V542" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round"/>
+<path d="M560 542 H330 V569.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M560 542 H790 V569.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M430.0 606 H510 V675.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M690.0 606 H610 V675.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M660.0 704 H960 V403.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M560 733.0 V772" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round"/>
+<path d="M560 772 H240 V811.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M560 772 V811.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M560 772 H880 V811.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M240 869.0 V941.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M560 869.0 V941.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M560 999.0 V1063.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M240 999.0 V1092 H460.0" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<path d="M960 1193.0 V1121.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<path d="M860.0 1092 H660.0" fill="none" stroke="#c62828" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="8 5" marker-end="url(#gap)"/>
+<circle cx="560" cy="542" r="3.5" fill="#46525e"/><circle cx="560" cy="772" r="3.5" fill="#46525e"/>
+<rect x="150.0" y="121.0" width="200" height="58" rx="9" fill="#fbeae7" stroke="#b23a2e" stroke-width="1.8"/>
+<text x="160.0" y="138.0" font-size="11.5" font-weight="800" fill="#b23a2e" text-anchor="start" letter-spacing="0.4">C1.1</text>
+<text x="250" y="154" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Satellite beacon</text>
+<text x="250" y="170" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">detection, location</text>
+<rect x="420.0" y="121.0" width="200" height="58" rx="9" fill="#fbeae7" stroke="#b23a2e" stroke-width="1.8"/>
+<text x="430.0" y="138.0" font-size="11.5" font-weight="800" fill="#b23a2e" text-anchor="start" letter-spacing="0.4">C1.2</text>
+<text x="520" y="154" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Maritime distress</text>
+<text x="520" y="170" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">radio watch</text>
+<rect x="720.0" y="121.0" width="200" height="58" rx="9" fill="#eceff3" stroke="#4b5a6a" stroke-width="1.8"/>
+<text x="730.0" y="138.0" font-size="11.5" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="0.4">C6.1</text>
+<text x="820" y="154" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Met-ocean</text>
+<text x="820" y="170" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">intelligence</text>
+<rect x="320.0" y="233.0" width="200" height="58" rx="9" fill="#fbeae7" stroke="#b23a2e" stroke-width="1.8"/>
+<text x="330.0" y="250.0" font-size="11.5" font-weight="800" fill="#b23a2e" text-anchor="start" letter-spacing="0.4">C1.3</text>
+<text x="420" y="266" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Alert verification</text>
+<text x="420" y="282" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">and classification</text>
+<rect x="460.0" y="345.0" width="200" height="58" rx="9" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.8"/>
+<text x="470.0" y="362.0" font-size="11.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.1</text>
+<text x="560" y="386" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Search planning</text>
+<rect x="800.0" y="345.0" width="200" height="58" rx="9" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.8"/>
+<text x="810.0" y="362.0" font-size="11.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.3</text>
+<text x="900" y="378" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Situational</text>
+<text x="900" y="394" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">awareness</text>
+<rect x="460.0" y="457.0" width="200" height="58" rx="9" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.8"/>
+<text x="470.0" y="474.0" font-size="11.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.2</text>
+<text x="560" y="498" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Resource tasking</text>
+<rect x="230.0" y="569.0" width="200" height="58" rx="9" fill="#e0f2ef" stroke="#0f766e" stroke-width="1.8"/>
+<text x="240.0" y="586.0" font-size="11.5" font-weight="800" fill="#0f766e" text-anchor="start" letter-spacing="0.4">C3.1</text>
+<text x="330" y="610" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Aerial search</text>
+<rect x="690.0" y="569.0" width="200" height="58" rx="9" fill="#e0f2ef" stroke="#0f766e" stroke-width="1.8"/>
+<text x="700.0" y="586.0" font-size="11.5" font-weight="800" fill="#0f766e" text-anchor="start" letter-spacing="0.4">C3.2</text>
+<text x="790" y="610" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Surface search</text>
+<rect x="460.0" y="675.0" width="200" height="58" rx="9" fill="#e0f2ef" stroke="#0f766e" stroke-width="1.8"/>
+<text x="470.0" y="692.0" font-size="11.5" font-weight="800" fill="#0f766e" text-anchor="start" letter-spacing="0.4">C3.3</text>
+<text x="560" y="708" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">On-scene</text>
+<text x="560" y="724" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">coordination</text>
+<rect x="140.0" y="811.0" width="200" height="58" rx="9" fill="#fdf0e2" stroke="#b45309" stroke-width="1.8"/>
+<text x="150.0" y="828.0" font-size="11.5" font-weight="800" fill="#b45309" text-anchor="start" letter-spacing="0.4">C4.1</text>
+<text x="240" y="852" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Aerial rescue (hoist)</text>
+<rect x="460.0" y="811.0" width="200" height="58" rx="9" fill="#fdf0e2" stroke="#b45309" stroke-width="1.8"/>
+<text x="470.0" y="828.0" font-size="11.5" font-weight="800" fill="#b45309" text-anchor="start" letter-spacing="0.4">C4.2</text>
+<text x="560" y="852" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Surface recovery</text>
+<rect x="780.0" y="811.0" width="200" height="58" rx="9" fill="#fdf0e2" stroke="#b45309" stroke-width="1.8"/>
+<text x="790.0" y="828.0" font-size="11.5" font-weight="800" fill="#b45309" text-anchor="start" letter-spacing="0.4">C4.3</text>
+<text x="880" y="844" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Survival equipment</text>
+<text x="880" y="860" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">delivery</text>
+<rect x="140.0" y="941.0" width="200" height="58" rx="9" fill="#f0e9f8" stroke="#6b3fa0" stroke-width="1.8"/>
+<text x="150.0" y="958.0" font-size="11.5" font-weight="800" fill="#6b3fa0" text-anchor="start" letter-spacing="0.4">C5.2</text>
+<text x="240" y="982" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Medical evacuation</text>
+<rect x="460.0" y="941.0" width="200" height="58" rx="9" fill="#f0e9f8" stroke="#6b3fa0" stroke-width="1.8"/>
+<text x="470.0" y="958.0" font-size="11.5" font-weight="800" fill="#6b3fa0" text-anchor="start" letter-spacing="0.4">C5.1</text>
+<text x="560" y="982" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">On-scene first aid</text>
+<rect x="460.0" y="1063.0" width="200" height="58" rx="9" fill="#f0e9f8" stroke="#6b3fa0" stroke-width="1.8"/>
+<text x="470.0" y="1080.0" font-size="11.5" font-weight="800" fill="#6b3fa0" text-anchor="start" letter-spacing="0.4">C5.3</text>
+<text x="560" y="1096" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Casualty hand-over</text>
+<text x="560" y="1112" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">to EMS</text>
+<rect x="860.0" y="1063.0" width="200" height="58" rx="9" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.8"/>
+<text x="870.0" y="1080.0" font-size="11.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.4</text>
+<text x="960" y="1096" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">Multi-agency</text>
+<text x="960" y="1112" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="middle">coordination</text>
+<rect x="460.0" y="1193.0" width="200" height="58" rx="9" fill="#eceff3" stroke="#4b5a6a" stroke-width="1.8"/>
+<text x="470.0" y="1210.0" font-size="11.5" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="0.4">C6.3</text>
+<text x="560" y="1226" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="middle">Readiness: trained crews</text>
+<text x="560" y="1242" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="middle">and available assets</text>
+<rect x="860.0" y="1193.0" width="200" height="58" rx="9" fill="#eceff3" stroke="#4b5a6a" stroke-width="1.8"/>
+<text x="870.0" y="1210.0" font-size="11.5" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="0.4">C6.2</text>
+<text x="960" y="1226" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="middle">Communications and</text>
+<text x="960" y="1242" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="middle">information exchange</text>
+<rect x="321.4" y="195" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="335" y="209.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D1</text>
+<rect x="456.4" y="195" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="470" y="209.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D2</text>
+<rect x="476.4" y="308" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="490" y="322.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D3</text>
+<rect x="746.4" y="252" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="760" y="266.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D4</text>
+<rect x="716.4" y="380" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="730" y="394.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D5</text>
+<rect x="546.4" y="420" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="560" y="434.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D6</text>
+<rect x="406.4" y="532" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="420" y="546.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D7</text>
+<rect x="686.4" y="532" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="700" y="546.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D8</text>
+<rect x="456.4" y="596" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="470" y="610.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D9</text>
+<rect x="632.6" y="596" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="650" y="610.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D10</text>
+<rect x="942.6" y="550" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="960" y="564.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D11</text>
+<rect x="362.6" y="762" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="380" y="776.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D12</text>
+<rect x="542.6" y="782" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="560" y="796.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D13</text>
+<rect x="722.6" y="762" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="740" y="776.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D14</text>
+<rect x="222.6" y="895" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="240" y="909.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D15</text>
+<rect x="542.6" y="895" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="560" y="909.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D16</text>
+<rect x="542.6" y="1022" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="560" y="1036.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D17</text>
+<rect x="222.6" y="1030" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="240" y="1044.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D18</text>
+<rect x="942.6" y="1140" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="960" y="1154.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D19</text>
+<rect x="742.6" y="1082" width="34.8" height="20" rx="10" fill="#ffffff" stroke="#c62828" stroke-width="1.3"/>
+<text x="760" y="1096.5" font-size="11.5" font-weight="700" fill="#c62828" text-anchor="middle">D20</text>
+<text x="760" y="1072" font-size="12.5" font-weight="700" fill="#c62828" text-anchor="middle">GAP: hospital pre-alert</text>
+<text x="760" y="1124" font-size="12.5" font-weight="400" fill="#c62828" text-anchor="middle">not supported today</text>
+<text x="976" y="470" font-size="12.5" font-weight="600" fill="#5b6b7c" text-anchor="start" font-style="italic">re-planning</text>
+<text x="976" y="486" font-size="12.5" font-weight="600" fill="#5b6b7c" text-anchor="start" font-style="italic">loop (D11, D5)</text>
+<line x1="40" y1="1292" x2="1060" y2="1292" stroke="#d5dbe1" stroke-width="1"/>
+<text x="40" y="1318" font-size="13.5" font-weight="800" fill="#5b6b7c" text-anchor="start" letter-spacing="1.2">LEGEND</text>
+<path d="M40 1342 H92" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round" marker-end="url(#ar)"/>
+<text x="102" y="1347" font-size="14" font-weight="400" fill="#1b2a3a" text-anchor="start">A → B: B depends on A (supported today)</text>
+<path d="M430 1342 H482" fill="none" stroke="#c62828" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="8 5" marker-end="url(#gap)"/>
+<text x="492" y="1347" font-size="14" font-weight="400" fill="#1b2a3a" text-anchor="start">Required dependency, not supported (gap)</text>
+<rect x="826.4" y="1332" width="27.2" height="20" rx="10" fill="#ffffff" stroke="#46525e" stroke-width="1.3"/>
+<text x="840" y="1346.5" font-size="11.5" font-weight="700" fill="#46525e" text-anchor="middle">D1</text>
+<text x="864" y="1347" font-size="14" font-weight="400" fill="#1b2a3a" text-anchor="start">Dependency ID (see table)</text>
+<path d="M40 1372 H92" fill="none" stroke="#1b2a3a" stroke-width="3.4" stroke-linejoin="round" marker-end="url(#cp)"/>
+<text x="102" y="1377" font-size="14" font-weight="400" fill="#1b2a3a" text-anchor="start">Critical path: the longest chain, 9 capabilities from C1.1 to C5.3</text>
+<text x="40" y="1410" font-size="13.5" font-weight="700" fill="#5b6b7c" text-anchor="start">Groups (CV-2 colours):</text>
+<rect x="196" y="1396" width="22" height="18" rx="4" fill="#fbeae7" stroke="#b23a2e" stroke-width="1.6"/>
+<text x="226" y="1410" font-size="13.5" font-weight="600" fill="#1b2a3a" text-anchor="start">C1 Alerting</text>
+<rect x="343" y="1396" width="22" height="18" rx="4" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="373" y="1410" font-size="13.5" font-weight="600" fill="#1b2a3a" text-anchor="start">C2 Coordination</text>
+<rect x="490" y="1396" width="22" height="18" rx="4" fill="#e0f2ef" stroke="#0f766e" stroke-width="1.6"/>
+<text x="520" y="1410" font-size="13.5" font-weight="600" fill="#1b2a3a" text-anchor="start">C3 Search</text>
+<rect x="637" y="1396" width="22" height="18" rx="4" fill="#fdf0e2" stroke="#b45309" stroke-width="1.6"/>
+<text x="667" y="1410" font-size="13.5" font-weight="600" fill="#1b2a3a" text-anchor="start">C4 Rescue</text>
+<rect x="784" y="1396" width="22" height="18" rx="4" fill="#f0e9f8" stroke="#6b3fa0" stroke-width="1.6"/>
+<text x="814" y="1410" font-size="13.5" font-weight="600" fill="#1b2a3a" text-anchor="start">C5 Medical</text>
+<rect x="931" y="1396" width="22" height="18" rx="4" fill="#eceff3" stroke="#4b5a6a" stroke-width="1.6"/>
+<text x="961" y="1410" font-size="13.5" font-weight="600" fill="#1b2a3a" text-anchor="start">C6 Enablers</text>
+<text x="1060" y="1454" font-size="12.5" fill="#5b6b7c" text-anchor="end">Author: Adekunle Adeniji (1378471) · MGMT6119 · 16 Nov 2026</text>
+</svg>

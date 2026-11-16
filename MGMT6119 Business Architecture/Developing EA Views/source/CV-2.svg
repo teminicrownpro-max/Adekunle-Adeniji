@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 965" width="1240" height="965" font-family="Inter, 'Liberation Sans', Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#46525e"/></marker><marker id="cp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1b2a3a"/></marker><marker id="gap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c62828"/></marker></defs>
+<rect width="1240" height="965" fill="#ffffff"/>
+<text x="40" y="46" font-size="28" font-weight="700" fill="#1b2a3a" text-anchor="start">CV-2 Capability Taxonomy</text>
+<text x="40" y="76" font-size="15" font-weight="400" fill="#5b6b7c" text-anchor="start">Maritime Search and Rescue (SAR) · As-Is · notional · DoDAF 2.02 Capability Viewpoint</text>
+<line x1="40" y1="92" x2="1200" y2="92" stroke="#d5dbe1" stroke-width="1"/>
+<rect x="385.0" y="112" width="470" height="64" rx="10" fill="#1f4f80" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="620.0" y="139" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">C0  Maritime Search and Rescue</text>
+<text x="620.0" y="161" font-size="13" font-weight="400" fill="#d8e6f5" text-anchor="middle">Detect, locate and rescue people in distress at sea; deliver them to care</text>
+<path d="M620.0 176 V198" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M115.0 198 H1125.0" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M115.0 198 V222" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M317.0 198 V222" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M519.0 198 V222" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M721.0 198 V222" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M923.0 198 V222" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M1125.0 198 V222" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<rect x="20.0" y="222" width="190" height="70" rx="9" fill="#b23a2e" stroke="#b23a2e" stroke-width="2.2"/>
+<text x="115.0" y="244" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.6">C1</text>
+<text x="115.0" y="264" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Distress</text>
+<text x="115.0" y="282" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">alerting</text>
+<path d="M32.0 292 V530.0" fill="none" stroke="#b23a2e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M32.0 358.0 H46.0" fill="none" stroke="#b23a2e" stroke-width="2" stroke-linejoin="round"/>
+<rect x="46.0" y="322" width="164" height="72" rx="8" fill="#fbeae7" stroke="#b23a2e" stroke-width="1.6"/>
+<text x="58.0" y="342" font-size="12.5" font-weight="800" fill="#b23a2e" text-anchor="start" letter-spacing="0.4">C1.1</text>
+<text x="58.0" y="362" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Satellite beacon</text>
+<text x="58.0" y="379" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">detection, location</text>
+<path d="M32.0 444.0 H46.0" fill="none" stroke="#b23a2e" stroke-width="2" stroke-linejoin="round"/>
+<rect x="46.0" y="408" width="164" height="72" rx="8" fill="#fbeae7" stroke="#b23a2e" stroke-width="1.6"/>
+<text x="58.0" y="428" font-size="12.5" font-weight="800" fill="#b23a2e" text-anchor="start" letter-spacing="0.4">C1.2</text>
+<text x="58.0" y="448" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Maritime distress</text>
+<text x="58.0" y="465" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">radio watch</text>
+<path d="M32.0 530.0 H46.0" fill="none" stroke="#b23a2e" stroke-width="2" stroke-linejoin="round"/>
+<rect x="46.0" y="494" width="164" height="72" rx="8" fill="#fbeae7" stroke="#b23a2e" stroke-width="1.6"/>
+<text x="58.0" y="514" font-size="12.5" font-weight="800" fill="#b23a2e" text-anchor="start" letter-spacing="0.4">C1.3</text>
+<text x="58.0" y="534" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Alert verification</text>
+<text x="58.0" y="551" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">and classification</text>
+<rect x="20.0" y="672" width="190" height="70" rx="8" fill="#ffffff" stroke="#b23a2e" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="32.0" y="692" font-size="11.5" font-weight="800" fill="#b23a2e" text-anchor="start" letter-spacing="0.8">MEASURE</text>
+<text x="32.0" y="711" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Time to detect and</text>
+<text x="32.0" y="728" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">locate a distress</text>
+<rect x="222.0" y="222" width="190" height="70" rx="9" fill="#1f4f80" stroke="#1f4f80" stroke-width="2.2"/>
+<text x="317.0" y="244" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.6">C2</text>
+<text x="317.0" y="264" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Mission</text>
+<text x="317.0" y="282" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">coordination</text>
+<path d="M234.0 292 V616.0" fill="none" stroke="#1f4f80" stroke-width="2" stroke-linejoin="round"/>
+<path d="M234.0 358.0 H248.0" fill="none" stroke="#1f4f80" stroke-width="2" stroke-linejoin="round"/>
+<rect x="248.0" y="322" width="164" height="72" rx="8" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="260.0" y="342" font-size="12.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.1</text>
+<text x="260.0" y="362" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Search planning</text>
+<path d="M234.0 444.0 H248.0" fill="none" stroke="#1f4f80" stroke-width="2" stroke-linejoin="round"/>
+<rect x="248.0" y="408" width="164" height="72" rx="8" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="260.0" y="428" font-size="12.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.2</text>
+<text x="260.0" y="448" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Resource tasking</text>
+<path d="M234.0 530.0 H248.0" fill="none" stroke="#1f4f80" stroke-width="2" stroke-linejoin="round"/>
+<rect x="248.0" y="494" width="164" height="72" rx="8" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="260.0" y="514" font-size="12.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.3</text>
+<text x="260.0" y="534" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Situational</text>
+<text x="260.0" y="551" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">awareness</text>
+<path d="M234.0 616.0 H248.0" fill="none" stroke="#1f4f80" stroke-width="2" stroke-linejoin="round"/>
+<rect x="248.0" y="580" width="164" height="72" rx="8" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="260.0" y="600" font-size="12.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.4">C2.4</text>
+<text x="260.0" y="620" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Multi-agency</text>
+<text x="260.0" y="637" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">coordination</text>
+<rect x="222.0" y="672" width="190" height="70" rx="8" fill="#ffffff" stroke="#1f4f80" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="234.0" y="692" font-size="11.5" font-weight="800" fill="#1f4f80" text-anchor="start" letter-spacing="0.8">MEASURE</text>
+<text x="234.0" y="711" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Time from first alert</text>
+<text x="234.0" y="728" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">to first tasking</text>
+<rect x="424.0" y="222" width="190" height="70" rx="9" fill="#0f766e" stroke="#0f766e" stroke-width="2.2"/>
+<text x="519.0" y="244" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.6">C3</text>
+<text x="519.0" y="264" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Search</text>
+<path d="M436.0 292 V530.0" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round"/>
+<path d="M436.0 358.0 H450.0" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round"/>
+<rect x="450.0" y="322" width="164" height="72" rx="8" fill="#e0f2ef" stroke="#0f766e" stroke-width="1.6"/>
+<text x="462.0" y="342" font-size="12.5" font-weight="800" fill="#0f766e" text-anchor="start" letter-spacing="0.4">C3.1</text>
+<text x="462.0" y="362" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Aerial search</text>
+<path d="M436.0 444.0 H450.0" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round"/>
+<rect x="450.0" y="408" width="164" height="72" rx="8" fill="#e0f2ef" stroke="#0f766e" stroke-width="1.6"/>
+<text x="462.0" y="428" font-size="12.5" font-weight="800" fill="#0f766e" text-anchor="start" letter-spacing="0.4">C3.2</text>
+<text x="462.0" y="448" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Surface search</text>
+<path d="M436.0 530.0 H450.0" fill="none" stroke="#0f766e" stroke-width="2" stroke-linejoin="round"/>
+<rect x="450.0" y="494" width="164" height="72" rx="8" fill="#e0f2ef" stroke="#0f766e" stroke-width="1.6"/>
+<text x="462.0" y="514" font-size="12.5" font-weight="800" fill="#0f766e" text-anchor="start" letter-spacing="0.4">C3.3</text>
+<text x="462.0" y="534" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">On-scene</text>
+<text x="462.0" y="551" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">coordination</text>
+<rect x="424.0" y="672" width="190" height="70" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="436.0" y="692" font-size="11.5" font-weight="800" fill="#0f766e" text-anchor="start" letter-spacing="0.8">MEASURE</text>
+<text x="436.0" y="711" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Probability of success</text>
+<text x="436.0" y="728" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">(POS) of the search</text>
+<rect x="626.0" y="222" width="190" height="70" rx="9" fill="#b45309" stroke="#b45309" stroke-width="2.2"/>
+<text x="721.0" y="244" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.6">C4</text>
+<text x="721.0" y="264" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Rescue and</text>
+<text x="721.0" y="282" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">recovery</text>
+<path d="M638.0 292 V530.0" fill="none" stroke="#b45309" stroke-width="2" stroke-linejoin="round"/>
+<path d="M638.0 358.0 H652.0" fill="none" stroke="#b45309" stroke-width="2" stroke-linejoin="round"/>
+<rect x="652.0" y="322" width="164" height="72" rx="8" fill="#fdf0e2" stroke="#b45309" stroke-width="1.6"/>
+<text x="664.0" y="342" font-size="12.5" font-weight="800" fill="#b45309" text-anchor="start" letter-spacing="0.4">C4.1</text>
+<text x="664.0" y="362" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Aerial rescue (hoist)</text>
+<path d="M638.0 444.0 H652.0" fill="none" stroke="#b45309" stroke-width="2" stroke-linejoin="round"/>
+<rect x="652.0" y="408" width="164" height="72" rx="8" fill="#fdf0e2" stroke="#b45309" stroke-width="1.6"/>
+<text x="664.0" y="428" font-size="12.5" font-weight="800" fill="#b45309" text-anchor="start" letter-spacing="0.4">C4.2</text>
+<text x="664.0" y="448" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Surface recovery</text>
+<path d="M638.0 530.0 H652.0" fill="none" stroke="#b45309" stroke-width="2" stroke-linejoin="round"/>
+<rect x="652.0" y="494" width="164" height="72" rx="8" fill="#fdf0e2" stroke="#b45309" stroke-width="1.6"/>
+<text x="664.0" y="514" font-size="12.5" font-weight="800" fill="#b45309" text-anchor="start" letter-spacing="0.4">C4.3</text>
+<text x="664.0" y="534" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Survival equipment</text>
+<text x="664.0" y="551" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">delivery</text>
+<rect x="626.0" y="672" width="190" height="70" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="638.0" y="692" font-size="11.5" font-weight="800" fill="#b45309" text-anchor="start" letter-spacing="0.8">MEASURE</text>
+<text x="638.0" y="711" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Lives saved as a share</text>
+<text x="638.0" y="728" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">of persons at risk</text>
+<rect x="828.0" y="222" width="190" height="70" rx="9" fill="#6b3fa0" stroke="#6b3fa0" stroke-width="2.2"/>
+<text x="923.0" y="244" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.6">C5</text>
+<text x="923.0" y="264" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">Medical response</text>
+<text x="923.0" y="282" font-size="15.5" font-weight="700" fill="#ffffff" text-anchor="middle">and hand-over</text>
+<path d="M840.0 292 V530.0" fill="none" stroke="#6b3fa0" stroke-width="2" stroke-linejoin="round"/>
+<path d="M840.0 358.0 H854.0" fill="none" stroke="#6b3fa0" stroke-width="2" stroke-linejoin="round"/>
+<rect x="854.0" y="322" width="164" height="72" rx="8" fill="#f0e9f8" stroke="#6b3fa0" stroke-width="1.6"/>
+<text x="866.0" y="342" font-size="12.5" font-weight="800" fill="#6b3fa0" text-anchor="start" letter-spacing="0.4">C5.1</text>
+<text x="866.0" y="362" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">On-scene first aid</text>
+<path d="M840.0 444.0 H854.0" fill="none" stroke="#6b3fa0" stroke-width="2" stroke-linejoin="round"/>
+<rect x="854.0" y="408" width="164" height="72" rx="8" fill="#f0e9f8" stroke="#6b3fa0" stroke-width="1.6"/>
+<text x="866.0" y="428" font-size="12.5" font-weight="800" fill="#6b3fa0" text-anchor="start" letter-spacing="0.4">C5.2</text>
+<text x="866.0" y="448" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Medical evacuation</text>
+<path d="M840.0 530.0 H854.0" fill="none" stroke="#6b3fa0" stroke-width="2" stroke-linejoin="round"/>
+<rect x="854.0" y="494" width="164" height="72" rx="8" fill="#f0e9f8" stroke="#6b3fa0" stroke-width="1.6"/>
+<text x="866.0" y="514" font-size="12.5" font-weight="800" fill="#6b3fa0" text-anchor="start" letter-spacing="0.4">C5.3</text>
+<text x="866.0" y="534" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Casualty hand-over</text>
+<text x="866.0" y="551" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">to EMS</text>
+<rect x="828.0" y="672" width="190" height="70" rx="8" fill="#ffffff" stroke="#6b3fa0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="840.0" y="692" font-size="11.5" font-weight="800" fill="#6b3fa0" text-anchor="start" letter-spacing="0.8">MEASURE</text>
+<text x="840.0" y="711" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Time from rescue to</text>
+<text x="840.0" y="728" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">hospital care</text>
+<rect x="1030.0" y="222" width="190" height="70" rx="9" fill="#ffffff" stroke="#4b5a6a" stroke-width="2.2" stroke-dasharray="7 4"/>
+<text x="1125.0" y="244" font-size="13" font-weight="800" fill="#4b5a6a" text-anchor="middle" letter-spacing="0.6">C6</text>
+<text x="1125.0" y="264" font-size="15.5" font-weight="700" fill="#4b5a6a" text-anchor="middle">Enabling</text>
+<text x="1125.0" y="282" font-size="15.5" font-weight="700" fill="#4b5a6a" text-anchor="middle">capabilities</text>
+<path d="M1042.0 292 V530.0" fill="none" stroke="#4b5a6a" stroke-width="2" stroke-linejoin="round"/>
+<path d="M1042.0 358.0 H1056.0" fill="none" stroke="#4b5a6a" stroke-width="2" stroke-linejoin="round"/>
+<rect x="1056.0" y="322" width="164" height="72" rx="8" fill="#eceff3" stroke="#4b5a6a" stroke-width="1.6"/>
+<text x="1068.0" y="342" font-size="12.5" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="0.4">C6.1</text>
+<text x="1068.0" y="362" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">Met-ocean</text>
+<text x="1068.0" y="379" font-size="14" font-weight="600" fill="#1b2a3a" text-anchor="start">intelligence</text>
+<path d="M1042.0 444.0 H1056.0" fill="none" stroke="#4b5a6a" stroke-width="2" stroke-linejoin="round"/>
+<rect x="1056.0" y="408" width="164" height="72" rx="8" fill="#eceff3" stroke="#4b5a6a" stroke-width="1.6"/>
+<text x="1068.0" y="428" font-size="12.5" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="0.4">C6.2</text>
+<text x="1068.0" y="445.0" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="start">Communications</text>
+<text x="1068.0" y="459.5" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="start">and information</text>
+<text x="1068.0" y="474.0" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="start">exchange</text>
+<path d="M1042.0 530.0 H1056.0" fill="none" stroke="#4b5a6a" stroke-width="2" stroke-linejoin="round"/>
+<rect x="1056.0" y="494" width="164" height="72" rx="8" fill="#eceff3" stroke="#4b5a6a" stroke-width="1.6"/>
+<text x="1068.0" y="514" font-size="12.5" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="0.4">C6.3</text>
+<text x="1068.0" y="531.0" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="start">Readiness: trained</text>
+<text x="1068.0" y="545.5" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="start">crews and available</text>
+<text x="1068.0" y="560.0" font-size="13" font-weight="600" fill="#1b2a3a" text-anchor="start">assets</text>
+<rect x="1030.0" y="672" width="190" height="70" rx="8" fill="#ffffff" stroke="#4b5a6a" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="1042.0" y="692" font-size="11.5" font-weight="800" fill="#4b5a6a" text-anchor="start" letter-spacing="0.8">MEASURE</text>
+<text x="1042.0" y="711" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Availability of assets</text>
+<text x="1042.0" y="728" font-size="13.5" font-weight="400" fill="#1b2a3a" text-anchor="start">and communications</text>
+<path d="M20.0 760 V768 H1018.0 V760" fill="none" stroke="#5b6b7c" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="519.0" y="790" font-size="14" font-weight="600" fill="#5b6b7c" text-anchor="middle">Mission capabilities, in the order of a rescue: alert → coordinate → search → rescue → treat</text>
+<path d="M1030.0 760 V768 H1220.0 V760" fill="none" stroke="#5b6b7c" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="1125.0" y="790" font-size="14" font-weight="600" fill="#5b6b7c" text-anchor="middle">Support all of C1 to C5</text>
+<line x1="40" y1="822" x2="1200" y2="822" stroke="#d5dbe1" stroke-width="1"/>
+<text x="40" y="850" font-size="13.5" font-weight="800" fill="#5b6b7c" text-anchor="start" letter-spacing="1.2">LEGEND</text>
+<rect x="40" y="858" width="40" height="24" rx="5" fill="#1f4f80" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="90" y="875" font-size="14.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Root capability (level 0)</text>
+<rect x="300" y="858" width="40" height="24" rx="5" fill="#b45309" stroke="#b45309" stroke-width="1.6"/>
+<text x="350" y="875" font-size="14.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Capability group (level 1)</text>
+<rect x="570" y="858" width="40" height="24" rx="5" fill="#e4eef9" stroke="#1f4f80" stroke-width="1.6"/>
+<text x="620" y="875" font-size="14.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Sub-capability (level 2)</text>
+<rect x="830" y="858" width="40" height="24" rx="5" fill="#ffffff" stroke="#4b5a6a" stroke-width="1.6" stroke-dasharray="6 3"/>
+<text x="880" y="875" font-size="14.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Enabling group / measure (dashed)</text>
+<path d="M40 904 H80" fill="none" stroke="#46525e" stroke-width="2" stroke-linejoin="round"/>
+<text x="90" y="909" font-size="14.5" font-weight="400" fill="#1b2a3a" text-anchor="start">Connector = "is part of" (whole–part hierarchy)</text>
+<text x="570" y="909" font-size="14.5" font-weight="400" fill="#1b2a3a" text-anchor="start">IDs encode the parent: C2.1 is part of C2. Colours are reused in the CV-4.</text>
+<text x="1200" y="949" font-size="12.5" fill="#5b6b7c" text-anchor="end">Author: Adekunle Adeniji (1378471) · MGMT6119 · 16 Nov 2026</text>
+</svg>

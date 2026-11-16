@@ -1,8 +1,11 @@
-"""Build the submission .docx from submission.md: pandoc, then style with python-docx.
+"""Build the submission .docx from a markdown source: pandoc, then style with python-docx.
 
-Run from this folder:  python3 build_docx.py
+Run from this folder:
+  python3 build_docx.py                      # CV-2 + CV-4 submission
+  python3 build_docx.py submission_ov.md OUT.docx ov   # OV-1 + OV-2 backup
 """
 import subprocess
+import sys
 from docx import Document
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -10,8 +13,10 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-OUT = "../Adekunle_Adeniji_1378471_Developing_EA_Views.docx"
-subprocess.run(["pandoc", "submission.md", "-o", OUT, "--resource-path=.:.."], check=True)
+SRC = sys.argv[1] if len(sys.argv) > 1 else "submission.md"
+OUT = sys.argv[2] if len(sys.argv) > 2 else "../Adekunle_Adeniji_1378471_Developing_EA_Views.docx"
+PROFILE = sys.argv[3] if len(sys.argv) > 3 else "cv"
+subprocess.run(["pandoc", SRC, "-o", OUT, "--resource-path=.:..:../Backup - OV-1 and OV-2 version"], check=True)
 
 doc = Document(OUT)
 NAVY = RGBColor(0x1F, 0x4F, 0x80)
@@ -86,9 +91,16 @@ WIDTHS = {  # inches per column, by column count; each sums to the 6.5 in text w
     5: [0.55, 1.75, 0.8, 1.15, 2.25],
 }
 
-def set_widths(table):
+CV_TABLES = [  # per table, in document order
+    [1.9, 4.6], [2.0, 4.5], [1.45, 3.45, 1.6], [2.0, 4.5],
+    [0.5, 1.35, 4.65], [1.75, 1.55, 1.6, 1.6], [2.4, 4.1],
+]
+
+def set_widths(table, idx):
     cols = len(table.columns)
     widths = WIDTHS.get(cols)
+    if PROFILE == "cv" and idx < len(CV_TABLES) and len(CV_TABLES[idx]) == cols:
+        widths = CV_TABLES[idx]
     if not widths:
         return
     table.autofit = False
@@ -105,10 +117,10 @@ def set_widths(table):
         for cell, w in zip(row.cells, widths):
             cell.width = Inches(w)
 
-for t in doc.tables:
+for t_i, t in enumerate(doc.tables):
     t.alignment = WD_TABLE_ALIGNMENT.CENTER
     set_borders(t)
-    set_widths(t)
+    set_widths(t, t_i)
     for r_i, row in enumerate(t.rows):
         for cell in row.cells:
             if r_i == 0:
@@ -129,6 +141,6 @@ for p in doc.paragraphs:
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
 doc.core_properties.author = "Adekunle Adeniji"
-doc.core_properties.title = "Developing EA Views – DoDAF OV-1 and OV-2"
+doc.core_properties.title = "Developing EA Views – DoDAF " + ("CV-2 and CV-4" if PROFILE == "cv" else "OV-1 and OV-2")
 doc.save(OUT)
 print("wrote", OUT)
