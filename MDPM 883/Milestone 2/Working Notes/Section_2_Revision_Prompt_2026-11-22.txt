@@ -1,0 +1,161 @@
+ROLE
+You are an experienced product manager and requirements analyst. Help me (Adekunle, author of Section 2) revise Section 2 "Requirements" of our Product Requirements Document (PRD). Edit only what I paste below. Do not invent requirements, evidence, numbers or decisions. Where something is unclear, keep it and mark it [CHECK: reason]. The meeting record at the end explains what the team asked for; follow it.
+
+CONTEXT
+- Team Dart, MDPM capstone, Milestone 2. Client: Government of Alberta (GOA) infrastructure team; client contact: Cohen.
+- Product: a proposed, guided furniture request service ("Prism Requests") embedded in the GOA's Prism Core platform. It replaces the furniture-request part of WARDS, the work-order system that is reaching end of life. Section 1 now calls it a "proposed guided … service". In our wording, "connected" means bringing together the fragmented parts of the WARDS process; it does not mean integration between separate platforms.
+- Primary users: CMACs, the ministry accommodation contacts who submit and track furniture requests, often for other staff.
+- Supporting users: infrastructure processing and coordination staff (furniture request coordinator, FRC; furniture coordinator, FC) and infrastructure management.
+- In scope: request submission, status and next step, messaging, proposal sharing.
+- Outside the current product scope: maintenance requests, broader WARDS replacement, purchasing, vendor delivery, and integrations with WARDS, Snap Tracker, 1GX and other data stores. Migration of historical work orders is still being decided by the GOA. Use the phrase "outside the current product scope", as Section 3 now does.
+- Readers: faculty (including Milestone 3 instructors) reading a PRINTED copy, many of them new to the project. Later readers are the GOA and a development team. Nothing can be clicked, so use references such as "see Appendix B, Table B2".
+- Faculty (Christian) require standard PRD headings so teams can be compared. "Functional requirements" and "Non-functional requirements" must appear as clearly visible headings. Christian accepts listing every requirement, provided the important ones are clear.
+- The current Section 2 is about 17 pages, with 31 functional requirements (FR) and 22 non-functional requirements (NFR). Sources: our MDPM 883 requirements assignment (also on my Miro board), the hierarchical task model, interviews and the usability test report. Priorities use MoSCoW.
+- Requirement IDs are used elsewhere: the Section 5 backlog (F1, F2 …), Section 4 (FR27 for proposal sharing) and Section 6 (FR numbers in brackets). IDs must not change.
+- Fixed facts (confirmed by the report author and three teammates): usability testing had 6 experienced GOA staff doing 4 tasks each, giving 24 task attempts. 14 were completed without help and 10 with moderator help.
+- The PRD is a living document and will be updated in Milestones 3 and 4. It is due Thursday 26 November. My revision is due before Monday's working session; Warren then sends the PRD to Christian for early feedback.
+
+TEAM FEEDBACK TO APPLY (21 November review)
+1. Make it readable for newcomers. Open with a short guide to the section and lead with a summary, not the full list.
+2. Keep Section 2 to a summary of the most important requirements. Move the detailed tables, the hierarchical task model and the source/evidence mapping to the appendix, with clear cross-references.
+3. Preserve traceability: keep every FR/NFR ID, its priority, and its link to evidence and to the Section 5 backlog.
+4. Do not mix tested and untested items. Show each requirement's status.
+5. Explain MoSCoW, because the team never introduced or formally chose it.
+6. Do not present unconfirmed technical details as rules. FR07 assumes Prism Core supplies every profile field; FR23 says users will no longer need local copies. Mark both as proposed, pending GOA confirmation, and check the rest of the section for similar statements.
+7. FR 1.1 ("identify Prism Requests as the right portal") is untested and is really an enablement or training need, not a system function. It is a "should have" and comes from the task model: new CMACs may not know where to submit requests.
+8. Fix the usability counts in the Section 2.2 table. It currently says 13 unaided, 10 with help and 1 not confirmed (because P1's recording ended before a reply was sent). The report and every other section say 14 unaided and 10 with help.
+9. Use plain language and define every acronym the first time it appears: GOA, CMAC, FRC, FC, WARDS, Prism Core, FR, NFR, MoSCoW.
+10. The themes you highlight must match the Section 5 backlog (for example, guided submission maps to F1 and F5).
+11. Use the usability findings as evidence and as each requirement's status (tested or not). Where testing confirmed a requirement or showed it needs changing, say so briefly. Do not create new requirements from the findings.
+12. Keep the finding that some participants were confused by status wording. Do not say all participants "successfully understood" the status; Section 6 now says all six completed the tasks and understood the current status, some with help.
+13. Keep the distinction between current GOA practice and our proposals (section 2.5), and the note that the status model is not final (section 2.9).
+14. Course codes (for example MDPM 883) may stay only where they cite a source. Mark each one [CHECK: keep course code?], because the team has not decided whether course codes stay in the submitted PRD.
+
+WHAT TO PRODUCE
+
+A. REVISED SECTION 2 (main body, about 5–6 printed pages). Keep existing subsection numbers where possible (2.2, 2.5 and 2.9 are referred to elsewhere). If you renumber, give an old→new list.
+  2.0 How to read this section (no more than 150 words). Cover:
+      - what the requirements cover;
+      - where they came from;
+      - how they are prioritised (MoSCoW);
+      - what the status labels mean;
+      - where the full detail is (appendix);
+      - that the IDs link to the Section 5 backlog;
+      - that this is the Milestone 2 version and will be updated in Milestones 3 and 4.
+  Requirements at a glance: a compact table listing EVERY FR and NFR ID on one line each, with columns ID | Short title | MoSCoW | Status | Backlog item (F#). This keeps the full list visible in the body in case faculty prefer that, while the detail moves to the appendix.
+  Functional requirements (visible heading):
+      - Group the 31 FRs into 6–8 plain-language capability themes. Derive the themes from the actual list; likely candidates include guided submission, clear status and next step, messages and proposals kept with the request, governed access and decisions, and retrieval and reporting.
+      - For each theme give: a 2–3 sentence description, the FR IDs it covers, the highest priority, one short piece of evidence, its status, and the related backlog items.
+  Non-functional requirements (visible heading): group the 22 NFRs into 4–6 themes, presented the same way.
+  Business rules and assumptions: current GOA practice vs our proposals (2.5); status model not final (2.9).
+  Requirements-to-evidence coverage: the corrected 2.2 table, using 14 unaided and 10 with help out of 24 attempts. Delete the "13 unaided, 1 not confirmed" sentence. If the pasted report shows a different figure, flag it with [CHECK] instead of changing it.
+  Status labels, used consistently: "Tested in usability study" | "Shown in prototype, not tested" | "Proposed – needs GOA confirmation". Assign a status only from evidence in the pasted text; otherwise write [CHECK].
+  MoSCoW legend below the first table: Must have, Should have, Could have, Won't have (this release).
+
+B. APPENDIX CONTENT
+  - Full FR and NFR tables with unchanged IDs. Change wording only to clarify or to flag items as proposed.
+  - The hierarchical task model.
+  - The source and evidence mapping for each requirement.
+
+C. SPECIFIC FIXES
+  - FR07 and FR23: rewrite as proposed requirements that need GOA confirmation, for example "Where Prism Core holds profile data, the form pre-fills it (proposed; GOA to confirm which fields Prism Core supplies)."
+  - FR 1.1: recommended treatment is to keep the ID, move it to an "Enablement and adoption needs (outside the system)" list and keep it in the task model appendix. Also give one alternative: reword it as a system capability, such as "the service clearly states which requests it handles and points users elsewhere for others." Then list it under team decisions.
+  - Scan for other assumptions written as confirmed rules and flag them.
+  - Make sure no wording conflicts with Section 3 (integrations outside the current product scope) or Section 6 (status wording).
+
+D. CHANGE LOG AND TEAM CHECKLIST
+  - Bullet list of what moved where, what was reworded, and any old→new subsection numbers.
+  - "Decisions for the team": the FR 1.1 treatment, course codes, and any [CHECK] items.
+  - "Cross-references to update":
+      - Section 4: proposal sharing must cite FR27 (not FR9). Owner: Warren.
+      - Section 5: backlog F-numbers must match the themes and IDs. Owner: Fuyang.
+      - Section 6: bracketed FR numbers and participant counts. Owner: Qiuchen.
+
+RULES
+- Never renumber, merge or delete an FR or NFR ID.
+- No new requirements, numbers, sources or claims.
+- Consultant-to-client tone, using "proposed" for our recommendations. Canadian spelling.
+- Tables must work on paper: short cells, no links.
+- If the answer is too long for one reply, first give the 2.0 guide and the at-a-glance table, then the themed summaries, then the appendix and change log.
+
+INPUTS
+[1] CURRENT SECTION 2 (full text):
+<paste here>
+
+[2] SECTION 5 BACKLOG (feature IDs and titles):
+<paste here>
+
+[3] USABILITY REPORT, key results table (optional, to check counts and status):
+<paste here>
+
+[4] EARLIER FR/NFR GROUPING FROM MY MIRO BOARD (optional):
+<paste here>
+
+[5] MEETING RECORD — 21 NOVEMBER PRD REVIEW (context for the feedback above; Item 2 and the showcase actions are not part of this task)
+
+MEETING SUMMARY — Team Dart — Working Session (PRD Review), Saturday, 21 November 2026 (date inferred)
+
+1. Meeting details
+- Date: Saturday, 21 November 2026, inferred: the Saturday PRD review agreed on 16 and 19 November; PRD due "on the 26th"; Adekunle travels "tomorrow"; Warren closed with "see you on Monday".
+- Time: not recorded; about 1 h 52 min.
+- Platform: online; auto-transcribed; the shared PRD document and the faculty presentation work plan on Miro were used.
+- Facilitator: Warren Noronha. Note-taker: not named.
+- Present: Warren Noronha (facilitator), Anne-Marie Lampow, Fuyang Xu, Mmenyene Umana (first recorded contribution at about 5 min), Qiuchen Li (about 12 min), Adekunle Adeniji (about 33 min).
+- Agenda: 1 PRD review, section by section; 2 Faculty showcase presentation.
+
+2. Discussion and resolutions
+
+Item 1 — PRD review (due Thursday 26 November)
+
+Section 1: executive summary (Anne-Marie)
+- Fuyang Xu said the furniture request service is embedded in Prism Core, and that faculty might read "connected" as an integration between separate platforms. Anne-Marie Lampow said "connected" refers to bringing together the fragmented parts of WARDS, and that Fuyang's other comment fits the prototype or usability findings sections better than a summary.
+- "Proposed": Mmenyene Umana and Warren Noronha favoured describing the service as proposed, so faculty do not read it as an implemented or GOA-approved solution; Warren noted the PRD mixes current GOA practice (section 2.5) with team proposals, and the status model is not final (section 2.9). Anne-Marie said the whole document is a proposal, so the word is unnecessary. Qiuchen Li said either works, provided more explanation is added; Mmenyene said the vision line says little about what the product does.
+- Resolved: Anne-Marie added "proposed" ("proposed guided … service"); with that, no further expansion of the line is needed (Mmenyene, Warren). Section 1 is otherwise final.
+
+Section 2: requirements (Adekunle)
+- Format and length: Anne-Marie said Christian set standard headers for the PRD, including functional and non-functional requirements, so faculty can compare teams, and these are hard to find in section 2. Qiuchen said the section is about 17 pages, and readers new to the project will not know why 31 functional and 22 non-functional requirements matter. Fuyang suggested a short summary up front and grouping the 31 into about 10 main requirements, with the full list in the appendix. Warren noted faculty will have printed copies, so links cannot be clicked.
+- Adekunle's explanation: Adekunle Adeniji said the section was detailed because there is no page limit and the printed document should be complete. It draws on the earlier requirements assignment (also on Adekunle's Miro board), the hierarchical task model, interviews and the usability test report. Adekunle said they had been unsure whether to fold in the usability findings at this stage, and was willing to revise.
+- Traceability: Warren said Christian accepted listing every requirement, provided the important ones are clear, and that the template asks for requirement IDs to be kept because they feed the backlog (for example, FR27 links proposal sharing to usability findings and ethics safeguards). Mmenyene worried that grouping could mix tested and untested items. Warren suggested asking Christian whether most of the section can move to the appendix.
+- Specific points: Mmenyene said FR 1.1 ("identify Prism Requests as the right portal") is untested and reads as enablement or training, not functionality; Adekunle noted it is a "should have", and Warren said it comes from the task model, which covers the full requester journey (new CMACs may not know where to go). Mmenyene and Qiuchen asked that MoSCoW (must, should, could, won't) be explained, as the team never formally chose it. Warren said FR07 (Prism Core supplies every profile field) and FR23 (no more local copies) state unconfirmed technical details as rules, and will comment on them.
+- Usability counts: Qiuchen and Warren found that the section 2.2 table counts 13 unaided, 10 assisted and one not confirmed (P1's recording ended before a reply was sent), while the report and other sections say 14 and 10. Anne-Marie, who wrote the report, Qiuchen, Mmenyene and Fuyang confirmed 14 and 10. Adekunle will check against the usability report.
+- Resolved (consensus; Adekunle agreed): move the detailed task model and supporting evidence to the appendix; open section 2 with a short explanation of how to read the requirements and where the priorities are; summarise the key functional and non-functional requirements with their priorities, keeping IDs and the link to evidence and the backlog. Also: explain MoSCoW below the table; mark unconfirmed items as proposed; reconcile the 14/10 figures. The summary must match Fuyang's section 5 backlog (for example, guided submission to F1 and F5). Due before Monday's working session (Adekunle travels Sunday; Warren had hoped for Sunday morning).
+
+Section 3: data model (Mmenyene)
+- Fuyang said "integration with WARDS, Snap Tracker, 1GX and other data stores has not been finalised" conflicts with section 5, which puts direct integrations out of scope. Mmenyene said Cohen is still deciding what to migrate because of data retention. Resolved: reworded during the meeting to say these integrations are outside the current product scope. Section 3 is final.
+
+Section 4: ethics scan and design implications (Warren)
+- Warren will correct a misaligned reference (proposal sharing is FR27, not FR9) and replace the template table with a clearer one of the team's own, as Anne-Marie suggested. Section 4 is otherwise final.
+
+Section 5: prototype and backlog (Fuyang)
+- A printed PRD cannot play the prototype video. Resolved: a QR code and a web address for the V1 video (Qiuchen's idea), plus snapshots of the latest V2 design to show how it evolved; Fuyang prefers also showing them on screen at the showcase in case print quality fails. Playing all four V2 test scenarios would take about 20 minutes. Warren thought the Figma video might need re-recording; Anne-Marie said only V1 is being presented, so the QR code is enough.
+- The section 5 backlog must align with the section 2 summary once it is revised.
+- Qiuchen asked whether the course codes (for example MDPM 826 and 850) in several sections should stay; Anne-Marie and Mmenyene said they are for the team's reference. Whether they are removed before submission was not stated.
+
+Section 6: usability findings (Qiuchen)
+- Resolved: severity for the ethics-scan items becomes "not applicable" (they are design safeguards, not usability issues; minor for the team but major for the GOA). "All six participants successfully understood the request status" is reworded without "successfully" (for example, all six completed the tasks and understood the current status), since some needed help and section 2 records confusion over status wording. Anne-Marie preferred keeping "successfully", meaning the goal was reached, but accepted the change.
+- FR references and participant counts in brackets stay for traceability (Warren, Adekunle); Qiuchen will recheck the FR numbers after section 2 is revised. Warren noted the PRD will keep changing through Milestones 3 and 4.
+
+Item 2 — Faculty showcase presentation (on site) [context only]
+- The slides should reflect the final PRD; keep the client presentation's slide order, as Christian advised; owners revise speaker notes for an audience new to the project; define CMAC clearly in the introduction, then use "CMAC" throughout (Adekunle's suggestion); about 70% of slide changes by Monday's working session (23 November). No items from this session need confirming with Cohen.
+
+3. Action items (Section 2 and related)
+1. Revise section 2: reading guide; summary of key requirements with priorities; task model and evidence to the appendix; keep IDs; explain MoSCoW; mark FR07 and FR23 as proposed; review FR 1.1; reconcile the 14/10 counts. Owner: Adekunle Adeniji. Due: Mon 23 Nov, before the working session.
+2. Ask Christian whether most of section 2 can move to the appendix with a summary. Owner: Warren Noronha. Due: not set.
+3. Fix the FR27 reference and replace the section 4 table. Owner: Warren Noronha. Due: before submission.
+4. Section 5: QR code and web address for the V1 video; V2 snapshots; align the backlog with the section 2 summary. Owner: Fuyang Xu. Due: after section 2 is revised.
+5. Section 6: ethics items to "not applicable"; reword the understanding sentence; recheck FR numbers. Owner: Qiuchen Li. Due: after section 2 is revised.
+6. Send the PRD draft to Christian for early feedback. Owner: Warren Noronha. Due: after section 2 is revised (PRD due Thu 26 Nov).
+
+PRD section status
+- 1 Executive summary: final ("proposed" added)
+- 2 Requirements: largest revision needed (Adekunle, Monday)
+- 3 Data model: final (integrations reworded as outside the current scope)
+- 4 Ethics and design implications: final after Warren's reference and table fixes
+- 5 Prototype and backlog: QR code, V2 snapshots and backlog alignment to follow
+- 6 Usability findings: content agreed; wording and FR number checks to follow
+
+Open points
+- Whether most of section 2 moves to the appendix (Christian to be asked).
+- Whether course codes stay in the submitted PRD.
+
+Key dates: Mon 23 Nov, 10 am, working session (last before the on-site week) · Thu 26 Nov, PRD due and admin meeting · Sat 28 Nov, team process review with M (on site).
